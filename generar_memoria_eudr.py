@@ -23,11 +23,10 @@ from reportlab.platypus import (
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY
 
 # ── Rutas ────────────────────────────────────────────────────────────────────
-SRC = (r"C:\Users\acuba\.minimax\v2\assets\2026\10\01"
-       r"\17-41-27-653-asset_20261001-174127-653_"
-       r"7634a625047b_ed338c6a-Memoria Diaria EUDR.md")
-OUT_DOCX = r"C:\Users\acuba\eudrperu\Memoria_Diaria_EUDR.docx"
-OUT_PDF  = r"C:\Users\acuba\eudrperu\Memoria_Diaria_EUDR.pdf"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC      = os.path.join(BASE_DIR, "Memoria Diaria EUDR.md")
+OUT_DOCX = os.path.join(BASE_DIR, "Memoria_Diaria_EUDR.docx")
+OUT_PDF  = os.path.join(BASE_DIR, "Memoria_Diaria_EUDR.pdf")
 
 # ── Colores institucionales ───────────────────────────────────────────────────
 DARK_GREEN  = RGBColor(0x1B, 0x5E, 0x20)   # #1B5E20
