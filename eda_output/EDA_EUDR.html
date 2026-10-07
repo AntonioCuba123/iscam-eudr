@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDA EUDR — Cooperativas Café Perú</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #F0F2F5; color: #1A1A2E; }
+  .hero { background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 60%, #40916C 100%); color: white; padding: 52px 48px 40px; }
+  .hero h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .hero p { opacity: 0.88; font-size: 15px; line-height: 1.6; }
+  .hero .badge-row { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); border-radius: 20px; padding: 4px 14px; font-size: 12px; }
+
+  nav { background: #1B4332; padding: 0 48px; display: flex; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.7); text-decoration: none; padding: 12px 16px; font-size: 13px; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  nav a:hover, nav a.active { color: white; border-bottom-color: #74C69D; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 32px 60px; }
+
+  .section-title { font-size: 19px; font-weight: 700; color: #1B4332; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #74C69D; display: flex; align-items: center; gap: 10px; }
+  .section-title::before { content: ''; display: inline-block; width: 5px; height: 22px; background: #2D6A4F; border-radius: 3px; }
+
+  /* KPI Cards */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 36px; }
+  .kpi { background: white; border-radius: 12px; padding: 22px 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-top: 4px solid #2D6A4F; }
+  .kpi.green { border-top-color: #2D6A4F; }
+  .kpi.amber { border-top-color: #D4A373; }
+  .kpi.blue { border-top-color: #457B9D; }
+  .kpi.red { border-top-color: #C1121F; }
+  .kpi .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B7280; margin-bottom: 6px; }
+  .kpi .kpi-value { font-size: 26px; font-weight: 700; color: #1B4332; line-height: 1.1; }
+  .kpi .kpi-sub { font-size: 11px; color: #9CA3AF; margin-top: 4px; }
+
+  /* Charts */
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 24px; margin-bottom: 40px; }
+  .chart-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .chart-card.wide { grid-column: span 2; }
+  .chart-card img { width: 100%; height: auto; display: block; }
+  .chart-caption { padding: 12px 16px; font-size: 12px; color: #6B7280; border-top: 1px solid #F0F0F0; }
+  .chart-title { font-size: 13px; font-weight: 600; color: #374151; padding: 14px 16px 0; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 28px; }
+  th { background: #1B4332; color: white; padding: 11px 16px; font-size: 12px; text-align: left; }
+  td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #F0F0F0; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #F9FAFB; }
+
+  /* Alert boxes */
+  .alert { border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; font-size: 13px; line-height: 1.6; }
+  .alert-red { background: #FEF2F2; border-left: 4px solid #C1121F; color: #7F1D1D; }
+  .alert-amber { background: #FFFBEB; border-left: 4px solid #D97706; color: #78350F; }
+  .alert-green { background: #F0FDF4; border-left: 4px solid #2D6A4F; color: #14532D; }
+
+  /* Two-col layout */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+
+  /* Bullet lists */
+  ul { padding-left: 20px; }
+  li { font-size: 13px; line-height: 1.8; color: #374151; }
+
+  .divider { height: 1px; background: #E5E7EB; margin: 36px 0; }
+  .small { font-size: 12px; color: #9CA3AF; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🔍 EDA — Evaluación Exploratoria de Datos</h1>
+  <p>Cooperativas de Café y Cacao frente al EUDR (Reglamento de Deforestación de la UE)<br>
+  Proyecto: <strong>eudrperu</strong> · 3 archivos · 673 + 6 + 25 organizaciones</p>
+  <div class="badge-row">
+    <span class="badge">📁 Archivo 1: Directorio PAC Café 2018–2025</span>
+    <span class="badge">📁 Archivo 2: Directorio Mango/Banano</span>
+    <span class="badge">📁 Archivo 3: Perfil EUDR San Martín</span>
+    <span class="badge">🗓️ Sep 2026</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#archivo1">Archivo 1</a>
+  <a href="#archivo3">Archivo 3</a>
+  <a href="#calidad">Calidad</a>
+  <a href="#graficos">Gráficos</a>
+  <a href="#hallazgos">Hallazgos</a>
+</nav>
+
+<div class="container">
+
+<!-- ── KPI OVERVIEW ─────────────────────────────────── -->
+<div class="section-title" id="kpis">Panorámica General</div>
+
+<div class="kpi-grid">
+  <div class="kpi green">
+    <div class="kpi-label">Organizaciones PAC (A1)</div>
+    <div class="kpi-value">673</div>
+    <div class="kpi-sub">25 departamentos · 8 años</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Productores en San Martín (A3)</div>
+    <div class="kpi-value">7,580</div>
+    <div class="kpi-sub">5,590 H + 1,990 M en 25 coop.</div>
+  </div>
+  <div class="kpi green">
+    <div class="kpi-label">Exportaciones FOB 2025 (A3)</div>
+    <div class="kpi-value">$33.9M</div>
+    <div class="kpi-sub">13 de 25 cooperativas</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Certificación Orgánica (A3)</div>
+    <div class="kpi-value">96%</div>
+    <div class="kpi-sub">24 de 25 cooperativas</div>
+  </div>
+  <div class="kpi blue">
+    <div class="kpi-label">Avance EUDR promedio (A3)</div>
+    <div class="kpi-value">0.79 / 1</div>
+    <div class="kpi-sub">17 de 25 registran dato</div>
+  </div>
+  <div class="kpi red">
+    <div class="kpi-label">Hectáreas en San Martín (A3)</div>
+    <div class="kpi-value">21,235</div>
+    <div class="kpi-sub">Superficie total de las 25 coop.</div>
+  </div>
+</div>
+
+<!-- ── ARCHIVO 1 ───────────────────────────────────── -->
+<div class="divider" id="archivo1"></div>
+<div class="section-title">Archivo 1 — Directorio PAC Café (673 organizaciones)</div>
+
+<div class="kpi-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+  <div class="kpi green">
+    <div class="kpi-label">Departamentos</div>
+    <div class="kpi-value">25</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Tipos de org.</div>
+    <div class="kpi-value">4</div>
+  </div>
+  <div class="kpi blue">
+    <div class="kpi-label">Productos</div>
+    <div class="kpi-value">96</div>
+  </div>
+  <div class="kpi green">
+    <div class="kpi-label">Llenado</div>
+    <div class="kpi-value">84.3%</div>
+  </div>
+</div>
+
+<div class="two-col">
+  <div>
+    <div class="chart-card">
+      <div class="chart-title">Departamentos con más organizaciones PAC</div>
+      <img src="v01_deptos_pac.png" alt="Departamentos">
+      <div class="chart-caption">Cusco y Junín lideran en cobertura PAC</div>
+    </div>
+  </div>
+  <div>
+    <div class="chart-card">
+      <div class="chart-title">Tipos de organización</div>
+      <img src="v02_tipos_org.png" alt="Tipos org">
+      <div class="chart-caption">Asociaciones son el tipo predominante (59%)</div>
+    </div>
+  </div>
+</div>
+
+<div class="chart-card wide" style="margin-bottom:28px;">
+  <div class="chart-title">Productos principales en el directorio PAC</div>
+  <img src="v05_productos.png" alt="Productos">
+  <div class="chart-caption">Cacao, Café y Palta son los tres productos con mayor representación en el directorio</div>
+</div>
+
+<div class="chart-card wide">
+  <div class="chart-title">Ventas totales por año (S/) — 2018 a 2025</div>
+  <img src="v03_ventas_anuales.png" alt="Ventas anuales">
+  <div class="chart-caption">Ventas en soles de las organizaciones PAC. Aclaración: los valores numéricos en el directorio original aparecen en la misma escala que los beneficiarios, lo que sugiere que las columnas de ventas pueden estar confundidas con las de beneficiarios en la estructura original del Excel. Se requiere auditoría de las fórmulas originales.</div>
+</div>
+
+<div class="alert alert-red" style="margin-top:16px;">
+  ⚠️ <strong>Alerta de calidad A1:</strong> Las columnas de "VENTAS TOTALES" en el directorio PAC café muestran valores numéricos idênticos a las columnas de "BENEFICIARIOS" en todos los años. Esto ocurre porque la estructura del Excel tiene celdas combinadas (merged cells) en la fila de encabezado, lo que causa que pandas lea la columna equivocada. Se recomienda que el equipo de datos reexporte el Excel asegurándose de que las columnas de ventas estén correctamente etiquetadas.
+</div>
+
+<div class="chart-card wide">
+  <div class="chart-title">Heatmap — Departamentos × Productos principales</div>
+  <img src="v06_heatmap_prod_dept.png" alt="Heatmap">
+  <div class="chart-caption">Intensidad de organizaciones por departamento y producto</div>
+</div>
+
+<!-- ── ARCHIVO 3 ───────────────────────────────────── -->
+<div class="divider" id="archivo3"></div>
+<div class="section-title">Archivo 3 — Perfil Cooperativas Café San Martín (25 organizaciones)</div>
+
+<div class="kpi-grid" style="grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));">
+  <div class="kpi green">
+    <div class="kpi-label">Socios totales</div>
+    <div class="kpi-value">7,580</div>
+    <div class="kpi-sub">5,590 H + 1,990 M</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Hectáreas</div>
+    <div class="kpi-value">21,235</div>
+    <div class="kpi-sub">Promedio 849 ha/org</div>
+  </div>
+  <div class="kpi blue">
+    <div class="kpi-label">Volumen cosecha 2026</div>
+    <div class="kpi-value">136,505 qq</div>
+    <div class="kpi-sub">10 orgs con dato</div>
+  </div>
+  <div class="kpi green">
+    <div class="kpi-label">FOB 2025</div>
+    <div class="kpi-value">$33.9M</div>
+    <div class="kpi-sub">13 orgs exportadoras</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Certif. Orgánica</div>
+    <div class="kpi-value">96%</div>
+    <div class="kpi-sub">24 de 25 coop.</div>
+  </div>
+  <div class="kpi amber">
+    <div class="kpi-label">Certif. Fair Trade</div>
+    <div class="kpi-value">96%</div>
+    <div class="kpi-sub">24 de 25 coop.</div>
+  </div>
+  <div class="kpi blue">
+    <div class="kpi-label">Avance EUDR</div>
+    <div class="kpi-value">0.79 / 1</div>
+    <div class="kpi-sub">17 orgs con dato</div>
+  </div>
+  <div class="kpi green">
+    <div class="kpi-label">Provincias</div>
+    <div class="kpi-value">12</div>
+    <div class="kpi-sub">La Conv., Moyobamba</div>
+  </div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart-card">
+    <div class="chart-title">Distribución de socios varones y mujeres</div>
+    <img src="v07_socios_dist.png" alt="Socios">
+    <div class="chart-caption">Sesgo hacia organizaciones con menor número de socios (mediana: 141 varones, 66 mujeres)</div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Hectáreas vs Volumen de producción</div>
+    <img src="v08_hect_vs_volumen.png" alt="Hectáreas vs volumen">
+    <div class="chart-caption">Relación superficie-producción. Orgss. con mayor eficiencia relative visible a la derecha.</div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Certificaciones vigentes</div>
+    <img src="v09_certificaciones.png" alt="Certificaciones">
+    <div class="chart-caption">Orgânica y Fair Trade dominan. Rainforest Alliance no tiene dato estructurado.</div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-title">Nivel de avance EUDR</div>
+    <img src="v12_eudr_avance.png" alt="EUDR">
+    <div class="chart-caption">Mayorǐa de orgss. están en fase avanzada (0.75–1.0 de 1.0)</div>
+  </div>
+</div>
+
+<div class="chart-card wide">
+  <div class="chart-title">Exportaciones FOB 2025 por cooperativa (USD)</div>
+  <img src="v10_fob_exportaciones.png" alt="FOB">
+  <div class="chart-caption">Concentración extrema: la cooperativa Valle Grande sola representa ~$10.7M de los $33.9M totales</div>
+</div>
+
+<div class="chart-card wide" style="margin-top:24px;">
+  <div class="chart-title">Mercados de destino de exportación</div>
+  <img src="v11_destinos.png" alt="Destinos">
+  <div class="chart-caption">Estados Unidos es el principal mercado. Hay duplicación en nombres (p.ej. "Noruega." con punto) que debe limpiarse.</div>
+</div>
+
+<!-- ── CALIDAD DE DATOS ─────────────────────────────── -->
+<div class="divider" id="calidad"></div>
+<div class="section-title">Calidad de Datos</div>
+
+<table>
+  <tr><th>Archivo</th><th>Problema</th><th>Severidad</th><th>Acción recomendada</th></tr>
+  <tr><td>A1</td><td>Columnas de ventas confundidas con beneficiarios por merged cells</td><td style="color:#C1121F;font-weight:700">🔴 Alta</td><td>Reexportar Excel con estructura plana; auditar fórmulas originales</td></tr>
+  <tr><td>A1</td><td>Celdas <code>#REF!</code> en fórmulas de ventas incrementales</td><td style="color:#D97706;font-weight:700">🟠 Media</td><td>Recalcular en Excel/LibreOffice o recomputar desde fuente</td></tr>
+  <tr><td>A1</td><td>96 categorías de producto — probable inconsistencias de nombres</td><td style="color:#D97706;font-weight:700">🟠 Media</td><td>Normalizar nombres (e.g., "CAFÉ" vs "café" vs "Cafe")</td></tr>
+  <tr><td>A3</td><td>Columna Rainforest Alliance no encontrada — valor en texto libre</td><td style="color:#D97706;font-weight:700">🟠 Media</td><td>Extraer con regex del texto de "otras certificaciones"</td></tr>
+  <tr><td>A3</td><td>1 organización con estado SUSPENSIÓN TEMPORAL en SUNAT</td><td style="color:#C1121F;font-weight:700">🔴 Alta</td><td>Verificar si es activo para el EUDR</td></tr>
+  <tr><td>A3</td><td>Texto libre en certificaciones y calidad — no estructurado</td><td style="color:#D97706;font-weight:700">🟠 Media</td><td>Procesamiento NLP para extraer: n° certificado, fecha vigencia</td></tr>
+  <tr><td>A3</td><td>8 organizaciones sin registro de volumen de producción</td><td style="color:#6B7280">🟡 Baja</td><td>Completar con datos de campo</td></tr>
+  <tr><td>A3</td><td>Duplicación de nombres de países ("Noruega." vs "Noruega")</td><td style="color:#6B7280">🟡 Baja</td><td>Limpiar strings en paso de ETL</td></tr>
+  <tr><td>A2</td><td>Solo 6 registros — no representativo</td><td style="color:#6B7280">🟡 Baja</td><td>Ampliar directorio o marcar como piloto</td></tr>
+</table>
+
+<!-- ── HALLAZGOS ───────────────────────────────────── -->
+<div class="divider" id="hallazgos"></div>
+<div class="section-title">Hallazgos Clave</div>
+
+<div class="alert alert-green" style="margin-bottom:20px;">
+  <strong>✅ Punto fuerte EUDR:</strong> Las 25 cooperativas de San Martín tienen un avance EUDR promedio de <strong>0.79/1.0</strong>. 11 de las 17 organizaciones que registran dato están en fase avanzada (≥0.75). Esto indica que el universo de San Martín está relativamente bien posicionado para cumplir el reglamento.
+</div>
+
+<div class="two-col">
+  <div>
+    <h3 style="font-size:14px;margin-bottom:12px;color:#1B4332;">🌍 Cobertura geográfica (A1)</h3>
+    <ul>
+      <li>25 departamentos cubiertos con 673 organizaciones PAC</li>
+      <li>Cusco (66), Junín (57) y Puno (37) son los 3 departamentos con más organizaciones</li>
+      <li>Huancavelica, Apurímac y Ayacucho también tienen representación significativa</li>
+      <li>La concentración regional es consistente con las zonas cocaleras históricas</li>
+    </ul>
+    <h3 style="font-size:14px;margin:20px 0 12px;color:#1B4332;">🏷️ Certificaciones (A3)</h3>
+    <ul>
+      <li>96% de las 25 cooperativas tienen certificación orgánica vigente</li>
+      <li>96% tienen Fair Trade</li>
+      <li>Esto es un activo estratégico enorme para acceso al mercado UE bajo EUDR</li>
+      <li>Rainforest Alliance no está estructurado — debe extraerse del texto libre</li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="font-size:14px;margin-bottom:12px;color:#1B4332;">💰 Dimensión comercial (A3)</h3>
+    <ul>
+      <li>13 de 25 cooperativas exportan (52%)</li>
+      <li>FOB 2025 total: $33.9M USD</li>
+      <li>Concentración extrema: Valle Grande sola = $10.7M (31.5% del total)</li>
+      <li>Mercados: EE.UU. (8 destinos), Bélgica y Alemania (5 c/u)</li>
+      <li>Ninguna cooperativa apunta a China como mercado (a pesar de interés reportado)</li>
+    </ul>
+    <h3 style="font-size:14px;margin:20px 0 12px;color:#1B4332;">⚠️ Flags EUDR (A3)</h3>
+    <ul>
+      <li>1 organización en suspensión temporal SUNAT — riesgo operativo</li>
+      <li>8 organizaciones sin volumen de producción declarado — incomplete perfil de riesgo</li>
+      <li>Avance EUDR = 0 en 7 organizaciones (28% del universo)</li>
+      <li>Marco normativo EUDR requiere trazabilidad completa — los gaps son críticos</li>
+    </ul>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="text-align:center;" class="small">
+  EDA EUDR Cooperativas Café Perú · Proyecto eudrperu · Generado automáticamente por Mavis
+</div>
+
+</div><!-- container -->
+</body>
+</html>

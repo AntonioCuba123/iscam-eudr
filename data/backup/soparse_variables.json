@@ -1,0 +1,482 @@
+{
+  "ID": {
+    "label": null,
+    "non_null": 1965,
+    "unique": 1965
+  },
+  "CCDD": {
+    "label": "CODIGO DEPARTAMENTO",
+    "non_null": 1965,
+    "unique": 25
+  },
+  "NOMBREDD": {
+    "label": "1.NOMBRE DEL DEPARTAMENTO",
+    "non_null": 1965,
+    "unique": 25
+  },
+  "CCPP": {
+    "label": "CODIGO PROVINCIA",
+    "non_null": 1965,
+    "unique": 15
+  },
+  "NOMBREPV": {
+    "label": "2.NOMBRE DE LA PROVINCIA",
+    "non_null": 1965,
+    "unique": 138
+  },
+  "CCDI": {
+    "label": "CODIGO DISTRITO",
+    "non_null": 1965,
+    "unique": 42
+  },
+  "NOMBREDI": {
+    "label": "3.NOMBRE DEL DISTRITO",
+    "non_null": 1965,
+    "unique": 444
+  },
+  "GPSLAT": {
+    "label": "11. COORDENADAS GPS - LATITUD",
+    "non_null": 1965,
+    "unique": 1961
+  },
+  "GPSLON": {
+    "label": "11.COORDENADAS GPS - LONGITUD",
+    "non_null": 1965,
+    "unique": 1960
+  },
+  "NOM_CCPP": {
+    "label": "4. NOMBRE DEL CENTRO POBLADO",
+    "non_null": 1965,
+    "unique": 882
+  },
+  "AREA": {
+    "label": "6. AREA URBANA",
+    "non_null": 1965,
+    "unique": 2
+  },
+  "TIPVIA": {
+    "label": "12. DIRECCIÓN - TIPO DE VIA",
+    "non_null": 1965,
+    "unique": 6
+  },
+  "TIPVIA_ESPEC": {
+    "label": "OTRO - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 66
+  },
+  "NOMVIA": {
+    "label": "12.NOMBRE DE LA VIA",
+    "non_null": 1965,
+    "unique": 1059
+  },
+  "NROPTA": {
+    "label": "12.NUMERO PUERTA",
+    "non_null": 1965,
+    "unique": 766
+  },
+  "BLOCK": {
+    "label": "12.BLOCK",
+    "non_null": 1965,
+    "unique": 7
+  },
+  "INTERIOR": {
+    "label": "12.INTERIOR",
+    "non_null": 1965,
+    "unique": 95
+  },
+  "PISO": {
+    "label": "12.PISO",
+    "non_null": 1965,
+    "unique": 13
+  },
+  "MZA": {
+    "label": "12.MANZANA",
+    "non_null": 1965,
+    "unique": 92
+  },
+  "LOTE": {
+    "label": "12.LOTE",
+    "non_null": 1965,
+    "unique": 71
+  },
+  "KM": {
+    "label": "12.KILOMETRO",
+    "non_null": 99,
+    "unique": 63
+  },
+  "REF_DIREC": {
+    "label": "13.REFERENCIA DE LA DIRECCIÓN",
+    "non_null": 1965,
+    "unique": 1891
+  },
+  "NUM_RUC": {
+    "label": "1. NÚMERO DE RUC",
+    "non_null": 1965,
+    "unique": 1965
+  },
+  "RAZON_SOCIAL": {
+    "label": "2. RAZÓN SOCIAL",
+    "non_null": 1965,
+    "unique": 1961
+  },
+  "NOM_COMER_COOP": {
+    "label": "3. NOMBRE COMERCIAL DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 1215
+  },
+  "NUM_PARTIDA_REG1": {
+    "label": "4. NUMERO DE PARTIDA REGISTRAL",
+    "non_null": 1965,
+    "unique": 1610
+  },
+  "OFICINA_REGISTRAL": {
+    "label": "5. OFICINA REGISTRAL",
+    "non_null": 1965,
+    "unique": 103
+  },
+  "C1_P6": {
+    "label": "6. AÑO DE CONSTITUCIÓN DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 68
+  },
+  "C1_P7": {
+    "label": "7. AÑO DE INICIO DE OPERACIÓN",
+    "non_null": 1965,
+    "unique": 66
+  },
+  "PAG_WEB": {
+    "label": "8. PÁGINA WEB",
+    "non_null": 1965,
+    "unique": 261
+  },
+  "CORREO": {
+    "label": "9. CORREO ELECTRÓNICO",
+    "non_null": 1965,
+    "unique": 819
+  },
+  "TELEFONO_FIJO": {
+    "label": "10. TELÉFONO FIJO",
+    "non_null": 1965,
+    "unique": 713
+  },
+  "TELEFONO_MOVIL": {
+    "label": "11.TELÉFONO MÓVIL",
+    "non_null": 1965,
+    "unique": 743
+  },
+  "C1_P12": {
+    "label": "12. TIPO DE COOPERATIVA",
+    "non_null": 1965,
+    "unique": 20
+  },
+  "C1_P12_O": {
+    "label": "OTRO - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 7
+  },
+  "C1_P12_SECTOR": {
+    "label": null,
+    "non_null": 1965,
+    "unique": 15
+  },
+  "C1_P13_1": {
+    "label": "13.  CÓDIGO DE LA ACTIVIDAD ECONOMICA PRINCIPAL  CIIU",
+    "non_null": 1965,
+    "unique": 125
+  },
+  "C1_P13": {
+    "label": "13.  ACTIVIDAD ECONÓMICA PRINCIPAL DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 585
+  },
+  "CIIU_REV4": {
+    "label": null,
+    "non_null": 1965,
+    "unique": 125
+  },
+  "C1_P14_A": {
+    "label": "14. SELECCIÓN A",
+    "non_null": 1965,
+    "unique": 2
+  },
+  "C1_P14_B": {
+    "label": "14. SELECCIÓN B",
+    "non_null": 1965,
+    "unique": 2
+  },
+  "C1_P14_C": {
+    "label": "14. SELECCIÓN C",
+    "non_null": 1965,
+    "unique": 1
+  },
+  "C1_P14_D": {
+    "label": "14. NO TIENE",
+    "non_null": 1965,
+    "unique": 2
+  },
+  "C1_P14_1": {
+    "label": "14. A) ACTIVIDADES ECONÓMICAS SECUNDARIAS DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 75
+  },
+  "C1_P14_2": {
+    "label": "14. B) ACTIVIDADES ECONÓMICAS SECUNDARIAS DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 30
+  },
+  "C1_P14_3": {
+    "label": "14. C) ACTIVIDADES ECONÓMICAS SECUNDARIAS DE LA COOPERATIVA",
+    "non_null": 1965,
+    "unique": 1
+  },
+  "C1_P14_1A": {
+    "label": "14.A) CÓDIGO DE DESCRIPCIÓN DE LA SECUNDARIA ACTIVIDAD A",
+    "non_null": 1965,
+    "unique": 204
+  },
+  "C1_P14_1B": {
+    "label": "14 B) CODIGO DE LA DESCRIPCIÓN DE LA SECUNDARIA ACTIVIDAD B",
+    "non_null": 1965,
+    "unique": 45
+  },
+  "C1_P14_1C": {
+    "label": "14. C) CODIGO DE LA DESCRIPCIÓN DE LA SECUNDARIA ACTIVIDAD C",
+    "non_null": 1965,
+    "unique": 1
+  },
+  "C1_P15": {
+    "label": "15. ESTADO DE LA COOPERATIVA: (SELECCIONE UNA ALTERNATIVA)",
+    "non_null": 1965,
+    "unique": 3
+  },
+  "C1_P15_O": {
+    "label": "15. OTRO - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 5
+  },
+  "C1_P16": {
+    "label": "16. MODALIDAD DE LA COOPERATIVA: (SELECCIONE  UNA ALTERNATIVA)",
+    "non_null": 1249,
+    "unique": 2
+  },
+  "C1_P17": {
+    "label": "17. CLASE DE COOPERATIVA: (SELECCIONE UNA ALTERNATIVA)",
+    "non_null": 1249,
+    "unique": 2
+  },
+  "C1_P18": {
+    "label": "18. ¿CUENTA CON LICENCIA MUNICIPAL DE FUNCIONAMIENTO? (SELECCIONE UNA ALTERNATIVA)",
+    "non_null": 1249,
+    "unique": 2
+  },
+  "C1_P19": {
+    "label": "19. ¿CUENTA ADICIONALMENTE CON ALGUNA AUTORIZACIÓN SECTORIAL?",
+    "non_null": 1249,
+    "unique": 2
+  },
+  "C1_P19_O": {
+    "label": "19. ¿CUENTA ADICIONALMENTE CON ALGUNA AUTORIZACIÓN SECTORIAL?  - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 16
+  },
+  "C1_P20_1": {
+    "label": "20. APROXIMADAMENTE, DEL LOCAL PRINCIPAL DE LA COOPERATIVA INDIQUE:  A. ¿ÁREA DE TERRENO?",
+    "non_null": 1249,
+    "unique": 372
+  },
+  "C1_P20_2": {
+    "label": "20. APROXIMADAMENTE, DEL LOCAL PRINCIPAL DE LA COOPERATIVA INDIQUE:  B. ¿ÁREA CONSTRUIDA?",
+    "non_null": 1249,
+    "unique": 308
+  },
+  "C1_P20_3": {
+    "label": "20. APROXIMADAMENTE, , DEL LOCAL PRINCIPAL DE LA COOPERATIVA INDIQUE C. ¿NIVELES CONSTRUIDOS?",
+    "non_null": 1249,
+    "unique": 11
+  },
+  "C1_P21": {
+    "label": "21. ¿CUÁL ES LA CONDICIÓN DE LA PROPIEDAD DE LA COOPERATIVA?:",
+    "non_null": 1249,
+    "unique": 5
+  },
+  "C1_P21_O": {
+    "label": "21. OTRO - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 5
+  },
+  "C1_P22_1": {
+    "label": "22. DURANTE EL 2016, ¿QUÉ TIPOS DE LOCALES TUVO LA COOPERATIVA?, INDIQUE CANTIDAD - LOCAL COMERCIAL",
+    "non_null": 1234,
+    "unique": 22
+  },
+  "C1_P22_2": {
+    "label": "22. DURANTE EL 2016,  ¿QUÉ TIPOS DE LOCALES TUVO LA COOPERATIVA?, INDIQUE CANTIDAD - LOCAL ADMINISTRATIVO",
+    "non_null": 1234,
+    "unique": 15
+  },
+  "C1_P22_3": {
+    "label": "22. DURANTE EL 2016,  ¿QUÉ TIPOS DE LOCALES TUVO LA COOPERATIVA?, INDIQUE CANTIDAD- LOCAL PRODUCTIVO (PLANTA, TALLER)",
+    "non_null": 1234,
+    "unique": 6
+  },
+  "C1_P22_4": {
+    "label": "22. DURANTE EL 2016, ¿QUÉ TIPOS DE LOCALES TUVO LA COOPERATIVA?, INDIQUE CANTIDAD - DEPÓSITO (ALMACÉN)",
+    "non_null": 1234,
+    "unique": 12
+  },
+  "C1_P22_5": {
+    "label": "22. DURANTE EL 2016,  ¿QUÉ TIPOS DE LOCALES TUVO LA COOPERATIVA?, INDIQUE CANTIDAD - OTRO",
+    "non_null": 587,
+    "unique": 5
+  },
+  "C1_P22_O": {
+    "label": "22. OTRO",
+    "non_null": 1233,
+    "unique": 2
+  },
+  "C1_P22_5O": {
+    "label": "22. OTRO - ESPECIFIQUE",
+    "non_null": 1965,
+    "unique": 18
+  },
+  "C1_P22_T": {
+    "label": "22.CANTIDAD TOTAL",
+    "non_null": 1234,
+    "unique": 25
+  },
+  "C1_P23": {
+    "label": "23. EN EL AÑO 2016, ¿SUS INGRESOS SE ENCUENTRAN EN EL RANGO::",
+    "non_null": 1249,
+    "unique": 3
+  },
+  "C1_P24": {
+    "label": "24. APELLIDOS Y NOMBRES DEL PRESIDENTE DEL CONSEJO DE ADMINISTRACIÓN DE LA COOPERATIVA.",
+    "non_null": 1965,
+    "unique": 1242
+  },
+  "C1_P25": {
+    "label": "25. SEXO",
+    "non_null": 1247,
+    "unique": 2
+  },
+  "C1_P26": {
+    "label": "26. EDAD",
+    "non_null": 1247,
+    "unique": 68
+  },
+  "C1_P27": {
+    "label": "27. ÚLTIMO NIVEL DE ESTUDIOS ALCANZADO",
+    "non_null": 1247,
+    "unique": 10
+  },
+  "C1_P28": {
+    "label": "28. PROFESIÓN",
+    "non_null": 1965,
+    "unique": 234
+  },
+  "C1_P29": {
+    "label": "29. DNI",
+    "non_null": 1965,
+    "unique": 1239
+  },
+  "C1_P30": {
+    "label": "30. CORREO ELECTRÓNICO",
+    "non_null": 1965,
+    "unique": 563
+  },
+  "C1_P31": {
+    "label": "31. TELÉFONO FIJO",
+    "non_null": 1965,
+    "unique": 411
+  },
+  "C1_P32": {
+    "label": "32. TELÉFONO MÓVIL",
+    "non_null": 1965,
+    "unique": 1042
+  },
+  "C1_P33": {
+    "label": "33. APELLIDOS Y NOMBRES DEL GERENTE GENERAL DE LA COOPERATIVA.",
+    "non_null": 1965,
+    "unique": 1111
+  },
+  "C1_P34": {
+    "label": "34. SEXO",
+    "non_null": 1126,
+    "unique": 2
+  },
+  "C1_P35": {
+    "label": "35. EDAD",
+    "non_null": 1126,
+    "unique": 69
+  },
+  "C1_P36": {
+    "label": "36. ÚLTIMO NIVEL DE ESTUDIOS ALCANZADO",
+    "non_null": 1126,
+    "unique": 9
+  },
+  "C1_P37": {
+    "label": "37. PROFESIÓN",
+    "non_null": 1965,
+    "unique": 167
+  },
+  "C1_P38": {
+    "label": "38. DNI",
+    "non_null": 1965,
+    "unique": 1104
+  },
+  "C1_P39": {
+    "label": "39. CORREO ELECTRÓNICO",
+    "non_null": 1965,
+    "unique": 729
+  },
+  "C1_P40": {
+    "label": "40. TELÉFONO FIJO",
+    "non_null": 1965,
+    "unique": 449
+  },
+  "C1_P41": {
+    "label": "41. TELÉFONO MÓVIL",
+    "non_null": 1965,
+    "unique": 977
+  },
+  "C1_P42": {
+    "label": "42. APELLIDOS Y NOMBRES DEL INFORMANTE",
+    "non_null": 1965,
+    "unique": 1238
+  },
+  "C1_P43": {
+    "label": "43. CARGO",
+    "non_null": 1247,
+    "unique": 4
+  },
+  "C1_P43_O": {
+    "label": "43. CARGO - OTRO (ESPECIFIQUE)",
+    "non_null": 1965,
+    "unique": 151
+  },
+  "C1_P44": {
+    "label": "44. DNI",
+    "non_null": 1965,
+    "unique": 1233
+  },
+  "C1_P45": {
+    "label": "45. CORREO ELECTRÓNICO",
+    "non_null": 1965,
+    "unique": 925
+  },
+  "C1_P46": {
+    "label": "46. TELÉFONO FIJO",
+    "non_null": 1965,
+    "unique": 535
+  },
+  "C1_P47": {
+    "label": "47. TELÉFONO MÓVIL",
+    "non_null": 1965,
+    "unique": 1162
+  },
+  "Resultado_Visita": {
+    "label": "RESULTADO DE LA VISITA",
+    "non_null": 1965,
+    "unique": 7
+  }
+}

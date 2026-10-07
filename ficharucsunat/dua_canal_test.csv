@@ -1,0 +1,7 @@
+﻿ruc,anio,mes,aduana_codigo,agente_codigo,pais_codigo,dua_numero,fecha_embarque,canal,url_detalle,fecha_consulta
+20118578415,2025,1,118,5901,DE,136579,01/01/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2024&numecorre=136579,2026-09-24T02:43:52.496809+00:00
+20118578415,2025,1,118,5901,DE,136594,01/01/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2024&numecorre=136594,2026-09-24T02:43:52.496809+00:00
+20118578415,2025,1,118,5901,US,006573,31/01/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2025&numecorre=006573,2026-09-24T02:43:53.622116+00:00
+20118578415,2025,8,118,5901,DE,086978,27/08/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2025&numecorre=086978,2026-09-24T02:43:54.326867+00:00
+20118578415,2025,9,118,5901,DE,099967,24/09/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2025&numecorre=099967,2026-09-24T02:43:55.197433+00:00
+20118578415,2025,9,118,5901,IE,099969,24/09/2025,VERDE,http://www.aduanet.gob.pe/servlet/SgCDUI2?option=una&n=40&codaduana=118&anoprese=2025&numecorre=099969,2026-09-24T02:43:55.943347+00:00

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluación Nuevos Datos — EUDRPERU</title>
+<style>
+  :root { --g0:#1B4332; --g1:#2D6A4F; --g2:#40916C; --g3:#74C69D; --g4:#B7E4C7; --ao:#D4A373; --ro:#C1121F; --bg:#F0F2F5; --w:#FFF; }
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--bg); color:#1A1A2E; }
+  .hero { background: linear-gradient(135deg,#0D2818 0%,#1B4332 50%,#2D6A4F 100%); color:white; padding:48px 56px 40px; }
+  .hero h1 { font-size:26px; font-weight:700; margin-bottom:8px; }
+  .hero p { opacity:0.85; font-size:15px; line-height:1.65; }
+  .badges { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
+  .badge { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:4px 14px; font-size:12px; }
+  nav { background:var(--g0); padding:0 56px; display:flex; flex-wrap:wrap; }
+  nav a { color:rgba(255,255,255,.65); text-decoration:none; padding:12px 16px; font-size:13px; border-bottom:2.5px solid transparent; transition:.2s; }
+  nav a:hover, nav a.active { color:white; border-bottom-color:var(--g3); }
+  .wrap { max-width:1200px; margin:0 auto; padding:32px 32px 60px; }
+  .sec { font-size:18px; font-weight:700; color:var(--g0); margin-bottom:18px; padding-bottom:10px; border-bottom:3px solid var(--g3); display:flex; align-items:center; gap:10px; }
+  .sec::before { content:''; display:inline-block; width:5px; height:22px; background:var(--g1); border-radius:3px; flex-shrink:0; }
+  .sec-sub { font-size:13px; color:#6B7280; margin-bottom:20px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(185px,1fr)); gap:14px; margin-bottom:36px; }
+  .kpi { background:var(--w); border-radius:12px; padding:20px 18px; box-shadow:0 1px 4px rgba(0,0,0,.07); border-top:4px solid var(--g1); }
+  .kpi .lbl { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:#9CA3AF; margin-bottom:5px; }
+  .kpi .val { font-size:26px; font-weight:700; color:var(--g0); line-height:1.05; }
+  .kpi .sub { font-size:11px; color:#9CA3AF; margin-top:4px; }
+  .kpi.ao { border-top-color:var(--ao); }
+  .kpi.ao .val { color:#8B4513; }
+  .kpi.ro { border-top-color:var(--ro); }
+  .kpi.ro .val { color:var(--ro); }
+  .chart-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(460px,1fr)); gap:20px; margin-bottom:36px; }
+  .chart { background:var(--w); border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.07); }
+  .chart.wide { grid-column:span 2; }
+  .chart img { width:100%; height:auto; display:block; }
+  .chart-cap { padding:11px 16px; font-size:11.5px; color:#6B7280; border-top:1px solid #F0F0F0; background:#FAFAFA; }
+  .chart-title { font-size:12.5px; font-weight:600; color:#374151; padding:14px 16px 4px; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px; }
+  table { width:100%; border-collapse:collapse; background:var(--w); border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.07); margin-bottom:28px; }
+  th { background:var(--g0); color:white; padding:11px 16px; font-size:12px; }
+  td { padding:10px 16px; font-size:13px; border-bottom:1px solid #F0F0F0; }
+  tr:last-child td { border-bottom:none; }
+  tr:nth-child(even) td { background:#F9FAFB; }
+  .alert { border-radius:10px; padding:16px 20px; margin-bottom:22px; font-size:13px; line-height:1.65; }
+  .alert-r { background:#FEF2F2; border-left:4px solid var(--ro); color:#7F1D1D; }
+  .alert-a { background:#FFFBEB; border-left:4px solid #D97706; color:#78350F; }
+  .alert-g { background:#F0FDF4; border-left:4px solid var(--g1); color:#14532D; }
+  .alert-b { background:#EFF6FF; border-left:4px solid #457B9D; color:#1E3A5F; }
+  .divider { height:1px; background:#E5E7EB; margin:36px 0; }
+  .score-card { background:white; border-radius:12px; padding:24px; box-shadow:0 1px 4px rgba(0,0,0,.07); margin-bottom:20px; }
+  .verdict { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-bottom:32px; }
+  .verdict-item { background:white; border-radius:12px; padding:20px; border-top:4px solid var(--g1); box-shadow:0 1px 4px rgba(0,0,0,.07); text-align:center; }
+  .verdict-item.ao { border-top-color:var(--ao); }
+  .verdict-item.ro { border-top-color:var(--ro); }
+  .verdict-item .score { font-size:36px; font-weight:700; color:var(--g0); }
+  .verdict-item.ao .score { color:#8B4513; }
+  .verdict-item.ro .score { color:var(--ro); }
+  .verdict-item .label { font-size:12px; color:#6B7280; margin-top:6px; }
+  .small { font-size:11.5px; color:#9CA3AF; text-align:center; padding:20px; }
+  @media(max-width:768px){.hero,.wrap,nav{padding-left:24px;padding-right:24px}nav a{padding:10px 12px;font-size:12px}.chart-grid,.chart.wide{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.wrap{padding:24px 16px 40px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>📊 Evaluación de Nuevos Datos — EUDRPERU</h1>
+  <p>7 archivos evaluados. Se valora cada fuente según su contribución al objetivo EUDR:<br>
+  diagnosticar la preparación de cooperativas de café y cacao frente al Reglamento de Deforestación de la UE.</p>
+  <div class="badges">
+    <span class="badge">7 archivos evaluados</span>
+    <span class="badge">☕☕ Café + Cacao</span>
+    <span class="badge">🌍 SUNAT 2010-2025</span>
+    <span class="badge">🏛️ PRODUCER 2024</span>
+    <span class="badge">📋 RNCA MIDAGRI</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#resumen">Resumen</a>
+  <a href="#sunat">SUNAT</a>
+  <a href="#producer">PRODUCER</a>
+  <a href="#veredicto">Veredicto</a>
+  <a href="#flags">Flags</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ── VEREDICTO ──────────────────────────────────────────────────────── -->
+<div class="sec" id="resumen">Veredicto Rápido</div>
+
+<div class="verdict">
+  <div class="verdict-item">
+    <div class="score" style="color:#1B4332">⭐⭐⭐⭐⭐</div>
+    <div class="label">SUNAT Exportaciones 2010-2025<br>(18,765 registros)</div>
+  </div>
+  <div class="verdict-item ao">
+    <div class="score" style="color:#8B4513">⭐⭐⭐⭐</div>
+    <div class="label">DATA_COOPERATIVAS_2024<br>(2,266 cooperativas)</div>
+  </div>
+  <div class="verdict-item ao">
+    <div class="score" style="color:#8B4513">⭐⭐⭐</div>
+    <div class="label">PRODUCE 3 — RNCA MIDAGRI<br>(341 registros, requiere limpieza)</div>
+  </div>
+  <div class="verdict-item">
+    <div class="score" style="color:#1B4332">⭐⭐⭐</div>
+    <div class="label">PRODUCE 4 — Atendidas 2023<br>(191 registros)</div>
+  </div>
+  <div class="verdict-item">
+    <div class="score" style="color:#1B4332">⭐</div>
+    <div class="label">Metadatos_Cooperativas.csv<br>(documentación, no datos)</div>
+  </div>
+  <div class="verdict-item ro">
+    <div class="score" style="color:#C1121F">⚠️</div>
+    <div class="label">Cooperativas_III.csv<br>(duplicado — es metadata, no datos)</div>
+  </div>
+</div>
+
+<div class="alert alert-g">
+  <strong>Conclusión central:</strong> El archivo <strong>SUNAT exportaciones 2010-2025</strong> es la fuente de mayor valor estratégico. Confirma que 24 de las 106 organizaciones café/cacao del universo PAC tienen historial exportador real, con un FOB acumulado de <strong>$1,100M USD</strong>. Los datos del A3 (perfil San Martín con $33.9M FOB) representan solo 3% del universo exportador real. La brecha de cobertura SUNAT (82 orgs sin registro) es un flag de alerta clave para EUDR.
+</div>
+
+<!-- ── KPI ──────────────────────────────────────────────────────────── -->
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="lbl">RUCs café/cacao en SUNAT</div>
+    <div class="val">24 / 106</div>
+    <div class="sub">22.6% con historial exportador</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">FOB acumulado (café/cacao)</div>
+    <div class="val">$1,106M</div>
+    <div class="sub">USD 2010–2025</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">FOB 2025 (estimado)</div>
+    <div class="val">$46.4M</div>
+    <div class="sub">Último año disponible</div>
+  </div>
+  <div class="kpi ao">
+    <div class="lbl">Top exportador (SUNAT)</div>
+    <div class="val">$904M</div>
+    <div class="sub">Maranura (15 años)</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">Cooperativas PRODUCER</div>
+    <div class="val">2,266</div>
+    <div class="sub">805 sector agro</div>
+  </div>
+  <div class="kpi ao">
+    <div class="lbl">Exportadoras PRODUCER</div>
+    <div class="val">117</div>
+    <div class="sub">5.2% del total PRODUCER</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">Deptos coincidentes</div>
+    <div class="val">13 / 13</div>
+    <div class="sub">100% PAC ↔ PRODUCER</div>
+  </div>
+  <div class="kpi ro">
+    <div class="lbl">RUCs sin SUNAT</div>
+    <div class="val">82 / 106</div>
+    <div class="sub">Necesitan verificación</div>
+  </div>
+</div>
+
+<!-- ── SUNAT ────────────────────────────────────────────────────────── -->
+<div class="divider" id="sunat"></div>
+<div class="sec">📦 Archivo 3: SUNAT Exportaciones 2010-2025</div>
+<div class="sec-sub">18,765 registros de exportación a nivel de envío (DUA). Variables: exportador, mes, agente aduanero, aduana, país destino, FOB USD, RUC, año.</div>
+
+<div class="alert alert-b">
+  <strong>⚡ Hallazgo estrella:</strong> Este archivo revela que el universo exportador de café/cacao es mucho más grande de lo que muestra el A3 (perfil San Martín). El FOB acumulado de $1,100M USD incluye operaciones de cooperativas grandes como Maranura ($904M), Aromático Colpa de Lorenzo ($37M), y Sonodoro VRAEM ($33M) que no aparecen en el perfil San Martín.
+</div>
+
+<div class="chart-grid">
+  <div class="chart wide">
+    <div class="chart-title">FOB Total Café/Cacao por Año — SUNAT (2010–2025, organizaciones PAC)</div>
+    <img src="g01_sunat_fob_anual.png" alt="">
+    <div class="chart-cap">
+      ⚠️ El dato de 2016 ($911M) es un outlier que requiere auditoría — valores típicos 2010-2015 y 2017-2025 están en el rango $4M–$46M/año.
+      La tendencia 2023-2025 muestra aceleración: $11M → $27M → $46M.
+    </div>
+  </div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart wide">
+    <div class="chart-title">Top 15 Exportadores Café/Cacao — SUNAT (2010-2025)</div>
+    <img src="g02_top_exportadores.png" alt="">
+    <div class="chart-cap">Maranura domina con $904M en 15 años — 82% del FOB total del universo. Todas las orgs del top 20 corresponden a RUCs del universo PAC café/cacao.</div>
+  </div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart">
+    <div class="chart-title">Mercados de destino — Envíos café/cacao</div>
+    <img src="g03_paises_destino.png" alt="">
+    <div class="chart-cap">Bélgica e Italia lideran los mercados — coherente con el perfil de cafés especiales peruanos para el mercado UE. EE.UU. es el tercer destino.</div>
+  </div>
+  <div class="chart">
+    <div class="chart-title">Cobertura SUNAT — RUCs café vs cacao</div>
+    <img src="g06_cobertura_sunat.png" alt="">
+    <div class="chart-cap">
+      <strong>Café:</strong> solo 4/12 RUCs café (33%) tienen registro SUNAT — dato bajo, coherente con el hecho de que el A3 (San Martín) reporta que solo 52% de las cooperativas exportan.<br>
+      <strong>Cacao:</strong> 20/94 (21%) — cacao es más exportador como materia prima a granel.
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+<div class="sec">🔑 Insights EUDR desde SUNAT</div>
+
+<table>
+  <tr><th>Cooperativa</th><th>RUC</th><th>FOB Acumulado (USD)</th><th>Principales Mercados</th><th>En Perfil San Martín</th></tr>
+  <tr><td>COOP. AGRARIA CAFETALERA MARANURA</td><td>20132509876</td><td>$904,779,622</td><td>Bélgica, Italia, EE.UU.</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA DE CACAO AROMÁTICO COLPA DE LORENZO</td><td>20600390911</td><td>$37,140,075</td><td>Bélgica, Italia</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA SONOMORO DEL VRAEM</td><td>20486973219</td><td>$32,982,575</td><td>Bélgica, EE.UU., Alemania</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA CAFETALERA EL QUINACHO</td><td>20143692010</td><td>$30,505,652</td><td>Bélgica, Italia</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA CAFETALERA CASIL</td><td>20479595276</td><td>$28,645,778</td><td>Bélgica, Alemania</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA CAFETALERA JOSE OLAYA</td><td>20132509795</td><td>$16,944,810</td><td>Italia, EE.UU.</td><td>⚠️ No aparece en A3</td></tr>
+  <tr><td>COOP. AGRARIA CORDILLERA AZUL (A3)</td><td>20603820691</td><td>$2,422,903</td><td>Bélgica, EE.UU., Alemania</td><td>✅ Sí (A3)</td></tr>
+  <tr><td>COOP. AGRARIA VALLE DEL BIAVO (A3)</td><td>20542264544</td><td>$1,686,821</td><td>Bélgica, EE.UU., Alemania</td><td>✅ Sí (A3)</td></tr>
+</table>
+
+<div class="alert alert-r">
+  <strong>⚠️ Gap crítico:</strong> Las 6 cooperativas con mayor FOB en SUNAT no aparecen en el perfil San Martín (A3). Esto significa que el universo EUDR real es <em>significativamente más grande</em> que lo que muestra el A3. Se recomienda integrar SUNAT como fuente de referencia para validar el universo completo de exportadores.
+</div>
+
+<!-- ── PRODUCER ─────────────────────────────────────────────────────────── -->
+<div class="divider" id="producer"></div>
+<div class="sec">🏛️ DATA_COOPERATIVAS_2024 — PRODUCER</div>
+<div class="sec-sub">2,266 cooperativas con datos económicos de Sunat 2024. 17 columnas: id, tipo, CIIU, sector, ubigeo, ventas, trabajadores, exportación, FOB, experiencia, año.</div>
+
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="lbl">Total cooperativas</div>
+    <div class="val">2,266</div>
+    <div class="sub">Base Sunat 2024</div>
+  </div>
+  <div class="kpi ao">
+    <div class="lbl">Sector agropecuario</div>
+    <div class="val">805</div>
+    <div class="sub">35.5% del total</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">Exportadoras</div>
+    <div class="val">117</div>
+    <div class="sub">5.2% del universo PRODUCER</div>
+  </div>
+  <div class="kpi ao">
+    <div class="lbl">Cobertura deptos</div>
+    <div class="val">100%</div>
+    <div class="sub">Coincide con PAC café/cacao</div>
+  </div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart">
+    <div class="chart-title">Cooperativas PRODUCER — Distribución por sector</div>
+    <img src="g04_sectores_producer.png" alt="">
+    <div class="chart-cap">Servicios domina (44%), seguido de Agro (36%). El sector agropecuario es la segunda categoría más grande — pool de donde salen las cooperativas café/cacao.</div>
+  </div>
+  <div class="chart">
+    <div class="chart-title">Cooperativas exportadoras por departamento</div>
+    <img src="g05_exportadoras_depto.png" alt="">
+    <div class="chart-cap">Junín lidera con 33 exportadoras, seguido de Cajamarca (25) y Piura (16). San Martín tiene 13 exportadoras en la base PRODUCER.</div>
+  </div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart">
+    <div class="chart-title">FOB promedio miles USD por sector — PRODUCER</div>
+    <img src="g07_fob_sector.png" alt="">
+    <div class="chart-cap">FOB promedio más alto en manufactura y servicios. Sector agro tiene FOB modesto, consistente con la estructura de cooperativas de pequeños productores.</div>
+  </div>
+</div>
+
+<!-- ── OTROS ARCHIVOS ──────────────────────────────────────────────── -->
+<div class="divider"></div>
+<div class="sec">📁 Archivos Restantes</div>
+
+<div class="two-col">
+  <div>
+    <div class="alert alert-b">
+      <strong>PRODUCE 3 — RNCA MIDAGRI (341 registros)</strong><br>
+      Registro Nacional de Cooperativas Agrarias del MIDAGRI (D.S. 023-2021-MIDAGRI). 341 cooperativas registradas. Encabezados requieren limpieza de celdas combinadas. Útil como lista maestra de referencia para verificar cuáles de las 185 orgs PAC están formalmente inscritas en el RNCA.
+    </div>
+    <div class="alert alert-a">
+      <strong>PRODUCE 4 — Atendidas 2023 (191 registros)</strong><br>
+      Cooperativas atendidas por el programa DCI-DGDE del Produce en 2023. Encabezados limpios. Variables: nombre, cargo, región, contacto, género, tema, modalidad. Útil para cruzar con el perfil San Martín y ver si las 25 cooperativas ya fueron atendidas.
+    </div>
+  </div>
+  <div>
+    <div class="alert alert-a">
+      <strong>PRODUCE 2 — Matriz con Correos (2,049 registros)</strong><br>
+      Listado de cooperativas y centrales por región. Fuente: Sunat 2021. 21 columnas con información de contacto (nombres, cargos, emails, celulares). <strong>Fuente valiosa para inteligencia de contacto</strong> — permite enriquecer el directorio PAC con datos de contacto verificables.
+    </div>
+    <div class="alert alert-g">
+      <strong>Metadatos_Cooperativas.csv</strong><br>
+      Solo documentación del dataset PRODUCER. Describe las 17 columnas y la metodología. No tiene datos operativos. Útil como referencia técnica.
+    </div>
+  </div>
+</div>
+
+<!-- ── VEREDICTO ──────────────────────────────────────────────────────── -->
+<div class="divider" id="veredicto"></div>
+<div class="sec">✅ Veredicto: ¿Suman a la necesidad EUDR?</div>
+
+<table>
+  <tr><th>Archivo</th><th>Utilidad EUDR</th><th>Nueva info que aporta</th><th>Integrable</th><th>Veredicto</th></tr>
+  <tr><td>SUNAT Exportaciones 2010-2025</td><td>⭐⭐⭐⭐⭐</td><td>FOB real, países destino, tendencias, top exportadores</td><td>Sí — por RUC</td><td style="color:#1B4332;font-weight:700">✅ Integrar</td></tr>
+  <tr><td>DATA_COOPERATIVAS_2024</td><td>⭐⭐⭐⭐</td><td>Universo ampliado, deptos exportadores, experiencia</td><td>Sí — por RUC/ubigeo</td><td style="color:#1B4332;font-weight:700">✅ Integrar</td></tr>
+  <tr><td>PRODUCE 2 — Matriz Correos</td><td>⭐⭐⭐⭐</td><td>Contactos, emails, celulares — enrich del directorio</td><td>Parcial — requiere nombre/ubigeo</td><td style="color:#1B4332;font-weight:700">✅ Integrar</td></tr>
+  <tr><td>PRODUCE 3 — RNCA MIDAGRI</td><td>⭐⭐⭐</td><td>Inscripción legal formal vs PAC</td><td>Sí — por RUC</td><td style="color:#8B4513;font-weight:700">🟡 Limpiar + integrar</td></tr>
+  <tr><td>PRODUCE 4 — Atendidas 2023</td><td>⭐⭐⭐</td><td>¿Cooperativas San Martín ya atendidas?</td><td>Sí — por nombre/región</td><td style="color:#8B4513;font-weight:700">🟡 Cruzar con A3</td></tr>
+  <tr><td>Cooperativas_III.csv</td><td>—</td><td>Ninguna (es metadata/documentation)</td><td>No</td><td style="color:#6B7280">⛔ Descartar</td></tr>
+  <tr><td>Metadatos_Cooperativas.csv</td><td>—</td><td>Ninguna (solo documentación)</td><td>No</td><td style="color:#6B7280">⛔ Descartar</td></tr>
+</table>
+
+<!-- ── FLAGS ──────────────────────────────────────────────────────────── -->
+<div class="divider" id="flags"></div>
+<div class="sec">🚩 Flags y Próximos Pasos</div>
+
+<div class="two-col">
+  <div>
+    <div class="alert alert-r" style="margin-bottom:14px;">
+      <strong>🔴 Gap de universo:</strong> Las 6 cooperativas con mayor FOB en SUNAT ($904M + $37M + $33M + $30M + $29M + $17M) no están en el perfil San Martín. El A3 cubre 25 orgs pero SUNAT revela un universo exportador mucho mayor que debe incluirse en el diagnóstico EUDR.
+    </div>
+    <div class="alert alert-r" style="margin-bottom:14px;">
+      <strong>🔴 82 RUCs sin registro SUNAT:</strong> De los 106 RUCs válidos café/cacao, 82 no aparecen en SUNAT. Esto puede significar: (a) no exportan, (b) exportan a través de terceros, o (c) RUC incorrecto. Requiere verificación.
+    </div>
+    <div class="alert alert-a" style="margin-bottom:14px;">
+      <strong>🟠 Outlier 2016 en SUNAT:</strong> El año 2016 muestra $911M USD FOB vs un promedio de $10M/año — es un error o un evento único (posible operación de commodity). Los años 2024-2025 ($27M y $46M) son más representativos de la tendencia actual.
+    </div>
+  </div>
+  <div>
+    <div class="alert alert-b" style="margin-bottom:14px;">
+      <strong>🟡 Oportunidad — Enriquecer directorio:</strong> PRODUCER 2 (Matriz de correos) tiene datos de contacto para ~2,000 cooperativas. Cruzar por nombre/departamento con el directorio PAC para tener emails y celulares verificables.
+    </div>
+    <div class="alert alert-g" style="margin-bottom:14px;">
+      <strong>🟢 Confirmación:</strong> Los deptos 100% coincidentes entre PAC y PRODUCER (13/13) confirman que la muestra PAC es representativa del universo cooperativo agro en la zona de intervención.
+    </div>
+    <div class="alert alert-g" style="margin-bottom:14px;">
+      <strong>🟢 Validez cruzada:</strong> Los RUCs de las cooperativas San Martín del A3 que coinciden con SUNAT (Cordillera Azul, Valle del Biavo, APROSELVANOR) confirman que ambos datasets son consistentes y complementarios.
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+<div style="text-align:center;" class="small">
+  Evaluación Nuevos Datos — EUDRPERU · Mavis · Sep 2026
+</div>
+
+</div><!-- wrap -->
+</body>
+</html>

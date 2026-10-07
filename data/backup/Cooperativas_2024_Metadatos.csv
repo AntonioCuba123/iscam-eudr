@@ -1,0 +1,37 @@
+﻿Título;COOPERATIVA   [MINISTERIO DE LA PRODUCCION - PRODUCE]
+Título URL Descripción;COOPERATIVA   
+Descripción;"Este conjunto de datos presenta información detallada sobre el desempeño económico de las Cooperativas en el país. Estas entidades constituyen un componente relevante de la estructura empresarial nacional, con presencia en diversas regiones del territorio.
+El dataset permite identificar la distribución de las cooperativas por región, provincia y distrito. Asimismo, presenta variables clave como ventas anuales, número de trabajadores y valor de exportaciones, todas expresadas como promedios. Esta información constituye un insumo fundamental para el diseño y seguimiento de políticas públicas orientadas al fortalecimiento del desarrollo productivo con enfoque territorial.
+
+Nota: Por razones de confidencialidad y en cumplimiento de las disposiciones sobre protección de datos, se han excluido los registros correspondientes a distritos con menos de tres cooperativas. La información publicada es de carácter agregado e innominado.
+Para más información sobre las cooperativas, visita el Observatorio PRODUCEmpresarial:
+https://www.producempresarial.pe/cooperativas-publicaciones/
+
+Este conjunto de datos incluye las siguientes variables:
+•	Identificador de la empresa o unidad económica
+•	Año
+•	Tipo de cooperativa
+•	Código CIIU
+•	Descripción CIIU
+•	Sector económico
+•	Código de ubigeo 
+•	Ubicación geografica 
+•	Número de trabajadores
+•	Venta promedio en soles
+•	Variable dummy de exportación
+•	 Valor de exportaciones (en miles de USD)               "
+;
+Entidad;Ministerio de la Producción – PRODUCE
+Fuente;PRODUCE / INEI / SUNAT 
+Etiquetas;COOPERATIVA
+Fecha de creación ;30/04/2025
+Frecuencia de actualización;ANUAL
+Última actualización;31/12/2024
+Versión;1
+Licencia;Open Data Commons Attribution License
+Idioma;Español
+Nivel de acceso público;Público
+Tipo de recurso;Dataset
+Formato;CSV
+Cobertura ;PERU, 2024
+Correo de contacto;producempresarial@produce.gob.pe

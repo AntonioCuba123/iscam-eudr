@@ -1,0 +1,1346 @@
+{
+  "25700": {
+    "fob": 154779.477,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "96261": {
+    "fob": 169066.91,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "227": {
+    "fob": 134408.494,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "449": {
+    "fob": 124241.88,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "1107": {
+    "fob": null,
+    "peso_neto": 138.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "23341": {
+    "fob": 162006.7,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "2917": {
+    "fob": null,
+    "peso_neto": 220.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "3030": {
+    "fob": 76135.47,
+    "peso_neto": 7590.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "3800": {
+    "fob": 218209.28,
+    "peso_neto": 25024.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "18.01.00.19.00"
+  },
+  "7476": {
+    "fob": 153362.86,
+    "peso_neto": 19665.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "7802": {
+    "fob": 129680.084,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "7804": {
+    "fob": 129680.09,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "11636": {
+    "fob": null,
+    "peso_neto": 700.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "18.01.00.19.00"
+  },
+  "11906": {
+    "fob": 389046.245,
+    "peso_neto": 56925.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "15736": {
+    "fob": 128891.29,
+    "peso_neto": 19665.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "15743": {
+    "fob": 53970.27,
+    "peso_neto": 5100.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "16329": {
+    "fob": 168690.4,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "17760": {
+    "fob": null,
+    "peso_neto": 60.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "18383": {
+    "fob": 134415.0,
+    "peso_neto": 20690.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "20987": {
+    "fob": 155262.1,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "21325": {
+    "fob": 163900.56,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "21443": {
+    "fob": null,
+    "peso_neto": 9315.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "22202": {
+    "fob": 157500.15,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "22206": {
+    "fob": 142377.626,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "22329": {
+    "fob": null,
+    "peso_neto": 345.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "22449": {
+    "fob": 151510.49,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "23342": {
+    "fob": 175697.41,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "23740": {
+    "fob": null,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "23741": {
+    "fob": null,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "24075": {
+    "fob": 189388.11,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "24836": {
+    "fob": 156897.58,
+    "peso_neto": 19665.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "24882": {
+    "fob": 110776.87,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25067": {
+    "fob": 159382.63,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25165": {
+    "fob": 128375.17,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25167": {
+    "fob": 301271.548,
+    "peso_neto": 41400.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25601": {
+    "fob": 148025.04,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25699": {
+    "fob": 159150.93,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25701": {
+    "fob": 132640.104,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "25702": {
+    "fob": 83969.652,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "26083": {
+    "fob": 104733.91,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "26875": {
+    "fob": 150635.76,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "26881": {
+    "fob": 163581.09,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "26882": {
+    "fob": null,
+    "peso_neto": 24115.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "18.01.00.19.00"
+  },
+  "27028": {
+    "fob": 159414.63,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "27035": {
+    "fob": 152832.356,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "27107": {
+    "fob": 246432.73,
+    "peso_neto": 41400.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "27523": {
+    "fob": 129605.358,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "27524": {
+    "fob": 161550.338,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "27875": {
+    "fob": 146979.23,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "28133": {
+    "fob": 146034.0,
+    "peso_neto": 19665.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "28973": {
+    "fob": 130061.69,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "29702": {
+    "fob": 167026.63,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "29744": {
+    "fob": 138152.52,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "30455": {
+    "fob": 137523.124,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "30765": {
+    "fob": 168852.19,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "30768": {
+    "fob": 168852.19,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31217": {
+    "fob": 131459.29,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31232": {
+    "fob": 141925.536,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31236": {
+    "fob": null,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31238": {
+    "fob": 50000.0,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31527": {
+    "fob": 129680.08,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31826": {
+    "fob": 50000.0,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31922": {
+    "fob": 134623.9,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "31934": {
+    "fob": 118803.702,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32115": {
+    "fob": 273449.03,
+    "peso_neto": 41355.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32150": {
+    "fob": 139941.846,
+    "peso_neto": 20670.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32161": {
+    "fob": 172489.66,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32163": {
+    "fob": 124368.647,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32165": {
+    "fob": 120934.55,
+    "peso_neto": 20690.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32200": {
+    "fob": 130381.17,
+    "peso_neto": 20670.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32253": {
+    "fob": 124368.64,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32303": {
+    "fob": 147859.77,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "32995": {
+    "fob": 139624.1,
+    "peso_neto": 19250.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "33465": {
+    "fob": 135775.274,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "33702": {
+    "fob": 153942.81,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "33704": {
+    "fob": 50000.0,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "34337": {
+    "fob": 124653.86,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "34410": {
+    "fob": 128006.812,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "34443": {
+    "fob": 128053.75,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "34697": {
+    "fob": 139301.51,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "34704": {
+    "fob": 139141.78,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35063": {
+    "fob": 137819.786,
+    "peso_neto": 20670.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35551": {
+    "fob": 142859.54,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35714": {
+    "fob": 155159.75,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35719": {
+    "fob": 163944.53,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35721": {
+    "fob": 155465.58,
+    "peso_neto": 19320.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35724": {
+    "fob": 109525.656,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35747": {
+    "fob": 170884.35,
+    "peso_neto": 19320.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35840": {
+    "fob": 66924.74,
+    "peso_neto": 9660.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35862": {
+    "fob": 134625.26,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35915": {
+    "fob": 177789.02,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35916": {
+    "fob": 177789.02,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35940": {
+    "fob": 160219.28,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35941": {
+    "fob": 160219.28,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "35949": {
+    "fob": 399275.75,
+    "peso_neto": 62100.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36432": {
+    "fob": 181356.84,
+    "peso_neto": 19320.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36679": {
+    "fob": 146386.94,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36767": {
+    "fob": 50000.0,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36798": {
+    "fob": 118498.42,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36800": {
+    "fob": 165000.0,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36802": {
+    "fob": 162309.27,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "36930": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37017": {
+    "fob": 139045.55,
+    "peso_neto": 18550.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37021": {
+    "fob": 147403.276,
+    "peso_neto": 20610.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37026": {
+    "fob": 148506.132,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37239": {
+    "fob": 157080.23,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37245": {
+    "fob": 50000.0,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37479": {
+    "fob": 137660.032,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37480": {
+    "fob": 142223.594,
+    "peso_neto": 20620.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37555": {
+    "fob": 163582.94,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "37558": {
+    "fob": 175383.6,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "38421": {
+    "fob": 160219.28,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "38806": {
+    "fob": 387903.37,
+    "peso_neto": 41400.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "39250": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "39351": {
+    "fob": null,
+    "peso_neto": 3000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "39360": {
+    "fob": 313746.98,
+    "peso_neto": 37950.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "39967": {
+    "fob": 191070.86,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "40735": {
+    "fob": 160280.422,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "40737": {
+    "fob": 353335.37,
+    "peso_neto": 41360.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "41694": {
+    "fob": null,
+    "peso_neto": 5037.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "41719": {
+    "fob": 180777.2,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "41726": {
+    "fob": 178462.37,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "41865": {
+    "fob": 195910.29,
+    "peso_neto": 20660.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "42807": {
+    "fob": 51504.415,
+    "peso_neto": 9315.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "44289": {
+    "fob": 136905.655,
+    "peso_neto": 20680.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "46287": {
+    "fob": 177277.5,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "47384": {
+    "fob": null,
+    "peso_neto": 2760.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "47915": {
+    "fob": 167551.31,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "48062": {
+    "fob": 170858.24,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "48083": {
+    "fob": 313746.98,
+    "peso_neto": 37950.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "48084": {
+    "fob": 313746.98,
+    "peso_neto": 37950.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "48189": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "48257": {
+    "fob": 165239.2,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "50021": {
+    "fob": 171916.46,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "50051": {
+    "fob": 165239.2,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "50085": {
+    "fob": 100000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "50160": {
+    "fob": 100000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "50189": {
+    "fob": 100000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "51536": {
+    "fob": null,
+    "peso_neto": 3450.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "53154": {
+    "fob": 153335.91,
+    "peso_neto": 16560.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "53895": {
+    "fob": 183398.67,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "54018": {
+    "fob": null,
+    "peso_neto": 1750.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "54693": {
+    "fob": 182983.68,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "56247": {
+    "fob": 100000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "56780": {
+    "fob": 181085.84,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "57100": {
+    "fob": 188405.01,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "59111": {
+    "fob": 1035006.79,
+    "peso_neto": 124200.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "59892": {
+    "fob": 161662.52,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "61203": {
+    "fob": 149531.04,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "63895": {
+    "fob": 146182.92,
+    "peso_neto": 18975.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "63907": {
+    "fob": 182408.6,
+    "peso_neto": 20000.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "64680": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "65196": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "65812": {
+    "fob": 50000.0,
+    "peso_neto": 20700.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  },
+  "70158": {
+    "fob": 137608.71,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "70159": {
+    "fob": 133446.36,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "71691": {
+    "fob": 135956.28,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "76099": {
+    "fob": 173080.0,
+    "peso_neto": 25000.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "18.01.00.19.00"
+  },
+  "77497": {
+    "fob": 128184.38,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "77512": {
+    "fob": 133425.44,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "80165": {
+    "fob": null,
+    "peso_neto": 506.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "81523": {
+    "fob": 119223.2,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "81639": {
+    "fob": null,
+    "peso_neto": 690.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "87180": {
+    "fob": 136102.74,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "87786": {
+    "fob": 56588.27,
+    "peso_neto": 8280.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "90464": {
+    "fob": 145323.75,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "90466": {
+    "fob": 56588.27,
+    "peso_neto": 8280.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "93268": {
+    "fob": 161516.11,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "101649": {
+    "fob": 181261.15,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "101650": {
+    "fob": 151928.83,
+    "peso_neto": 16215.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "101651": {
+    "fob": 132938.75,
+    "peso_neto": 18000.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "102210": {
+    "fob": 147669.481,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "103464": {
+    "fob": null,
+    "peso_neto": 5175.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "105955": {
+    "fob": 167330.8,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "106945": {
+    "fob": 172507.5,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "109775": {
+    "fob": 167958.35,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "111570": {
+    "fob": null,
+    "peso_neto": 7935.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "115678": {
+    "fob": 155526.42,
+    "peso_neto": 16560.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "119634": {
+    "fob": 187096.75,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "119651": {
+    "fob": 159800.92,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "119681": {
+    "fob": 168125.62,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "122024": {
+    "fob": null,
+    "peso_neto": 2001.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "123880": {
+    "fob": 151198.32,
+    "peso_neto": 19320.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "125194": {
+    "fob": 163147.535,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "125732": {
+    "fob": 181491.18,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "127408": {
+    "fob": 69441.88,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "130331": {
+    "fob": 104830.617,
+    "peso_neto": 11592.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "133179": {
+    "fob": 175003.84,
+    "peso_neto": 18900.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "134093": {
+    "fob": 146414.45,
+    "peso_neto": 18975.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "135927": {
+    "fob": null,
+    "peso_neto": 690.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "136082": {
+    "fob": 116933.148,
+    "peso_neto": 20000.0,
+    "bultos": 1,
+    "tipo_bulto": "IDENTIFICACION",
+    "subpartida": "09.01.11.90.00"
+  },
+  "29699": {
+    "fob": 125650.26,
+    "peso_neto": 19320.0,
+    "bultos": 2,
+    "tipo_bulto": "REGISTRO",
+    "subpartida": "09.01.11.90.00"
+  }
+}

@@ -1,0 +1,81 @@
+﻿ruc,atributo,valor_anterior,valor_nuevo,fecha_valor,fuente,usuario_o_proceso,observacion
+20118578415,fob_total_usd,3332803.61,5107246.62,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20118578415,n_paises_destino,6,7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20129529530,fob_total_usd,7077021.9399999995,9603968.12,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20132509795,fob_total_usd,1039099.4099999999,2477083.5,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20132509795,fob_ultimo_anio_usd,1039099.4099999999,1039099.41,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20132509795,n_paises_destino,4,5,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20132509876,fob_total_usd,1016749.37,1689820.33,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20136201132,fob_total_usd,561223.7999999999,681394.36,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20136201132,fob_ultimo_anio_usd,561223.7999999999,561223.8,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20136201132,n_paises_destino,3,4,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20136201213,fob_total_usd,2999457.229999999,4445611.6,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20140181405,fob_total_usd,2944666.3499999996,4202982.89,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20140181405,n_paises_destino,6,7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20143692010,fob_total_usd,2378363.0100000002,4030694.66,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20170142773,fob_total_usd,6541775.279999999,9070756.88,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20170142773,n_paises_destino,3,7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20448277781,fob_total_usd,542368.1599999999,542368.16,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20479595276,fob_total_usd,3256065.7600000002,4538578.93,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20479595276,fob_ultimo_anio_usd,3256065.7600000002,3256065.76,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20479595276,n_paises_destino,4,8,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20479917141,fob_total_usd,377881.98,1175215.28,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20480458550,fob_total_usd,1187499.06,1684429.98,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20484163902,fob_total_usd,584400,817000,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20486255090,fob_total_usd,7990596.3100000005,13207692.05,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20486255090,fob_ultimo_anio_usd,7990596.3100000005,7990596.31,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20486255090,n_paises_destino,3,4,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20486973219,fob_total_usd,20081049.230000004,30342293.08,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20487242994,fob_total_usd,1472488.54,2290978.7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20525955843,fob_total_usd,2977208.3599999994,3909368.27,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20525955843,n_paises_destino,2,4,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20526179367,fob_total_usd,4141063.6,6778323.1,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20526179367,fob_ultimo_anio_usd,1210789.5999999999,1210789.6,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20527565376,fob_total_usd,7138193.45,10746930.95,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20527565376,n_paises_destino,8,10,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20531441797,exporta,NO,SI,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20531441797,fob_total_usd,,1984.05,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20531441797,ultimo_periodo_exportacion,,2024-11,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20531441797,fob_ultimo_anio_usd,,1984.05,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20531441797,n_paises_destino,,1,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20542209951,fob_total_usd,13246408.590000002,13246408.59,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20542209951,fob_ultimo_anio_usd,393775.17000000004,393775.17,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20542289024,fob_total_usd,24285431.820000004,24285431.82,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20542380455,fob_total_usd,10961556.73,16891006.49,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20542380455,n_paises_destino,8,10,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20568071281,fob_total_usd,443314.75,1435723.71,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20568071281,n_paises_destino,2,3,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20568190450,fob_total_usd,74091.7,113466.98,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20568194951,fob_total_usd,5355025.229999999,5355025.23,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20570706927,fob_total_usd,6421813.84,9585341.8,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20570706927,n_paises_destino,7,8,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20572190251,fob_total_usd,2252404.75,3777944.83,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20572190251,n_paises_destino,5,7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20574602450,fob_total_usd,503352.78,721912.78,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600263286,fob_total_usd,4154567.7900000005,4154567.79,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600263286,fob_ultimo_anio_usd,4154567.7900000005,4154567.79,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600390911,fob_total_usd,13437544.190000001,21233720.82,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600390911,fob_ultimo_anio_usd,992523.3700000001,992523.37,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600682386,fob_total_usd,3887946.2899999996,3887946.29,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600717902,fob_total_usd,240990.99000000002,522002.65,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600717902,fob_ultimo_anio_usd,240990.99000000002,240990.99,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600717902,n_paises_destino,2,3,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20600796721,fob_total_usd,1789601.5899999999,1789601.59,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20601558204,exporta,NO,SI,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20601558204,fob_total_usd,,442439.35,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20601558204,ultimo_periodo_exportacion,,2024-12,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20601558204,fob_ultimo_anio_usd,,442439.35,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20601558204,n_paises_destino,,1,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,dato nuevo
+20601958911,fob_total_usd,11385109.579999996,13966273.33,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20601958911,fob_ultimo_anio_usd,1847986.9300000002,1847986.93,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20601958911,n_paises_destino,8,9,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20603557825,fob_total_usd,124585.29,378122,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20603862369,fob_total_usd,332555.16000000003,332555.16,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20604151954,fob_total_usd,336472.8,543961.38,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20604151954,n_paises_destino,1,2,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20607536016,fob_total_usd,1979570.69,3002219.02,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20607536016,n_paises_destino,3,7,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20609555395,fob_total_usd,1265261.9000000001,1265261.9,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20609555395,fob_ultimo_anio_usd,1265261.9000000001,1265261.9,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20611935243,fob_total_usd,7723335.029999999,7723335.03,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor
+20611935243,fob_ultimo_anio_usd,7723335.029999999,7723335.03,2026-09-23,SUNAT-Aduanas (HECHO_EXPORTACION),hist_atributo_diff.py,cambio de valor

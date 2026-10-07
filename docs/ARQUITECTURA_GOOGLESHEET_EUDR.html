@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EUDR Perú — Arquitectura Google Sheet Maestro</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --border: #e2ddd5;
+  --border-soft: #ede9e2;
+  --text: #14171e;
+  --text-mid: #3a4256;
+  --text-muted: #7c7a72;
+  --accent: #2f6f5e;
+  --accent-soft: rgba(47,111,94,0.08);
+  --accent-mid: rgba(47,111,94,0.15);
+  --amber: #c97b3f;
+  --amber-soft: rgba(201,123,63,0.08);
+  --rose: #b06367;
+  --rose-soft: rgba(176,99,103,0.08);
+  --indigo: #4f58a8;
+  --indigo-soft: rgba(79,88,168,0.08);
+  --sky: #3b82f6;
+  --sky-soft: rgba(59,130,246,0.08);
+  --line: #e9e3d6;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.05);
+  --shadow: 0 3px 12px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 15px;
+}
+.serif { font-family: 'DM Serif Display', serif; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0 2rem;
+}
+nav ul {
+  display: flex; gap: 0.25rem; list-style: none;
+  max-width: 1100px; margin: 0 auto;
+  overflow-x: auto; scrollbar-width: none;
+}
+nav ul::-webkit-scrollbar { display: none; }
+nav a {
+  display: block; padding: 0.85rem 1.1rem;
+  text-decoration: none; color: var(--text-muted);
+  font-size: 0.82rem; font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover { color: var(--text); background: var(--surface); }
+nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── HERO ── */
+.hero {
+  max-width: 1100px; margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+}
+.hero .eyebrow {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+.hero .subtitle {
+  font-size: 1.05rem; color: var(--text-mid);
+  max-width: 680px; line-height: 1.65;
+}
+.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  margin-top: 2rem;
+}
+.hero .meta-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.82rem; color: var(--text-muted);
+}
+.hero .meta-item .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+.section-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.section-label::after {
+  content: ""; flex: 1; height: 1px; background: var(--border);
+}
+h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.2; margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: 1.05rem; font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.005em;
+}
+.intro {
+  color: var(--text-mid);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── TABS OVERVIEW ── */
+.tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.tab-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.tab-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+.tab-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.tab-card.t1::before { background: var(--accent); }
+.tab-card.t2::before { background: var(--amber); }
+.tab-card.t3::before { background: var(--rose); }
+.tab-card.t4::before { background: var(--indigo); }
+.tab-card.t5::before { background: var(--sky); }
+.tab-card.t6::before { background: #10b981; }
+
+.tab-card .tab-num {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.tab-card .tab-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 0.8rem;
+}
+.tab-card.t1 .tab-icon { background: var(--accent-soft); color: var(--accent); }
+.tab-card.t2 .tab-icon { background: var(--amber-soft); color: var(--amber); }
+.tab-card.t3 .tab-icon { background: var(--rose-soft); color: var(--rose); }
+.tab-card.t4 .tab-icon { background: var(--indigo-soft); color: var(--indigo); }
+.tab-card.t5 .tab-icon { background: var(--sky-soft); color: var(--sky); }
+.tab-card.t6 .tab-icon { background: rgba(16,185,129,0.1); color: #10b981; }
+
+.tab-card h3 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+.tab-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+.tab-card .tab-count {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.7rem; font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
+/* ── SHEET BLOCK ── */
+.sheet-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.sheet-header {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--bg);
+}
+.sheet-badge {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 0.25rem 0.7rem;
+  border-radius: 99px;
+}
+.sheet-badge.s1 { background: var(--accent-soft); color: var(--accent); }
+.sheet-badge.s2 { background: var(--amber-soft); color: var(--amber); }
+.sheet-badge.s3 { background: var(--rose-soft); color: var(--rose); }
+.sheet-badge.s4 { background: var(--indigo-soft); color: var(--indigo); }
+.sheet-badge.s5 { background: var(--sky-soft); color: var(--sky); }
+.sheet-badge.s6 { background: rgba(16,185,129,0.1); color: #10b981; }
+
+.sheet-title {
+  font-weight: 600; font-size: 0.95rem;
+  flex: 1;
+}
+.sheet-desc {
+  font-size: 0.8rem; color: var(--text-muted);
+}
+.sheet-body { padding: 1.5rem; }
+
+/* ── COLUMN TABLE ── */
+.col-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.col-table th {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+  background: var(--bg);
+}
+.col-table td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.col-table tr:last-child td { border-bottom: none; }
+.col-table tr:hover td { background: var(--bg); }
+
+.col-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.col-type {
+  display: inline-block;
+  font-size: 0.65rem; font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+.type-text { background: #e0f2fe; color: #0369a1; }
+.type-num  { background: #dcfce7; color: #15803d; }
+.type-date { background: #fef9c3; color: #854d0e; }
+.type-select { background: #fce7f3; color: #9d174d; }
+.type-formula { background: #ede9fe; color: #5b21b6; }
+.type-id  { background: #f3f4f6; color: #374151; }
+
+.col-desc { color: var(--text-mid); font-size: 0.8rem; }
+.col-source { color: var(--text-muted); font-size: 0.76rem; }
+.col-source code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  background: var(--bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.col-tag {
+  display: inline-block;
+  font-size: 0.62rem; font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin: 0.1rem;
+}
+.tag-key { background: #fef3c7; color: #92400e; }
+.tag-eudr { background: var(--accent-soft); color: var(--accent); }
+.tag-prod { background: #dbeafe; color: #1e40af; }
+.tag-fin { background: #f3e8ff; color: #6b21a8; }
+.tag-cert { background: #d1fae5; color: #065f46; }
+.tag-risk { background: #fee2e2; color: #991b1b; }
+.tag-track { background: var(--amber-soft); color: var(--amber); }
+
+/* ── DIMENSION CARDS ── */
+.dim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+.dim-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  background: var(--bg);
+  font-size: 0.8rem;
+}
+.dim-card .dim-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 0.3rem;
+}
+.dim-card .dim-name { font-weight: 600; margin-bottom: 0.25rem; }
+.dim-card .dim-q { font-size: 0.73rem; color: var(--text-muted); }
+
+/* ── SCALE TABLE ── */
+.scale-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  gap: 1px;
+  background: var(--border-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+}
+.scale-header {
+  background: var(--bg);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.scale-item {
+  display: contents;
+}
+.scale-item > div {
+  padding: 0.55rem 0.8rem;
+  background: var(--surface);
+}
+.scale-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; font-size: 1rem;
+  text-align: center;
+  display: flex; align-items: center; justify-content: center;
+}
+.scale-lbl { font-weight: 600; }
+.scale-desc { color: var(--text-muted); font-size: 0.78rem; }
+
+/* ── ARCH DIAGRAM ── */
+.arch-diagram {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  margin-top: 1.5rem;
+}
+.arch-row {
+  display: flex; align-items: center;
+  gap: 1rem; margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.arch-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.1rem;
+  font-size: 0.82rem; font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  min-width: 120px;
+}
+.arch-box.accent { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.arch-box.amber  { border-color: var(--amber); background: var(--amber-soft); color: var(--amber); }
+.arch-box.rose   { border-color: var(--rose); background: var(--rose-soft); color: var(--rose); }
+.arch-box.indigo { border-color: var(--indigo); background: var(--indigo-soft); color: var(--indigo); }
+.arch-box.sky    { border-color: var(--sky); background: var(--sky-soft); color: var(--sky); }
+.arch-box.green  { border-color: #10b981; background: rgba(16,185,129,0.08); color: #10b981; }
+
+.arch-arrow {
+  font-size: 1.2rem; color: var(--text-muted);
+  flex-shrink: 0;
+}
+.arch-label {
+  font-size: 0.72rem; color: var(--text-muted);
+  text-align: center; margin-top: -0.5rem; margin-bottom: 0.8rem;
+}
+
+/* ── TIMELINE MOCK ── */
+.timeline-mock {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 120px 120px 1fr 80px;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.82rem;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-item:hover { background: rgba(47,111,94,0.03); border-radius: 6px; padding-left: 0.5rem; padding-right: 0.5rem; }
+.tl-date { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-muted); }
+.tl-type { font-weight: 600; }
+.tl-desc { color: var(--text-mid); }
+.tl-src {
+  font-size: 0.7rem; padding: 0.15rem 0.45rem;
+  border-radius: 4px; text-align: center;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.tl-header {
+  display: grid;
+  grid-template-columns: 120px 120px 1fr 80px;
+  gap: 1rem;
+  font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ── STEPS ── */
+.steps-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.step-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem;
+  box-shadow: var(--shadow-sm);
+}
+.step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 0.75rem; font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.step-item h4 { font-size: 0.9rem; margin-bottom: 0.4rem; }
+.step-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+.step-tag {
+  display: inline-block; margin-top: 0.6rem;
+  font-size: 0.65rem; font-weight: 600;
+  padding: 0.15rem 0.5rem; border-radius: 4px;
+  background: var(--bg); color: var(--text-muted);
+}
+
+/* ── MOCK SHEET PREVIEW ── */
+.mock-sheet {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+}
+.mock-bar {
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  display: flex; gap: 0.5rem; align-items: center;
+}
+.mock-tab {
+  background: #e8e8e8; border-radius: 4px 4px 0 0;
+  padding: 0.3rem 0.8rem; font-size: 0.72rem;
+  color: #555; cursor: default;
+}
+.mock-tab.active {
+  background: white; color: var(--accent);
+  border: 1px solid #ddd; border-bottom: 2px solid white;
+  font-weight: 600;
+}
+.mock-header {
+  display: grid;
+  gap: 0;
+  background: #fafafa;
+  border-bottom: 2px solid var(--border);
+}
+.mock-th {
+  padding: 0.4rem 0.6rem;
+  font-weight: 600; font-size: 0.7rem;
+  text-align: left; color: var(--text-muted);
+  border-right: 1px solid var(--border-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.mock-row {
+  display: grid;
+  border-bottom: 1px solid var(--border-soft);
+}
+.mock-row:hover { background: rgba(47,111,94,0.03); }
+.mock-cell {
+  padding: 0.35rem 0.6rem;
+  border-right: 1px solid var(--border-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  color: var(--text-mid);
+  font-size: 0.76rem;
+}
+.mock-cell.pk { font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; }
+.mock-cell.warn { background: #fff7ed; color: #c2410c; }
+.mock-cell.ok { background: #f0fdf4; color: #15803d; }
+.mock-cell.empty { color: #ccc; font-style: italic; }
+
+/* ── FORMULA BLOCK ── */
+.formula-block {
+  background: #1a1a2e;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #a5d6a7;
+  line-height: 1.8;
+  overflow-x: auto;
+}
+.formula-block .fn { color: #80deea; }
+.formula-block .comment { color: #9e9e9e; }
+.formula-block .key { color: #ffcc80; }
+.formula-block .val { color: #ef9a9a; }
+.formula-block .op { color: #fff; }
+
+/* ── BADGE ROW ── */
+.badge-row {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-top: 1rem;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.72rem; font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 99px;
+  border: 1px solid;
+}
+.badge.green { background: #f0fdf4; border-color: #bbf7d0; color: #15803d; }
+.badge.amber { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+.badge.red   { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+.badge.blue  { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+.badge.gray  { background: #f9fafb; border-color: #e5e7eb; color: #374151; }
+
+/* ── DIVIDER ── */
+.divider {
+  border: none; border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  max-width: 1100px; margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#overview" class="active">Resumen</a></li>
+    <li><a href="#directorio">1. Directorio</a></li>
+    <li><a href="#scorecard">2. Scorecard EUDR</a></li>
+    <li><a href="#instrumento">3. Instrumento 2</a></li>
+    <li><a href="#timeline">4. Timeline</a></li>
+    <li><a href="#metricas">5. Métricas</a></li>
+    <li><a href="#construir">Cómo construir</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="overview">
+  <div class="eyebrow">Arquitectura de datos · EUDR Perú 2025</div>
+  <h1 class="serif">Google Sheet Maestro:<br>la vida de la cooperativa bajo el EUDR</h1>
+  <p class="subtitle">
+    Una hoja maestra que cruza el directorio de 245 organizaciones con las 11 dimensiones
+    de preparación EUDR, integra los 75 preguntas del Instrumento 2 (escala 0-4), y traza
+    la línea de tiempo de cada organización desde múltiples fuentes.
+  </p>
+  <div class="meta">
+    <div class="meta-item">
+      <span class="dot" style="background:var(--accent)"></span>
+      6 sheets interconectadas
+    </div>
+    <div class="meta-item">
+      <span class="dot" style="background:var(--amber)"></span>
+      ~180 columnas total
+    </div>
+    <div class="meta-item">
+      <span class="dot" style="background:var(--rose)"></span>
+      75 preguntas Instrumento 2
+    </div>
+    <div class="meta-item">
+      <span class="dot" style="background:var(--indigo)"></span>
+      245 organizaciones base
+    </div>
+    <div class="meta-item">
+      <span class="dot" style="background:var(--sky)"></span>
+      5 fuentes de datos cruzadas
+    </div>
+  </div>
+</div>
+
+<!-- TABS OVERVIEW -->
+<div class="section">
+  <div class="section-label">Estructura — 6 hojas</div>
+  <div class="tabs-grid">
+    <div class="tab-card t1">
+      <div class="tab-num">Sheet 1</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6"/></svg>
+      </div>
+      <h3>DIRECTORIO</h3>
+      <p>Identidad, ubicación, contacts, RUC validado, clasificación café/cacao.</p>
+      <span class="tab-count">~22 columnas</span>
+    </div>
+    <div class="tab-card t2">
+      <div class="tab-num">Sheet 2</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3>SCORECARD EUDR</h3>
+      <p>11 dimensiones de preparación (D1-D11), scores agregados ISA/IP/IV, semáforo.</p>
+      <span class="tab-count">~40 columnas</span>
+    </div>
+    <div class="tab-card t3">
+      <div class="tab-num">Sheet 3</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <h3>INSTRUMENTO 2</h3>
+      <p>Las 75 preguntas escala 0-4, calculadas por dimensión, con notas y evidencia.</p>
+      <span class="tab-count">~90 columnas</span>
+    </div>
+    <div class="tab-card t4">
+      <div class="tab-num">Sheet 4</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>TIMELINE</h3>
+      <p>Línea de tiempo de eventos: registros, certificaciones, inspecciones, sanciones.</p>
+      <span class="tab-count">~20 columnas</span>
+    </div>
+    <div class="tab-card t5">
+      <div class="tab-num">Sheet 5</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <h3>MÉTRICAS</h3>
+      <p>KPIs, distribución de scores, mapa de calor por región, exportar a Looker Studio.</p>
+      <span class="tab-count">~15 columnas</span>
+    </div>
+    <div class="tab-card t6">
+      <div class="tab-num">Sheet 6</div>
+      <div class="tab-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/><path d="M7 7h.01"/></svg>
+      </div>
+      <h3>DICCIONARIO</h3>
+      <p>Metadatos de cada columna: definición, fuente, fórmula, quién llena, frecuencia.</p>
+      <span class="tab-count">~15 columnas</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 1: DIRECTORIO ── -->
+<div class="section" id="directorio">
+  <div class="section-label">Sheet 1 · Identidad</div>
+  <h2>DIRECTORIO</h2>
+  <p class="intro">
+    La tabla maestra. Cada fila es una organización. Columnasprovenientes de múltiples archivos
+    (PAC, MIDAGRI, CENACOOP, PRODUCE, SUNAT). La clave es el <strong>RUC validado</strong>.
+  </p>
+
+  <div class="sheet-block">
+    <div class="sheet-header">
+      <span class="sheet-badge s1">Sheet 1</span>
+      <span class="sheet-title">DIRECTORIO</span>
+      <span class="sheet-desc">~22 columnas · 245 filas · actualizar trimestral</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr>
+            <th>Columna</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Fuente</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="col-name">RUC</span><span class="col-type type-id">ID PK</span></td>
+            <td><span class="col-type type-id">ID</span></td>
+            <td class="col-desc">11 dígitos. Clave primaria. 100% validado contra SUNAT en puerto 4006.</td>
+            <td class="col-source">SUNAT <code>identity-fiscal</code></td>
+            <td><span class="col-tag tag-key">CRÍTICO</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">NOMBRE_ORG</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Razón social normalizada. Sin abreviaturas, sin mayúsculas excesivas.</td>
+            <td class="col-source">SUNAT / PAC directory</td>
+            <td><span class="col-tag tag-key">CRÍTICO</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">NOMBRE_ABREV</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Nombre corto para dashboards. Ej: "CAC Pangoa", "Cooperativa Sol"</td>
+            <td class="col-source">Derivado</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">TIPO_ORG</span><span class="col-type type-select">select</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">Cooperativa Agraria / CAC / SAT / Assoc. / otra</td>
+            <td class="col-source">SUNAT <code>taxpayer_type</code></td>
+            <td><span class="col-tag tag-eudr">EUDR</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">DEPARTAMENTO</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Departamento de sede principal. Estandarizado (no "LIMA METROPOLITANA" → "LIMA")</td>
+            <td class="col-source">SUNAT / PAC</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">PROVINCIA</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Provincia de sede principal.</td>
+            <td class="col-source">SUNAT / PAC</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">DISTRITO</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Distrito de sede principal.</td>
+            <td class="col-source">SUNAT / PAC</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">UBIGEO</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Código UBIGEO RENAMYGR/DIREPRO de 6 dígitos.</td>
+            <td class="col-source">SUNAT / PAC</td>
+            <td><span class="col-tag tag-prod">PRODUCE</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CADENA</span><span class="col-type type-select">select</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">CAFÉ / CACAO / AMBAS. Definido por el directorio A1 del PAC.</td>
+            <td class="col-source">PAC directory v3</td>
+            <td><span class="col-tag tag-eudr">EUDR</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">REGION_EUDR</span><span class="col-type type-select">select</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">Norte / Centro / Sur / Selva. Agrupación operativa para EUDR.</td>
+            <td class="col-source">Derivado de DEPARTAMENTO</td>
+            <td><span class="col-tag tag-eudr">EUDR</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">MIEMBROS</span><span class="col-type type-num">número</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Número de productores socios. Fuente preferida: MIDAGRI 2026.</td>
+            <td class="col-source">MIDAGRI 2026 / PRODUCE 2024</td>
+            <td><span class="col-tag tag-prod">PRODUCE</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">HA_has</span><span class="col-type type-num">número</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Hectáreas totales bajo gestión de la organización.</td>
+            <td class="col-source">MIDAGRI / PAC</td>
+            <td><span class="col-tag tag-prod">PRODUCE</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">FOB_2024</span><span class="col-type type-num">USD</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Valor FOB exportaciones 2024. Cruce por nombre (no RUC disponible en PRODUCE).</td>
+            <td class="col-source">PRODUCE 2024</td>
+            <td><span class="col-tag tag-fin">FINanciero</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">TRABAJADORES</span><span class="col-type type-num">número</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Número total de trabajadores (permanentes + temporales).</td>
+            <td class="col-source">PRODUCE 2024</td>
+            <td><span class="col-tag tag-prod">PRODUCE</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CONTACTO_NOMBRE</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Nombre del contacto principal (gerente, presidente, técnico de campo).</td>
+            <td class="col-source">PAC directory / CENACOOP</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CONTACTO_EMAIL</span><span class="col-type type-text">email</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Email de contacto. Verificar formato antes de usar para envío masivo.</td>
+            <td class="col-source">PAC directory / CENACOOP</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CONTACTO_TELEFONO</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Teléfono. Formato: +51 + código + número.</td>
+            <td class="col-source">PAC directory / CENACOOP</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">ESTADO_SUNAT</span><span class="col-type type-select">select</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">ACTIVO / BAJA DEFINITIVA / BAJA PROVISIONAL / NO HALLADO. Valorado vs SUNAT.</td>
+            <td class="col-source">SUNAT <code>identity-fiscal</code></td>
+            <td><span class="col-tag tag-risk">RIESGO</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CONDICION_SUNAT</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</td>
+            <td class="col-desc">Condición tributaria detallada: HABIDO, NO HABIDO, PENDIENTE, OTRO.</td>
+            <td class="col-source">SUNAT</td>
+            <td><span class="col-tag tag-risk">RIESGO</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">PRIORIDAD_EUDR</span><span class="col-type type-select">select</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">ALTA / MEDIA / BAJA. Basado en: exportar a EU + volumen + cadena café/cacao.</td>
+            <td class="col-source">Derivado (scorecard)</td>
+            <td><span class="col-tag tag-eudr">EUDR</span></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">FECHA_INSCRIPCION</span><span class="col-type type-date">fecha</span></td>
+            <td><span class="col-type type-date">fecha</span></td>
+            <td class="col-desc">Fecha de constitución. Fuente: SUNAT / registros públicos.</td>
+            <td class="col-source">SUNAT</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">OBSERVACIONES</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Notas libres del equipo de campo. Anotar siempre fecha + nombre.</td>
+            <td class="col-source">Manual</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 2: SCORECARD ── -->
+<div class="section" id="scorecard">
+  <div class="section-label">Sheet 2 · Preparación EUDR</div>
+  <h2>SCORECARD EUDR</h2>
+  <p class="intro">
+    Los 11 dominios de preparación del EUDR (D1-D11) validados con el marco ISCAM.
+    Cada organización recibe un score 0-4 por dimensión. Los scores feeds del
+    Instrumento 2 y se recalculan automáticamente.
+  </p>
+
+  <!-- 11 dimensions cards -->
+  <div class="dim-grid">
+    <div class="dim-card">
+      <div class="dim-code">D1</div>
+      <div class="dim-name">Identificación del operador</div>
+      <div class="dim-q">8 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D2</div>
+      <div class="dim-name">Actividades de trazabilidad</div>
+      <div class="dim-q">13 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D3</div>
+      <div class="dim-name">Geolocalización de parcelas</div>
+      <div class="dim-q">9 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D4</div>
+      <div class="dim-name">Sistemas de vigilancia</div>
+      <div class="dim-q">10 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D5</div>
+      <div class="dim-name">Due diligence en cadenas</div>
+      <div class="dim-q">5 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D6</div>
+      <div class="dim-name">Papeles de deforestación</div>
+      <div class="dim-q">4 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D7</div>
+      <div class="dim-name">Sanciones y decomisos</div>
+      <div class="dim-q">3 preguntas · geométrica</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D8</div>
+      <div class="dim-name">Capacidad operativa</div>
+      <div class="dim-q">6 preguntas · aritmética</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D9</div>
+      <div class="dim-name">Acceso a mercados</div>
+      <div class="dim-q">3 preguntas · aritmética</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D10</div>
+      <div class="dim-name">Certificaciones</div>
+      <div class="dim-q">2 preguntas · mapeo</div>
+    </div>
+    <div class="dim-card">
+      <div class="dim-code">D11</div>
+      <div class="dim-name">Volumen y valor de exportación</div>
+      <div class="dim-q">2 preguntas · mapeo</div>
+    </div>
+  </div>
+
+  <div class="sheet-block" style="margin-top:2rem">
+    <div class="sheet-header">
+      <span class="sheet-badge s2">Sheet 2</span>
+      <span class="sheet-title">SCORECARD EUDR — columnas</span>
+      <span class="sheet-desc">~40 columnas · una fila por organización</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr><th>Columna</th><th>Tipo</th><th>Descripción</th><th>Fuente</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="col-name">RUC</span><span class="col-type type-id">FK</span></td>
+            <td><span class="col-type type-id">ID</span></td>
+            <td class="col-desc">Clave foránea → DIRECTORIO.RUC</td>
+            <td class="col-source">Vínculo</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">D1_PROMEDIO</span><span class="col-type type-num">0-4</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Promedio geométrico de las 8 respuestas D1. Fórmula: =GEO_MEAN(I2:Q2)</td>
+            <td class="col-source"><code>INSTRUMENTO2!D1_*</code></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">D2_PROMEDIO ... D7_PROMEDIO</span></td>
+            <td><span class="col-type type-num">0-4</span></td>
+            <td class="col-desc">Media geométrica por dimensión núcleo (D1-D7). Ver manual ISCAM para la fórmula.</td>
+            <td class="col-source"><code>INSTRUMENTO2!D*_*</code></td>
+          </tr>
+          <tr>
+            <td><span class="col-name">ISA</span><span class="col-type type-formula">índice</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">Índice de Sostenibilidad Agregada = media geométrica de D1-D7. Rango 0-4.</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">IP</span><span class="col-type type-formula">índice</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">Índice de Preparación = media aritmética de D8-D9. Rango 0-4.</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">IV</span><span class="col-type type-formula">índice</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">Índice de Vulnerabilidad = 4 - ISA. Inverso de preparación.</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">RE</span><span class="col-type type-formula">índice</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">Índdice de Resiliencia = (ISA × 0.7) + (IP × 0.3). Ponderación ISCAM.</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CERT_RAINFOREST</span><span class="col-type type-select">bool</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">¿Cuenta con certificación Rainforest Alliance? SÍ / NO / EN PROCESO</td>
+            <td class="col-source">SENASA / Org. certificadora</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CERT_ORGANICO</span><span class="col-type type-select">bool</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">¿Cuenta con certificación orgánica (USDA/SENASA)? SÍ / NO / EN PROCESO</td>
+            <td class="col-source">SENASA / OTA</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CERT_FAIRTRADE</span><span class="col-type type-select">bool</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">¿Cuenta con Fairtrade / Comercio Justo? SÍ / NO / EN PROCESO</td>
+            <td class="col-source">FLOCERT</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">CERT_UTZ</span><span class="col-type type-select">bool</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">¿Cuenta con certificación UTZ / GLOBALG.A.P? SÍ / NO / EN PROCESO</td>
+            <td class="col-source">Rainforest Alliance</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">EXPORT_A_UE</span><span class="col-type type-select">bool</span></td>
+            <td><span class="col-type type-select">select</span></td>
+            <td class="col-desc">¿Exporta actualmente a la Unión Europea? SÍ / NO / SE CONTABILIZA EN PAÍS TERCERO</td>
+            <td class="col-source">Instrumento 2 / PAC</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">VOLUMEN_EXPORT</span><span class="col-type type-num">TM</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Volumen aproximado de exportación anual en toneladas métricas.</td>
+            <td class="col-source">PRODUCE 2024 / BCRP</td>
+          </tr>
+          <tr>
+           td><span class="col-name">VALOR_EXPORT_USD</span><span class="col-type type-num">USD</span></td>
+            <td><span class="col-type type-num">número</span></td>
+            <td class="col-desc">Valor FOB de exportaciones a UE en USD (último año disponible).</td>
+            <td class="col-source">PRODUCE / BCRP</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">NIVEL_RIESGO</span><span class="col-type type-formula">select</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">ALTO / MEDIO / BAJO. Reglas: IV ≥ 3 → ALTO; 2 ≤ IV < 3 → MEDIO; IV < 2 → BAJO</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">SEMAFORO</span><span class="col-type type-formula">emoji</span></td>
+            <td><span class="col-type type-formula">fórmula</span></td>
+            <td class="col-desc">🔴 ALTO / 🟡 MEDIO / 🟢 BAJO. Derivado de NIVEL_RIESGO + exportar a UE.</td>
+            <td class="col-source">Calculado</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">FECHA_EVALUACION</span><span class="col-type type-date">fecha</span></td>
+            <td><span class="col-type type-date">fecha</span></td>
+            <td class="col-desc">Fecha en que se levantó el Instrumento 2 (llenado de campo).</td>
+            <td class="col-source">Campo / Google Forms</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">EVALUADOR</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Nombre del técnico / evaluador que levantó el instrumento.</td>
+            <td class="col-source">Campo</td>
+          </tr>
+          <tr>
+            <td><span class="col-name">NOTAS_SCORECARD</span><span class="col-type type-text">texto</span></td>
+            <td><span class="col-type type-text">texto</span></td>
+            <td class="col-desc">Observaciones cualitativas del evaluador. Máximo 500 caracteres.</td>
+            <td class="col-source">Campo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 3: INSTRUMENTO 2 ── -->
+<div class="section" id="instrumento">
+  <div class="section-label">Sheet 3 · Survey</div>
+  <h2>INSTRUMENTO 2</h2>
+  <p class="intro">
+    Las 75 preguntas del cuestionario EUDR del Toolkit ISCAM / Universidad del Pacífico.
+    Cada pregunta tiene una respuesta 0-4 (ordinal). Se calculan por dimensión.
+    Esta hoja se llena desde Google Forms o manualmente en campo.
+  </p>
+
+  <!-- Scale -->
+  <div class="scale-row">
+    <div class="scale-header">Valor</div>
+    <div class="scale-header">Escala ISCAM</div>
+    <div class="scale-header">Qué significa en la práctica</div>
+  </div>
+  <div class="scale-row">
+    <div class="scale-item">
+      <div><span class="scale-val" style="color:#ef4444">0</span></div>
+      <div class="scale-lbl" style="color:#ef4444">No existe</span></div>
+      <div class="scale-desc">No hay evidencia ni práctica</div>
+    </div>
+  </div>
+  <div class="scale-row">
+    <div class="scale-item">
+      <div><span class="scale-val" style="color:#f97316">1</span></div>
+      <div class="scale-lbl" style="color:#f97316">Existe / planificación</div>
+      <div class="scale-desc">Documentado pero sin implementación</div>
+    </div>
+  </div>
+  <div class="scale-row">
+    <div class="scale-item">
+      <div><span class="scale-val" style="color:#eab308">2</span></div>
+      <div class="scale-lbl" style="color:#eab308">Implementación parcial</div>
+      <div class="scale-desc">Funciona en < 50% de casos o con fallas</div>
+    </div>
+  </div>
+  <div class="scale-row">
+    <div class="scale-item">
+      <div><span class="scale-val" style="color:#22c55e">3</span></div>
+      <div class="scale-lbl" style="color:#22c55e">Implementación amplia</div>
+      <div class="scale-desc">Funciona en la mayoría de casos</div>
+    </div>
+  </div>
+  <div class="scale-row">
+    <div class="scale-item">
+      <div><span class="scale-val" style="color:#2f6f5e">4</span></div>
+      <div class="scale-lbl" style="color:#2f6f5e">Plenamente funcional</div>
+      <div class="scale-desc">Documentado, implementado, auditado</div>
+    </div>
+  </div>
+
+  <div class="sheet-block" style="margin-top:1.5rem">
+    <div class="sheet-header">
+      <span class="sheet-badge s3">Sheet 3</span>
+      <span class="sheet-title">INSTRUMENTO 2 — columnas por pregunta</span>
+      <span class="sheet-desc">~90 columnas · RUC + 75 preguntas + metadata</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr><th>Columna</th><th>Tipo</th><th>Descripción</th><th>Dimensión</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="col-name">RUC</span></td>
+            <td><span class="col-type type-id">ID</span></td>
+            <td class="col-desc">FK → DIRECTORIO.RUC</td>
+            <td></td>
+          </tr>
+          <!-- D1 -->
+          <tr><td colspan="4" style="background:var(--accent-soft);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--accent)">D1 — IDENTIFICACIÓN DEL OPERADOR · 8 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D1_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿La organización cuenta con RUC activo?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿La organización tiene partida de registro SUNARP?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Los socios productores están registrados formalmente?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se identifica a los compradores / comercializadores?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se lleva registro de compradores por campaña?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P06</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Los documentos de identidad de productores están digitalizados?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P07</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe un registro actualizado de todos los proveedores?</td><td>D1</td></tr>
+          <tr><td><span class="col-name">D1_P08</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se verifica la identidad de cada proveedor antes de la primera transacción?</td><td>D1</td></tr>
+          <!-- D2 -->
+          <tr><td colspan="4" style="background:var(--amber-soft);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--amber)">D2 — TRAZABILIDAD · 13 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D2_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se registran las cosechas por parcela?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se pesa la producción en recibo?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿El ticket de balanza identifica al productor?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se registra el volumen por lote de acopio?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe sistema de lotes con código único?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P06</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se vincula el lote con la fecha de acopio?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P07</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se vincula el lote con la parcela de origen?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P08</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se registra humedad / calidad en recibo?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P09</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe registro de almacenamiento por lote?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P10</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se documenta el proceso de transformación?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P11</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se emite documento de transporte (GDR/GUIAS)?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P12</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se registra destino final del lote?</td><td>D2</td></tr>
+          <tr><td><span class="col-name">D2_P13</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿El sistema permite rastrear backwards del lote final al parcela?</td><td>D2</td></tr>
+          <!-- D3 -->
+          <tr><td colspan="4" style="background:var(--rose-soft);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--rose)">D3 — GEOLOCALIZACIÓN · 9 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D3_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Las parcelas de productores están georreferenciadas?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se usa GPS o app móvil para capturar coordenadas?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Los polígonos de parcela están dibujados en mapa?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se actualiza la cartografía anualmente?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Las coordenadas se almacenan en base digital?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P06</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se verifica que las parcelas no estén en áreas deforestadas?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P07</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se hace análisis de cobertura boscosa?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P08</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se cruza parcela vs mapas de cobertura MINAM/GEOSERFOR?</td><td>D3</td></tr>
+          <tr><td><span class="col-name">D3_P09</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se puede generar archivo GeoJSON/KML de parcelas?</td><td>D3</td></tr>
+          <!-- D4 -->
+          <tr><td colspan="4" style="background:var(--indigo-soft);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--indigo)">D4 — VIGILANCIA · 10 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D4_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe mecanismo de vigilancia comunitaria?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se reportan incidentes de deforestación?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Hay acuerdo con autoridades locales para vigilancia?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se usa tecnología de monitoreo (drones, satélite)?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se supervisa el cumplimiento del plan de manejo?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P06</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe protocolo de respuesta ante hallazgo de deforestación?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P07</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se registran ingresos de terceros a parcelas?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P08</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se supervisa a proveedores indirectos?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P09</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe registro fotográfico georreferenciado?</td><td>D4</td></tr>
+          <tr><td><span class="col-name">D4_P10</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se comparte información de vigilancia con otras orgs?</td><td>D4</td></tr>
+          <!-- D5 -->
+          <tr><td colspan="4" style="background:rgba(16,185,129,0.08);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:#059669">D5 — DUE DILIGENCE · 5 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D5_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se evalúa riesgo de deforestación de proveedores?</td><td>D5</td></tr>
+          <tr><td><span class="col-name">D5_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se firma declaración jurada de no deforestación con socios?</td><td>D5</td></tr>
+          <tr><td><span class="col-name">D5_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se audita a proveedores de segundo nivel?</td><td>D5</td></tr>
+          <tr><td><span class="col-name">D5_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe código de conducta / política de sostenibilidad?</td><td>D5</td></tr>
+          <tr><td><span class="col-name">D5_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se capacita a productores sobre EUDR y deforestación?</td><td>D5</td></tr>
+          <!-- D6 -->
+          <tr><td colspan="4" style="background:rgba(245,158,11,0.08);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:#b45309">D6 — PAPELES DE DEFORESTACIÓN · 4 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D6_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se verifica que proveedores no estén en listas de deforestación?</td><td>D6</td></tr>
+          <tr><td><span class="col-name">D6_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se consulta base de datos de sanciones ambientales?</td><td>D6</td></tr>
+          <tr><td><span class="col-name">D6_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se mantiene registro de controversias legales ambientales?</td><td>D6</td></tr>
+          <tr><td><span class="col-name">D6_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Existe protocolo de diligencia debida reforzada?</td><td>D6</td></tr>
+          <!-- D7 -->
+          <tr><td colspan="4" style="background:rgba(239,68,68,0.08);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:#dc2626">D7 — SANCIONES Y DECOMISOS · 3 preguntas · geométrica</td></tr>
+          <tr><td><span class="col-name">D7_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿La organización ha recibido sanciones por temas ambientales?</td><td>D7</td></tr>
+          <tr><td><span class="col-name">D7_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Hay decomisos o retenciones de mercancía?</td><td>D7</td></tr>
+          <tr><td><span class="col-name">D7_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Se han iniciado acciones legales por incumplimiento ambiental?</td><td>D7</td></tr>
+          <!-- D8 -->
+          <tr><td colspan="4" style="background:rgba(139,92,246,0.08);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:#7c3aed">D8 — CAPACIDAD OPERATIVA · 6 preguntas · aritmética</td></tr>
+          <tr><td><span class="col-name">D8_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Cuenta con software/sistema de gestión?</td><td>D8</td></tr>
+          <tr><td><span class="col-name">D8_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Tiene conectividad a internet estable?</td><td>D8</td></tr>
+          <tr><td><span class="col-name">D8_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Personal capacitado en tecnología?</td><td>D8</td></tr>
+          <tr><td><span class="col-name">D8_P04</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Tiene presupuesto para cumplir EUDR?</td><td>D8</td></tr>
+          <tr><td><span class="col-name">D8_P05</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Tiene acceso a asistencia técnica?</td><td>D8</td></tr>
+          <tr><td><span class="col-name">D8_P06</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Cumple requisitos de personal mínimo para exportar?</td><td>D8</td></tr>
+          <!-- D9 -->
+          <tr><td colspan="4" style="background:rgba(6,182,212,0.08);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:#0891b2">D9 — ACCESO A MERCADOS · 3 preguntas · aritmética</td></tr>
+          <tr><td><span class="col-name">D9_P01</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Ya exporta a la Unión Europea?</td><td>D9</td></tr>
+          <tr><td><span class="col-name">D9_P02</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Tiene comprador/importador identificado en UE?</td><td>D9</td></tr>
+          <tr><td><span class="col-name">D9_P03</span></td><td><span class="col-type type-select">0-4</span></td><td class="col-desc">¿Ha recibido consultas o requerimientos de compradores EU?</td><td>D9</td></tr>
+          <!-- D10 + D11 -->
+          <tr><td colspan="4" style="background:var(--bg);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--text-muted)">D10 — CERTIFICACIONES · 2 preguntas · mapeo &nbsp;|&nbsp; D11 — VOLUMEN · 2 preguntas · mapeo</td></tr>
+          <tr><td><span class="col-name">D10_P01</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">¿Qué certificaciones tiene? (lista desplegable: RA, Orgánico, Fairtrade, UTZ, Ninguna)</td><td>D10</td></tr>
+          <tr><td><span class="col-name">D10_P02</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">¿Cuál es el estado de la certificación? (Vigente / Vence en X meses / En proceso / Caducada)</td><td>D10</td></tr>
+          <tr><td><span class="col-name">D11_P01</span></td><td><span class="col-type type-num">TM</span></td><td class="col-desc">Volumen exportado en TM (último año)</td><td>D11</td></tr>
+          <tr><td><span class="col-name">D11_P02</span></td><td><span class="col-type type-num">USD</span></td><td class="col-desc">Valor FOB exportado en USD (último año)</td><td>D11</td></tr>
+          <!-- Meta -->
+          <tr><td colspan="4" style="background:var(--bg);border-top:2px solid var(--border);font-weight:700;font-size:0.75rem;padding:0.4rem 1rem;color:var(--text-muted)">METADATA DE LEVANTAMIENTO</td></tr>
+          <tr><td><span class="col-name">FECHA_LEVANTAMIENTO</span></td><td><span class="col-type type-date">fecha</span></td><td class="col-desc">Fecha en que se llenó el instrumento</td><td>meta</td></tr>
+          <tr><td><span class="col-name">EVALUADOR</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Nombre del técnico</td><td>meta</td></tr>
+          <tr><td><span class="col-name">FORMA</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">PRESENCIAL / VIDEOLLAMADA / TELEFÓNICA / AUTOAPLICADO</td><td>meta</td></tr>
+          <tr><td><span class="col-name">NOTAS</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Observaciones del evaluador. Usar para casos "2" y "1" donde se necesita evidencia.</td><td>meta</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 4: TIMELINE ── -->
+<div class="section" id="timeline">
+  <div class="section-label">Sheet 4 · Vida de la cooperativa</div>
+  <h2>TIMELINE</h2>
+  <p class="intro">
+    Cada fila es un <strong>evento</strong> (no una organización). Una organización puede tener
+    múltiples eventos. Esto permite trazar la vida completa: cuándo se registró, cuándo certificó,
+    cuándo fue inspeccionada, cuándo recibió un requerimiento EUDR.
+  </p>
+
+  <div class="sheet-block">
+    <div class="sheet-header">
+      <span class="sheet-badge s4">Sheet 4</span>
+      <span class="sheet-title">TIMELINE — columnas</span>
+      <span class="sheet-desc">~20 columnas · una fila por evento</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr><th>Columna</th><th>Tipo</th><th>Descripción</th><th>Fuente</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="col-name">RUC</span><span class="col-type type-id">FK</span></td><td><span class="col-type type-id">ID</span></td><td class="col-desc">FK → DIRECTORIO.RUC</td><td class="col-source">Vínculo</td></tr>
+          <tr><td><span class="col-name">FECHA_EVENTO</span></td><td><span class="col-type type-date">fecha</span></td><td class="col-desc">Fecha del evento. Formato AAAA-MM-DD.</td><td class="col-source">Variable</td></tr>
+          <tr><td><span class="col-name">TIPO_EVENTO</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">CONSTITUCIÓN / REGISTRO_RUC / CERTIFICACIÓN / INSPECCIÓN / REQUERIMIENTO_EUDR / SANCIÓN / EXPORTACIÓN / ACTUALIZACIÓN_DATOS / CONTACTO / OTRO</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">SUBTIPO</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Detalle: "Cert Rainforest 2024", "Inspección SENASA", "Requerimiento importador alemán".</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">DESCRIPCION</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Narrativa corta del evento. Máx 300 caracteres.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">INSTITUCION</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Entidad involucrada: SUNAT, SENASA, PAC, SENACE, importador, etc.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">DOCUMENTO</span></td><td><span class="col-type type-text">URL</span></td><td class="col-desc">Link al documento o archivo de respaldo en Drive.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">RESULTADO</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">APROBADO / RECHAZADO / PENDIENTE / OBSERVADO / N/A</td><td class="col-source">Variable</td></tr>
+          <tr><td><span class="col-name">ESCALA_RESULTADO</span></td><td><span class="col-type type-num">0-4</span></td><td class="col-desc">Si es un evento de evaluación: score obtenido.</td><td class="col-source">Variable</td></tr>
+          <tr><td><span class="col-name">PROXIMO_PASSO</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Qué falta hacer. Convierte cada evento en un checklist.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">FECHA_PROXIMO</span></td><td><span class="col-type type-date">fecha</span></td><td class="col-desc">Fecha límite o estimada para el próximo paso.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">RESPONSABLE</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Quién está a cargo del seguimiento.</td><td class="col-source">Manual</td></tr>
+          <tr><td><span class="col-name">FUENTE_INFO</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">MIDAGRI / SUNAT / PAC / CENACOOP / PRODUCE / BCRP / SENASA / CAMPO / WEB / OTRO</td><td class="col-source">Anotar siempre</td></tr>
+          <tr><td><span class="col-name">CONFIANZA</span></td><td><span class="col-type type-select">select</span></td><td class="col-desc">ALTA / MEDIA / BAJA. ¿Se puede verificar el dato?</td><td class="col-source">Anotar siempre</td></tr>
+          <tr><td><span class="col-name">CREADO_POR</span></td><td><span class="col-type type-text">texto</span></td><td class="col-desc">Nombre de quien registró el evento.</td><td class="col-source">Auto</td></tr>
+          <tr><td><span class="col-name">FECHA_CREADO</span></td><td><span class="col-type type-date">fecha</span></td><td class="col-desc">Fecha de registro en la hoja.</td><td class="col-source">Auto</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Mock timeline -->
+      <p style="font-size:0.82rem;font-weight:600;color:var(--text-muted);margin-top:1.5rem;margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.06em">Ejemplo — Cooperativa Pangoa</p>
+      <div class="timeline-mock">
+        <div class="tl-header">
+          <div>Fecha</div>
+          <div>Tipo</div>
+          <div>Descripción</div>
+          <div>Fuente</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2004-03-15</div>
+          <div class="tl-type" style="color:var(--accent)">CONSTITUCIÓN</div>
+          <div class="tl-desc">Fundación como CAC. 85 socios fundadores. Junín.</div>
+          <div class="tl-src">SUNAT</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2018-09-01</div>
+          <div class="tl-type" style="color:var(--amber)">CERTIFICACIÓN</div>
+          <div class="tl-desc">Obiene certificación Rainforest Alliance. Auditoría externa.</div>
+          <div class="tl-src">PAC</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021-06-20</div>
+          <div class="tl-type" style="color:var(--rose)">INSPECCIÓN</div>
+          <div class="tl-desc">Inspección SENASA. Cumplimiento sanitario aprobado.</div>
+          <div class="tl-src">SENASA</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2024-11-01</div>
+          <div class="tl-type" style="color:var(--indigo)">EXPORTACIÓN</div>
+          <div class="tl-desc">Primer contenedor a puerto de Rotterdam. 18 TM café.</div>
+          <div class="tl-src">PRODUCE</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025-03-15</div>
+          <div class="tl-type" style="color:#7c3aed">REQUERIMIENTO EUDR</div>
+          <div class="tl-desc">Comprador alemán solicita evidencia de geolocalización parcelas.</div>
+          <div class="tl-src">CAMPO</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025-06-01</div>
+          <div class="tl-type" style="color:var(--sky)">INSTRUMENTO 2</div>
+          <div class="tl-desc">Llenado Instrumento 2 por equipo UP. Score D3=2.1.</div>
+          <div class="tl-src">UP/ISCAM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 5: MÉTRICAS ── -->
+<div class="section" id="metricas">
+  <div class="section-label">Sheet 5 · Analytics</div>
+  <h2>MÉTRICAS Y DASHBOARD</h2>
+  <p class="intro">
+    Vistas resumidas sobre el universo completo. Se actualizan con fórmulas
+    de referencia cruzada. Incluyen semáforo, rankings, y export a Looker Studio.
+  </p>
+
+  <div class="sheet-block">
+    <div class="sheet-header">
+      <span class="sheet-badge s5">Sheet 5</span>
+      <span class="sheet-title">MÉTRICAS — columnas clave</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr><th>Columna / Widget</th><th>Tipo</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="col-name">TOTAL_ORGS</span></td><td><span class="col-type type-num">métrica</span></td><td class="col-desc">=COUNTA(DIRECTORIO!A2:A) — total de orgs en universo</td></tr>
+          <tr><td><span class="col-name">EVALUADAS</span></td><td><span class="col-type type-num">métrica</span></td><td class="col-desc">=COUNTIF(SCORECARD!FECHA_EVALUACION,"<>") — orgs con Instrumento 2 lleno</td></tr>
+          <tr><td><span class="col-name">PCT_EVALUADAS</span></td><td><span class="col-type type-formula">%</span></td><td class="col-desc">=EVALUADAS/TOTAL_ORGS — meta: 100% en muestra</td></tr>
+          <tr><td><span class="col-name">ISA_PROMEDIO</span></td><td><span class="col-type type-num">0-4</span></td><td><td class="col-desc">=AVERAGE(SCORECARD!ISA) — score medio de preparación</td></tr>
+          <tr><td><span class="col-name">RIESGO_ALTO</span></td><td><span class="col-type type-num">número</span></td><td class="col-desc">=COUNTIF(SCORECARD!NIVEL_RIESGO,"ALTO")</td></tr>
+          <tr><td><span class="col-name">RIESGO_MEDIO</span></td><td><span class="col-type type-num">número</span></td><td class="col-desc">=COUNTIF(SCORECARD!NIVEL_RIESGO,"MEDIO")</td></tr>
+          <tr><td><span class="col-name">RIESGO_BAJO</span></td><td><span class="col-type type-num">número</span></td><td class="col-desc">=COUNTIF(SCORECARD!NIVEL_RIESGO,"BAJO")</td></tr>
+          <tr><td><span class="col-name">TOP_D1</span></td><td><span class="col-type type-text">lista</span></td><td class="col-desc">Top 10 orgs con mayor D1_PROMEDIO</td></tr>
+          <tr><td><span class="col-name">TOP_ISA</span></td><td><span class="col-type type-text">lista</span></td><td class="col-desc">Top 10 orgs con mayor ISA</td></tr>
+          <tr><td><span class="col-name">RANKING_D3</span></td><td><span class="col-type type-text">ranking</span></td><td class="col-desc">Ranking de geolocalización por org. Para identificar quién necesita apoyo en D3.</td></tr>
+          <tr><td><span class="col-name">MAPA_CALOR</span></td><td><span class="col-type type-formula">pivot</span></td><td class="col-desc">ISA promedio × DEPARTAMENTO — pivot table para identificar brechas regionales.</td></tr>
+          <tr><td><span class="col-name">EXPORT_LOOKER</span></td><td><span class="col-type type-text">URL</span></td><td class="col-desc">Link al dashboard Looker Studio conectado a este sheet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── SHEET 6: DICCIONARIO ── -->
+<div class="section" id="diccionario">
+  <div class="section-label">Sheet 6 · Metadatos</div>
+  <h2>DICCIONARIO DE DATOS</h2>
+  <p class="intro">
+    Metadatos de cada columna. Quién la llena, con qué frecuencia, de dónde sale,
+    qué significa. Evita que el equipo se pierda cuando pase el tiempo.
+  </p>
+  <div class="sheet-block">
+    <div class="sheet-header">
+      <span class="sheet-badge s6">Sheet 6</span>
+      <span class="sheet-title">DICCIONARIO — columnas</span>
+    </div>
+    <div class="sheet-body">
+      <table class="col-table">
+        <thead>
+          <tr><th>Sheet</th><th>Columna</th><th>Definición</th><th>Fuente</th><th>Quién llena</th><th>Frecuencia</th><th>Validación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>DIRECTORIO</td><td><span class="col-name">RUC</span></td><td>Número de RUC SUNAT de 11 dígitos</td><td>SUNAT</td><td>Mavis</td><td>Trimestral</td><td>11 dígitos + checksum</td></tr>
+          <tr><td>DIRECTORIO</td><td><span class="col-name">NOMBRE_ORG</span></td><td>Razón social según SUNAT</td><td>SUNAT</td><td>Mavis</td><td>Trimestral</td><td>No vacío</td></tr>
+          <tr><td>DIRECTORIO</td><td><span class="col-name">ESTADO_SUNAT</span></td><td>Estado del contribuyente en SUNAT</td><td>SUNAT</td><td>Mavis</td><td>Trimestral</td><td>Lista: ACTIVO/BAJA</td></tr>
+          <tr><td>DIRECTORIO</td><td><span class="col-name">CADENA</span></td><td>Cadena productiva principal</td><td>PAC dir v3</td><td>Ricardo</td><td>Mensual</td><td>CAFÉ/CACAO/AMBAS</td></tr>
+          <tr><td>SCORECARD</td><td><span class="col-name">ISA</span></td><td>Índice Sostenibilidad Agregada = geom(D1:D7)</td><td>Calculado</td><td>Auto</td><td>Auto</td><td>Rango 0-4</td></tr>
+          <tr><td>SCORECARD</td><td><span class="col-name">IV</span></td><td>Índice Vulnerabilidad = 4 - ISA</td><td>Calculado</td><td>Auto</td><td>Auto</td><td>Rango 0-4</td></tr>
+          <tr><td>INSTRUMENTO2</td><td><span class="col-name">D*_P*</span></td><td>Respuesta 0-4 a pregunta del instrumento</td><td>Campo</td><td>Evaluador</td><td>Por evaluación</td><td>Solo 0/1/2/3/4</td></tr>
+          <tr><td>TIMELINE</td><td><span class="col-name">TIPO_EVENTO</span></td><td>Clasificación del evento</td><td>Manual</td><td>Equipo</td><td>Por evento</td><td>Lista cerrada</td></tr>
+          <tr><td>TIMELINE</td><td><span class="col-name">CONFIANZA</span></td><td>Nivel de verificabilidad del dato</td><td>Manual</td><td>Equipo</td><td>Por evento</td><td>ALTA/MEDIA/BAJA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── ARQUITECTURA DE FLUJO ── -->
+<div class="section" id="flujo">
+  <div class="section-label">Cómo fluyen los datos</div>
+  <h2>Arquitectura de integración</h2>
+  <p class="intro">
+    El RUC es la clave primaria en todas las hojas. Las fórmulas de referencia cruzada
+    recalculan scores, índices y semáforos automáticamente cuando se llena el Instrumento 2.
+  </p>
+
+  <div class="arch-diagram">
+    <div class="arch-label">Flujo de datos — lectura vertical</div>
+    <div class="arch-row">
+      <div class="arch-box accent">📁 Archivos fuente<br><small>MIDAGRI · PAC · PRODUCE · SUNAT</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box accent">🔄 SCRIPT PYTHON<br><small>Validación RUC + cruce por nombre</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box amber">📋 DIRECTORIO<br><small>RUC · Nombre · Ubicación · Miembros</small></div>
+    </div>
+    <div class="arch-row">
+      <div class="arch-box amber">📋 DIRECTORIO</div>
+      <div class="arch-arrow">↓ copia</div>
+      <div class="arch-box indigo">📝 INSTRUMENTO 2<br><small>RUC + 75 respuestas 0-4</small></div>
+      <div class="arch-arrow">↓ calcula</div>
+      <div class="arch-box rose">⭐ SCORECARD<br><small>D1-D11 · ISA/IP/IV/RE · Semáforo</small></div>
+    </div>
+    <div class="arch-row">
+      <div class="arch-box rose">⭐ SCORECARD</div>
+      <div class="arch-arrow">+</div>
+      <div class="arch-box sky">📅 TIMELINE<br><small>Eventos por org · Fuentes · Próximos pasos</small></div>
+      <div class="arch-arrow">=</div>
+      <div class="arch-box green">📊 MÉTRICAS<br><small>Universo · Rankings · Mapa de calor</small></div>
+    </div>
+    <div class="arch-row" style="margin-top:1rem">
+      <div class="arch-box green">📊 MÉTRICAS</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box">🔗 Looker Studio<br><small>Dashboard público / restringido</small></div>
+      <div class="arch-arrow">+</div>
+      <div class="arch-box">📱 Google Forms<br><small>Levantamiento Instrumento 2</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box accent">📋 DIRECTORIO<br><small>Actualización trimestral</small></div>
+    </div>
+  </div>
+
+  <!-- Formula block -->
+  <div style="margin-top:2rem">
+    <p style="font-size:0.82rem;font-weight:600;color:var(--text-muted);margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.06em">Fórmulas clave — cómo se calculan los índices</p>
+    <div class="formula-block">
+<span class="comment">// D1-D7: MEDIA GEOMÉTRICA (índice de sostenibilidad — ISCAM)</span>
+<span class="key">ISA</span> <span class="op">=</span> (D1 × D2 × D3 × D4 × D5 × D6 × D7)<span class="op">^(1/7)</span>
+
+<span class="comment">// D8-D9: MEDIA ARITMÉTICA (índice de preparación operativa)</span>
+<span class="key">IP</span> <span class="op">=</span> (D8 × <span class="fn">COUNT</span>(D8) + D9 × <span class="fn">COUNT</span>(D9)) <span class="op">/</span> (<span class="fn">COUNT</span>(D8) + <span class="fn">COUNT</span>(D9))
+
+<span class="comment">// Vulnerabilidad = complemento del ISA</span>
+<span class="key">IV</span> <span class="op">=</span> 4 <span class="op">−</span> ISA
+
+<span class="comment">// Resiliencia = ponderación 70% sostenibilidad, 30% preparación operativa</span>
+<span class="key">RE</span> <span class="op">=</span> (ISA × 0.7) + (IP × 0.3)
+
+<span class="comment">// Semáforo: regla de decisión por nivel de riesgo + exposición UE</span>
+<span class="key">SEMÁFORO</span> <span class="op">=</span> <span class="fn">IF</span>(IV ≥ 3, "🔴 ALTO",
+  <span class="fn">IF</span>(IV ≥ 2, "🟡 MEDIO", "🟢 BAJO"))
+
+<span class="comment">// Prioridad EUDR: nivel de riesgo × exporta a UE (multiplicador 2×)</span>
+<span class="key">PRIORIDAD</span> <span class="op">=</span> <span class="fn">IF</span>(<span class="fn">AND</span>(NIVEL_RIESGO="ALTO", EXPORTA_UE="SÍ"), "URGENTE",
+  <span class="fn">IF</span>(NIVEL_RIESGO="ALTO", "ALTA",
+  <span class="fn">IF</span>(NIVEL_RIESGO="MEDIO", "MEDIA", "BAJA")))
+    </div>
+  </div>
+</div>
+
+<!-- ── CÓMO CONSTRUIR ── -->
+<div class="section" id="construir">
+  <div class="section-label">Hoja de ruta</div>
+  <h2>Cómo construirlo</h2>
+  <p class="intro">Pasos concretos, en orden. Empezamos por el directorio, terminamos en el dashboard.</p>
+
+  <ol class="steps-list">
+    <li class="step-item">
+      <div class="step-num">1</div>
+      <h4>Crear Google Sheet vacío</h4>
+      <p>6 pestañas en blanco. Nombrar las hojas tal como están aquí. Crear las columnas con formato desde el inicio — no agregar columnas después.</p>
+      <span class="step-tag">~15 min</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">2</div>
+      <h4>Subir DIRECTORIO desde CSV</h4>
+      <p>Exportar <code>EUDRPERU_universo_final.csv</code> → importar a la pestaña DIRECTORIO. Verificar que RUC sea texto (no número) para evitar pérdida de ceros.</p>
+      <span class="step-tag">~10 min · CSV listo</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">3</div>
+      <h4>Configurar validación de datos</h4>
+      <p>Aplicar listas desplegables a: TIPO_ORG, CADENA, REGION_EUDR, ESTADO_SUNAT, PRIORIDAD_EUDR. Evitar texto libre en estas columnas.</p>
+      <span class="step-tag">~20 min</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">4</div>
+      <h4>Crear SCORECARD con fórmulas</h4>
+      <p>Agregar RUC desde DIRECTORIO con =UNIQUE(DIRECTORIO!RUC). Escribir fórmulas ISA, IP, IV, RE referenciando INSTRUMENTO2. El semáforo se calcula solo.</p>
+      <span class="step-tag">~30 min</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">5</div>
+      <h4>Armar Google Forms del Instrumento 2</h4>
+      <p>Crear formulario con las 75 preguntas organizadas por dimensión. Cada pregunta: opción única (0/1/2/3/4). Vincular respuestas a la pestaña INSTRUMENTO2 con Zapier/Make o manualmente.</p>
+      <span class="step-tag">~2-3h · Forms</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">6</div>
+      <h4>Llenar TIMELINE con datos existentes</h4>
+      <p>Usar la información de FECHA_INSCRIPCION del directorio para crear el primer evento de CONSTITUCIÓN de cada org. Luego agregar certificaciones known.</p>
+      <span class="step-tag">~1h</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">7</div>
+      <h4>Poblar DICCIONARIO</h4>
+      <p>Copiar la tabla de la Sheet 6 de este documento. Completar quién llena y frecuencia reales.</p>
+      <span class="step-tag">~30 min</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">8</div>
+      <h4>Conectar Looker Studio</h4>
+      <p>Desde Métricas, "Archivo → Compartir → Publicar en la web" o conectar directamente con Looker Studio para dashboard interactivo.</p>
+      <span class="step-tag">~1h · Looker</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">9</div>
+      <h4>Protocolo de actualización trimestral</h4>
+      <p>Script Python que re-valida RUCs en SUNAT, cruza con PRODUCE, y genera CSV actualizado. El CSV se vuelve a importar a DIRECTORIO.</p>
+      <span class="step-tag">Script Python</span>
+    </li>
+    <li class="step-item">
+      <div class="step-num">10</div>
+      <h4>Levantamiento de campo (Instrumento 2)</h4>
+      <p>Meta: 46-150 organizaciones. Prioridad: ALTA + exporta a UE. Distribuir Forms, capacitar evaluadores, revisar calidad de respuestas.</p>
+      <span class="step-tag">Ongoing</span>
+    </li>
+  </ol>
+</div>
+
+<!-- ── PRIORIDAD ── -->
+<div class="section">
+  <div class="section-label">Criterio de priorización</div>
+  <h2>¿A quién evaluamos primero?</h2>
+
+  <p class="intro">Con 245 organizaciones y recursos limitados, la muestra debe ser estratégica. Filtro en cascada:</p>
+
+  <div class="badge-row" style="margin-bottom:1.5rem">
+    <span class="badge red">Filtro 1: Exporta a UE = SÍ</span>
+    <span class="badge amber">Filtro 2: CADENA = CAFÉ o CACAO</span>
+    <span class="badge blue">Filtro 3: Miembros > 50</span>
+    <span class="badge gray">Filtro 4: ACTIVO en SUNAT</span>
+    <span class="badge green">Filtro 5: Sin certificación vigente</span>
+  </div>
+
+  <div class="sheet-block">
+    <div class="sheet-body">
+      <p style="font-size:0.82rem;font-weight:600;color:var(--text-muted);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.06em">Muestra sugerida — marco toolkit ISCAM</p>
+      <table class="col-table">
+        <thead>
+          <tr><th>Grupo</th><th>Criterio</th><th>Org esperadas</th><th>Prioridad</th><th>Por qué</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700;color:var(--rose)">🔥 URGENTE</td>
+            <td>Exporta a UE + alto volumen + sin geolocalización</td>
+            <td>15-20</td>
+            <td><span class="badge red">Inmediato</span></td>
+            <td>Riesgo inmediato de requerimiento de importador</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;color:var(--amber)">⚡ ALTA</td>
+            <td>Exporta a UE + certificada pero D3 bajo</td>
+            <td>20-30</td>
+            <td><span class="badge amber">Q3 2025</span></td>
+            <td>Pueden perder certificación si no cumplen</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;color:var(--sky)">📋 MEDIA</td>
+            <td>No exporta a UE pero tiene potencial</td>
+            <td>40-60</td>
+            <td><span class="badge blue">Q4 2025</span></td>
+            <td>Preparación proactiva para expansión</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;color:var(--text-muted)">🔰 BAJA</td>
+            <td>Resto del universo</td>
+            <td>Resto</td>
+            <td><span class="badge gray">2026</span></td>
+            <td>Mapeo general, menor urgencia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- KEY DECISIONS BOX -->
+<div class="section">
+  <div class="section-label">Decisiones de diseño</div>
+  <div class="sheet-block" style="border-left:4px solid var(--accent)">
+    <div class="sheet-body">
+      <ul style="list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:0.85rem">
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>RUC como clave primaria</strong> — validado 100% contra SUNAT. Nombre como backup para cruce.</span>
+        </li>
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>Instrumento 2 → Google Forms</strong> — el Toolkit recomienda formulario digital para consistencia.</span>
+        </li>
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>TIMELINE como eventos</strong> — una fila por evento, no por org. Permite trazar la vida completa.</span>
+        </li>
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>DICCIONARIO incluido</strong> — sin metadatos, el sheet se vuelve inmanejable en 6 meses.</span>
+        </li>
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>Scores calculados automáticamente</strong> — ISA, IP, IV, RE, semáforo recalculan al llenar Instrumento 2.</span>
+        </li>
+        <li style="display:flex;gap:0.5rem;align-items:flex-start">
+          <span style="color:var(--accent);font-weight:700;flex-shrink:0">✓</span>
+          <span><strong>Actualización trimestral</strong> — script Python re-valida RUCs y cruza con PRODUCE cada 3 meses.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  EUDR Perú · Arquitectura Google Sheet Maestro · Basado en Toolkit ISCAM / Universidad del Pacífico
+  <br><span style="font-size:0.72rem;color:var(--text-muted)">245 organizaciones · 11 dimensiones · 75 preguntas · 5 fuentes de datos</span>
+</footer>
+
+<script>
+// Simple nav highlight
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('.section[id], .hero[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    const top = s.offsetTop - 80;
+    if (scrollY >= top) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Variable;Descripcion;Tipo de dato;Tamaño;Recurso relacionado;Informacion Adicional 
+id_anonimo_coop;Identificador anonimizada de la empresa o unidad economica;Alfanumerico;32;;Anonimizacion compleja
+anio;Año de origen de la informacion;Numerico;4;;Formato:aaaa
+tipo_cooperativa;Clasificacion segun el tipo de cooperativa;Texto;150;INEI;
+ciiu;Codigo CIIU rev.3 ;Texto;4;Catalogo del INEI;
+descciiu;Descripcion del Clasificador Internacional  Industrial Uniforme;Texto;150;Catalogo  INEI;
+sector;Sector economico;Texto;100;Catalogo del INEI;
+ubigeo;Codigo de ubigeo ;Texto;6;INEI, RENIEC, SUNAT;
+departamento;Departamento donde se encuentra ubicado la unidad economica MIPYME;Texto;50;INEI, SUNAT;
+provincia;Provincia donde se encuentra ubicado la unidad economica MIPYME;Texto;150;INEI, SUNAT;
+distrito;Distrito donde se encuentra ubicado la unidad economica MIPYME;Texto;150;INEI, SUNAT;
+nrotrab;Cantidad de trabajadores;Numerico;8;;
+venta_promedio;Venta promedio aproximado declarado durante el año fiscal;Numerico;8;;
+exporta;Indicador de la unidad economica SI/NO exporta;Texto;4;;
+valor_milesfob_dolar;Valor de exportaciones en miles de dolares americanos;Numerico;10;;
+fec_creacion;Fecha de creacion del dataset;Numerico;8;;Formato: aaaammdd
+imputado_venta_promedio;Imputacion de las Venta promedio aproximado declarado durante el año fiscal;Numerico;8;;En la base de datos se identificaron 5 cooperativas con ventas declaradas en cero, a pesar de registrar un valor positivo en sus exportaciones. Esto podría deberse a la falta de declaración ante la SUNAT o a su naturaleza como entidades sin fines de lucro. Para abordar esta inconsistencia, se imputó una nueva variable de ventas promedio (imputado_venta_promedio) asignando el valor de las exportaciones de estas cinco cooperativas, convertido a moneda nacional utilizando el tipo de cambio promedio bancario del BCRP para 2024 (S/ 3.7539).

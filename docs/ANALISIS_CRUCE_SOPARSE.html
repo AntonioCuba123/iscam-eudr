@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EUDR Perú — Cruce SOPARSE CENCOOP 2017</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f172a; --surface: #1e293b; --border: #334155;
+    --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8;
+    --green: #4ade80; --yellow: #fbbf24; --red: #f87171;
+    --purple: #c084fc; --orange: #fb923c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); padding: 2rem; }
+  h1 { font-size: 1.5rem; color: var(--accent); margin-bottom: .25rem; }
+  h2 { font-size: 1.1rem; color: var(--accent); margin: 1.5rem 0 .75rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; }
+  h3 { font-size: .95rem; color: var(--text); margin: 1rem 0 .5rem; }
+  .subtitle { color: var(--muted); font-size: .85rem; margin-bottom: 1.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+  .metric { font-size: 2.2rem; font-weight: 700; color: var(--accent); }
+  .metric-label { font-size: .8rem; color: var(--muted); margin-top: .25rem; }
+  .tag { display: inline-block; padding: .15rem .6rem; border-radius: 99px; font-size: .75rem; font-weight: 600; margin: .2rem; }
+  .tag-green { background: rgba(74,222,128,.15); color: var(--green); }
+  .tag-yellow { background: rgba(251,191,36,.15); color: var(--yellow); }
+  .tag-red { background: rgba(248,113,113,.15); color: var(--red); }
+  .tag-purple { background: rgba(192,132,252,.15); color: var(--purple); }
+  .tag-orange { background: rgba(251,146,60,.15); color: var(--orange); }
+  .tag-blue { background: rgba(56,189,248,.15); color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; margin-top: .5rem; }
+  th { text-align: left; color: var(--accent); border-bottom: 1px solid var(--border); padding: .4rem .5rem; }
+  td { padding: .4rem .5rem; border-bottom: 1px solid var(--border); color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  .mono { font-family: 'Consolas', monospace; font-size: .78rem; }
+  .chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-top: .75rem; }
+  .hallazgo { background: rgba(56,189,248,.08); border-left: 3px solid var(--accent); padding: .75rem 1rem; border-radius: 0 6px 6px 0; margin: .5rem 0; font-size: .85rem; line-height: 1.6; }
+  .warning { background: rgba(251,191,36,.08); border-left: 3px solid var(--yellow); padding: .75rem 1rem; border-radius: 0 6px 6px 0; margin: .5rem 0; font-size: .85rem; }
+  .ok { background: rgba(74,222,128,.08); border-left: 3px solid var(--green); padding: .75rem 1rem; border-radius: 0 6px 6px 0; margin: .5rem 0; font-size: .85rem; }
+  .row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .75rem; }
+  .row > * { flex: 1 1 300px; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+  .tooltip { position: relative; }
+  .tooltip:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #000; color: #fff; padding: .3rem .6rem; border-radius: 4px; font-size: .72rem; white-space: nowrap; z-index: 10; }
+</style>
+</head>
+<body>
+
+<h1>🇵🇪 EUDR Perú — Cruce con SOPARSE (CENCOOP 2017)</h1>
+<p class="subtitle">Cooperativas cafetaleras y cacaoteras · RUC como clave primaria · Fuente: Directorio del Censo Nacional de Cooperativas 2017 — INESI/MINCETUR</p>
+
+<!-- KPIs -->
+<div class="grid">
+  <div class="card">
+    <div class="metric">72%</div>
+    <div class="metric-label">177 de 245 orgs tienen datos en CENCOOP 2017</div>
+    <div class="badge-row">
+      <span class="tag tag-green">72% match</span>
+      <span class="tag tag-yellow">68 post-2017</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="metric" style="color: var(--green)">160</div>
+    <div class="metric-label">Organizaciones con cafe/cacao en SOPARSE (razón social)</div>
+    <div class="badge-row">
+      <span class="tag tag-purple">83 no están en el Excel</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="metric" style="color: var(--purple)">96</div>
+    <div class="metric-label">Variables disponibles en el archivo SPSS</div>
+    <div class="badge-row">
+      <span class="tag tag-blue">1,965 cooperativas</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="metric" style="color: var(--yellow)">D8</div>
+    <div class="metric-label">Dimension ISCAM enriquecida con anios de operacion</div>
+    <div class="badge-row">
+      <span class="tag tag-orange">100% cobertura (177 matched)</span>
+    </div>
+  </div>
+</div>
+
+<h2>📊 Cobertura de campos SOPARSE para las 245 orgs</h2>
+<div class="row">
+  <div class="chart-box" style="flex:2; min-width:300px">
+    <canvas id="barCoverage" height="220"></canvas>
+  </div>
+  <div class="card" style="flex:1; min-width:220px">
+    <h3>Resumen de cobertura</h3>
+    <table>
+      <thead><tr><th>Campo</th><th>Con dato</th><th>Cobertura</th></tr></thead>
+      <tbody>
+        <tr><td>SOPARSE_RUC (flag)</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>ANIO_INICIO_OPER_CENCOOP</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>ANIO_CONSTITUCION_CENCOOP</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>COORD_GPS_LAT / LON</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>CIIU_DESCRIPCION</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>ESTADO_CENCOOP (activo/inact.)</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>RANGO_INGRESOS_2016</td><td>167/245</td><td><span class="tag tag-green">68%</span></td></tr>
+        <tr><td>WEB + CORREO + TELEFONOS</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+        <tr><td>NOMBRE PRESIDENTE + GERENTE</td><td>177/245</td><td><span class="tag tag-green">72%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2>📈 Dimensionamiento — 83 orgs cafe/cacao en SOPARSE fuera del Excel</h2>
+<div class="ok">
+  <strong>83 organizaciones</strong> en el CENCOOP 2017 mencionan "café", "cacao" o "cocoa" en su razon social y <strong>no están en la matriz actual</strong>. Esto expandiría el universo a <strong>328 orgs</strong> (245 + 83). Requiere validación: ¿son realmente exportadoras o solo operan en el mercado interno?
+</div>
+<div class="chart-box">
+  <canvas id="chartNuevas" height="200"></canvas>
+</div>
+
+<h2>🔑 Campos criticos para ISCAM — enriquecidos desde CENCOOP</h2>
+<div class="grid">
+  <div class="card">
+    <h3>D8 — Anos de operacion (ISCAM geom.)</h3>
+    <div class="hallazgo">
+      <strong>177 orgs</strong> ahora tienen <code>ANIO_INICIO_OPER_CENCOOP</code> y <code>ANIOS_OPER_CENCOOP</code> (2017 − anio). El universo completo de 245 orgs puede calcular anos de operacion via <code>ANO_ACTUAL − ANIO_INSCRIPCION</code> de SUNAT o MIDAGRI.
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-green">177 con CENCOOP</span>
+      <span class="tag tag-yellow">68 requieren otra fuente</span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>D10 — Certificaciones</h3>
+    <div class="hallazgo">
+      El CENCOOP 2017 <strong>NO tiene campo de certificaciones</strong>. La fuente sigue siendo el archivo PAC (5 de 48 orgs certificadas, 10% de cobertura). SENASA, Rainforest Alliance y FLOCERT no están cruzadas.
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-red">0% CENCOOP</span>
+      <span class="tag tag-yellow">10% PAC</span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>GPS — Geolocalizacion</h3>
+    <div class="hallazgo">
+      <strong>177 orgs</strong> tienen <code>COORD_GPS_LAT</code> y <code>COORD_GPS_LON</code> del CENCOOP. Útil para mapas de exposicion EUDR por region y clustering geográfico.
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-green">177 geolocalizadas</span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Contacto — Presidente / Gerente</h3>
+    <div class="hallazgo">
+      <strong>177 orgs</strong> con nombre, telefono movil y profesion del presidente y gerente. Available en <code>PRESIDENTE_NOMBRE</code>, <code>PRESIDENTE_TEL1/2</code>, <code>GERENTE_EDAD</code>, <code>GERENTE_PROFESION</code>.
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-green">177 con contactos</span>
+      <span class="tag tag-red">68 sin datos CENCOOP</span>
+    </div>
+  </div>
+</div>
+
+<h2>⚠️ Hallazgos clave</h2>
+<div class="hallazgo">
+  <strong>68 orgs no estan en el CENCOOP 2017.</strong> Estas son cooperativas que se constituyeron <strong>despues de 2017</strong>, cambiaron su RUC, o no fueron censadas. Esto explica parcialmente la baja cobertura de anios de operacion en algunas fuentes. Recommended action: <strong>verificar via SUNAT el ano de fundacion</strong> para las 68 orgs sin match.
+</div>
+<div class="hallazgo">
+  <strong>83 orgs cafe/cacao en SOPARSE no cubiertas.</strong> Estas 83 organizaciones con keywords cafe/cacao en SOPARSE están fuera del universo actual de 245. Recommended action: <strong>clasificar por exportacion real (vs. solo produccion)</strong> antes de incluirlas en la matriz EUDR.
+</div>
+<div class="hallazgo">
+  <strong>CIIU no es suficiente para filtrar cafe/cacao.</strong> El CENCOOP usa CIIU Rev.4, que tiene codigos generales de agricultura (01xx) pero no especificacafe ni cacao especificamente. El keyword search en razon social es más preciso para este sector.
+</div>
+<div class="warning">
+  <strong>D1–D7 (ISCAM): 0% en todas las fuentes administrativas.</strong> Los campos del Instrumento 2 (trazabilidad, deforestacion, derechos laborales) requieren <strong>levantamiento de campo via el Google Forms del ISCAM</strong>. Ninguna fuente administrativa los provee.
+</div>
+
+<h2>📁 Archivos generados</h2>
+<table>
+  <thead><tr><th>Archivo</th><th>Descripcion</th><th>Contenido</th></tr></thead>
+  <tbody>
+    <tr><td class="mono">MATRIZ_IP_IV_v4_EUDRPERU.xlsx</td><td>Matriz enriquecida v4</td><td>245 orgs × 48 cols (4 fuentes + SOPARSE)</td></tr>
+    <tr><td class="mono">data/soparse_cencoop2017.csv</td><td>CSV del archivo SPSS</td><td>1,965 cooperativas × 96 variables</td></tr>
+    <tr><td class="mono">docs/ANALISIS_CRUCE_SOPARSE.html</td><td>Este informe</td><td>Hallazgos del cruce</td></tr>
+  </tbody>
+</table>
+
+<script>
+const coverage = {
+  labels: ['Flag Match\n(SOPARSE)', 'Anio Inicio\nOper.', 'Coord.\nGPS', 'CIIU\nDescrip.', 'Estado\nCENCOOP', 'Rango\nIngresos', 'Web /\nCorreo', 'Telefono', 'Presidente\n+ Gerente'],
+  data: [72, 72, 72, 72, 72, 68, 72, 72, 72],
+  colors: ['#38bdf8','#38bdf8','#38bdf8','#38bdf8','#38bdf8','#fbbf24','#38bdf8','#38bdf8','#38bdf8']
+};
+
+new Chart(document.getElementById('barCoverage'), {
+  type: 'bar',
+  data: {
+    labels: coverage.labels,
+    datasets: [{
+      label: 'Cobertura (%)',
+      data: coverage.data,
+      backgroundColor: coverage.colors,
+      borderRadius: 4
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: 'Cobertura de campos SOPARSE para las 245 orgs (%)', color: '#e2e8f0', font: { size: 13 } }
+    },
+    scales: {
+      y: { max: 100, ticks: { color: '#94a3b8', callback: v => v + '%' }, grid: { color: '#334155' } },
+      x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: 'transparent' } }
+    }
+  }
+});
+
+// Org por departamento (83 nuevas)
+new Chart(document.getElementById('chartNuevas'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Amazonas (nuevas)', 'Cajamarca', 'San Martin', 'Junin', 'Cusco', 'Pasco', 'Ayacucho', 'Otros'],
+    datasets: [{
+      data: [18, 14, 12, 10, 8, 6, 5, 10],
+      backgroundColor: ['#38bdf8','#4ade80','#fbbf24','#c084fc','#fb923c','#f87171','#34d399','#94a3b8']
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'right', labels: { color: '#e2e8f0', font: { size: 11 } } },
+      title: { display: true, text: '83 orgs cafe/cacao en SOPARSE fuera del Excel (por dpto.)', color: '#e2e8f0', font: { size: 12 } }
+    }
+  }
+});
+</script>
+</body>
+</html>
