@@ -25,3 +25,8 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 *.log
+
+# Cache/backup pesados que exceden el limite de GitHub (100MB) o estan cerca (>50MB) -
+# regenerables desde las fuentes originales, no deben versionarse
+ficharucsunat/cache_ocds/*.jsonl.gz
+data/backup/
