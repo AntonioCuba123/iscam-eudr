@@ -1,10 +1,10 @@
 # Estructura de la Google Sheet de Respuestas — Instrumento 2
 
-**Tarea:** Fase 1, Plan de Trabajo 75 días — "Definir la estructura de la Google Sheet de respuestas". Cerrado 2026-10-06.
+**Tarea:** Fase 1, Plan de Trabajo 75 días — "Definir la estructura de la Google Sheet de respuestas". Cerrado 2026-10-06. **Actualización 2026-10-08:** agregados D12–D14 (módulos Pacto Verde).
 
-**Principio de diseño:** una fila = una respuesta completa de una cooperativa al Instrumento 2 (Bloque 0 + Bloque P + D1–D11). Las columnas usan el **mismo ID de pregunta que `Scripts/matriz_data.py`** (ej. `D8.30`, no "pregunta 30 de gobernanza") para que el análisis posterior (carga al Excel `Modelo de Calculo - ISA-IP-IV-RE-AHP.xlsx`) lea la hoja sin tener que reconciliar nombres de columna a mano. Si Google Forms no permite fijar el texto del encabezado de columna directamente, renombrar la fila de encabezados de la Sheet de respuestas inmediatamente después de crear el Form, antes de la primera respuesta real.
+**Principio de diseño:** una fila = una respuesta completa de una cooperativa al Instrumento 2 (Bloque 0 + Bloque P + D1–D14). Las columnas usan el **mismo ID de pregunta que `Scripts/matriz_data.py`** (ej. `D8.30`, no "pregunta 30 de gobernanza") para que el análisis posterior (carga al Excel `Modelo de Calculo - ISA-IP-IV-RE-AHP.xlsx`) lea la hoja sin tener que reconciliar nombres de columna a mano. Si Google Forms no permite fijar el texto del encabezado de columna directamente, renombrar la fila de encabezados de la Sheet de respuestas inmediatamente después de crear el Form, antes de la primera respuesta real.
 
-**Total de columnas de datos:** 76 preguntas (12 Bloque 0 + 13 Bloque P + 51 de D1–D11) + 6 columnas de metadata = **82 columnas**.
+**Total de columnas de datos:** 80 preguntas (12 Bloque 0 + 13 Bloque P + 51 de D1–D11 + 16 de D12–D14) + 6 columnas de metadata = **86 columnas**.
 
 ---
 
@@ -120,20 +120,44 @@
 
 ---
 
-## 5. Encabezados listos para pegar en la fila 1 de la Google Sheet
+## 5. D12–D14 — Módulos Pacto Verde (16 columnas, semáforo propio, alimentan ISA-PactoVerde)
+
+| Col | ID | Pregunta (resumen) | Tipo |
+|---|---|---|---|
+| CE | D12.40 | Conoce CalCafé v2.1 o equivalente cacao | 4 opciones |
+| CF | D12.41 | Registra insumos para huella (fertilizantes, combustible, energía, distancia) | 4 opciones |
+| CG | D12.42 | Calculó huella de carbono últimos 2 años | 4 opciones |
+| CH | D12.43 | Tiene objetivo cuantificado de reducción emisiones | 4 opciones |
+| CI | D12.44 | Reporta huella a compradores/plataformas (CDP, etc.) | 4 opciones |
+| CJ | D13.45 | Elabora reporte anual sostenibilidad / memoria RSE | 4 opciones |
+| CK | D13.46 | Reporte incluye indicadores ambientales (deforestación, carbono, agua, biodiversidad, residuos) | 4 opciones |
+| CL | D13.47 | Reporte incluye indicadores sociales (trabajo infantil, forzoso, igualdad, mujeres, salud) | 4 opciones |
+| CM | D13.48 | Reporte incluye indicadores de gobernanza (directiva, anticorrupción, riesgos, canal denuncias) | 4 opciones |
+| CN | D13.49 | Información verificada/auditada por tercero independiente | 4 opciones |
+| CO | D13.50 | Reporte se comparte proactivamente con compradores UE y partes interesadas | 3 opciones |
+| CP | D14.51 | Gestión residuos beneficio/acopio (cáscara, mucílago, agua miel, trilla) | 4 opciones |
+| CQ | D14.52 | Envases exportación: reutilizables/reciclables/compostables | 4 opciones |
+| CR | D14.53 | Plan reducción plásticos un solo uso (bolsas, film, flejes, etiquetas) | 4 opciones |
+| CS | D14.54 | Subproductos valorizados (cáscara→biocombustible, mucílago→bioinsumos, agua→riego) | 4 opciones |
+| CT | D14.55 | Trazabilidad envases y residuos por lote exportado | 4 opciones |
+
+---
+
+## 6. Encabezados listos para pegar en la fila 1 de la Google Sheet
 
 ```
-timestamp	id_respuesta	RUC	fecha_aplicacion	encuestador	canal_aplicacion	B0.1	B0.2	B0.3	B0.4	B0.5	B0.6	B0.7	B0.8	B0.9	B0.10	B0.11	B0.12	P1	P1b	P2	P3	P4	P5	P6	P7	P8	P9	P10	P11	P12	D1.1	D1.2	D1.3	D1.4	D2.5	D2.6	D2.7	D2.8	D2.9	D2.10	D3.11	D3.12	D3.13	D3.14	D3.14a	D3.14b	D3.14c	D3.14d	D3.14e	D3.14f	D3.14g	D4.15	D4.16	D4.17	D5.18	D5.18a	D5.18b	D5.19	D5.19a	D5.20	D5.21	D5.21a	D5.21b	D6.22	D6.23	D6.24	D6.25	D7.26	D7.27	D7.28	D8.29	D8.30	D8.31	D8.32	D9.33	D9.34	D9.35	D10.36	D10.37	D11.38	D11.39
+timestamp	id_respuesta	RUC	fecha_aplicacion	encuestador	canal_aplicacion	B0.1	B0.2	B0.3	B0.4	B0.5	B0.6	B0.7	B0.8	B0.9	B0.10	B0.11	B0.12	P1	P1b	P2	P3	P4	P5	P6	P7	P8	P9	P10	P11	P12	D1.1	D1.2	D1.3	D1.4	D2.5	D2.6	D2.7	D2.8	D2.9	D2.10	D3.11	D3.12	D3.13	D3.14	D3.14a	D3.14b	D3.14c	D3.14d	D3.14e	D3.14f	D3.14g	D4.15	D4.16	D4.17	D5.18	D5.18a	D5.18b	D5.19	D5.19a	D5.20	D5.21	D5.21a	D5.21b	D6.22	D6.23	D6.24	D6.25	D7.26	D7.27	D7.28	D8.29	D8.30	D8.31	D8.32	D9.33	D9.34	D9.35	D10.36	D10.37	D11.38	D11.39	D12.40	D12.41	D12.42	D12.43	D12.44	D13.45	D13.46	D13.47	D13.48	D13.49	D13.50	D14.51	D14.52	D14.53	D14.54	D14.55
 ```
 
 (Separador: tabulación — pegar directamente en A1 de la Sheet con "Pegar sin formato"; Google Sheets separa automáticamente por columna.)
 
 ---
 
-## 6. Reglas de integridad para quien cargue la Sheet
+## 7. Reglas de integridad para quien cargue la Sheet
 
 1. **RUC (col. C) nunca queda vacío.** Es la clave de join contra `EUDRPERU_universo_consolidado.csv`. Si el Form se aplicó sin RUC a mano, completar después contra el marco muestral por nombre antes de analizar.
 2. **No reordenar columnas** una vez iniciado el levantamiento — el script de carga al Excel de cálculo (a construir en Fase 3) asumirá posición fija por nombre de columna, no por letra.
 3. **D2.10, D10.36 y D7.28 son banderas/excepciones** — no promediarlas junto con el resto de su dimensión al calcular D2, D10 o D7 (ver Instrumento 2, notas de puntaje).
 4. **D5.19a y D11.38/D11.39 son de mapeo, no de madurez** — no entran a ningún promedio de dimensión; alimentan directamente el Instrumento 4.
-5. Mantener esta fila de encabezados **congelada** (`Ver > Congelar > 1 fila`) para que no se pierda al ordenar o filtrar.
+5. **D12–D14 (módulos Pacto Verde) no promedian en ISA-EUDR** — alimentan ISA-PactoVerde (media aritmética simple) y ISA-Completo (70/30). No mezclar con D1–D9 al calcular el semáforo EUDR.
+6. Mantener esta fila de encabezados **congelada** (`Ver > Congelar > 1 fila`) para que no se pierda al ordenar o filtrar.

@@ -4,6 +4,7 @@
 # "=" en cualquier columna significa "hereda el valor de la dimensión padre" (ver DIM_DEFAULTS)
 # 2026-09-17: columna única "ISCAM (IP/IV/RE)" partida en "Ruta a IP" y "Ruta a IV" a pedido del usuario,
 # para poder leer por separado cómo decanta cada pregunta en cada índice antes de RE = IV·(1−IP/100).
+# 2026-10-08: agregados D12 (Huella carbono), D13 (Reporte sostenibilidad), D14 (Economía circular) — módulos Pacto Verde i, iv, v.
 
 DIM_DEFAULTS = {
     "Bloque 0": (
@@ -88,6 +89,27 @@ DIM_DEFAULTS = {
         "Alineado con Fig. 4 (herramientas/actores estatales)",
         "Doc. orientador ADEX/MIDAGRI/EFI",
         "IP5 recalculado — % actores activos de D11.38, regla propia solo para IP",
+        "No entra a IV",
+    ),
+    "D12": (
+        "Pacto Verde módulo (i) — Taxonomía UE, CSRD, CBAM; CalCafé v2.1 (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) para café; cacao sin equivalente identificado",
+        "No corresponde a un paso del manual EUDR — módulo transversal de preparación Pacto Verde",
+        "CalCafé v2.1 (manual de uso 2021); IPCC Guidelines; GHG Protocol",
+        "Fuera de ISA-EUDR — entra a ISA-PactoVerde (media aritmética D12–D14)",
+        "No entra a IV",
+    ),
+    "D13": (
+        "Pacto Verde módulo (iv) — CSRD/ESRS, Taxonomía verde UE, SFDR, NFRD legado",
+        "No corresponde a un paso del manual EUDR — módulo transversal de preparación Pacto Verde",
+        "GRI Standards, ESRS simplificado (EFRAG), Directiva CSRD (UE) 2022/2464",
+        "Fuera de ISA-EUDR — entra a ISA-PactoVerde (media aritmética D12–D14)",
+        "No entra a IV",
+    ),
+    "D14": (
+        "Pacto Verde módulo (v) — Plan Acción Economía Circular UE, PPWR (Reglamento envases), Estrategia 'De la granja a la mesa'",
+        "No corresponde a un paso del manual EUDR — módulo transversal de preparación Pacto Verde",
+        "Directiva 94/62/CE (envases), PPWR propuesta, Plataforma Europea de Economía Circular",
+        "Fuera de ISA-EUDR — entra a ISA-PactoVerde (media aritmética D12–D14)",
         "No entra a IV",
     ),
     "Bloque P": (
@@ -202,6 +224,28 @@ ROWS = [
 # ---------------- D11 ----------------
 ("D11","38","Actores con los que ya tiene contacto o apoyo activo","—","Fig. 4 — actores y fuentes estatales","Doc. ADEX/MIDAGRI/EFI (GEOSERFOR, SINIA, OEFA, SENASA, BDPI, SUNAT/VUCE)","=","="),
 ("D11","39","Actores conocidos pero no contactados, y por qué","—","—","—","No entra a IP directo (insumo Instrumento 4)","No entra a IV"),
+
+# ---------------- D12 — Huella de carbono (Pacto Verde i) ----------------
+("D12","40","¿Conoce CalCafé v2.1 o equivalente para cacao?","Pacto Verde módulo (i) — Taxonomía, CSRD, CBAM","—","CalCafé v2.1 (manual 2021), IPCC Guidelines, GHG Protocol","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D12","41","¿Registra insumos para huella (fertilizantes, combustible, energía, distancia)?","Pacto Verde módulo (i)","—","CalCafé v2.1 (requisitos de datos)","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D12","42","¿Calculó huella de carbono en los últimos 2 años?","Pacto Verde módulo (i)","—","CalCafé v2.1, ISO 14040/44, PEFCR","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D12","43","¿Tiene objetivo cuantificado de reducción de emisiones?","Pacto Verde módulo (i) — Taxonomía, CSRD","—","GHG Protocol, Science Based Targets initiative","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D12","44","¿Reporta huella a compradores o plataformas (CDP, etc.)?","Pacto Verde módulo (i) — CSRD, SFDR","—","CDP, plataformas compradores UE","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+
+# ---------------- D13 — Reporte de sostenibilidad (Pacto Verde iv) ----------------
+("D13","45","¿Elabora reporte anual de sostenibilidad / memoria RSE?","Pacto Verde módulo (iv) — CSRD/ESRS, Taxonomía","—","GRI Standards, ESRS simplificado (EFRAG)","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D13","46","¿Reporte incluye indicadores ambientales (deforestación, carbono, agua, biodiversidad, residuos)?","Pacto Verde módulo (iv)","—","GRI 300, ESRS E1–E5","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D13","47","¿Reporte incluye indicadores sociales (trabajo infantil, forzoso, igualdad, mujeres, salud)?","Pacto Verde módulo (iv)","—","GRI 400, ESRS S1–S4","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D13","48","¿Reporte incluye indicadores de gobernanza (directiva, anticorrupción, riesgos, canal denuncias)?","Pacto Verde módulo (iv)","—","GRI 200, ESRS G1–G2","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D13","49","¿Información verificada/auditada por tercero independiente?","Pacto Verde módulo (iv) — CSRD (auditoría obligatoria)","—","ESRS (verificación limitada → razonable)","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D13","50","¿Reporte se comparte proactivamente con compradores UE y partes interesadas?","Pacto Verde módulo (iv) — CSRD, taxonomía, expectativas compradores","—","Plataformas compradores UE, CDP","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+
+# ---------------- D14 — Economía circular/envases (Pacto Verde v) ----------------
+("D14","51","Gestión residuos beneficio/acopio (cáscara, mucílago, agua miel, trilla)","Pacto Verde módulo (v) — Plan Circular UE, PPWR, 'Granja a mesa'","—","Directiva 94/62/CE, PPWR, Plataforma Economía Circular UE","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D14","52","Envases exportación (sacos, big-bags, contenedores): reutilizables/reciclables/compostables?","Pacto Verde módulo (v) — PPWR (envases)","—","PPWR propuesta, Directiva 94/62/CE","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D14","53","Plan de reducción/eliminación plásticos un solo uso (bolsas, film, flejes, etiquetas)","Pacto Verde módulo (v) — PPWR, Directiva plásticos un solo uso","—","Directiva (UE) 2019/904, PPWR","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D14","54","Subproductos valorizados (cáscara→biocombustible, mucílago→bioinsumos, agua→riego)","Pacto Verde módulo (v) — Economía circular, bioeconomía","—","Plan Acción Bioeconomía UE, Plataforma Economía Circular","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
+("D14","55","Trazabilidad de envases y residuos por lote exportado","Pacto Verde módulo (v) — PPWR (trazabilidad envases)","—","PPWR Art. 12 (trazabilidad), Digital Product Passport","Fuera de ISA-EUDR — entra a ISA-PactoVerde","No entra a IV"),
 ]
 
 HEADERS = ["Dimensión", "Pregunta", "EUDR", "5 pasos de debida diligencia", "Otras fuentes citadas", "Ruta a IP", "Ruta a IV"]

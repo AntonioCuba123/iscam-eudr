@@ -196,8 +196,52 @@
 
 ---
 
-## Nota de puntaje
+## D12 — Huella de carbono y gestión de emisiones GEI *(dimensión extendida — módulo Pacto Verde)*
 
-- El promedio de cada dimensión D1–D9 se calcula sobre las preguntas tipo escala/porcentaje únicamente (no las de texto libre ni las de mapeo).
+**Contexto:** este módulo corresponde al pilar (i) del proyecto madre ISCAM ("huella de carbono"). El EUDR no exige inventario de GEI, pero el Pacto Verde Europeo (taxonomía, CSRD, CBAM) y los compradores europeos cada vez lo demandan. Para café, existe **CalCafé v2.1** (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) — calculadora validada y gratuita que cubre 8 categorías de impacto. **Limitación: solo café, no cacao.** Este bloque mide si la cooperativa tiene capacidad de medir y reportar su huella, no el valor absoluto.
+
+40. ¿La cooperativa conoce la herramienta CalCafé v2.1 (para café) o equivalente para cacao? (No sabe qué es / La conoce pero no la ha usado / La ha usado al menos una vez / La usa sistemáticamente)
+41. ¿Cuenta con registros de insumos necesarios para calcular huella de carbono (fertilizantes por campaña, combustible en maquinaria/transporte, energía de procesamiento, distancia finca-acopio)? (No registra nada / Registra algún insumo / Registra la mayoría / Registra todo sistemáticamente)
+42. ¿Ha calculado la huella de carbono de su café/cacao de exportación en los últimos 2 años? (No / Sí, estimación interna / Sí, con herramienta validada ej. CalCafé / Sí, verificada por tercero)
+43. ¿Tiene objetivo cuantificado de reducción de emisiones (ej. -X% al 2030)? (No / En definición / Sí, interno / Sí, público y con plan de acción)
+44. ¿Reporta huella de carbono a compradores o plataformas (ej. CDP, plataforma del comprador)? (No / Solo si lo piden / Sí, regularmente)
+
+> **Nota de alcance:** para cacao no hay equivalente a CalCafé v2.1 identificado. Si la cooperativa exporta ambos, puntuar según el producto principal y anotar la brecha en cacao. Este bloque NO promedia en el ISA EUDR (D1–D9) — es dimensión extendida del Pacto Verde, se reporta aparte y alimenta el módulo (i) del ISA completo del proyecto madre.
+
+---
+
+## D13 — Reporte de sostenibilidad y transparencia *(dimensión extendida — módulo Pacto Verde)*
+
+**Contexto:** corresponde al pilar (iv) del proyecto madre ("reporte de sostenibilidad"). Alineado con CSRD/ESRS, taxonomía verde UE, y expectativas de compradores europeos. Mide capacidad de la cooperativa para producir información estructurada, verificable y comparable sobre su desempeño ambiental, social y de gobernanza (ESG), más allá de lo que exige estrictamente el EUDR.
+
+45. ¿Elabora algún reporte anual de sostenibilidad / memoria de responsabilidad social? (No / Interno, informal / Formal, interno / Público, según estándar reconocido ej. GRI, ESRS simplificado)
+46. ¿El reporte incluye indicadores ambientales (deforestación, huella carbono, agua, biodiversidad, residuos)? (No / Parcial / Sí, básicos / Sí, completos y con metas)
+47. ¿El reporte incluye indicadores sociales (trabajo infantil, trabajo forzoso, igualdad salarial, participación mujeres, salud ocupacional)? (No / Parcial / Sí, básicos / Sí, completos y con metas)
+48. ¿El reporte incluye indicadores de gobernanza (estructura directiva, anticorrupción, gestión de riesgos, canal de denuncias)? (No / Parcial / Sí, básicos / Sí, completos)
+49. ¿La información reportada es verificada/auditada por tercero independiente? (No / Auto-declarada / Verificación parcial / Auditoría completa externa)
+50. ¿El reporte se comparte proactivamente con compradores europeos y partes interesadas? (No / Solo bajo 요청 / Sí, sistemáticamente)
+
+> **Nota de alcance:** NO promedia en el ISA EUDR (D1–D9). Es dimensión extendida del Pacto Verde. Una cooperativa puede tener alta madurez EUDR (D1–D9) y nulo reporte de sostenibilidad, y viceversa. Se correlaciona contra performance (Bloque P) y alimenta el módulo (iv) del ISA completo del proyecto madre.
+
+---
+
+## D14 — Economía circular, envases y gestión de residuos *(dimensión extendida — módulo Pacto Verde)*
+
+**Contexto:** corresponde al pilar (v) del proyecto madre ("economía circular/envases"). Alineado con Plan de Acción de Economía Circular UE, Directiva de envases y residuos de envases (PPWR), y estrategia "De la granja a la mesa". El EUDR no regula el envase del producto terminado, pero el Pacto Verde sí impulsa circularidad en toda la cadena. Mide prácticas de la cooperativa en acopio, beneficio y empaque de exportación.
+
+51. **Gestión de residuos del beneficio/acopio:** ¿Qué se hace con cáscara, mucílago, agua miel, residuos de trilla/despulpado? (Eliminación sin tratamiento / Compostaje parcial / Compostaje/biogás sistemático + reuso en fincas / Economía circular cerrada con subproductos valorizados)
+52. **Envases de exportación (sacos, big-bags, contenedores):** ¿Son reutilizables, reciclables o compostables? (Ninguno / Parcialmente / Mayoría / Todos, con certificación/trazabilidad de retorno)
+53. **Plásticos de un solo uso en la cadena (bolsas, film, flejes, etiquetas):** ¿Hay plan de reducción/eliminación? (No / En análisis / Sí, en implementación / Sí, cumplido y verificado)
+54. **Subproductos valorizados:** ¿Se comercializa o transforma algún residuo (cáscara → biocombustible, mucílago → bioinsumos, agua tratada → riego)? (No / Piloto / Sí, escala parcial / Sí, escala comercial)
+55. **Trazabilidad de envases y residuos:** ¿Existe registro de qué envases salen, cuáles retornan y qué residuos se generan por lote exportado? (No / Parcial / Sí, para envases / Sí, completo envases + residuos)
+
+> **Nota de alcance:** NO promedia en el ISA EUDR (D1–D9). Es dimensión extendida del Pacto Verde. El Reglamento (UE) 2023/1115 regula materias primas (Anexo I), no envases terminados — pero la normativa de envases (PPWR) y taxonomía sí afectan la competitividad. Se reporta aparte y alimenta el módulo (v) del ISA completo del proyecto madre.
+
+---
+
+## Nota de puntaje (actualizada)
+
+- El promedio de cada dimensión **D1–D9** se calcula sobre las preguntas tipo escala/porcentaje únicamente (no las de texto libre ni las de mapeo).
 - **D10 no se promedia como madurez** — se reporta como bandera (Sí/No de falsa seguridad), porque un puntaje alto en "creer que ya está cubierto" sería, perversamente, una mala noticia, no una buena.
 - **D11 no se promedia como madurez** — se reporta como inventario de oportunidades ya usadas vs. disponibles, insumo directo para el Instrumento 4 (columna "oportunidad").
+- **D12, D13, D14 no promedian en el ISA EUDR** — son dimensiones extendidas del **Pacto Verde Europeo** (módulos i, iv, v del proyecto madre ISCAM). Se reportan por separado con su propio semáforo 0–4 por pregunta, se agregan internamente (media aritmética simple por dimensión) y se correlacionan contra el ISA EUDR y la performance (Bloque P) en el análisis integral. No anulan ni compensan el ISA EUDR.

@@ -1,0 +1,408 @@
+1. Análisis Pestaña por Pestaña: Excel 1 (MIDAGRI / SISPAC)
+
+Archivo: 3 directorio - base de datos de los excels de midagri 06.10.26.xlsx
+Estructura general: 8 hojas de trabajo que abarcan desde el registro histórico institucional del Estado hasta la gobernanza registral y tributaria de los productores.
+
+3 directorio - base de datos de los excels de midagri 06.10.26.xlsx
+├── 1. base global                (681 × 115) [Histórico SISPAC multiactividad 2018-2025]
+├── 2. base 7                     (8 × 31)    [Control cadenas no-EUDR: Banano, Mango, Palta]
+├── 3. base consolidad MIDAGRI   (596 × 165) [Padrón general beneficiarios PAC]
+├── 4. base 25 detallada (cafe)   (25 × 151)  [Ficha técnica agronómica y comercial café]
+├── 5. ficha ruc cafe             (91 × 24)   [Estado y condición SUNAT Café]
+├── 6. ficha ruc cacao            (89 × 24)   [Estado y condición SUNAT Cacao]
+├── 7. ruc oece personas          (441 × 16)  [Directorio directivos y órganos SUNARP/OECE]
+└── 8. base cafe cacao            (179 × 154) [Consolidado filtrado cadenas EUDR]
+
+Pestaña 1.1: base global (681 filas × 115 columnas)
+Objetivo: Registro histórico de beneficiarios e intervenciones del Programa de Articulación Comercial (PAC / Agromercado - MIDAGRI) a través del sistema SISPAC entre 2018 y 2025.
+Estructura y Esquema: Matriz multianual compleja organizada en bloques temáticos:
+Demografía de Socios (2018–2025): Desglose anual de beneficiarios varones, beneficiarias mujeres y total de socios activos.
+Asistencia e Intervención Pública: Registro de talleres, capacitaciones y horas de asistencia técnica acumuladas.
+Facturación Histórica: Desglose de Ventas Ejecutadas Nacionales vs. Ventas Ejecutadas de Exportación por ejercicio fiscal.
+Trazabilidad de Medios de Pago: Montos facturados por tipo de comprobante de pago emitido (Facturas, Boletas de Venta, Declaraciones Juradas, Liquidaciones de Compra, Guías de Remisión y Documentos de Entrega Cooperativo - DEC).
+Hallazgos Clave:
+Dispersión Productiva: Contiene 25 cadenas agropecuarias distintas (alpaca, derivados lácteos, papa nativa, cuy, orégano, flores, café, cacao, etc.), reflejando que el programa del MIDAGRI no fue concebido originalmente con un enfoque normativo EUDR, sino como fomento general.
+Predominio del Mercado Interno: Más del 78% de las organizaciones beneficiarias del PAC no registran transacciones internacionales continuas; su volumen de acopio se dirige a mayoristas de Lima y mercados locales.
+Calidad del Dato y Anomalías:
+Presencia de cadenas de error literales #REF! e #ERROR! en las columnas de cálculo dinámico: INCREMENTOS VENTAS EN 2019, DIFERENCIA VENTA 2020-2019, TOTAL VENTAS 2018 AL 2025 e INCREMENTOS VENTAS EN 2025.
+Causa Raíz: En el archivo maestro original de Agromercado se borraron u omitieron columnas pivot que alimentaban las fórmulas interanuales relativas.
+
+Pestaña 1.2: base 7 (8 filas × 31 columnas)
+Objetivo: Panel de control de organizaciones agrarias que ostentan sellos internacionales de sostenibilidad, pero que pertenecen a cadenas agroindustriales fuera del alcance del Reglamento EUDR (Banano, Mango, Palta).
+Estructura y Esquema: 8 registros de cooperativas y asociaciones evaluadas al cierre de 2025 con datos de ubicación (Áncash, Piura, Lambayeque, Ica, Huancavelica), número de socios y esquema de certificación.
+Hallazgos Clave:
+Organizaciones emblemáticas registradas: Cooperativa Agraria de Usuarios Pequeños Productores del Perú (Mango - Casma; FAIR TRADE), Cooperativa Agraria Agrofrutos Orgánicos (Mango - Motupe; ORGÁNICO), Cooperativa Agraria de Usuarios Aspraosra Ltda. (Banano - Morropón; ORGÁNICO / GLOBAL GAP), Asociación de Agricultores Innovadores Ediflor (Palta - Chimbote; GLOBAL GAP).
+Monitoreo de exportaciones 2025: Aspraosra reporta US$ 781,855.20 en exportaciones de banano 100% amparadas en Factura comercial.
+Relevancia para el EUDR:
+Actúa como grupo de control metodológico. Permite comprobar que los estándares Global GAP, Fairtrade o sellos orgánicos de exportación no son exclusivos de café/cacao, pero que al no estar reguladas por el Reglamento (UE) 2023/1115, estas organizaciones no enfrentan el estrés transaccional de geolocalización poligonal estricta a diciembre de 2020.
+
+Pestaña 1.3: base consolidad MIDAGRI (596 filas × 165 columnas)
+Objetivo: Padrón central de organizaciones del MIDAGRI que cruzó la totalidad de variables de intervención territorial, técnica y económica.
+Estructura y Esquema: 596 entidades únicas identificadas con su número de RUC (100% RUCs válidos sin nulos), Nombre de Organización, Producto Dominante (PRODUCTO DOM), Sede operativa, Ubigeo, Departamento, Provincia, Distrito, y series temporales 2018-2025.
+Distribución Sectorial y Geográfica:
+Top Productos: Cacao (89 entidades), Café (86 entidades), Derivados Lácteos (62), Palta (53), Fibra de Alpaca (43), Quinua y Granos Andinos (36), Papa (30), Cuy (27), Maíz (16), Plátano (13), Naranja (13).
+Top Regiones: Cusco (59 organizaciones), Junín (56), Puno (36), Huánuco (35), Ayacucho (34), Cajamarca (32), Apurímac (31), San Martín (31), Ucayali (30), Huancavelica (29), Amazonas (27).
+Hallazgos Clave:
+Al aislar estrictamente las cadenas cubiertas por el Reglamento Europeo (Café + Cacao = 175 organizaciones en este corte), estas representan el 29.36% de todas las entidades promovidas por el Estado.
+El restante 70.64% corresponde a producción para seguridad alimentaria o pecuaria de pequeña escala.
+
+Pestaña 1.4: base 25 detallada (cafe) (25 filas × 151 columnas)
+Objetivo: Ficha agronómica, logística, comercial y de preparación EUDR de las 25 organizaciones cafetaleras líderes de la pequeña agricultura peruana.
+Estructura y Esquema: 25 organizaciones seleccionadas por volumen comercial y presencia gremial. Contiene 151 campos que desglosan:
+RUC, Razón Social, Nombre SUNAT, Condición Fiscal al 24/02/2026.
+Geografía: Región, Provincia, Distrito, Altitud de fincas (msnm), variedades cultivadas (Catimor, Geisha, Caturra, Borbón, Típica, Pache).
+Base social y tenencia: Socios hombres, mujeres, total socios, superficie total (ha).
+Calidad física y sensorial: Rendimiento físico (%), defectos según NTP, taza SCA (82 a 88 puntos).
+Logística y Comercio Exterior: Quintales proyectados 2026, sacos de 69 kg, contenedores marítimos, valor FOB 2025, países de destino en la UE y otros continentes.
+Dimensión EUDR: Indicador de avance declarado y estado de empadronamiento en el Padrón de Productores Agrarios (PPA).
+
+Radiografía Cuantitativa de la Muestra:
+RUC	Organización	Región	Socios (H/M)	Área (ha)	FOB 2025 (USD)	Cont.	Destinos Principales	Avance Declarado EUDR	Estado SUNAT
+20542209951	CAC Valle Grande	San Martín	468 / 154	4,031.0	$10,702,633.46	69.90	BE, FR, SE, DE, UK, US	1.0 (100%)	ACTIVO / HABIDO
+20602650643	Asoc. Agroexp. San Martín	San Martín	607 / 155	1,500.0	$6,402,453.00	45.57	DE, SE, BE, UK, US	0.8 (80%)	ACTIVO / HABIDO
+20600263286	APROSELVANOR	San Martín	607 / 190	2,110.0	$4,154,567.84	28.80	DE, BE, DK, SE, US	1.0 (100%)	ACTIVO / HABIDO
+20479595276	CAC CASIL LTDA	Cajamarca	136 / 42	437.0	$3,256,066.00	22.27	DE, US, JP, CA	Sin dato	ACTIVO / HABIDO
+20140181405	CAC La Florida	Junín	339 / 111	1,605.8	$2,877,331.57	18.73	GP (FR), US, JP, BE	0.75 (75%)	ACTIVO / HABIDO
+20136201213	Central COCLA Ltda.	Cusco	472 / 188	1,670.0	$2,803,351.40	19.11	DE, FR, JP, US, CA	0.75 (75%)	ACTIVO / HABIDO
+20542264544	CAC Valle del Biavo	San Martín	372 / 44	1,248.0	$1,034,237.62	7.36	BE, DE, US	1.0 (100%)	ACTIVO / HABIDO
+20606451122	Asoc. Cerro Blanco	San Martín	141 / 46	600.0	$864,647.85	5.11	NO, HK, US, DK	0.7 (70%)	ACTIVO / HABIDO
+20602054480	CEMCAVIR (Mujeres)	Pasco	91 / 86	213.0	$800,858.56	4.84	DE, BE	PPA 64.8%	ACTIVO / HABIDO (Comex: Sin Actividad)
+20603820691	CAC Cordillera Azul	San Martín	291 / 90	1,143.0	$723,914.95	5.34	BE, DE, US, NL	1.0 (100%)	ACTIVO / PENDIENTE
+20603862369	CAC Tropical Products	Junín	135 / 68	609.0	$151,198.32	1.02	DK	0.75 (75%)	ACTIVO / HABIDO
+20605500430	CAC Los Chankas Perené	Junín	165 / 92	771.0	$147,669.48	1.00	US	0.75 (75%)	ACTIVO / HABIDO (Comex: Sin Actividad)
+20604309728	APROCASJ	Cajamarca	236 / 69	699.0	$7,275.18	< 1	TW, KR	Sin dato	ACTIVO / HABIDO
+Hallazgos Clave:
+Concentración: Las primeras 6 organizaciones abarcan el 89.02% de todo el valor FOB declarado de la muestra.
+Disparidad de escala: Coexisten gigantes como Valle Grande (622 socios, 4,031 hectáreas, 70 contenedores) con entidades de pequeña escala como CEMCAVIR (177 socias, 213 hectáreas) o APROCASJ.
+Discrepancia Tributaria Grave:
+CAC Tirijuay Pavayoc Ltda. (RUC 20147443120, Cusco): Figura en el padrón del MIDAGRI como entidad elegible, pero en SUNAT registra condición fiscal de SUSPENSIÓN TEMPORAL / NO HABIDO.
+
+Pestañas 1.5 y 1.6: ficha ruc cafe (91 × 24) y ficha ruc cacao (89 × 24)
+Objetivo: Registro individualizado de la consulta RUC ante SUNAT para el universo de organizaciones cafetaleras (91) y cacaoteras (89) empadronadas.
+Estructura: 24 columnas oficiales de SUNAT: NumeroRuc, Nombre ó RazonSocial, Tipo de Contribuyente, Condicion del Contribuyente, Estado del Contribuyente, fechas de inscripción e inicio de actividades, domicilio fiscal, departamento, provincia, distrito.
+Hallazgos Comparativos de Legalidad Tributaria:
+DISTRIBUCIÓN DEL ESTADO DEL CONTRIBUYENTE (SUNAT)
+==================================================
+CADENA CAFÉ (91 entidades):
+  ├── ACTIVO:                 74  (81.3%)
+  ├── BAJA DE OFICIO:         12  (13.2%) ⚠️
+  ├── SUSPENSIÓN TEMPORAL:     4  ( 4.4%) ⚠️
+  └── BAJA PROV. POR OFICIO:   1  ( 1.1%) ⚠️
+  [Condición: 85 Habidos | 5 No Habidos | 1 Pendiente]
+CADENA CACAO (89 entidades):
+  ├── ACTIVO:                 76  (85.4%)
+  ├── BAJA DE OFICIO:          7  ( 7.9%) ⚠️
+  ├── SUSPENSIÓN TEMPORAL:     5  ( 5.6%) ⚠️
+  └── BAJA PROV. POR OFICIO:   1  ( 1.1%) ⚠️
+  [Condición: 86 Habidos | 2 No Habidos | 1 Pendiente]
+Hallazgos Clave:
+Entre ambas cadenas hay 30 organizaciones en situación tributaria irregular (19 en Baja de Oficio, 9 en Suspensión Temporal y 2 en Baja Provisional).
+Geografía de la irregularidad: Las bajas de oficio se concentran en cooperativas de Cajamarca, Cusco y Amazonas constituidas entre 2005 y 2014 que no actualizaron sus declaraciones juradas anuales.
+
+Pestaña 1.7: ruc oece personas (441 filas × 16 columnas)
+Objetivo: Registro oficial de directivos y representantes legales inscritos ante registros públicos (SUNARP) y cruzados con el Organismo Supervisor de las Contrataciones del Estado (OECE).
+Estructura y Esquema: 441 personas físicas vinculadas a 170 RUCs únicos.
+Campos: ruc, razon_social, tipo_empresa, departamento, provincia, distrito, rol (ORGANO_ADMINISTRACION: 256; REPRESENTANTE: 57; SOCIO: 13), dni, nombre_persona, tipo_organo (CONSEJO DE ADMINISTRACION: 193; CONSEJO DIRECTIVO: 63), cargo (Vocal: 64; Presidente: 51; Secretario: 48; Vicepresidente: 45; Tesorero: 10), y fecha_ingreso.
+Hallazgos Críticos de Gobernanza:
+Obsolescencia Registral y Mandatos Caducos: La columna fecha_ingreso revela que una proporción significativa de los directivos asumió el cargo entre los años 2014, 2015, 2016 y 2018 sin renovación registrada ante SUNARP.
+Impacto Regulatorio Ley 31335 vs. EUDR:
+El Artículo 26 de la Ley 31335 (Ley de Perfeccionamiento del Régimen de las Cooperativas Agrarias) establece que los directivos del Consejo de Administración no pueden ejercer el cargo por más de 3 años consecutivos sin renovación estatutaria.
+Bajo el Reglamento (UE) 2023/1115, la Due Diligence Statement (DDS) requiere la firma del representante legal acreditado. Si la vigencia de poder está vencida en SUNARP, los bancos europeos y los departamentos legales de los importadores (traders) rechazarán las cartas de debida diligencia por riesgo de nulidad legal.
+
+Pestaña 1.8: base cafe cacao (179 filas × 154 columnas)
+Objetivo: Matriz consolidada de organizaciones del MIDAGRI dedicadas a las cadenas cubiertas por el EUDR (Café y Cacao).
+Estructura: 179 filas (178 organizaciones evaluables tras deducir encabezados/resumen) con 154 variables cruzadas entre producción, ventas históricas y fiscalidad.
+Composición Institucional y Comercial:
+Tipología Societaria: 112 Cooperativas Agrarias (62.6%), 66 Asociaciones de Productores (36.9%) y 1 Sociedad Anónima Cerrada (0.5%).
+Estado Fiscal: 149 Activas (83.2%), 19 Baja de Oficio (10.6%), 9 Suspensión Temporal (5.0%), 2 Baja Prov. por Oficio (1.1%).
+Condición de Domicilio: 170 Habidos, 7 No Habidos, 2 Pendientes.
+Actividad de Comercio Exterior registrada en SUNAT:
+101 organizaciones figuran como "SIN ACTIVIDAD" (56.4%).
+39 organizaciones figuran como "EXPORTADOR" (21.8%).
+39 organizaciones figuran como "IMPORTADOR/EXPORTADOR" (21.8%).
+Hallazgo Clave:
+Más de la mitad de las organizaciones formales de café y cacao del Perú no tienen habilitado el perfil de comercio exterior en su Ficha RUC, operando exclusivamente como proveedores secundarios de acopiadores intermediarios.
+
+
+2. Análisis Pestaña por Pestaña: Excel 2 (DUA Consolidado con Atributos)
+
+Archivo: DUA_CONSOLIDADO_con_atributos_20261002 (2).xlsx
+Estructura general: 13 hojas de trabajo que auditan las Declaraciones Únicas de Aduanas (DUAs), series comerciales de exportación, minería de texto de atributos EUDR y bitácoras de extracción.
+
+DUA_CONSOLIDADO_con_atributos_20261002 (2).xlsx
+├── 1. base 25 detallada (cafe)  (25 × 151)  [Espejo de la ficha MIDAGRI]
+├── 2. base dua 25 detallada     (233 × 40)  [233 despachos de las 25 cooperativas]
+├── 3. por RUC                   (14 × 46)   [Métrica agregada de los 14 exportadores]
+├── 4. DETALLE_ITEMS             (312 × 76)  [312 series con minería de atributos EUDR]
+├── 5. DUAS                      (239 × 29)  [Cabeceras aduaneras de despacho]
+├── 6. PRODUCTORES_ICO           (20 × 19)   [Auditoría códigos OIC/ICO de trazabilidad]
+├── 7. SIN_CABECERA              (68 × 11)   [68 DUAs con PDF de serie pero sin cabecera]
+├── 8. CONTROL                   (27 × 3)    [Cuadre dimensional y métricas ETL]
+├── 9. ITEMS_EXCLUIDOS           (11 × 12)   [11 series descartadas por sobreestimación]
+├── 10. CAT_ADUANAS              (3 × 3)     [Catálogo de aduanas de salida]
+├── 11. CAT_AGENTES              (11 × 4)    [Catálogo de agencias de aduana]
+├── 12. DUA_Consolidado_Total    (233 × 16)  [Registro consolidado normalizado]
+└── 13. DESCARGAR_PENDIENTES     (0 × 10)    [Cola de scraping ejecutada al 100%]
+
+Pestaña 2.1: base 25 detallada (cafe) (25 filas × 151 columnas)
+Objetivo: Réplica exacta de la hoja técnica contenida en el libro del MIDAGRI, incorporada dentro de este archivo para servir como tabla dimensional de referencia (lookup table) para los cruces aduaneros.
+Integración Operativa: Permite que las fórmulas y scripts de aduanas asocien el RUC de la DUA directamente con el número de socios, las hectáreas de fincas y el avance EUDR declarado.
+
+Pestaña 2.2: base dua 25 detallada (233 filas × 40 columnas)
+Objetivo: Registro granular de los 233 despachos aduaneros ejecutados por las 25 organizaciones cafetaleras detalladas entre 2024 y principios de 2026.
+Estructura y Esquema: Incluye ruc, anio, mes, aduana_codigo, agente_codigo, pais_codigo, dua_numero, fecha_embarque, canal, url_detalle, fob_pdf, peso_neto_pdf, bultos_pdf, tipo_bulto, subpartida, cant_duas, duas_con_pdf.
+Hallazgos Clave:
+Universo temporal: 42 DUAs en 2024, 177 DUAs en 2025 y 14 DUAs en los primeros meses de 2026.
+Canal de control aduanero: 231 despachos cursaron por Canal Verde (despacho directo sin inspección física ni documental intrusiva) y únicamente 2 despachos por Canal Rojo. Esto ratifica que la aduana peruana no realiza control de deforestación ni trazabilidad en origen; el filtro de control recae enteramente en la aduana de destino europea.
+
+Pestaña 2.3: por RUC (14 filas × 46 columnas)
+Objetivo: Tabla pivot y resumen ejecutivo consolidado por cada uno de los 14 RUCs exportadores efectivos que tuvieron movimiento comercial aduanero registrado.
+Estructura: Desglosa para 2024, 2025 y 2026: número de DUAs, DUAs con PDF auditado, valor FOB, peso neto (kg), bultos/contenedores, puertos de salida, agencias de aduana utilizadas y variables de texto extraídas.
+Ranking y Desempeño Consolidado de los 14 Exportadores:
+
+RANKING DE EXPORTACIÓN CONSOLIDADA (DUAS 2024–2026)
+========================================================================================
+N°  RUC          Organización            DUAs   FOB Total (USD)  Peso Neto (kg)  Cont.
+----------------------------------------------------------------------------------------
+ 1  20542209951  CAC Valle Grande          46   $11,721,408.62       966,827      88
+ 2  20602650643  Asoc. Agroexp. San Martín 36    $6,686,861.51       780,215      70
+ 3  20479595276  CAC CASIL LTDA            24    $4,468,578.96       351,435      30
+ 4  20136201213  Central COCLA Ltda.       33    $4,415,611.74       227,550      16
+ 5  20140181405  CAC La Florida            35    $4,184,722.23       340,980      22
+ 6  20600263286  APROSELVANOR              25    $4,154,567.83       546,485      50
+ 7  20603820691  CAC Cordillera Azul        8    $1,201,126.56       170,150      14
+ 8  20542264544  CAC Valle del Biavo        6    $1,187,600.48       138,630      12
+ 9  20606451122  Asoc. Cerro Blanco         7      $940,783.32        88,136      13
+10  20602054480  CEMCAVIR (Mujeres)         5      $813,479.67        34,776       5
+11  20601558204  CAC Ocumal                 4      $442,439.35        41,055       8
+12  20603862369  CAC Tropical Products      2      $332,555.16        38,640       2
+13  20605500430  Los Chankas Perené         1      $147,669.48        18,975       1
+14  20604309728  APROCASJ                   1        $7,275.18           220      <1
+----------------------------------------------------------------------------------------
+    TOTAL                                 233   $40,704,680.09     3,744,074     331
+========================================================================================
+Pestaña 2.4: DETALLE_ITEMS (312 filas × 76 columnas)
+Objetivo: Desglose analítico a nivel de ítem/serie comercial de las declaraciones de exportación, aplicando minería de texto y expresiones regulares (regex) sobre las descripciones de mercancía declaradas ante SUNAT.
+Estructura: 312 registros que extraen variables de trazabilidad, sellos, botánica y presentación física:
+Certificaciones: organico, fairtrade, rainforest, utz_jbs, sustentable_cert.
+Especie y variedad: arabica, robusta, criollo, trinitario, forastero, amazonico.
+Procesamiento y empaque: en_grano, en_bolsa, a_granel, consumo_humano, washed (café lavado).
+Subpartidas arancelarias: 307 ítems bajo la partida 09.01.11.90.00 (Café en grano verde sin tostar ni descafeinar) y 5 ítems bajo 18.01.00.19.00 (Cacao en grano).
+Hallazgos Clave de Minería de Texto:
+Menciones de Orgánico: 47 ítems (15.1% de la serie) declaran explícitamente el término "ORGANIC" o "ORGÁNICO" en la glosa de la factura/DUA (liderados por La Florida con 27 ítems y COCLA con 26 ítems).
+Comercio Justo (Fairtrade): Únicamente 7 ítems contienen la mención "FAIRTRADE" en la descripción oficial (todos correspondientes a Central COCLA Ltda.).
+Rainforest Alliance: 0 ítems mencionan explícitamente "Rainforest" en la glosa aduanera, a pesar de que cooperativas como APROSELVANOR y Valle Grande cuentan con la certificación vigente. Esto demuestra que la información del sello viaja en certificados privados paralelos y no queda registrada en la aduana peruana.
+Ausencia de Lotes: Solo 6 ítems de 312 presentan un código de lote explícito (LOT NUMBER). El 98.1% de los ítems carece de identificador de lote en la declaración oficial.
+Pestaña 2.5: DUAS (239 filas × 29 columnas)
+Objetivo: Cabeceras formales de las declaraciones aduaneras (Casilla 1 a Casilla 8 de la DUA de exportación).
+Estructura: 239 registros con campos institucionales: aduana, fecha_numeracion, canal, exportador, transportista (navieras: Hapag-Lloyd, MSC, Maersk, CMA CGM), manifiesto, deposito_aa, valor_neto_fob, total_peso_neto, total_peso_bruto.
+Hallazgos Clave:
+Registra un valor neto FOB de US$ 27,353,811.26 y un peso neto de 3,706,154 kg para las cabeceras directamente indexadas.
+Revela la presencia de 15 RUCs: los 14 exportadores cafetaleros más COOPERATIVA AGRARIA ACOPAGRO LTDA (RUC 20404057805), que aporta 6 DUAs de exportación de cacao por un valor neto de US$ 1,325,192.68.
+Pestaña 2.6: PRODUCTORES_ICO (20 filas × 19 columnas)
+Objetivo: Auditoría de códigos de la Organización Internacional del Café (OIC / ICO - International Coffee Organization), que constituyen el estándar multilateral de identificación de origen del café de exportación.
+Estructura: 20 registros con columnas: ico, ruc_exportador, razon_social, n_items, n_duas, fob_total, peso_neto_total, bultos_total, anios, atributos, descripcion_ejemplo, cobertura_ico.
+Hallazgo Crítico:
+El 100% de los 20 códigos ICO identificados pertenecen exclusivamente a una sola organización: Central de Cooperativas Agrarias Cafetaleras COCLA Ltda. N° 281 (RUC 20136201213).
+Ejemplos de marcas registradas: 30/11/4039, 30/11/4663, 30/11/4771, 30/11/4806 (donde 30 = código de país Perú, 11 = puerto de embarque/región, y los 4 dígitos restantes identifican al productor/exportador).
+Cobertura en el corpus: 20 ítems con código ICO frente a 292 ítems sin código ICO (solo el 6.41% de cobertura). Las demás 13 cooperativas exportadoras (incluyendo a las gigantes Valle Grande y San Martín) no consignan el código ICO en la descripción de sus DUAs.
+Pestaña 2.7: SIN_CABECERA (68 filas × 11 columnas)
+Objetivo: Registro de control de calidad aduanera para 68 DUAs en las que se obtuvo el PDF de Serie (ítems), pero cuya página web de consulta de cabecera en el portal de SUNAT no pudo ser indexada o arrojó error de consulta de red.
+Estructura: 68 registros que totalizan US$ 14,894,269.80 FOB y 2,124,495 kg netos.
+Distribución de DUAs afectadas por RUC:
+CAC Valle Grande: 21 DUAs.
+Asoc. Agroexportadora San Martín: 13 DUAs.
+APROSELVANOR: 11 DUAs.
+CAC Valle del Biavo: 5 DUAs.
+CAC CASIL Ltda.: 4 DUAs.
+CAC Cordillera Azul: 4 DUAs.
+Otras organizaciones: 10 DUAs.
+Interpretación Técnica: Como aclara la hoja CONTROL, no son DUAs incompletas ni cargamentos falsos; cuentan con su PDF oficial de serie y respaldo físico de embarque, pero refleja una limitación del web scraping en los servidores de SUNAT.
+Pestaña 2.8: CONTROL (27 filas × 3 columnas)
+Objetivo: Tablero de control de auditoría interna del pipeline ETL que procesó las declaraciones de aduanas.
+Métricas Principales:
+pdfs leidos: 484 archivos PDF procesados.
+items (Series) leidos: 313 series.
+items duplicados descartados: 1 serie.
+items unicos en DETALLE_ITEMS: 312 series.
+cabeceras (Consulta): 171.
+filas DUAS: 239.
+RUC distintos: 15 organizaciones.
+errores de parseo: 0.
+pdfs no reconocidos: 0.
+FALTAN ITEMS: 0 DUAs (no hay cabeceras con FOB mayor al monto de sus ítems).
+SIN CABECERA: 68 DUAs verificadas y cuadradas en la hoja complementaria.
+Pestaña 2.9: ITEMS_EXCLUIDOS (11 filas × 12 columnas)
+Objetivo: Auditoría de 11 ítems de exportación que fueron descartados durante el ensamblaje de la base de datos consolidada.
+Estructura: 11 filas con aduana_codigo, anio, dua_numero, ruc, item_excluido, fob_excluido, peso_neto_excluido, archivo, item_conservado, motivo.
+Organizaciones Afectadas:
+CAC CASIL Ltda. (DUA 19072 del 2024): 2 ítems excluidos.
+CAC Valle Grande (DUAs 23740, 23741, 31826, 37245, 50189, 64680 del 2025): 8 ítems excluidos.
+Central COCLA Ltda. (DUA 109415 del 2025): 1 ítem excluido.
+Justificación Metodológica: En todas las exclusiones, el motivo documentado es: "suma de items > 6.5 de la cabecera; la cabecera coincide con el item 1". Corresponde a declaraciones rectificatorias o series provisionales emitidas en SUNAT donde los ítems 2 o 3 duplicaban el valor real del embarque. Su exclusión evitó una sobreestimación artificial de más de US$ 400,000 en el valor exportado.
+Pestañas 2.10 y 2.11: CAT_ADUANAS (3 × 3) y CAT_AGENTES (11 × 4)
+Objetivo: Catálogos normalizados de infraestructura logística aduanera.
+Aduanas de Salida (CAT_ADUANAS):
+Aduana de Paita (Código 046): 92 DUAs (54.1% de las cabeceras). Canaliza la totalidad del café producido en la Selva Alta del Norte (San Martín, Cajamarca, Amazonas) mediante transporte terrestre hacia el Puerto de Paita (Piura).
+Aduana Marítima del Callao (Código 118): 78 DUAs (45.3%). Canaliza el café de la Selva Central (Junín, Pasco) y del Sur (Cusco, Ayacucho).
+Aduana Aérea y Postal (Código 235): 1 DUA (muestras comerciales sin valor comercial relevante).
+Agencias de Aduana (CAT_AGENTES):
+Alta concentración de operadores logísticos: Grupo PML S.A.C. (88 DUAs) y Despachos Aduaneros Chavimochic S.A.C. (34 DUAs) concentran juntos el 71.35% de todos los trámites aduaneros de las cooperativas.
+Pestaña 2.12: DUA_Consolidado_Total (233 filas × 16 columnas)
+Objetivo: Matriz central normalizada y limpia que ampara el universo de los 233 despachos aduaneros con datos definitivos de país de destino, peso neto y valor FOB.
+Cifras Totales:
+Valor FOB Consolidado: US$ 40,704,680.09.
+Peso Neto Acumulado: 3,744,074 kg (3,744.07 toneladas métricas de café).
+Bultos / Lotes: 333 contenedores y lotes marítimos.
+Distribución de Destinos Comerciales:
+Estados Unidos: 67 DUAs (US$ 9,275,697.43).
+Bélgica: 44 DUAs (US$ 7,465,835.75).
+Suecia: 22 DUAs (US$ 6,254,241.45).
+Japón: 18 DUAs (US$ 3,812,611.29).
+Alemania: 16 DUAs (US$ 3,563,550.79).
+Canadá: 14 DUAs (US$ 2,737,257.99).
+Reino Unido: 12 DUAs (US$ 2,295,299.00).
+Dinamarca: 7 DUAs (US$ 1,046,920.85).
+Francia: 5 DUAs (US$ 720,815.87).
+Países Bajos: 3 DUAs (US$ 463,435.48).
+Otros países: 25 DUAs.
+Pestaña 2.13: DESCARGAR_PENDIENTES (0 filas × 10 columnas)
+Objetivo: Bitácora de control de peticiones pendientes de extracción en el crawler de SUNAT.
+Estado: 0 registros pendientes. Confirma que la base de datos descargó y procesó el 100% del universo programado para este corte analítico.
+3. Análisis Detallado en Conjunto y Triaje Crítico EUDR
+
+El cruce de ambos libros maestros y la confrontación con los informes preliminares (informe diagnostico preliminar.txt y analisis excel 1.txt) permite extraer seis conclusiones estructurales de alto impacto:
+
+DE LA ILUSIÓN DE REGISTRO AL ESTRÉS ADUANERO REAL
+========================================================================================
+[1. Macro-Universo MIDAGRI/PAC]      596 organizaciones promovidas por el Estado
+               ↓ (Filtro EUDR)
+[2. Universo Regulado Café/Cacao]    178 entidades (110 cooperativas, 68 asociaciones)
+               ↓ (Filtro Granular)
+[3. Muestra Granular Líder]          25 cooperativas cafetaleras prioritarias
+               ↓ (Filtro Aduanero SUNAT)
+[4. Exportadores Directos Activos]   14 organizaciones con DUAs emitidas (2024-2026)
+               ↓ (Filtro Pareto)
+[5. Núcleo Crítico Comercial]        3 a 6 cooperativas mueven el 87.5% del valor FOB
+3.1. Reconciliación de Universos y la Realidad Pareto
+
+Existe una brecha sustancial entre el universo formal promovido por el Estado y el universo con capacidad exportadora real:
+
+De las 596 organizaciones de la base consolidada del MIDAGRI, solo 178 pertenecen a café y cacao.
+De las 25 cooperativas de café seleccionadas por el Estado como líderes comerciales, únicamente 14 registran DUAs de exportación directa en SUNAT.
+Las otras 11 organizaciones no registran despachos directos bajo su propio RUC en este corpus. Cooperativas como CAECO Rosas Pampa (que declara un avance EUDR del 93%), Lonya Grande, Aguilayoc, Chancamayo o Mateo Pumacahua operan comercialmente entregando su grano a grandes acopiadoras o consorcios de segundo piso (como Central COCLA o exportadores privados como Perales Huancaruna o Volcafe).
+Concentración Pareto Extrema:
+Las Top 3 cooperativas (Valle Grande, Asociación Agroexportadora San Martín y CASIL) concentran US$ 22.88 millones FOB (el 56.21% del valor exportado).
+Las Top 6 cooperativas (sumando COCLA, La Florida y APROSELVANOR) concentran US$ 35.63 millones FOB, equivalente al 87.53% del valor total de la muestra.
+Cualquier política pública o plan de asistencia gremial debe priorizar blindar de inmediato a estas 6 entidades para proteger el 88% de las divisas cafetaleras del sector cooperativo.
+3.2. Exposición Comercial Directa al Mercado de la Unión Europea
+
+Al cuantificar los 233 despachos aduaneros clasificados por país de destino:
+
+Exposición a la Unión Europea (UE-27):
+99 DUAs (42.49% de todos los despachos).
+US$ 19,790,964.55 FOB (48.62% del valor exportado).
+1,864,956 kg (1,865 toneladas métricas de café).
+163 contenedores marítimos en riesgo de retención si no cumplen con la normativa.
+Destinos comunitarios clave:
+Bélgica (Puerto de Amberes): US$ 7.47M FOB (44 DUAs). Es el principal hub de entrada del café peruano a Europa.
+Suecia (Helsingborg/Gotemburgo): US$ 6.25M FOB (22 DUAs). Café de alta especialidad de Valle Grande y APROSELVANOR.
+Alemania (Hamburgo/Bremen): US$ 3.56M FOB (16 DUAs). Destino tradicional de COCLA y CASIL.
+Dinamarca, Francia, Países Bajos, Irlanda y Portugal: US$ 2.51M FOB combinados.
+Mercados No Regulados (Amortiguadores temporales):
+US
+20.91
+𝑀
+𝐹
+𝑂
+𝐵
+(
+51.38
+20.91MFOB(51.38 9.28M, Japón US
+3.81
+𝑀
+,
+𝐶
+𝑎
+𝑛
+𝑎
+𝑑
+𝑎
+ˊ
+𝑈
+𝑆
+3.81M,Canad
+a
+ˊ
+US 2.74M, Reino Unido US$ 2.30M). Sin embargo, desviar el volumen europeo hacia estos mercados generaría un sobreabastecimiento inmediato con castigos de precio de entre 25% y 40% en bolsa.
+3.3. Desmontaje de la "Ilusión del PPA": Mapas vs. Trazabilidad Transaccional
+
+Una de las conclusiones más críticas surge al contrastar la columna Indicar el avance con el reglamento de la EUDR de la hoja base 25 con los datos de las hojas aduaneras DETALLE_ITEMS y PRODUCTORES_ICO:
+
+Cuatro cooperativas declaran 1.0 (100%) de avance EUDR (Valle Grande, APROSELVANOR, Valle del Biavo y Cordillera Azul).
+Esta cifra constituye un falso positivo de cumplimiento:
+El PPA es un catastro pasivo, no un sistema transaccional: El Padrón de Productores Agrarios almacena coordenadas de fincas en los servidores del MIDAGRI, pero no está interconectado con el sistema de facturación electrónica ni con las guías de remisión de SUNAT.
+Vacío en la DUA: En la hoja DETALLE_ITEMS, ninguna de estas cooperativas consigna identificadores de parcela, coordenadas geográficas ni códigos de lote en las series aduaneras. El 98.1% de los ítems viaja como café genérico sin segregación.
+El riesgo de mezcla (Contaminación de Lote): Si una organización como Valle Grande acopia café de sus 622 socios distribuidos en 4,031 hectáreas y una sola parcela sufrió desbosque después del 31 de diciembre de 2020 (o no cuenta con geolocalización válida), todo el contenedor de 250 quintales queda contaminado, facultando a las aduanas de Amberes o Hamburgo a ordenar el reembarque o la destrucción del lote.
+Falta de Interoperabilidad con la API del Information System de la UE: Al día de hoy, ninguna cooperativa peruana cuenta con conexión API directa al sistema central de la Comisión Europea para registrar la DDS y generar el código de referencia previo al zarpe en Paita o Callao.
+3.4. El Triple Cuello de Botella Legal, Ambiental y de Gobernanza
+MATRIZ DE ESTRÉS TRANSACCIONAL: LOS 3 CUELLOS DE BOTELLA
+========================================================================================
+VULNERABILIDAD          EVIDENCIA EN LAS BASES                      IMPACTO EUDR
+----------------------------------------------------------------------------------------
+1. Fiscal / Comex       CEMCAVIR y Los Chankas figuran              Riesgo de bloqueo
+                        "SIN ACTIVIDAD" de comercio exterior.       en SUNAT y rechazo
+                        Cordillera Azul con RUC "PENDIENTE".        de acreditación bancaria.
+----------------------------------------------------------------------------------------
+2. Acefalía Registral   Hoja 'ruc oece personas' muestra            Invalidez legal para firmar
+   (OECE / SUNARP)      directivos con mandatos vencidos            las Due Diligence Statements
+                        (2014-2018) sin renovación en SUNARP.       ante compradores de la UE.
+----------------------------------------------------------------------------------------
+3. Vacío Ambiental y    0 certificaciones ambientales en SENACE.   Colisión frontal con el
+   Tenencia de Tierra   >70% socios con posesiones informales       Art. 3(b) del Reglamento
+                        sin título de propiedad inscrito.           (Legislación del país de origen).
+========================================================================================
+Inconsistencias Fiscales en Exportadores Reales:
+CEMCAVIR (Mujeres de Villa Rica): Exportó US$ 813,479.67 FOB a Bélgica y Alemania mediante 5 DUAs, pero en el padrón tributario de SUNAT figura formalmente como "SIN ACTIVIDAD" de comercio exterior.
+Los Chankas Valle del Río Perené: Exportó US$ 147,669.48 FOB a Estados Unidos figurando también "SIN ACTIVIDAD".
+Cordillera Azul: Exportó US$ 1.20M FOB a Europa manteniendo su condición de domicilio como "PENDIENTE".
+Caducidad de Mandatos en Registros Públicos:
+Al cruzar los 441 directivos de la hoja ruc oece personas, se constata que numerosos Consejos de Administración no han renovado sus poderes en SUNARP desde 2017 o 2018. Sin una Copia Literal actualizada que certifique las facultades vigentes del Gerente General, las declaraciones juradas de debida diligencia carecen de validez jurídica en la Unión Europea.
+El Vacío de Legalidad Ambiental y Tenencia (Art. 3.b del EUDR):
+El Reglamento EUDR exige no solo "cero deforestación" (Art. 3.a), sino haber sido producido conforme a la legislación pertinente del país de producción (Art. 3.b), lo cual incluye derechos de tenencia de la tierra y normativa ambiental.
+La evidencia del proyecto corrobora que ninguna cooperativa agraria cuenta con Instrumentos de Gestión Ambiental (IGA) certificados ante SENACE. Asimismo, en cuencas de Selva Central y San Martín, más del 70% de los pequeños productores operan bajo certificados comunales de posesión o constancias emitidas por agencias agrarias sin título de propiedad registrado en SUNARP.
+3.5. La Singularidad de COCLA y los Códigos OIC/ICO
+
+El análisis de la pestaña PRODUCTORES_ICO reveló un hallazgo documental de primer orden:
+
+Central COCLA Ltda. es la única organización en todo el registro aduanero peruano que imprime formalmente los códigos internacionales ICO (30/11/4039 a 30/11/4806) dentro de la descripción del ítem de la DUA.
+Esta práctica demuestra una disciplina histórica de trazabilidad por lote derivada de sus contratos con tostadores europeos de Comercio Justo.
+Sin embargo, para el EUDR, el código ICO es una condición necesaria pero insuficiente: la norma europea exige asociar dicho código OIC a las coordenadas latitud/longitud exactas de las parcelas de los socios cusqueños que suministraron el café.
+3.6. Hoja de Ruta Prioritaria hacia el 30 de Diciembre de 2026
+
+Para mitigar el riesgo inminente de exclusión comercial de los US$ 19.8 millones de café destinados a puertos europeos, se recomienda la ejecución inmediata de tres acciones estratégicas:
+
+Ventanilla Única de Saneamiento Registral y Fiscal (Gremial + SUNAT/SUNARP):
+Actualizar de oficio la condición de comercio exterior en SUNAT para las cooperativas exportadoras que figuran "Sin Actividad" (ej. CEMCAVIR y Los Chankas).
+Regularizar ante SUNARP la renovación de poderes de los Consejos de Administración de las 14 cooperativas exportadoras para garantizar la validez legal de las firmas en las DDS.
+Protocolo Físico de Doble Tolva (Segregación en Planta de Beneficio):
+Las cooperativas no pueden esperar a tener el 100% de socios georreferenciados para exportar. Deben establecer en sus plantas de proceso dos líneas independientes de acopio y trillado:
+Línea A (EUDR Verificada): Exclusiva para lotes de socios con polígonos validados y corte satelital limpio a diciembre de 2020.
+Línea B (Convencional / Mercados Alternativos): Destinada a Estados Unidos, Japón o mercado interno para café de socios sin saneamiento completo.
+Conversión del PPA a Formato GeoJSON Transaccional:
+El MIDAGRI debe habilitar una pasarela informática para que las organizaciones exportadoras descarguen de forma automatizada los archivos GeoJSON de sus productores empadronados, integrando el ID de socio al pesaje de acopio y a la Factura Electrónica.
+4. Resumen de Archivos y Entregables en el Repositorio
+
+Los análisis y datasets estructurados que soportan esta auditoría se encuentran disponibles y sincronizados en las siguientes rutas del espacio de trabajo:
+
+Informes Maestros y Memorias:
+Informe_Diagnostico_EUDR_MIDAGRI.md (Informe diagnóstico maestro)
+Memoria Diaria EUDR.md (Bitácora de investigación y marco legal)
+Dossier Completo - Toolkit EUDR Cooperativas.md (Manual de campo para cooperativas)
+Bases de Datos Limpias y Procesadas:
+midagri_cafe_cacao_limpio.xlsx (Universo filtrado de las 178 entidades de café y cacao)
+resumen_universo_midagri.json (Métricas consolidadas del universo)
+MATRIZ_IP_IV_v18_EUDRPERU.xlsx (Matriz matemática de índices de preparación y vulnerabilidad)
+Libros Auditados en esta Sesión:
+3 directorio - base de datos de los excels de midagri 06.10.26.xlsx
+DUA_CONSOLIDADO_con_atributos_20261002 (2).xlsx

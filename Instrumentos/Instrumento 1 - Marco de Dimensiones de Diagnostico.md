@@ -1,14 +1,14 @@
-# Instrumento 1 — Marco de Dimensiones de Diagnóstico EUDR para Cooperativas
+# Instrumento 1 — Marco de Dimensiones de Diagnóstico EUDR + Pacto Verde para Cooperativas
 
 **Serie:** este archivo forma parte de un paquete de 7 instrumentos (ver `Instrumento 7 - Evaluacion Critica y Elementos Adicionales.md` para la justificación de alcance). Reemplaza y amplía la Sección 1 del documento consolidado original.
 
-**Base normativa:** Reglamento (UE) 2023/1115, modificado por el Reglamento (UE) 2025/2650, interpretado por la 3ª edición del Documento de Orientación (C/2026/3896). Ver `Fe de Erratas - Actualizacion Reglamento 2025-2650.md`.
+**Base normativa:** Reglamento (UE) 2023/1115, modificado por el Reglamento (UE) 2025/2650, interpretado por la 3ª edición del Documento de Orientación (C/2026/3896). Ver `Fe de Erratas - Actualizacion Reglamento 2025-2650.md`. **Módulos Pacto Verde (D12–D14):** Taxonomía UE, CSRD/ESRS, CBAM, Plan Acción Economía Circular UE, PPWR, CalCafé v2.1 (PromPerú).
 
 ---
 
-## 1. Dimensiones núcleo (D1–D7)
+## 1. Dimensiones núcleo EUDR (D1–D7)
 
-Estas 7 dimensiones son el mínimo indispensable para cualquier diagnóstico EUDR de una cooperativa exportadora, directa o indirecta. El panel digital "Brújula de Diligencia" las implementa con semáforo automático (junto con D8–D11, ver sección 2).
+Estas 7 dimensiones son el mínimo indispensable para cualquier diagnóstico EUDR de una cooperativa exportadora, directa o indirecta. El panel digital "Brújula de Diligencia" las implementa con semáforo automático (junto con D8–D14, ver sección 2).
 
 | # | Dimensión | Qué mide | Por qué es núcleo (no opcional) |
 |---|---|---|---|
@@ -22,7 +22,9 @@ Estas 7 dimensiones son el mínimo indispensable para cualquier diagnóstico EUD
 
 ---
 
-## 2. Dimensiones extendidas (D8–D11) — recomendadas para un diagnóstico integral
+## 2. Dimensiones extendidas (D8–D14) — diagnóstico integral
+
+### 2.1 Extendidas EUDR (D8–D11) — complementan el cumplimiento EUDR
 
 Estas dimensiones no están en el reglamento de forma explícita como categorías propias, pero surgen de aplicar el marco núcleo a la realidad operativa de una cooperativa peruana. Un diagnóstico que se detiene en D1–D7 puede identificar brechas técnicas correctas pero pasar por alto por qué esas brechas persisten o qué las agrava.
 
@@ -33,9 +35,22 @@ Estas dimensiones no están en el reglamento de forma explícita como categoría
 | D10 | **Confusión entre certificación voluntaria y cumplimiento EUDR** | Si la cooperativa cree (erróneamente) que su certificación ya cubre el EUDR | Es la brecha de percepción más peligrosa: genera falsa seguridad y retrasa la acción real. El Art. 30 del Reglamento es explícito en que un esquema de certificación puede *informar* la evaluación de riesgo pero **no sustituye** la geolocalización ni la declaración de diligencia debida. |
 | D11 | **Ecosistema de apoyo externo y actores estatales** | Qué apoyo estatal o de cooperación ya conoce, usa o podría usar la cooperativa | Sin este mapeo, el diagnóstico produce una lista de carencias sin rutas de solución. No es una dimensión de "madurez" sino de "oportunidad" — se trata distinta en el scoring (ver Instrumento 4). |
 
-Las cuatro ya están implementadas en el panel digital: D8–D9 con el mismo semáforo 0–4 que el núcleo, D10 como bandera de alerta invertida y D11 como inventario de cobertura — ninguna de las dos últimas entra al promedio general (ver Instrumento 4, sección B).
+### 2.2 Módulos Pacto Verde (D12–D14) — competitividad de largo plazo
 
-**Nota de segregación de lotes (no es una dimensión aparte, es un refuerzo dentro de D2):** el EUDR prohíbe el "balance de masas" — no basta con saber de dónde viene cada parcela si en el acopio o la planta de procesamiento los lotes se mezclan físicamente sin control. Añadido como pregunta adicional en el Instrumento 2, no como dimensión D12, porque conceptualmente es parte de la misma cadena de custodia que D2 ya cubre — crear una dimensión aparte fragmentaría innecesariamente el marco.
+Estos tres módulos corresponden a los pilares (i), (iv) y (v) del proyecto madre ISCAM ("El impacto del Pacto Verde Europeo en la performance de las cooperativas peruanas"). **No determinan el acceso al mercado bajo el EUDR** (eso lo deciden D1–D7), pero definen la resiliencia competitiva, el acceso a financiamiento verde, la preferencia de compradores europeos y la alineación con CSRD/CBAM/taxonomía.
+
+| # | Dimensión | Módulo Pacto Verde | Qué mide | Herramienta de referencia |
+|---|---|---|---|---|
+| D12 | **Huella de carbono y gestión de emisiones GEI** | (i) Huella de carbono | Capacidad de medir, reportar y reducir huella de carbono de café/cacao exportado | **CalCafé v2.1** (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) — ✅ café validado; ⚠️ cacao sin equivalente identificado |
+| D13 | **Reporte de sostenibilidad y transparencia** | (iv) Reporte de sostenibilidad | Capacidad de producir información ESG estructurada, verificable, comparable (CSRD/ESRS/taxonomía) | GRI, ESRS simplificado, taxonomía verde UE |
+| D14 | **Economía circular, envases y gestión de residuos** | (v) Economía circular/envases | Prácticas de circularidad en acopio, beneficio, empaque de exportación (PPWR, "granja a mesa") | Plan Acción Economía Circular UE, PPWR (Directiva envases) |
+
+**Scoring diferenciado:**
+- D8–D9: semáforo 0–4 igual que núcleo → entran a ISA-EUDR (D8–D9 = 12.5% peso)
+- D10: bandera de alerta invertida → **no** entra a ISA-EUDR
+- D11: inventario de cobertura → **no** entra a ISA-EUDR
+- **D12–D14: semáforo 0–4 propio → entran a ISA-PactoVerde (media aritmética simple); NO entran a ISA-EUDR**
+- **ISA-Completo = 0.70 × ISA-EUDR + 0.30 × ISA-PactoVerde** (pesos a validar en piloto)
 
 ---
 
@@ -48,12 +63,14 @@ Ver el análisis completo en `Instrumento 7`. En resumen, se evaluaron y se deci
 - Búsqueda de una "certificación EUDR" (no existe; tratar como señal de alerta comercial, ver D10)
 - Trazabilidad del empaque del producto terminado (fuera del alcance del reglamento, que regula la materia prima)
 
-Esto no significa que estos temas sean irrelevantes para la cooperativa en general — solo que **no deben competir por prioridad ni presupuesto** con las dimensiones que sí determinan el acceso al mercado europeo.
+**Actualización 2026-10-08:** los módulos Pacto Verde (huella de carbono, reporte sostenibilidad, economía circular/envases) **sí se incluyen** como D12–D14 — no son criterios de cumplimiento EUDR, son criterios de **competitividad bajo el Pacto Verde completo**. Ver `Instrumento 7` para la justificación detallada del cambio.
+
+Esto no significa que estos temas sean irrelevantes para la cooperativa en general — solo que **no deben competir por prioridad ni presupuesto** con las dimensiones que sí determinan el acceso al mercado europeo (D1–D7).
 
 ---
 
 ## 4. Cómo se usa este marco
 
-- **Diagnóstico rápido / gran número de cooperativas:** aplicar solo D1–D7 (núcleo), vía el Instrumento 2 (encuesta) y el panel digital.
-- **Diagnóstico integral / cooperativas prioritarias o con financiamiento de cooperación:** aplicar D1–D11 completas, combinando encuesta + entrevista (Instrumento 3).
-- Las dimensiones extendidas (D8–D11) están diseñadas para añadirse sin romper la comparabilidad de D1–D7 entre cooperativas evaluadas solo con el núcleo.
+- **Diagnóstico EUDR-only / gran número de cooperativas:** aplicar solo D1–D9 (núcleo + extendidas EUDR), vía el Instrumento 2 (encuesta) y el panel digital. Genera **ISA-EUDR**.
+- **Diagnóstico Pacto Verde completo / cooperativas prioritarias o con financiamiento de cooperación:** aplicar **D1–D14 completas**, combinando encuesta + entrevista (Instrumento 3). Genera **ISA-EUDR + ISA-PactoVerde + ISA-Completo**.
+- Las dimensiones extendidas EUDR (D8–D9) y módulos Pacto Verde (D12–D14) están diseñadas para añadirse sin romper la comparabilidad de D1–D7 entre cooperativas evaluadas solo con el núcleo.

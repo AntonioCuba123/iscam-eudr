@@ -1,4 +1,4 @@
-# Instrumento 4 — Matriz de Brechas y Oportunidades (D1–D11)
+# Instrumento 4 — Matriz de Brechas y Oportunidades (D1–D14)
 
 **Serie:** parte del paquete de 7 instrumentos. Se completa por cooperativa, cruzando los puntajes del Instrumento 2 con los hallazgos cualitativos del Instrumento 3. Versión resumida junto a Instrumentos 5 y 6: `Uso de Resultados y Alcance de Aplicacion.md`.
 
@@ -48,23 +48,47 @@ Si una cooperativa reporta inversión activa en alguno de estos puntos mientras 
 
 ---
 
-## D. Ficha de síntesis por cooperativa (plantilla)
+## D. Módulos Pacto Verde (D12–D14) — semáforo propio, alimentan ISA-PactoVerde
+
+Estas dimensiones **no** determinan el acceso al mercado bajo EUDR (eso lo deciden D1–D7), pero definen la competitividad de largo plazo, el acceso a financiamiento verde y la preferencia de compradores europeos. Se evalúan con semáforo propio 0–4 y alimentan el **ISA-PactoVerde** (media aritmética simple), que luego se combina en el **ISA-Completo = 0.70 × ISA-EUDR + 0.30 × ISA-PactoVerde**.
+
+| Dimensión | 🔴 Incipiente (0–1) | 🟡 En desarrollo (2) | 🟢 Avanzada (3–4) | Tipo de oportunidad si hay brecha |
+|---|---|---|---|---|
+| D12 Huella carbono | No conoce CalCafé v2.1, no registra insumos, sin cálculo | Conoce CalCafé, registra algunos insumos, cálculo estimado interno | Usa CalCafé sistemáticamente, objetivo reducción público, reporta a compradores/CDP | Capacitación CalCafé v2.1 (gratuita, PromPerú/PUCP); soporte técnico para registros insumos; para cacao: identificar herramienta equivalente |
+| D13 Reporte sostenibilidad | Sin reporte / solo interno informal | Reporte interno formal o básico GRI/ESRS | Reporte público ESRS/GRI con metas ESG, verificación externa, difusión proactiva | Asesoría GRI/ESRS simplificado; capacitación CSRD/taxonomía; plantillas reporte alineado compradores UE |
+| D14 Economía circular/envases | Eliminación sin tratamiento; envases no reciclables; sin plan plásticos | Compostaje parcial; envases parcialmente reciclables; plan plásticos en análisis | Circularidad cerrada (biogás/reuso); envases 100% reciclables/compostables con trazabilidad retorno; plásticos eliminados/verificados | Acceso a fondos economía circular UE; alianzas reciclaje industrial; soporte técnico PPWR (Directiva envases) |
+
+**Regla de lectura:** una cooperativa puede tener ISA-EUDR alto (D1–D9 en verde) y ISA-PactoVerde bajo (D12–D14 en rojo) — eso indica **cumplimiento regulatorio actual pero riesgo competitivo futuro**. El ISA-Completo (70/30) pondera ambos: el acceso al mercado pesa más, pero la brecha Pacto Verde no se ignora.
+
+---
+
+## E. Ficha de síntesis por cooperativa (plantilla actualizada)
 
 ```
 Cooperativa: ____________________
 Fecha de evaluación: ____________________
 
-NÚCLEO (D1–D7):        🔴__ 🟡__ 🟢__
-Dimensión más crítica:  ____________________
-Dimensión mejor cubierta: ____________________
+ISA-EUDR: ______ / 100
+ISA-PactoVerde: ______ / 100
+ISA-Completo (70/30): ______ / 100
 
-EXTENDIDO:
-D8 Gobernanza:          🔴 🟡 🟢
-D9 Sostenibilidad:      🔴 🟡 🟢
-D10 Alerta certificación/EUDR: 🔴 Falsa seguridad / 🟢 Percepción correcta
-D11 Actores contactados: ___ de ___ identificados
+NÚCLEO EUDR (D1–D7):        🔴__ 🟡__ 🟢__
+Dimensión más crítica:      ____________________
+Dimensión mejor cubierta:   ____________________
 
-RIESGO DE MALA PRIORIZACIÓN: Sí / No — detalle: ____________________
+EXTENDIDO EUDR:
+D8 Gobernanza:              🔴 🟡 🟢
+D9 Sostenibilidad:          🔴 🟡 🟢
+D10 Alerta certif./EUDR:    🔴 Falsa seguridad / 🟢 Percepción correcta
+D11 Actores contactados:    ___ de ___ identificados
 
-RECOMENDACIÓN PRINCIPAL (1 sola, la más urgente): ____________________
+MÓDULOS PACTO VERDE:
+D12 Huella carbono:         🔴 🟡 🟢
+D13 Reporte sostenibilidad: 🔴 🟡 🟢
+D14 Economía circular:      🔴 🟡 🟢
+
+RIESGO DE MALA PRIORIZACIÓN:  Sí / No — detalle: ____________________
+
+RECOMENDACIÓN PRINCIPAL EUDR (1 sola, la más urgente): ____________________
+RECOMENDACIÓN PRINCIPAL PACTO VERDE (1 sola): ____________________
 ```

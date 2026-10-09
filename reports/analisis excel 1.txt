@@ -1,0 +1,154 @@
+Se ha materializado la contrapropuesta técnica ("Informe de Estrés Transaccional y Riesgo de Exclusión") integrando tanto la auditoría dimensional de las 4 fuentes como los 4 filtros de realidad crítica (Pareto extremo, desmontaje de la "Ilusión del PPA", alertas fiscales/registrales y scorecards individuales). El documento ha sido compilado en Markdown, Word (.docx) y PDF en la carpeta reports/ y registrado bajo control de versiones en Git.
+
+🗺️ Rutas a los Entregables Generados
+Informe Diagnóstico Maestro (Markdown):
+reports/Informe_Diagnostico_EUDR_MIDAGRI.md
+Informe Ejecutivo en Word:
+reports/Informe_Diagnostico_EUDR_MIDAGRI.docx
+Informe Ejecutivo en PDF:
+reports/Informe_Diagnostico_EUDR_MIDAGRI.pdf
+Base de Datos Depurada (Café y Cacao):
+data/midagri_cafe_cacao_limpio.xlsx | data/midagri_cafe_cacao_limpio.csv
+INFORME DIAGNÓSTICO: EVALUACIÓN DE ESTRÉS TRANSACCIONAL Y RIESGO DE EXCLUSIÓN EUDR
+
+1. Auditoría del Libro Maestro de MIDAGRI (8 Hojas)
+
+La base 3 directorio - base de datos de los excels de midagri 06.10.26.xlsx consolida 8 hojas de trabajo con datos de intervención pública y fuentes cruzadas:
+
+Hoja en Excel	Dimensiones	Contenido y Hallazgos Principales
+base global	681 × 115	Matriz histórica de beneficiarios PAC (2018–2025) multiactividad. Contenía fórmulas de incremento interanual rotas (#REF! e #ERROR!), reparadas en el pipeline.
+base 7	8 × 31	Muestra comparativa de organizaciones 2025 con sellos internacionales en cadenas fuera del EUDR (Banano, Mango, Palta).
+base consolidad MIDAGRI	596 × 165	Cruce institucional histórico de intervenciones y ventas sectoriales del programa SISPAC.
+base 25 detallada (cafe)	25 × 151	Ficha técnica agronómica, comercial y EUDR de las organizaciones cafetaleras líderes.
+ficha ruc cafe	91 × 24	Consulta RUC de organizaciones de café: 74 Activas, 12 Bajas de Oficio, 4 Suspensión Temporal, 1 Baja Provisional.
+ficha ruc cacao	89 × 24	Consulta RUC de organizaciones de cacao: 76 Activas, 7 Bajas de Oficio, 5 Suspensión Temporal, 1 Baja Provisional.
+ruc oece personas	441 × 16	Padrón de 441 directivos (170 RUCs únicos) ante registros públicos (OECE/SUNARP).
+base cafe cacao	179 × 154	Base consolidada de organizaciones con alcance EUDR, cruzada con ventas y condición fiscal.
+
+2. Radiografía del Universo Filtrado (Café y Cacao)
+
+Al aislar estrictamente las cadenas reguladas por el Reglamento (UE) 2023/1115:
+
+Total Organizaciones Evaluadas: 178 entidades (87 de Café y 91 de Cacao).
+Estructura Jurídica: 110 Cooperativas Agrarias (Ley 31335) y 68 Asociaciones de Productores.
+Condición Fiscal (SUNAT):
+146 Activas y Habidas (100 cooperativas y 46 asociaciones).
+32 en Situación Irregular (20 Bajas de Oficio, 9 Suspensiones Temporales y 9 No Habidas/Pendientes).
+
+3. Bloque I: La Realidad Pareto y la Exposición Comercial a la UE
+
+La muestra detallada de 25 organizaciones cafetaleras concentra un valor de US$ 33,926,205.23 FOB (2025) y 229.05 contenedores marítimos distribuidos en 13 exportadores declarados.
+
+Concentración Extrema del Valor FOB:
+Top 3 Organizaciones: Concentran el 62.6% del volumen exportador evaluado.
+Top 6 Organizaciones: Concentran el 89.0% (US$ 30.25 millones de los US$ 33.93M totales).
+Ranking de Exportación de la Muestra Granular:
+N°	RUC	Organización	Región	Socios (H/M)	Área (ha)	FOB 2025 (USD)	Cont.	Destinos Principales en la UE	Avance EUDR	Estado SUNAT	Condición Exterior
+1	20542209951	CAC Valle Grande	San Martín	468 / 154	4,031.0	$10,702,633.46	69.90	Bélgica, Francia, Suecia, Alemania, UK	1.0 (100%)	ACTIVO / HABIDO	EXPORTADOR
+2	20602650643	Asoc. Agroexp. San Martín	San Martín	607 / 155	1,500.0	$6,402,453.00	45.57	Alemania, Suecia, Bélgica, UK	0.8 (80%)	ACTIVO / HABIDO	EXPORTADOR
+3	20600263286	APROSELVANOR	San Martín	607 / 190	2,110.0	$4,154,567.84	28.80	Alemania, Bélgica, Dinamarca, Suecia	1.0 (100%)	ACTIVO / HABIDO	EXPORTADOR
+4	20479595276	CAC CASIL LTDA	Cajamarca	136 / 42	437.0	$3,256,066.00	22.27	Alemania, EE.UU., Japón	Sin dato	ACTIVO / HABIDO	EXPORTADOR
+5	20140181405	CAC La Florida	Junín	339 / 111	1,605.8	$2,877,331.57	18.73	Guadalupe (Francia), EE.UU., Japón	0.75 (75%)	ACTIVO / HABIDO	EXPORTADOR
+6	20136201213	Central COCLA Ltda.	Cusco	472 / 188	1,670.0	$2,803,351.40	19.11	Alemania, Francia, Canadá, Japón	0.75 (75%)	ACTIVO / HABIDO	EXPORTADOR
+7	20542264544	CAC Valle del Biavo	San Martín	372 / 44	1,248.0	$1,034,237.62	7.36	Bélgica, Alemania, EE.UU.	1.0 (100%)	ACTIVO / HABIDO	EXPORTADOR
+8	20606451122	Asoc. Cerro Blanco	San Martín	141 / 46	600.0	$864,647.85	5.11	Noruega, Hong Kong, EE.UU.	0.7 (70%)	ACTIVO / HABIDO	IMP/EXP
+9	20602054480	CEMCAVIR (Mujeres)	Pasco	91 / 86	213.0	$800,858.56	4.84	Alemania, Bélgica	PPA 64.8%	ACTIVO / HABIDO	SIN ACTIVIDAD ⚠️
+10	20603820691	CAC Cordillera Azul	San Martín	291 / 90	1,143.0	$723,914.95	5.34	Bélgica, Alemania, EE.UU.	1.0 (100%)	ACTIVO / PENDIENTE ⚠️	IMP/EXP
+11	20603862369	CAC Tropical Products	Junín	135 / 68	609.0	$151,198.32	1.02	Dinamarca	0.75 (75%)	ACTIVO / HABIDO	EXPORTADOR
+12	20605500430	CAC Los Chankas Perené	Junín	165 / 92	771.0	$147,669.48	1.00	EE.UU.	0.75 (75%)	ACTIVO / HABIDO	SIN ACTIVIDAD ⚠️
+13	20604309728	APROCASJ	Cajamarca	236 / 69	699.0	$7,275.18	< 1	Corea del Sur	Sin dato	ACTIVO / HABIDO	IMP/EXP
+
+4. Bloque II: Desmontando la "Ilusión del PPA" (Mapas vs. Trazabilidad)
+
+Cuatro organizaciones declaran 1.0 (100%) de avance EUDR (Valle Grande, APROSELVANOR, Valle del Biavo, Cordillera Azul). Sin embargo, esto representa un falso positivo de cumplimiento:
+
+El PPA es un catastro pasivo, no un sistema transaccional: No genera identificadores de lote que viajen en la guía de remisión electrónica ni en la factura.
+El riesgo de mezcla en planta de beneficio: Al acopiar café de cientos de socios (ej. Valle Grande con 622 socios en 4,031 ha), una sola parcela no registrada o deforestada post-2020 contamina todo el lote (un contenedor de 250 quintales), provocando el decomiso o rechazo en puertos europeos.
+Falta de interoperabilidad con la UE: Ninguna cooperativa tiene conexión API con el Information System de la Comisión Europea para emitir el código de referencia DDS antes de embarcar en el Callao o Paita.
+
+5. Bloque III: Auditoría de Legalidad Tributaria, Gobernanza y Tenencia
+Alertas Fiscales Críticas en Exportadores Reales [M]:
+CEMCAVIR (Pasco): Exporta US$ 800k a Alemania y Bélgica pero figura en SUNAT como "SIN ACTIVIDAD" de comercio exterior.
+Los Chankas Valle del Río Perené (Junín): Exporta US$ 147k pero también figura "SIN ACTIVIDAD".
+Cordillera Azul (San Martín): Exporta US$ 723k pero mantiene domicilio fiscal "PENDIENTE".
+Acefalía Registral y Mandatos Vencidos en OECE [M]:
+En la base ruc oece personas (441 directivos), múltiples directivos de Consejos de Administración registran fechas de asunción entre 2014 y 2018 sin renovación registrada.
+Bajo la Ley 31335 de Cooperativas Agrarias, los mandatos vencen a los 3 años. Sin copia literal actualizada de SUNARP que acredite al Presidente/Gerente General, los importadores europeos no podrán validar las declaraciones juradas de debida diligencia.
+El Vacío de Legalidad Ambiental y Tenencia de la Tierra [V]:
+0 certificaciones ambientales en SENACE: Al cruzar las 1,870 resoluciones de SENACE, ninguna cooperativa de café o cacao cuenta con certificación ambiental.
+Informalidad de tenencia: Más del 70% de los socios operan bajo constancias comunales o actas de posesión sin inscripción de título en SUNARP, lo cual colisiona con el Artículo 3(b) del Reglamento.
+
+6. Bloque IV: Dinámica Financiera Histórica (SISPAC 2018–2025)
+
+El análisis de ventas ejecutadas en la base general de café y cacao evidencia una aceleración exportadora dramática:
+
+2022: Ventas exportación de US$ 47.19M (59.0% del total).
+2023: Ventas exportación de US$ 56.64M (51.2% del total).
+2024: Ventas exportación de US$ 131.88M (74.2% del total).
+2025: Ventas exportación de US$ 261.73M (69.6% del total).
+
+La alta dependencia del mercado exterior (>70%) implica que una interrupción por barreras EUDR generaría una sobreoferta inmediata en el mercado nacional con desplome de precios en chacra.
+
+7. Bloque V: La Falsa Seguridad de las Certificaciones
+
+Casi todas las cooperativas exportadoras cuentan con sellos internacionales vigentes (Fairtrade FLO, Control Union Orgánico, IMO CERT, Rainforest Alliance).
+
+WARNING
+
+El Artículo 10.2 del Reglamento (UE) 2023/1115 aclara que los sellos voluntarios son únicamente información complementaria.
+Ninguna certificadora asume la responsabilidad legal ante la aduana de Hamburgo o Róterdam. Si un contenedor carece de coordenadas georreferenciadas por lote o se superpone con alertas de deforestación post-2020, el sello no evita la sanción ni el rechazo del embarque.
+
+8. Bloque VI: Matriz de Triaje y Riesgo de Exclusión
+
+9. Bloque VII: Scorecards Operativos de Descarte Comercial
+
+A continuación, las fichas de estrés para las organizaciones que lideran el comercio exterior:
+
+1. Cooperativa Agraria Valle Grande
+RUC: 20542209951 | Soritor, San Martín (800–2000 msnm) | 622 socios | 4,031 ha
+Comercial: US$ 10,702,633.46 FOB (69.9 contenedores a Bélgica, Francia, Suecia, Alemania, Reino Unido).
+Sellos: Control Union Orgánico, Fairtrade FLO ID 28953, Rainforest Alliance.
+Avance Declarado: 1.0 (100%).
+Brecha Crítica: Auditar 4,031 ha contra alertas satelitales post-2020. Un solo socio no conforme contamina un contenedor completo de 250 qq.
+Acción Inmediata: Cruce geoespacial de polígonos contra GeoBosques y protocolo de segregación estricta de tolvas en planta.
+2. Asociación Agroexportadora de la Región San Martín
+RUC: 20602650643 | Moyobamba, San Martín (1100–1700 msnm) | 762 socios | 1,500 ha
+Comercial: US$ 6,402,453.00 FOB (45.57 contenedores a Alemania, Suecia, Bélgica, Reino Unido).
+Sellos: Orgánico OCI Internacional, Fairtrade (vigente a 2028).
+Avance Declarado: 0.8 (80%).
+Brecha Crítica: El 20% de volumen no cubierto equivale a ~9 contenedores vulnerables a bloqueo.
+Acción Inmediata: Cerrar el empadronamiento del 20% residual y certificar código de parcela por lote.
+3. APROSELVANOR
+RUC: 20600263286 | Moyobamba, San Martín (800–1600 msnm) | 797 socios | 2,110 ha
+Comercial: US$ 4,154,567.84 FOB (28.80 contenedores a Alemania, Bélgica, Dinamarca, Suecia).
+Sellos: IMO CERT Orgánico, Fairtrade FLO ID 33184, Rainforest Alliance, C.A.F.E. Practices.
+Avance Declarado: 1.0 (100%).
+Brecha Crítica: Alta dispersión minifundista (2.6 ha/productor). Riesgo de compras a productores externos para completar contenedores.
+Acción Inmediata: Blindaje documental del acopio: ticket de pesaje digital con ID de socio obligatorio.
+4. CAC CASIL LTDA
+RUC: 20479595276 | San Ignacio, Cajamarca | 178 socios | 437 ha
+Comercial: US$ 3,256,066.00 FOB (22.27 contenedores a Alemania, EE.UU., Japón).
+Sellos: Orgánico y Fairtrade vigentes.
+Avance Declarado: Sin datos en MIDAGRI.
+Brecha Crítica: Cuenca de alta presión deforestadora de bosques de neblina sin avance registrado en la ficha oficial.
+Acción Inmediata: Levantamiento urgente de polígonos catastrales y verificación satelital de corte a diciembre de 2020.
+5. CAC La Florida
+RUC: 20140181405 | Perené, Chanchamayo, Junín (> 1200 msnm) | 450 socios | 1,605.8 ha
+Comercial: US$ 2,877,331.57 FOB (18.73 contenedores a Guadalupe/Francia, EE.UU., Japón).
+Sellos: Orgánico, Fairtrade FLO ID 796, Bird Friendly.
+Avance Declarado: 0.75 (75%).
+Brecha Crítica: Posesiones agrarias sin sanear en Selva Central; el 25% de socios permanece sin trazabilidad completa.
+Acción Inmediata: Regularización de constancias CUS y separación de líneas de exportación para la UE.
+6. CEMCAVIR (Mujeres de Villa Rica) - Alerta Fiscal
+RUC: 20602054480 | Villa Rica, Oxapampa, Pasco | 177 socias | 213 ha
+Comercial: US$ 800,858.56 FOB (4.84 contenedores a Alemania y Bélgica).
+Sellos: Orgánico, Fairtrade, Bird Friendly, Libre de Trabajo Infantil.
+Avance Declarado: Empadronadas PPA 64.8%.
+Brecha Crítica: Figura como "SIN ACTIVIDAD" de comercio exterior en SUNAT y el 35.2% de socias no está empadronado.
+Acción Inmediata: Activar inmediatamente la condición de Exportador en SUNAT e incorporar al 35.2% de socias al PPA.
+10. Hoja de Ruta Operativa hacia el 30-Dic-2026
+Ventanilla Única de Triaje Gremial (JNC / APPCACAO): Auditar los RUCs exportadores antes del zarpe de la campaña 2026 para subsanar discrepancias fiscales y registrales.
+API Pública de MIDAGRI / AgroDigital: Permitir que las cooperativas descarguen en masa los archivos GeoJSON de sus socios para alimentar las plataformas de compra de los importadores europeos.
+Segregación Física en Planta: Las cooperativas deben operar con doble tolva ("Línea EUDR Verificada" y "Línea Convencional/Otros Mercados") para blindar los contenedores destinados a Hamburgo y Róterdam.
+
+Todos los archivos generados quedan sincronizados en el repositorio y listos para su uso en reportes institucionales y mesas técnicas.

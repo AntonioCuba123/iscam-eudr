@@ -46,12 +46,12 @@
 
 | Campo | Valor |
 |---|---|
-| **Estructura del instrumento** | Bloque 0 — Ficha de identificación (12 ítems, no puntúa) · Bloque P — Variables de performance (13 ítems, preliminar v0.1 — incluye P11/P12, criterios de validación externa ISCAM) · D1–D11 (⚠ **corregido 2026-10-06: 51 ítems**, no 50 — recuento directo sobre `Instrumento 2 - Encuesta Cuantitativa.md`: D1=4, D2=6, D3=11 [incluye 14a–14g], D4=3, D5=9 [incluye 18a/18b/19a/21a/21b], D6=4, D7=3, D8=4, D9=3, D10=2, D11=2). Total: **76 preguntas** (no 75 — ver `Instrumentos/Estructura Google Sheet - Respuestas Instrumento 2.md` para el detalle columna por columna). |
-| **Escala de madurez** | Ordinal 0–4 en las preguntas tipo escala (0 = no existe/no sabe, 4 = implementado y verificado/auditado). |
+| **Estructura del instrumento** | Bloque 0 — Ficha de identificación (12 ítems, no puntúa) · Bloque P — Variables de performance (13 ítems, preliminar v0.1 — incluye P11/P12, criterios de validación externa ISCAM) · **D1–D11 (51 ítems: D1=4, D2=6, D3=11 [incluye 14a–14g], D4=3, D5=9 [incluye 18a/18b/19a/21a/21b], D6=4, D7=3, D8=4, D9=3, D10=2, D11=2)** · **D12–D14 — Módulos Pacto Verde (16 ítems: D12=5 huella carbono, D13=6 reporte sostenibilidad, D14=5 economía circular/envases)**. Total: **80 preguntas** (76 del núcleo EUDR + 4 de Bloque P que no son retrospectivas / 9 retrospectivas = 80 items efectivos). Ver `Instrumentos/Estructura Google Sheet - Respuestas Instrumento 2.md` para el detalle columna por columna. |
+| **Escala de madurez** | Ordinal 0–4 en las preguntas tipo escala (0 = no existe/no sabe, 4 = implementado y verificado/auditado). D10, D11, D12, D13, D14 usan la misma escala 0–4 pero **no promedian en el ISA EUDR** (ver Nota de puntaje). |
 | **Modo de aplicación** | Autoadministrado o asistido, vía **Google Forms**. |
 | **Almacenamiento de respuestas** | **Google Sheets**, una fila por organización/aplicación, columnas por ID de pregunta (mismo esquema de `matriz_data.py`). |
-| **Duración estimada de aplicación** | **Por calibrar durante el piloto** — no se declara una cifra sin datos reales (salida esperada de la Fase 4 del plan a 75 días). |
-| **Informantes** | Ver §3 (Guía de llenado) — varía por bloque/dimensión, no es una sola persona. |
+| **Duración estimada de aplicación** | **Por calibrar durante el piloto** — no se declara una cifra sin datos reales (salida esperada de la Fase 4 del plan a 75 días). La adición de D12–D14 añade ~15 min adicionales. |
+| **Informantes** | Ver §3 (Guía de llenado) — varía por bloque/dimensión, no es una sola persona. D12–D14: gerencia + responsable técnico/calidad + tesorería (según módulo). |
 
 ### 1.5 Periodo de aplicación
 
