@@ -1,10 +1,19 @@
-# Instrumento 2 — Encuesta Cuantitativa (D1–D11 + Performance)
+# Instrumento 2 — Encuesta Cuantitativa (D1–D15 + Performance)
 
 **Serie:** parte del paquete de 7 instrumentos. Ver `Instrumento 1 - Marco de Dimensiones de Diagnostico.md` para la justificación de cada dimensión, y `Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` para la ficha técnica, la guía metodológica resumida y la guía de llenado (quién responde cada bloque). Aplicable en Google Forms (canal elegido para el relevamiento real; respuestas a Google Sheets), o en el panel digital "Brújula de Diligencia", que ya implementa las 11 dimensiones descritas en este documento.
 
 **Fuente incorporada (2026-09-17):** Manual de Debida Diligencia en Deforestación — Pasos para su implementación en cadenas exportadoras de café y cacao (PROMPERÚ, financiado por BID, setiembre 2025, basado en el Manual OCDE-FAO y en el piloto 2024 con 17 organizaciones cafetaleras/cacaoteras peruanas). Contrastado pregunta por pregunta contra D1–D11; brechas cerradas en D3 (14e tributario/aduanero/comercial, 14f anticorrupción — 2 de las 7 categorías de legalidad EUDR que faltaban; 14g CLPI se agregó solo como verificación de bajo costo, no promedia — el *Documento orientador ADEX/MIDAGRI/EFI* ya determinó que no es un requisito legal pertinente a nivel nacional para café/cacao peruano) y D5 (18a política de deforestación formal, 18b priorización de riesgos, 19a componentes del plan de gestión, 21a frecuencia de revisión, 21b reporte de debida diligencia con KPIs — los 5 pasos del manual, antes solo parcialmente cubiertos).
 
-**Estado del Bloque P (Performance):** **preliminar, v0.1** — agregado el 2026-09-16 para responder al objetivo (f) del proyecto madre ("medir el impacto de la adecuación al Pacto Verde Europeo en la performance de las cooperativas"). Los indicadores elegidos son una propuesta razonable para el piloto (Checklist, Tarea C6-C7), **no una decisión cerrada** — deben validarse con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de las 100–150 organizaciones. El resto del instrumento (D1–D11) no cambió de estado.
+**Actualización 2026-10-09 — ajuste de cobertura Pacto Verde completo (café y cacao sin sesgo):**
+- **D7:** nueva pregunta 28b sobre presión CSDDD del comprador
+- **D12:** Q40 reformulada producto-neutral (café y cacao); eliminado sesgo CalCafé-only
+- **D13:** nueva Q44b como escala de entrada (nivel 0→1 adaptado a cooperativas)
+- **D15 (nueva):** Gestión fitosanitaria y LMR — módulo Pacto Verde vi, Estrategia Farm to Fork (5 preguntas, Q56–Q60; aplica igual a café y cacao)
+- **Bloque P:** P13 (exigencias Pacto Verde del comprador) y P14 (acceso a financiamiento verde) — variables de resultado Pacto Verde ampliado
+- **ISA-PactoVerde:** ahora 4 módulos (i/iv/v/vi) = (D12 + D13 + D14 + D15) / 4
+- **Total preguntas:** 89 (antes 80)
+
+**Estado del Bloque P (Performance):** **v0.2** — actualizado 2026-10-09. Los indicadores P1–P12 se mantienen de v0.1; P13 y P14 son nuevos. Pendiente validación con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de 100–150 organizaciones. El resto del instrumento (D1–D15) es versión vigente para piloto.
 
 **Escala de madurez (preguntas 0–4):**
 > **0** No existe / No sabe · **1** Informal o parcial · **2** En desarrollo · **3** Implementado · **4** Implementado y verificado/auditado
@@ -28,7 +37,9 @@
 
 ---
 
-## Bloque P — Variables de Performance *(preliminar v0.1 — no puntúa, no forma parte del ISA; es la variable de resultado, no de madurez)*
+## Bloque P — Variables de Performance *(ver versión actualizada v0.2 al final del documento — 2026-10-09)*
+
+> **Nota:** este bloque fue reubicado al final del instrumento (después de D15) como parte de la actualización 2026-10-09. La versión activa con P1–P14 está en la sección "Bloque P — Variables de Performance v0.2" al final. Lo que sigue a continuación corresponde a la versión v0.1 archivada para trazabilidad del historial de cambios.
 
 **Por qué existe este bloque:** el ISA (D1–D9) mide qué tan preparada está la cooperativa — es el predictor. El proyecto madre pide además medir el **impacto** de esa preparación en resultados de negocio. Estas preguntas recogen ese resultado en el mismo instrumento, para poder cruzarlas después contra el ISA de la misma organización.
 
@@ -171,6 +182,7 @@
 26. ¿El comprador ha exigido formalmente geolocalización/diligencia debida? (Aún no / Informalmente / Formalmente por escrito)
 27. ¿El comprador ofrece financiamiento/asistencia técnica condicionada al cumplimiento? (Sí/No)
 28. Riesgo percibido de perder el contrato si no cumple a tiempo (No sabe / Bajo / Medio / Alto) — **indicador de urgencia, no de madurez**; no promediar junto con las demás preguntas de D7.
+28b. **(nuevo, 2026-10-09 — CSDDD/presión regulatoria de la cadena)** ¿Algún comprador europeo le ha comunicado que sus propias obligaciones de diligencia debida bajo normativa europea (EUDR, CSRD, CSDDD u otra) implican requisitos adicionales sobre su cadena de suministro que van más allá de la geolocalización y la declaración de deforestación? (No ha mencionado nada / Lo ha mencionado verbalmente sin requisito formal / Sí, ha enviado documentación o cuestionario de proveedores / Sí, lo ha formalizado como cláusula contractual) — **promedia dentro de D7, escala 0→3 en el orden en que aparecen las opciones.** Captura la presión CSDDD que ya está trasladándose contractualmente desde los compradores; distingue cooperativas con compradores "adelantados" (que ya alinearon su propia CSRD/CSDDD con sus requisitos a proveedores) de aquellas cuyo comprador aún no se ha movido.
 
 ---
 
@@ -189,6 +201,7 @@
 36. ¿La cooperativa cree que su certificación vigente (Rainforest Alliance, Fairtrade, Orgánico, etc.) ya cubre las obligaciones del EUDR? (Sí, totalmente / Sí, en parte / No, sabe que son cosas distintas / No tiene certificación)
    — Una respuesta "Sí, totalmente" es una **bandera roja de percepción**, independientemente de cuán buena sea la certificación real: indica que la cooperativa puede no estar tomando acción propia porque cree (erróneamente) que ya está cubierta.
 37. ¿Algún proveedor o consultor le ha ofrecido una "certificación EUDR" como producto? (Sí / No) — una respuesta "Sí" amerita advertencia: no existe tal certificación oficial.
+36a. **(nuevo — no promedia, se reporta aparte)** ¿La organización ha recibido asesoría específica sobre el EUDR (a diferencia de asesoría genérica de sostenibilidad)? (Sí, asesoría especializada en EUDR / Solo asesoría genérica de sostenibilidad / No ha recibido asesoría / No sabe) — ítem de capacidad de D10: se captura y se codifica, pero no entra a ningún promedio.
 
 ## D11 — Ecosistema de apoyo externo *(dimensión extendida — mapeo, no promedio)*
 38. Marcar los actores con los que la cooperativa ya tiene contacto o apoyo activo: SERFOR (legalidad forestal) / PNCB-MINAM (monitoreo satelital) / MIDAGRI o programa regional de café-cacao / Gobierno regional (catastro/saneamiento) / Cooperación internacional (GIZ, USAID, UE, ONG) / Junta Nacional del Café, APPCACAO u otro gremio / Ninguno
@@ -196,32 +209,33 @@
 
 ---
 
-## D12 — Huella de carbono y gestión de emisiones GEI *(dimensión extendida — módulo Pacto Verde)*
+## D12 — Huella de carbono y gestión de emisiones GEI *(dimensión extendida — módulo Pacto Verde i)*
 
-**Contexto:** este módulo corresponde al pilar (i) del proyecto madre ISCAM ("huella de carbono"). El EUDR no exige inventario de GEI, pero el Pacto Verde Europeo (taxonomía, CSRD, CBAM) y los compradores europeos cada vez lo demandan. Para café, existe **CalCafé v2.1** (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) — calculadora validada y gratuita que cubre 8 categorías de impacto. **Limitación: solo café, no cacao.** Este bloque mide si la cooperativa tiene capacidad de medir y reportar su huella, no el valor absoluto.
+**Contexto:** este módulo corresponde al pilar (i) del proyecto madre ISCAM ("huella de carbono"). El EUDR no exige inventario de GEI, pero el Pacto Verde Europeo (taxonomía, CSRD, CBAM) y los compradores europeos cada vez lo demandan. **Herramienta de referencia por producto:** para café, **CalCafé v2.1** (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) — calculadora validada y gratuita que cubre 8 categorías de impacto. Para cacao, no existe herramienta nacional validada equivalente — el encuestador debe registrar qué herramienta usa la cooperativa (herramienta del comprador, consultoría externa, COSA tool u otra) o si no usa ninguna. Este bloque mide si la cooperativa tiene capacidad de medir y reportar su huella, no el valor absoluto; las preguntas son válidas para ambos productos.
 
-40. ¿La cooperativa conoce la herramienta CalCafé v2.1 (para café) o equivalente para cacao? (No sabe qué es / La conoce pero no la ha usado / La ha usado al menos una vez / La usa sistemáticamente)
-41. ¿Cuenta con registros de insumos necesarios para calcular huella de carbono (fertilizantes por campaña, combustible en maquinaria/transporte, energía de procesamiento, distancia finca-acopio)? (No registra nada / Registra algún insumo / Registra la mayoría / Registra todo sistemáticamente)
-42. ¿Ha calculado la huella de carbono de su café/cacao de exportación en los últimos 2 años? (No / Sí, estimación interna / Sí, con herramienta validada ej. CalCafé / Sí, verificada por tercero)
+40. **(actualizado 2026-10-09 — producto-neutral)** ¿La cooperativa conoce alguna herramienta o metodología para calcular la huella de carbono de su producto de exportación? *(Para café: referencia CalCafé v2.1, PromPerú, gratuita. Para cacao: herramienta del comprador, consultoría externa, COSA tool u otra — anotar cuál si aplica.)* (No sabe qué es una huella de carbono / Conoce el concepto pero no ha identificado herramienta / Conoce una herramienta pero no la ha usado / La ha usado al menos una vez / La usa sistemáticamente)
+41. ¿Cuenta con registros de insumos necesarios para calcular huella de carbono (fertilizantes por campaña, combustible en maquinaria/transporte, energía de procesamiento, distancia finca-acopio)? *(Aplica a café y cacao por igual.)* (No registra nada / Registra algún insumo / Registra la mayoría / Registra todo sistemáticamente)
+42. ¿Ha calculado la huella de carbono de su café/cacao de exportación en los últimos 2 años? (No / Sí, estimación interna sin herramienta validada / Sí, con herramienta validada [especificar cuál] / Sí, verificada por tercero independiente)
 43. ¿Tiene objetivo cuantificado de reducción de emisiones (ej. -X% al 2030)? (No / En definición / Sí, interno / Sí, público y con plan de acción)
 44. ¿Reporta huella de carbono a compradores o plataformas (ej. CDP, plataforma del comprador)? (No / Solo si lo piden / Sí, regularmente)
 
-> **Nota de alcance:** para cacao no hay equivalente a CalCafé v2.1 identificado. Si la cooperativa exporta ambos, puntuar según el producto principal y anotar la brecha en cacao. Este bloque NO promedia en el ISA EUDR (D1–D9) — es dimensión extendida del Pacto Verde, se reporta aparte y alimenta el módulo (i) del ISA completo del proyecto madre.
+> **Nota de alcance y tratamiento café/cacao:** la Q40 reformulada es producto-neutral — funciona igual para café y para cacao. En el análisis, cruzar D12 por producto principal para detectar la brecha estructural de herramientas entre café (CalCafé disponible) y cacao (sin equivalente nacional). No imputar ni ajustar el puntaje — la brecha debe aparecer en los datos, no ocultarse. Este bloque NO promedia en el ISA-EUDR (D1–D9) — es dimensión extendida del Pacto Verde, se reporta aparte y alimenta el módulo (i) del ISA-PactoVerde.
 
 ---
 
-## D13 — Reporte de sostenibilidad y transparencia *(dimensión extendida — módulo Pacto Verde)*
+## D13 — Reporte de sostenibilidad y transparencia *(dimensión extendida — módulo Pacto Verde iv)*
 
 **Contexto:** corresponde al pilar (iv) del proyecto madre ("reporte de sostenibilidad"). Alineado con CSRD/ESRS, taxonomía verde UE, y expectativas de compradores europeos. Mide capacidad de la cooperativa para producir información estructurada, verificable y comparable sobre su desempeño ambiental, social y de gobernanza (ESG), más allá de lo que exige estrictamente el EUDR.
 
+44b. **(nuevo, 2026-10-09 — escala de entrada para el universo objetivo)** ¿La cooperativa elabora actualmente algún documento que recoja indicadores de su desempeño ambiental, social o de gestión, aunque sea para uso interno y sin seguir ningún estándar formal? (No existe ningún documento de este tipo / Sí, registros internos informales sin estructura / Sí, informe estructurado de uso interno / Sí, informe publicado o compartido con terceros) — **promedia dentro de D13 igual que Q45–Q50.** Provee el nivel 0→1 de la escala adaptado al contexto de una cooperativa agraria, donde la mayoría de las organizaciones no habrá llegado aún al umbral de un reporte formal según estándar reconocido. Sin esta pregunta, D13 produce efecto suelo masivo y no discrimina dentro del rango bajo de la muestra.
 45. ¿Elabora algún reporte anual de sostenibilidad / memoria de responsabilidad social? (No / Interno, informal / Formal, interno / Público, según estándar reconocido ej. GRI, ESRS simplificado)
 46. ¿El reporte incluye indicadores ambientales (deforestación, huella carbono, agua, biodiversidad, residuos)? (No / Parcial / Sí, básicos / Sí, completos y con metas)
 47. ¿El reporte incluye indicadores sociales (trabajo infantil, trabajo forzoso, igualdad salarial, participación mujeres, salud ocupacional)? (No / Parcial / Sí, básicos / Sí, completos y con metas)
 48. ¿El reporte incluye indicadores de gobernanza (estructura directiva, anticorrupción, gestión de riesgos, canal de denuncias)? (No / Parcial / Sí, básicos / Sí, completos)
 49. ¿La información reportada es verificada/auditada por tercero independiente? (No / Auto-declarada / Verificación parcial / Auditoría completa externa)
-50. ¿El reporte se comparte proactivamente con compradores europeos y partes interesadas? (No / Solo bajo 요청 / Sí, sistemáticamente)
+50. ¿El reporte se comparte proactivamente con compradores europeos y partes interesadas? (No / Solo bajo solicitud / Sí, sistemáticamente)
 
-> **Nota de alcance:** NO promedia en el ISA EUDR (D1–D9). Es dimensión extendida del Pacto Verde. Una cooperativa puede tener alta madurez EUDR (D1–D9) y nulo reporte de sostenibilidad, y viceversa. Se correlaciona contra performance (Bloque P) y alimenta el módulo (iv) del ISA completo del proyecto madre.
+> **Nota de alcance:** NO promedia en el ISA-EUDR (D1–D9). Es dimensión extendida del Pacto Verde. Una cooperativa puede tener alta madurez EUDR (D1–D9) y nulo reporte de sostenibilidad, y viceversa. Se correlaciona contra performance (Bloque P) y alimenta el módulo (iv) del ISA-PactoVerde. El promedio de D13 incluye Q44b + Q45–Q50 (7 preguntas).
 
 ---
 
@@ -235,13 +249,59 @@
 54. **Subproductos valorizados:** ¿Se comercializa o transforma algún residuo (cáscara → biocombustible, mucílago → bioinsumos, agua tratada → riego)? (No / Piloto / Sí, escala parcial / Sí, escala comercial)
 55. **Trazabilidad de envases y residuos:** ¿Existe registro de qué envases salen, cuáles retornan y qué residuos se generan por lote exportado? (No / Parcial / Sí, para envases / Sí, completo envases + residuos)
 
-> **Nota de alcance:** NO promedia en el ISA EUDR (D1–D9). Es dimensión extendida del Pacto Verde. El Reglamento (UE) 2023/1115 regula materias primas (Anexo I), no envases terminados — pero la normativa de envases (PPWR) y taxonomía sí afectan la competitividad. Se reporta aparte y alimenta el módulo (v) del ISA completo del proyecto madre.
+> **Nota de alcance:** NO promedia en el ISA-EUDR (D1–D9). Es dimensión extendida del Pacto Verde. El Reglamento (UE) 2023/1115 regula materias primas (Anexo I), no envases terminados — pero la normativa de envases (PPWR) y taxonomía sí afectan la competitividad. Se reporta aparte y alimenta el módulo (v) del ISA-PactoVerde.
 
 ---
 
-## Nota de puntaje (actualizada)
+## D15 — Gestión fitosanitaria y LMR *(dimensión extendida — módulo Pacto Verde vi, Estrategia Farm to Fork)*
+
+**Contexto:** corresponde al pilar Farm to Fork del Pacto Verde Europeo (meta de reducción del 50% de pesticidas al 2030, Directiva 2009/128/CE sobre uso sostenible de plaguicidas, y la Red de Alerta Rápida RASFF de la UE). El EUDR no regula residuos de pesticidas, pero un rechazo por exceso de LMR (Límites Máximos de Residuos) en frontera UE tiene el mismo efecto de mercado que un rechazo por deforestación: pérdida del lote y del comprador. Los LMR son una vía de exclusión del mercado europeo que opera en paralelo al EUDR y que no está capturada en ninguna de las dimensiones D1–D14. **Aplica por igual a café y cacao.** Este bloque mide si la cooperativa tiene capacidad de identificar, prevenir y documentar el riesgo fitosanitario de su producto.
+
+56. ¿La cooperativa conoce los LMR (Límites Máximos de Residuos de Pesticidas) de la UE aplicables a su producto de exportación, en particular los que el RASFF ha alertado para café o cacao peruano? (No sabe qué son los LMR / Los conoce en términos generales pero no verifica / Los conoce y verifica cumplimiento en las fincas de los socios / Los verifica sistemáticamente por lote antes del embarque)
+57. ¿Existe un protocolo interno que prohíbe o restringe el uso de plaguicidas específicos en las fincas de los socios, en función de los LMR de la UE? (No existe / Lista informal comunicada verbalmente / Protocolo escrito, no verificado en campo / Protocolo escrito verificado en campo con evidencia)
+58. ¿Se realizan análisis de residuos de pesticidas en el producto de exportación? (Nunca / Ocasionalmente, sin sistema definido / Sistemáticamente por campaña / Por lote antes del embarque, con resultado documentado y archivado)
+59. ¿El comprador europeo ha exigido certificados de análisis de residuos o declaraciones de cumplimiento de LMR en los últimos 2 años? (No ha exigido nada / Lo exigió de forma puntual / Lo exige regularmente / Es parte del contrato vigente)
+60. ¿La cooperativa ha tenido algún lote retenido, observado o rechazado en frontera UE por exceso de residuos de pesticidas en los últimos 3 años? (Sí, más de un evento / Sí, un evento / No / No sabe) — **bandera de alerta:** una respuesta "Sí" debe reportarse por separado e independientemente del puntaje promedio de D15.
+
+> **Nota de alcance:** NO promedia en el ISA-EUDR (D1–D9). Es dimensión extendida del Pacto Verde, módulo (vi) Farm to Fork. Aplica a café y cacao sin distinción de herramienta — elimina el sesgo de D12 hacia café. Entra al ISA-PactoVerde como cuarto módulo (i/iv/v/vi), con peso igual a D12–D14 en la media aritmética del ISA-PactoVerde (ver Metodología ISA, §2.3 actualizado). La Q60 es bandera independiente del promedio de D15: un rechazo real en frontera anula cualquier percepción de preparación en las preguntas anteriores y debe reportarse siempre, igual que D2.10.
+
+---
+
+## Nota de puntaje (actualizada 2026-10-09)
 
 - El promedio de cada dimensión **D1–D9** se calcula sobre las preguntas tipo escala/porcentaje únicamente (no las de texto libre ni las de mapeo).
-- **D10 no se promedia como madurez** — se reporta como bandera (Sí/No de falsa seguridad), porque un puntaje alto en "creer que ya está cubierto" sería, perversamente, una mala noticia, no una buena.
+- **D10 no se promedia como madurez** — sus tres ítems (Q36, Q37 y Q36a) se reportan aparte: Q36 y Q37 como banderas (falsa seguridad y oferta engañosa de "certificación EUDR"), porque un puntaje alto en "creer que ya está cubierto" sería, perversamente, una mala noticia, no una buena; Q36a como ítem de capacidad de asesoría recibida, que se codifica pero no promedia.
 - **D11 no se promedia como madurez** — se reporta como inventario de oportunidades ya usadas vs. disponibles, insumo directo para el Instrumento 4 (columna "oportunidad").
-- **D12, D13, D14 no promedian en el ISA EUDR** — son dimensiones extendidas del **Pacto Verde Europeo** (módulos i, iv, v del proyecto madre ISCAM). Se reportan por separado con su propio semáforo 0–4 por pregunta, se agregan internamente (media aritmética simple por dimensión) y se correlacionan contra el ISA EUDR y la performance (Bloque P) en el análisis integral. No anulan ni compensan el ISA EUDR.
+- **D12, D13, D14, D15 no promedian en el ISA-EUDR** — son dimensiones extendidas del **Pacto Verde Europeo** (módulos i, iv, v, vi del proyecto madre ISCAM). Se reportan con su propio semáforo 0–4 por pregunta, se agregan internamente (media aritmética simple por dimensión) y conforman el **ISA-PactoVerde** = (D12 + D13 + D14 + D15) / 4. No anulan ni compensan el ISA-EUDR.
+- **D15.Q60 (lote rechazado por LMR)** es bandera independiente del promedio de D15, igual que D2.10: un rechazo real en frontera se reporta siempre por separado, nunca absorbido en el promedio.
+- **Bloque P (v0.2):** P1–P12 son variables de resultado/performance (no puntúan, no forman parte del ISA). P13–P14 son variables de resultado Pacto Verde ampliado, mismo tratamiento.
+
+---
+
+## Bloque P — Variables de Performance *(actualizado v0.2 — 2026-10-09)*
+
+**Por qué existe este bloque:** el ISA (D1–D9 + D12–D15) mide qué tan preparada está la cooperativa — es el predictor. El proyecto madre pide además medir el **impacto** de esa preparación en resultados de negocio bajo el Pacto Verde completo. Estas preguntas recogen ese resultado para poder cruzarlas después contra el ISA de la misma organización.
+
+**Limitación de diseño (mantener en todo reporte):** el levantamiento es transversal. Las preguntas P2, P5 y P7 son retrospectivas por autodeclaración — sirven para aproximar tendencia, no para análisis causal riguroso. Cualquier correlación ISA↔performance es asociación, nunca prueba de causalidad.
+
+- P1. Volumen exportado a la Unión Europea en el último año (kg o toneladas, especificar unidad y producto si exporta ambos)
+- P1b. Volumen TOTAL exportado a todos los destinos (UE y no UE) en el último año — permite calcular `% dependencia del mercado europeo = P1 / P1b`
+- P2. Volumen exportado a la Unión Europea hace 3 años, mismo producto — *retrospectivo*
+- P3. Ingreso total generado por ventas de exportación a la UE en el último año (S/ o USD, especificar moneda)
+- P4. N.º de compradores/clientes europeos activos actualmente
+- P5. N.º de compradores/clientes europeos activos hace 3 años — *retrospectivo*
+- P6. Precio promedio pagado al socio productor por kg/quintal en el último año (S/ o USD) — conecta con D9.35
+- P7. Precio promedio pagado al socio productor por kg/quintal hace 3 años — *retrospectivo*
+- P8. ¿Ha tenido algún lote rechazado u observado por un comprador europeo por motivos de trazabilidad/deforestación en los últimos 2 años? (Sí / No / No sabe)
+- P9. Si P8 = "Sí": N.º aproximado de lotes rechazados u observados
+- P10. ¿Ha perdido algún contrato o comprador europeo en los últimos 2 años por motivos de cumplimiento (EUDR u otro requisito de sostenibilidad)? (Sí / No / No sabe)
+- P11. % del volumen total exportado en el último año que cuenta con trazabilidad completa verificada hasta la parcela de origen (0–100%) — criterio de validación externa ISCAM; no promedia en ninguna dimensión
+- P12. N.º de años consecutivos exportando a la Unión Europea, contando el año actual — criterio de validación externa ISCAM; mismo tratamiento que P11
+- P13. **(nuevo, 2026-10-09 — Pacto Verde ampliado)** ¿Algún comprador europeo le ha exigido formalmente, en los últimos 2 años, información sobre huella de carbono, plan de reducción de emisiones, cumplimiento de LMR de pesticidas u otro requisito de sostenibilidad más allá del EUDR (ej. exigencias derivadas de CSRD/CSDDD del comprador)? (No / Sí, de forma verbal/informal / Sí, como cuestionario de proveedor o documentación formal / Sí, como cláusula contractual o condición de pago) — variable de resultado Pacto Verde; no promedia en ninguna dimensión del ISA.
+- P14. **(nuevo, 2026-10-09 — acceso a financiamiento verde)** ¿La cooperativa ha accedido o intentado acceder en los últimos 2 años a financiamiento verde, crédito de impacto o fondos condicionados a criterios de sostenibilidad del Pacto Verde (ej. criterios de taxonomía UE, banco verde, fondo de cooperación climática)? (No ha intentado acceder / Lo intentó pero no cumplió los criterios / Sí, recibió financiamiento verde / No sabe si aplica a su caso) — variable de resultado Pacto Verde; no promedia en ninguna dimensión del ISA.
+
+**Indicadores derivados a calcular en el análisis (no preguntas nuevas):**
+- Variación de volumen exportado UE = (P1 − P2) / P2
+- Variación de N.º de compradores europeos = P4 − P5
+- Variación del precio pagado al socio = (P6 − P7) / P7
+- Tasa de incidencia de rechazo = P9 / lotes totales exportados en el período

@@ -256,6 +256,183 @@ Calendario de aplicación · Art. 4a y su requisito de país bajo riesgo · clas
 
 ## 5. REGISTRO DIARIO
 
+### 2026-10-15 — D10 ratificado como bandera pura e IP5 recalculado por conteo de certificaciones
+
+**Decision ratificada contra las fuentes del propio instrumento** `[V]`: D10 (Confusión
+certificación/EUDR) es bandera pura —no promedia— y sus tres ítems (D10.36 falsa seguridad,
+D10.37 oferta de «certificación EUDR», D10.36a asesoría recibida) se capturan, se codifican y se
+reportan aparte; ninguno entra a ISA-EUDR, IP ni IV. Fuentes: §7.3 de la metodología ISA —«D10 ·
+Certificación (bandera) … Bandera: no promedia»—, la nota de puntaje del Instrumento 2 —«dimensión
+extendida — bandera de alerta, no promedio de madurez»—, la Tabla 4 del documento de trabajo y la
+hoja INSTRUMENTO_2_PREGUNTAS de la plantilla, que ya declaraba los tres ítems como bandera. Antes
+de esta sesión el libro promediaba D10.36a en NORMALIZADO!CK, en contradicción con todas esas
+fuentes: era un error de implementación, no una decisión de diseño.
+
+**Segunda corrección de la misma sesión** `[V]`: la certificación entra al índice por IP5 y como
+conteo 0/33/66/100 (0 · 1 · 2 · ≥3 esquemas vigentes), no como el score ponderado precensal
+0,6 orgánica / 0,4 Comercio Justo. Fuentes: Matriz de Cobertura Técnica —«IP5 recalculado
+(Certificaciones, conteo 0/33/66/100)»— y §7.3 —«IP5 = (D7 + D9 + Certificación) / 3»—. El cálculo
+viejo mezclaba escalas (D7 y D9 en 0–100 con la certificación en 0–1) y tomaba la certificación de
+una fuente precensal.
+
+**Aplicado en la plantilla** `PLANTILLA_INDICE_PVE_ISCAM.xlsx` (script
+`fix_d10_bandera_ip5_cert.py`; respaldo `ISCAM\respaldos\PLANTILLA_INDICE_PVE_ISCAM.backup_
+2026-10-15_*_pre-d10-bandera-ip5-cert.xlsx`):
+
+- `NORMALIZADO!CK3:CK176` (promedio de D10) vaciado → `=""`: la dimensión queda en blanco, no en 0.
+- `ISCAM_Score!N` (D10) solo hace eco de CK. Verificado: **0 fórmulas** en las 10 hojas consumen la
+  columna N — D10 no alimenta ISA-EUDR, IP, IV ni RE.
+- `MATRIZ_174!AU/AV` nuevas: AU = n.º de certificaciones vigentes (B0.9 al cargar la encuesta;
+  registro precensal H/I mientras tanto) y AV = 0/33/66/100. Estado actual `[M]`: 22 de 174
+  organizaciones con dato (15 con 2 esquemas → 66; 7 con 1 → 33); 152 sin dato → «».
+- `ISCAM_Score!T` (IP5) = (D7 + D9 + AV)/3 y devuelve «» si falta cualquier componente; antes el
+  IFERROR absorbía los vacíos y devolvía 0. `SCORECARDS!L` perdió su 0 de relleno.
+- Notas dejadas en `MATRIZ_174!A188/A189` y `PONDERADORES!A64/A65`; destino de B0.9 documentado en
+  `INSTRUMENTO_2_PREGUNTAS!G14` y los tres ítems de D10 marcados «bandera, no promedia» en G100:G102.
+- Verificado con `verify_d10_ip5.py`: **0 errores de fórmula** en las 10 hojas y offsets de fila
+  correctos (ISCAM_Score!T4 apunta a MATRIZ_174!AV3 porque el motor arranca en la fila 4 y la
+  matriz en la 3).
+
+**Aplicado en la documentación** (script `update_docx_d10_ip5.py`; respaldo
+`ISCAM\respaldos\Metodologia - Instrumento 2 e Indice ISCAM.backup_*_pre-d10-bandera.docx`):
+
+- `ISCAM\Metodologia - Instrumento 2 e Indice ISCAM.docx`: §2.6 ahora dice «promedian D1–D9; D10
+  es bandera y D11 inventario»; fila IP5 de la Tabla 1 reescrita con el conteo 0–33–66–100; hito
+  de §5 de IP5 corregido de escala y de fuente; hito nuevo «D10 ratificado como bandera pura
+  (2026-10-15)». PDF regenerado con `make_pdf_sindato.py` (15 páginas).
+- Propagación a los documentos que habían quedado con la fórmula vieja (script
+  `update_docx_dtiscam_ip5.py`, con respaldos en `ISCAM\respaldos\`):
+  - `DT-ISCAM-001_Indice_ISCAM_Trabajo.docx`: la Tabla 3 decía «D7 + D9 + D11 + Certificaciones» —
+    incluía D11, que es inventario y no promedia —; ahora «D7 + D9 + Certificación (conteo
+    0/33/66/100; sin D11, que es inventario)», con el detalle del conteo en la Tabla 8. La línea de
+    hoja de ruta «Poblar D10 con certificaciones conocidas» se redirigió a B0.9 → MATRIZ_174!AU/AV
+    → IP5.
+  - `ISCAM\Metodologia_ISA_MarcoMuestral.docx`: misma corrección en su tabla de fórmulas.
+  - `ISCAM\Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md` (motor de cálculo):
+    IP5 documentado con el conteo 0/33/66/100.
+  - `generar_doc_iscam.py` corregido en la fuente para que una regeneración no reintroduzca el
+    texto viejo.
+- `Instrumentos\Instrumento 2 - Encuesta Cuantitativa.md`: incorporada la pregunta **36a**
+  (asesoría específica sobre EUDR), que existía en el texto del Google Form y en la plantilla pero
+  faltaba en la encuesta; nota de puntaje de D10 actualizada a los tres ítems.
+- `Instrumentos\DOC_TRABAJO_Instrumento2_ISCAM_v2.md`: Q36a incorporada a la Tabla 4 de D10; B0-9
+  redirigido de «Insumo D10» a IP5 por conteo; Tabla 5 (D10 = 3 ítems) y totales ajustados
+  (Tabla 2 → 94; D1–D15 → 80; total general → 104 ítems / 95 preguntas).
+
+**Defectos ortográficos corregidos de paso** `[M]`: tres intrusiones de caracteres CJK heredadas
+del portapapeles —«文献» por «bibliografía» (DT-ISCAM-001, dos ocasiones, y su generador) y «满分»
+por «un puntaje máximo» (ídem)— más «報告ar» por «reportar» en DOC_TRABAJO_Instrumento2_ISCAM_v2.md.
+Quedan pendientes instancias de la misma familia en `ficharucsunat\fuentes_urls.md`,
+`reports\ANALISIS_TITULACION_EUDR_CAFE_PERU.md` y `reports\INFORME_TECNICO_EUDR_CAFE_PERU.md`,
+fuera del alcance de esta sesión.
+
+**Alcance de la ratificación** `[I]`: con D10 fuera de los promedios, sus ítems dejan de mover
+ISA, IP, IV y RE; la certificación solo pesa vía IP5 (20% del IP) y como conteo. Efecto esperado
+sobre índices ya publicados: nulo hasta cargar la encuesta, porque IP5 ya devolvía «» sin D7 y D9.
+
+**Pendiente que deja esta sesión** `[M]`: (a) DOC_TRABAJO_Instrumento2_ISCAM_v2.md sigue sin
+D11.39a ni los bloques PPWR/R que sí están en el Form v0.4 (119 ítems) y en la plantilla — sus
+totales usan otra base de conteo y hay que reconciliarlos; (b) ese mismo documento cita
+`ISCAM\Remapeo D1-D9 a Indice de Preparacion (IP-ISCAM).md`, que ya no existe en el working tree;
+(c) `ISCAM_Score!P` (IP1) todavía devuelve 0 con `IFERROR(F4,0)` cuando D2 está vacío — el mismo
+patrón «sin dato ≠ 0» que se corrigió en IP5; (d) el resto de la jornada 2026-10-15 (capa de
+ingesta CAPTURA/NORMALIZADO, ratificación de los 15 ítems «[R]» de CODIFICACION, ISA-PactoVerde
+provisional bajo el umbral Pacto Verde) quedó registrado en los hitos de §5 del docx de
+metodología pero aún sin entrada propia en esta memoria.
+
+### 2026-10-11 — Cierre de la base de 174 organizaciones: triaje, depuracion y modulo de trazabilidad EUDR
+
+**Alcance de la jornada** `[M]`: se cerro la base de 174 organizaciones cafetaleras y cacaoteras
+con cinco entregables y la apertura de la dimension de trazabilidad (D2), que era el vacio
+estructural del proyecto. Todo queda en `BASE CAFE CACAO 174\CONSULTA MASIVA RUC 10.10.26\`
+y en `appsperu\apps\identidad-fiscal\`.
+
+**Entregable 1 — Matriz de hallazgos publicos (174/174)** `[M]`:
+`MATRIZ_ORGANIZACIONES_174_FINAL.csv` y `.xlsx` (34 columnas), una ficha por RUC levantada desde
+fuente web: nombre publico, socios, hectareas, certificaciones, exportaciones, hallazgo detallado
+y URLs citadas. Informe legible en `HALLAZGOS_174_ORGANIZACIONES.md` y `.docx`.
+
+**Entregable 2 — 1.840 enlaces ADUANET verificados en vivo** `[M]`:
+`ENLACES_BUSQUEDA_DUA_2024-2026.xlsx`. 699 enlaces consultados contra aduanet.gob.pe: 573 con
+datos (82%), 126 vacios, 0 errores. Tres niveles: resumen por RUC+anio (sin captcha), listado de
+DUAs (sin captcha) y detalle de DUA (SgCDUI2, **si pide captcha**, no automatizable).
+
+**Entregable 3 — Cruce DUAs x FOB en dolares** `[M]`:
+`CRUCE_DUAs_FOB_POR_ORGANIZACION.xlsx`. 44 de 76 RUC exportadores con movimiento,
+**US$ 243.192.124** y **1.141 DUAs** (2024-2026), cuadrado en las 4 hojas del libro.
+Concentracion: el top 10 explica el **67%** del FOB. Informe con tablas y 5 graficos en
+`appsperu\INFORME_CRUCE_DUAs_FOB.md` / `.docx`.
+
+**Entregable 4 — Triaje y depuracion** `[M]`: `TRIAJE_Y_DEPURACION_174.xlsx` y
+`ACCIONES_EJECUTADAS.xlsx` (15 hojas). Las 6 acciones ejecutadas: (1) universo activo **165** de
+174, excluyendo 5 en suspension temporal y 4 en baja de oficio; (2) RUC 20611316616 recuperado con
+5 contradicciones abiertas; (3) la ficha de 20393786044 **existia**, mi busqueda fallaba por
+"COORDILLERA" con doble D; (4) identidad COAS reasignada a 20486973219; (5) via de venta de los 23
+activos sin movimiento: 3 indirecta, 7 domestica, 13 sin operacion; (6) alcance del universo con
+3 opciones documentadas, se recomienda la B.
+
+**Hallazgo que reorganiza el analisis** `[M]`: el "42% sin movimiento" del universo exportador
+**no era un hueco de datos**. El flag `exporta` del proyecto cruza limpio con la realidad: los 44
+con `exporta=SI` son todos ACTIVO y todos tienen FOB. Quien induce a error es la ficha SUNAT, que
+clasifica como EXPORTADOR a organizaciones que no embarcan nada.
+
+**Errores propios corregidos y documentados** `[M]`: (a) atribui a 20486668335, entidad
+**suspendida** y con FOB cero, toda la identidad publica de COAS (566 socios, 1.700 ha,
+Fairtrade, exportacion a Europa), que corresponde a 20486973219, la **mayor exportadora del
+universo** con US$ 30,3 millones; (b) el segundo RUC de Kemito Ene que anote no existe;
+(c) afirme que 20393786044 no tenia ficha interna cuando la tenia completa en 8 hojas.
+
+**RUC 20611316616 — caso abierto** `[M]`: Asociacion de Productores Agropecuarios San Miguel.
+SUNAT la ubica en **Ancash, Nuevo Chimbote** (costa), CIIU principal "cria de animales
+domesticos", inscrita el **03/11/2025**. MIDAGRI la registra como beneficiaria PAC desde
+**2019** con 22 beneficiados, sede **Piura, San Miguel de el Faique**, producto cacao. Una
+organizacion no puede operar 6 anos antes de tener RUC. En la misma base existe la Organizacion
+Zonal San Miguel del Faique (RUC 20604401187). Lectura: RUC mal asignado o cruzado al cargar.
+**No tratar como organizacion cacaotera hasta aclararlo con MIDAGRI.**
+
+---
+
+### 2026-10-11b — Modulo de trazabilidad EUDR (D2): esquema, plantilla y validacion
+
+**Entregable 5 — Migracion 013_eudr_trazabilidad.sql** `[M]`:
+`apps\identidad-fiscal\api\src\db\migrations\013_eudr_trazabilidad.sql`. Abre la dimension
+D2, que estaba en cero: **6 tablas** (`eudr_parcela`, `eudr_lote`, `eudr_lote_parcela`,
+`eudr_lote_embarque`, `eudr_declaracion`, `eudr_declaracion_lote`) y **2 vistas**
+(`v_eudr_cobertura_org`, `v_eudr_trazabilidad`). Cadena completa parcela -> lote -> embarque ->
+DDS. Data contract en
+`apps\identidad-fiscal\api\docs\data-contracts\eudr-trazabilidad.md`.
+
+**Decision de diseno que sostiene el indicador** `[M]`: el cumplimiento del art. 9(1)(d) es una
+**columna generada** (`cumple_geolocalizacion_eudr`) que compara el area contra el umbral de 4 ha
+del reglamento. Se calcula, no se declara: quien carga no puede maquillar el indicador. La
+geometria se guarda **tal como la reporta la organizacion**, con el sistema de referencia
+anotado — forzar una conversion silenciosa de PSAD56 a WGS84 introduce un error de decenas de
+metros, indistinguible de una falsificacion en una auditoria.
+
+**Validado contra base real, no solo en papel** `[M]`: 9 reglas verificadas en el Postgres local
+de Docker (`postgres://fiscal:fiscal@localhost:5438/identidad_fiscal`, 24 tablas con datos,
+2.356.381 contribuyentes). Rechaza punto en parcela >4 ha, punto+poligono simultaneos, lat/lon
+fuera de Peru, lat/lon invertidas, cultivo invalido, area negativa y codigo duplicado. Todo en
+transaccion con ROLLBACK: la base queda intacta.
+
+**Plantilla de recoleccion** `[M]`: `PLANTILLA_TRAZABILIDAD_EUDR.xlsx` +
+`plantilla_trazabilidad_parcelas.csv`, con validaciones en Excel (lista CAFE/CACAO, rango de
+lat/lon para Peru, error si se pone un punto en mas de 4 ha) y 3 filas de ejemplo.
+
+**Inconsistencia encontrada en el propio proyecto** `[M]`: mi primer comentario citaba una tabla
+`ruc_fob_dua` como destino del JOIN. **Esa tabla no existe en la base.** Las DUAs viven en
+`BASE CONSOLIDADA.xlsx`, hoja `RUC_FOB_DUA`; la base solo tiene `ruc_exportaciones_fob`, que
+trae FOB agregado por mes/aduana/agente/pais y **sin numero de DUA**. Comentario y data contract
+corregidos. **Tarea derivada: ingerir RUC_FOB_DUA como tabla propia** para que la cadena
+parcela -> lote -> DUA se resuelva dentro de la base.
+
+**Error de objetivo que debe quedar registrado** `[M]`: aplique la migracion 013 al Neon de
+produccion por confusion de `.env`. La raiz `.env.local` apunta a Neon; el `.env` de la app apunta
+al Docker local del puerto 5438. Revisado despues: **Neon produccion estaba VACIA**, sin ninguna
+de las 12 migraciones previas. No se revirtio nada: quedan 6 tablas `eudr_*` vacias y 1 fila en
+`schema_migrations` que registra la 013 como aplicada, lo cual es enganoso si alguien corre
+`migrate.ts` contra Neon luego. Pendiente de decision del responsable: revertir o completar alli.
+
 ### 2026-10-06j — Línea 3: verificación de las afirmaciones RLAC del paper contra cuadros SUNAT locales
 
 **Entregable nuevo** `[M]`: `Scripts\icrpp_rlac_verificacion.py` → `docs\RLAC_VERIFICACION_2023_2024.xlsx` (9 hojas). Contrasta afirmación por afirmación del paper ICRPP contra cdro_08/12/13/15/16/22 de SUNAT y la programación de naves 2023. La serie histórica sube a 3,501 registros (se arreglaron 3 bugs de parse: cdro_15 buscaba "TOTAL" en la fila equivocada; HHI de cdro_08/22 dividía dos veces por 100 —pasó de 0.1 a 86.3—; se añaden cdro_12 despachadores, cdro_13 almacenes y cdro_16 subpartidas FOB/CIF).
