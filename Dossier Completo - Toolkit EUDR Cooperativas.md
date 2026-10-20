@@ -1,6 +1,6 @@
 # Dossier Completo — Toolkit EUDR Cooperativas
 
-**Documento único** que reúne el toolkit completo de diagnóstico EUDR para cooperativas exportadoras de café y cacao (Perú), construido para el proyecto "El impacto del Pacto Verde Europeo en la performance de las cooperativas peruanas" (ISCAM, Universidad del Pacífico).
+**Documento único** que reúne el toolkit completo de diagnóstico EUDR para cooperativas exportadoras de café y cacao (Perú), construido para el proyecto "El impacto del Pacto Verde Europeo en el desempeño de las cooperativas peruanas" (ISCAM, Universidad del Pacífico).
 
 **Fuente de cada parte:** este documento concatena, sin editar su contenido, los documentos de trabajo ya consolidados del proyecto — listados al inicio de cada parte. Esos documentos siguen existiendo por separado y son la fuente editable; este dossier se regenera desde ellos.
 
@@ -102,7 +102,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 2. **Guía metodológica** — ¿por qué el instrumento está diseñado así (dimensiones, escala, agregación)?
 3. **Guía de llenado** — ¿quién responde cada bloque y qué hacer ante la duda al aplicar?
 
-**Efecto en el resto del toolkit (ver §4 al final):** este documento absorbe contenido que antes vivía repartido en `Instrumento 6`, `Metodología - Índice de Alineamiento (ISA) y Marco Muestral.md` y las notas "Cómo llenar" del formulario online. Esos documentos se recortaron para no duplicar — quedan como la fuente de detalle técnico/matemático (Metodología ISA) y de alcance multi-instrumento (Instrumento 6), y remiten aquí para lo que ahora es la referencia única.
+**Efecto en el resto del toolkit (ver §4 al final):** este documento absorbe contenido que antes vivía repartido en `Instrumento 6`, `Metodología - Índice de Alineamiento (ISA) y Marco Muestral.md` y las notas "Cómo llenar" del formulario en línea. Esos documentos se recortaron para no duplicar — quedan como la fuente de detalle técnico/matemático (Metodología ISA) y de alcance multi-instrumento (Instrumento 6), y remiten aquí para lo que ahora es la referencia única.
 
 ---
 
@@ -115,7 +115,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 | **Nombre del instrumento** | Encuesta Cuantitativa EUDR para Cooperativas Exportadoras de Café y Cacao (Instrumento 2) |
 | **Objetivo** | Diagnosticar el nivel de preparación de organizaciones cafetaleras/cacaoteras peruanas frente al Reglamento (UE) 2023/1115 (EUDR), y alimentar el Índice Sintético de Alineamiento (ISA) y los índices de Preparación/Vulnerabilidad (IP/IV) del proyecto madre ISCAM. |
 | **Base normativa** | Reglamento (UE) 2023/1115, modificado por Reglamento (UE) 2025/2650. |
-| **Entidad/proyecto que ejecuta** | Proyecto "El impacto del Pacto Verde Europeo en la performance de las cooperativas peruanas" (ISCAM, Universidad del Pacífico) — este toolkit opera como su instrumento operativo para el submódulo EUDR. |
+| **Entidad/proyecto que ejecuta** | Proyecto "El impacto del Pacto Verde Europeo en el desempeño de las cooperativas peruanas" (ISCAM, Universidad del Pacífico) — este toolkit opera como su instrumento operativo para el submódulo EUDR. |
 
 #### 1.2 Población, unidad de análisis y ámbito
 
@@ -142,7 +142,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 
 | Campo | Valor |
 |---|---|
-| **Estructura del instrumento** | Bloque 0 — Ficha de identificación (12 ítems, no puntúa) · Bloque P — Variables de performance (13 ítems, preliminar v0.1 — incluye P11/P12, criterios de validación externa ISCAM) · D1–D11 (50 ítems: D1–D7 núcleo, D8–D11 extendidas). Total: **76 preguntas.** |
+| **Estructura del instrumento** | Bloque 0 — Ficha de identificación (12 ítems, no puntúa) · Bloque P — Variables de desempeño (13 ítems, preliminar v0.1 — incluye P11/P12, criterios de validación externa ISCAM) · D1–D11 (50 ítems: D1–D7 núcleo, D8–D11 extendidas). Total: **76 preguntas.** |
 | **Escala de madurez** | Ordinal 0–4 en las preguntas tipo escala (0 = no existe/no sabe, 4 = implementado y verificado/auditado). |
 | **Modo de aplicación** | Autoadministrado o asistido, vía **Google Forms**. |
 | **Almacenamiento de respuestas** | **Google Sheets**, una fila por organización/aplicación, columnas por ID de pregunta (mismo esquema de `matriz_data.py`). |
@@ -163,7 +163,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 - Los datos recogidos (RUC, volúmenes exportados, ingresos, precios pagados al socio) son de naturaleza institucional/comercial, no datos personales sensibles de individuos — el sujeto de análisis es la organización, no una persona.
 - Uso previsto: diagnóstico interno de la organización, y agregado (sin identificación individual de la cooperativa) para el ISA/IP/IV/RE del proyecto madre.
 - **Advertencia de uso:** este instrumento no constituye asesoría legal ni sustituye una auditoría formal de diligencia debida. Su función es diagnóstica y de priorización de recursos.
-- **Limitaciones:** (1) no probabilístico, sin margen de error formal; (2) Bloque P es transversal con recall retrospectivo (P2, P5, P7) — cualquier correlación ISA↔performance es asociación, nunca causalidad; (3) el piloto (15–25 orgs) no equivale al levantamiento completo de las 258 organizaciones.
+- **Limitaciones:** (1) no probabilístico, sin margen de error formal; (2) Bloque P es transversal con recall retrospectivo (P2, P5, P7) — cualquier correlación ISA↔desempeño es asociación, nunca causalidad; (3) el piloto (15–25 orgs) no equivale al levantamiento completo de las 258 organizaciones.
 
 ---
 
@@ -202,7 +202,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 | Bloque / Dimensión | Informante ideal | Por qué |
 |---|---|---|
 | **Bloque 0** (identificación) | Quien tenga acceso a registros de venta/exportación | Datos duros (RUC, volumen, certificaciones), no de memoria. |
-| **Bloque P** (performance) | Idem | Las preguntas retrospectivas (P2, P5, P7) son mejor dejarlas vacías que forzar una cifra sin sustento contable. |
+| **Bloque P** (desempeño) | Idem | Las preguntas retrospectivas (P2, P5, P7) son mejor dejarlas vacías que forzar una cifra sin sustento contable. |
 | **D1** (clasificación regulatoria) | Gerencia general o asesoría legal/contable | Es estatus jurídico-comercial que el área técnica de campo rara vez maneja con certeza. |
 | **D2** (trazabilidad) | Responsable técnico/de campo, junto con gerencia | La pregunta 10 (mezcla de lotes) es una bandera: decirlo aunque el resto de D2 sea alto. |
 | **D3** (legalidad) | Gerencia + responsable de campo | Preguntas 14–14g piden información sensible — mejor "No verificado" que un "No" optimista. |
@@ -238,7 +238,7 @@ Resultado de un Grupo de Trabajo Multisectorial (R.M. N.° 0128-2025-MIDAGRI), m
 Este documento absorbió contenido que antes estaba repartido. Para no dejar información duplicada (y con eso, riesgo de que dos documentos digan cosas distintas si uno se actualiza y el otro no), se ajustó lo siguiente:
 
 - **`Instrumento 6 - Nota Metodologica de Aplicacion.md`** — su §1 ("Quién debe responder") queda como una versión general de 2 líneas; el detalle por bloque/dimensión (tabla completa) ahora vive solo aquí (§3.3), y Instrumento 6 debe remitir a este documento en vez de duplicarlo. Instrumento 6 conserva lo que sí le es propio y no se duplica aquí: el alcance según recurso disponible entre los instrumentos 2–5 (§2), la muestra sugerida para Instrumento 3/FGD (§3), y la frecuencia de aplicación general (§4, ya reflejada aquí en §1.5 solo para Instrumento 2).
-- **`Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md`** — su §1 ("Marco muestral") queda como la versión que sí explica el detalle matemático del ajuste por raking (§3 de ese documento); los campos de la ficha técnica propiamente dicha (universo, unidad de análisis, tamaño de muestra, estado actual del marco) ahora tienen como fuente única a este documento (§1 aquí). Metodología ISA conserva íntegro lo que le es propio: construcción del ISA (§2), ajuste de representatividad (§3), validación de robustez (§4) y conexión con performance (§5) — nada de eso se duplicó aquí.
+- **`Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md`** — su §1 ("Marco muestral") queda como la versión que sí explica el detalle matemático del ajuste por raking (§3 de ese documento); los campos de la ficha técnica propiamente dicha (universo, unidad de análisis, tamaño de muestra, estado actual del marco) ahora tienen como fuente única a este documento (§1 aquí). Metodología ISA conserva íntegro lo que le es propio: construcción del ISA (§2), ajuste de representatividad (§3), validación de robustez (§4) y conexión con desempeño (§5) — nada de eso se duplicó aquí.
 - **Los dos documentos previos** (`Ficha Tecnica - Instrumento 2.md` y `Guia de Llenado - Instrumento 2.md`, creados minutos antes en esta misma sesión) **se eliminaron** — su contenido íntegro está aquí, en §1 y §3 respectivamente. No quedó ninguna referencia a esos dos archivos en otros documentos del toolkit (se crearon y no llegaron a citarse en otro lado).
 
 ---
@@ -267,7 +267,7 @@ Este documento absorbió contenido que antes estaba repartido. Para no dejar inf
 > - El **número 14d** estaba reservado como hueco documentado desde el 2026-10-01 para no renumerar 14e–14g. Al ocuparse con la pregunta nueva, las referencias cruzadas de la matriz, este dossier y `Scripts\matriz_data.py` siguen válidas sin cambiar.
 > - El número **14d ya tiene pregunta** (derechos de terceros, desde el 2026-10-02). El hueco documentado que existía desde el 2026-10-01 se ocupó sin renumerar 14e–14g.
 
-**Estado del Bloque P (Performance):** **preliminar, v0.1** — agregado el 2026-09-16 para responder al objetivo (f) del proyecto madre ("medir el impacto de la adecuación al Pacto Verde Europeo en la performance de las cooperativas"). Los indicadores elegidos son una propuesta razonable para el piloto (Checklist, Tarea C6-C7), **no una decisión cerrada** — deben validarse con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de las 100–150 organizaciones. El resto del instrumento (D1–D11) no cambió de estado.
+**Estado del Bloque P (Desempeño):** **preliminar, v0.1** — agregado el 2026-09-16 para responder al objetivo (f) del proyecto madre ("medir el impacto de la adecuación al Pacto Verde Europeo en el desempeño de las cooperativas"). Los indicadores elegidos son una propuesta razonable para el piloto (Checklist, Tarea C6-C7), **no una decisión cerrada** — deben validarse con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de las 100–150 organizaciones. El resto del instrumento (D1–D11) no cambió de estado.
 
 **Escala de madurez (preguntas 0–4):**
 > **0** No existe / No sabe · **1** Informal o parcial · **2** En desarrollo · **3** Implementado · **4** Implementado y verificado/auditado
@@ -291,11 +291,11 @@ Este documento absorbió contenido que antes estaba repartido. Para no dejar inf
 
 ---
 
-### Bloque P — Variables de Performance *(preliminar v0.1 — no puntúa, no forma parte del ISA; es la variable de resultado, no de madurez)*
+### Bloque P — Variables de Desempeño *(preliminar v0.1 — no puntúa, no forma parte del ISA; es la variable de resultado, no de madurez)*
 
 **Por qué existe este bloque:** el ISA (D1–D9) mide qué tan preparada está la cooperativa — es el predictor. El proyecto madre pide además medir el **impacto** de esa preparación en resultados de negocio. Estas preguntas recogen ese resultado en el mismo instrumento, para poder cruzarlas después contra el ISA de la misma organización.
 
-**Limitación de diseño que debe quedar explícita en cualquier reporte:** el levantamiento es transversal (un solo corte). Las preguntas P2, P5 y P7 son **retrospectivas por autodeclaración** (piden recordar una cifra de hace 3 años), no datos de panel verificados — sirven para aproximar una tendencia, no para un análisis causal riguroso. Tratar cualquier correlación ISA↔performance resultante como asociación, nunca como prueba de causalidad.
+**Limitación de diseño que debe quedar explícita en cualquier reporte:** el levantamiento es transversal (un solo corte). Las preguntas P2, P5 y P7 son **retrospectivas por autodeclaración** (piden recordar una cifra de hace 3 años), no datos de panel verificados — sirven para aproximar una tendencia, no para un análisis causal riguroso. Tratar cualquier correlación ISA↔desempeño resultante como asociación, nunca como prueba de causalidad.
 
 - P1. Volumen exportado a la Unión Europea en el último año (kg o toneladas, especificar unidad y producto si exporta ambos)
 - P1b. **(nuevo, 2026-09-16 — insumo IV1, Índice de Vulnerabilidad)** Volumen TOTAL exportado a todos los destinos (UE y no UE) en el último año, mismo producto y misma unidad que P1 (kg o toneladas) — permite calcular `% dependencia del mercado europeo = P1 / P1b` con un dato duro y del mismo período, en vez de la estimación aproximada de Bloque 0 ("Volumen anual aproximado destinado a la UE, % del total"). Bloque 0 se mantiene como estimación rápida de identificación; P1/P1b es el dato preciso para el índice.
@@ -694,9 +694,9 @@ Una cooperativa muy vulnerable (IV alto) pero muy preparada (IP alto) tiene RE b
 
 ### 6. Panel AHP — validación de pesos
 
-El 20% parejo por sub-dimensión (§3, §4) es un default, no una decisión final. El panel AHP (Saaty 1980) lo reemplaza con pesos derivados de comparaciones pareadas de 8–10 expertos (5 grupos: EUDR/legal, gremios/cooperativas, certificación, cooperación técnica, académico ISCAM), en dos matrices 5×5 independientes (IP y IV — nunca un peso relativo IP-vs-IV, porque esa relación ya está fija en RE).
+El 20% parejo por sub-dimensión (§3, §4) es un valor predeterminado, no una decisión final. El panel AHP (Saaty 1980) lo reemplaza con pesos derivados de comparaciones pareadas de 8–10 expertos (5 grupos: EUDR/legal, gremios/cooperativas, certificación, cooperación técnica, académico ISCAM), en dos matrices 5×5 independientes (IP y IV — nunca un peso relativo IP-vs-IV, porque esa relación ya está fija en RE).
 
-**El punto donde más se falla:** agregar las matrices de los expertos por **media geométrica elemento-por-elemento (método AIJ)**, nunca promediando los pesos ya calculados de cada experto por separado (método AIP) — Forman & Peniwati (1998). Sensibilidad obligatoria: correlación de Spearman entre ranking con pesos AHP y ranking con pesos iguales.
+**El punto donde más se falla:** agregar las matrices de los expertos por **media geométrica elemento-por-elemento (método AIJ)**, nunca promediando los pesos ya calculados de cada experto por separado (método AIP) — Forman & Peniwati (1998). Sensibilidad obligatoria: correlación de Spearman entre ordenamiento con pesos AHP y ordenamiento con pesos iguales.
 
 **Diagrama completo del proceso (6 pasos, con el contraste AIJ vs. AIP):** https://claude.ai/code/artifact/fdf332b1-897d-43ad-b182-0bda5465067a
 **Instrumento de captura ya construido:** https://claude.ai/code/artifact/323b416c-1678-4fd0-a5c9-b02b7d874f1e
@@ -716,7 +716,7 @@ Panel real **aún no convocado** — depende del equipo del proyecto madre (Fase
 
 ---
 
-### 8. Checklist de 6 pilares para publicación Q1/Q2 (auto-evaluación, criterio propio de ISCAM)
+### 8. Lista de verificación de 6 pilares para publicación Q1/Q2 (auto-evaluación, criterio propio de ISCAM)
 
 | Pilar | Estado |
 |---|---|
@@ -737,7 +737,7 @@ Panel real **aún no convocado** — depende del equipo del proyecto madre (Fase
 - [x] **Fracción de D8 que cuenta como "fricción" para IV5 — cerrado 2026-09-17.** D8.30 invertida (100 − D8.30); ver `Diseno - Indice de Vulnerabilidad (IV-ISCAM).md`.
 - [x] **Bootstrap adoptado como estándar de robustez — cerrado 2026-09-17** (regla documentada en Metodología ISA §4; ejecución espera datos reales del piloto).
 - [ ] Fijar el corte alto/bajo de la matriz de tipología 2×2 — depende de datos reales del piloto (Fase 2/3 del plan a 75 días). Único ítem que sigue bloqueado por falta de datos, no por decisión pendiente.
-- [x] **Territorio como nivel de agregación con score propio — cerrado 2026-09-17.** Regla `RE_territorio = promedio(RE_c)` documentada en Metodología ISA §5; ejecución espera datos reales.
+- [x] **Territorio como nivel de agregación con puntaje propio — cerrado 2026-09-17.** Regla `RE_territorio = promedio(RE_c)` documentada en Metodología ISA §5; ejecución espera datos reales.
 
 ---
 

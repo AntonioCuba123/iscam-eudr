@@ -1,4 +1,4 @@
-# Instrumento 2 — Encuesta Cuantitativa (D1–D15 + Performance)
+# Instrumento 2 — Encuesta Cuantitativa (D1–D15 + Desempeño)
 
 **Serie:** parte del paquete de 7 instrumentos. Ver `Instrumento 1 - Marco de Dimensiones de Diagnostico.md` para la justificación de cada dimensión, y `Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` para la ficha técnica, la guía metodológica resumida y la guía de llenado (quién responde cada bloque). Aplicable en Google Forms (canal elegido para el relevamiento real; respuestas a Google Sheets), o en el panel digital "Brújula de Diligencia", que ya implementa las 11 dimensiones descritas en este documento.
 
@@ -13,7 +13,7 @@
 - **ISA-PactoVerde:** ahora 4 módulos (i/iv/v/vi) = (D12 + D13 + D14 + D15) / 4
 - **Total preguntas:** 89 (antes 80)
 
-**Estado del Bloque P (Performance):** **v0.2** — actualizado 2026-10-09. Los indicadores P1–P12 se mantienen de v0.1; P13 y P14 son nuevos. Pendiente validación con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de 100–150 organizaciones. El resto del instrumento (D1–D15) es versión vigente para piloto.
+**Estado del Bloque P (Desempeño):** **v0.2** — actualizado 2026-10-09. Los indicadores P1–P12 se mantienen de v0.1; P13 y P14 son nuevos. Pendiente validación con el equipo del proyecto madre (Checklist, Tarea D1) antes del levantamiento de 100–150 organizaciones. El resto del instrumento (D1–D15) es versión vigente para piloto.
 
 **Escala de madurez (preguntas 0–4):**
 > **0** No existe / No sabe · **1** Informal o parcial · **2** En desarrollo · **3** Implementado · **4** Implementado y verificado/auditado
@@ -37,13 +37,13 @@
 
 ---
 
-## Bloque P — Variables de Performance *(ver versión actualizada v0.2 al final del documento — 2026-10-09)*
+## Bloque P — Variables de Desempeño *(ver versión actualizada v0.2 al final del documento — 2026-10-09)*
 
-> **Nota:** este bloque fue reubicado al final del instrumento (después de D15) como parte de la actualización 2026-10-09. La versión activa con P1–P14 está en la sección "Bloque P — Variables de Performance v0.2" al final. Lo que sigue a continuación corresponde a la versión v0.1 archivada para trazabilidad del historial de cambios.
+> **Nota:** este bloque fue reubicado al final del instrumento (después de D15) como parte de la actualización 2026-10-09. La versión activa con P1–P14 está en la sección "Bloque P — Variables de Desempeño v0.2" al final. Lo que sigue a continuación corresponde a la versión v0.1 archivada para trazabilidad del historial de cambios.
 
 **Por qué existe este bloque:** el ISA (D1–D9) mide qué tan preparada está la cooperativa — es el predictor. El proyecto madre pide además medir el **impacto** de esa preparación en resultados de negocio. Estas preguntas recogen ese resultado en el mismo instrumento, para poder cruzarlas después contra el ISA de la misma organización.
 
-**Limitación de diseño que debe quedar explícita en cualquier reporte:** el levantamiento es transversal (un solo corte). Las preguntas P2, P5 y P7 son **retrospectivas por autodeclaración** (piden recordar una cifra de hace 3 años), no datos de panel verificados — sirven para aproximar una tendencia, no para un análisis causal riguroso. Tratar cualquier correlación ISA↔performance resultante como asociación, nunca como prueba de causalidad.
+**Limitación de diseño que debe quedar explícita en cualquier reporte:** el levantamiento es transversal (un solo corte). Las preguntas P2, P5 y P7 son **retrospectivas por autodeclaración** (piden recordar una cifra de hace 3 años), no datos de panel verificados — sirven para aproximar una tendencia, no para un análisis causal riguroso. Tratar cualquier correlación ISA↔desempeño resultante como asociación, nunca como prueba de causalidad.
 
 - P1. Volumen exportado a la Unión Europea en el último año (kg o toneladas, especificar unidad y producto si exporta ambos)
 - P1b. **(nuevo, 2026-09-16 — insumo IV1, Índice de Vulnerabilidad)** Volumen TOTAL exportado a todos los destinos (UE y no UE) en el último año, mismo producto y misma unidad que P1 (kg o toneladas) — permite calcular `% dependencia del mercado europeo = P1 / P1b` con un dato duro y del mismo período, en vez de la estimación aproximada de Bloque 0 ("Volumen anual aproximado destinado a la UE, % del total"). Bloque 0 se mantiene como estimación rápida de identificación; P1/P1b es el dato preciso para el índice.
@@ -235,7 +235,7 @@
 49. ¿La información reportada es verificada/auditada por tercero independiente? (No / Auto-declarada / Verificación parcial / Auditoría completa externa)
 50. ¿El reporte se comparte proactivamente con compradores europeos y partes interesadas? (No / Solo bajo solicitud / Sí, sistemáticamente)
 
-> **Nota de alcance:** NO promedia en el ISA-EUDR (D1–D9). Es dimensión extendida del Pacto Verde. Una cooperativa puede tener alta madurez EUDR (D1–D9) y nulo reporte de sostenibilidad, y viceversa. Se correlaciona contra performance (Bloque P) y alimenta el módulo (iv) del ISA-PactoVerde. El promedio de D13 incluye Q44b + Q45–Q50 (7 preguntas).
+> **Nota de alcance:** NO promedia en el ISA-EUDR (D1–D9). Es dimensión extendida del Pacto Verde. Una cooperativa puede tener alta madurez EUDR (D1–D9) y nulo reporte de sostenibilidad, y viceversa. Se correlaciona contra desempeño (Bloque P) y alimenta el módulo (iv) del ISA-PactoVerde. El promedio de D13 incluye Q44b + Q45–Q50 (7 preguntas).
 
 ---
 
@@ -274,15 +274,15 @@
 - **D11 no se promedia como madurez** — se reporta como inventario de oportunidades ya usadas vs. disponibles, insumo directo para el Instrumento 4 (columna "oportunidad").
 - **D12, D13, D14, D15 no promedian en el ISA-EUDR** — son dimensiones extendidas del **Pacto Verde Europeo** (módulos i, iv, v, vi del proyecto madre ISCAM). Se reportan con su propio semáforo 0–4 por pregunta, se agregan internamente (media aritmética simple por dimensión) y conforman el **ISA-PactoVerde** = (D12 + D13 + D14 + D15) / 4. No anulan ni compensan el ISA-EUDR.
 - **D15.Q60 (lote rechazado por LMR)** es bandera independiente del promedio de D15, igual que D2.10: un rechazo real en frontera se reporta siempre por separado, nunca absorbido en el promedio.
-- **Bloque P (v0.2):** P1–P12 son variables de resultado/performance (no puntúan, no forman parte del ISA). P13–P14 son variables de resultado Pacto Verde ampliado, mismo tratamiento.
+- **Bloque P (v0.2):** P1–P12 son variables de resultado/desempeño (no puntúan, no forman parte del ISA). P13–P14 son variables de resultado Pacto Verde ampliado, mismo tratamiento.
 
 ---
 
-## Bloque P — Variables de Performance *(actualizado v0.2 — 2026-10-09)*
+## Bloque P — Variables de Desempeño *(actualizado v0.2 — 2026-10-09)*
 
 **Por qué existe este bloque:** el ISA (D1–D9 + D12–D15) mide qué tan preparada está la cooperativa — es el predictor. El proyecto madre pide además medir el **impacto** de esa preparación en resultados de negocio bajo el Pacto Verde completo. Estas preguntas recogen ese resultado para poder cruzarlas después contra el ISA de la misma organización.
 
-**Limitación de diseño (mantener en todo reporte):** el levantamiento es transversal. Las preguntas P2, P5 y P7 son retrospectivas por autodeclaración — sirven para aproximar tendencia, no para análisis causal riguroso. Cualquier correlación ISA↔performance es asociación, nunca prueba de causalidad.
+**Limitación de diseño (mantener en todo reporte):** el levantamiento es transversal. Las preguntas P2, P5 y P7 son retrospectivas por autodeclaración — sirven para aproximar tendencia, no para análisis causal riguroso. Cualquier correlación ISA↔desempeño es asociación, nunca prueba de causalidad.
 
 - P1. Volumen exportado a la Unión Europea en el último año (kg o toneladas, especificar unidad y producto si exporta ambos)
 - P1b. Volumen TOTAL exportado a todos los destinos (UE y no UE) en el último año — permite calcular `% dependencia del mercado europeo = P1 / P1b`

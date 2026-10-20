@@ -1,0 +1,4 @@
+﻿ruc,codigo_parcela,cultivo,area_ha,tipo_geometria,latitud,longitud,poligono_geojson,sistema_referencia,altitud_msnm,fecha_establecimiento,fuente,observaciones
+20118578415,P-01,CAFE,2.5,PUNTO,-13.933611,-71.477222,,WGS84 (EPSG:4326),1450,2018-04-15,MEDIDA,EJEMPLO - parcela hasta 4 ha: basta el punto
+20118578415,P-02,CAFE,6.8,POLIGONO,,,"{""type"":""Polygon"",""coordinates"":[[[-71.477222,-13.933611],[-71.475000,-13.933611],[-71.475000,-13.931800],[-71.477222,-13.931800],[-71.477222,-13.933611]]]}",WGS84 (EPSG:4326),1520,2015-09-20,DERIVADA_GIS,"EJEMPLO - mas de 4 ha: el reglamento exige poligono, no punto"
+20118578415,P-03,CAFE,1.2,PUNTO,-13.935,-71.48,,PSAD56,1380,2020-03-10,DECLARADA,"EJEMPLO - coordenadas en PSAD56: se aceptan tal cual, se anota el sistema"

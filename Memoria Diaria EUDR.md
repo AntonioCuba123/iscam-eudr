@@ -19,7 +19,7 @@ Este archivo es la memoria viva del proyecto. Se actualiza **agregando una entra
 
 **Regla de citación:** toda cifra lleva fecha de corte y fuente. Si una cifra tiene dos versiones en circulación, se anotan ambas con su origen y se marca el conflicto.
 
-### Checklist de actualización diaria
+### Lista de verificación de actualización diaria
 
 1. Verificar si cambió el calendario de aplicación (§2.1) — es el ítem de mayor impacto.
 2. Verificar si cambió la clasificación de riesgo del Perú (§2.3) — si pasa a *low risk*, se activa el Art. 4a y §2.2 se cae.
@@ -269,7 +269,7 @@ de esta sesión el libro promediaba D10.36a en NORMALIZADO!CK, en contradicción
 fuentes: era un error de implementación, no una decisión de diseño.
 
 **Segunda corrección de la misma sesión** `[V]`: la certificación entra al índice por IP5 y como
-conteo 0/33/66/100 (0 · 1 · 2 · ≥3 esquemas vigentes), no como el score ponderado precensal
+conteo 0/33/66/100 (0 · 1 · 2 · ≥3 esquemas vigentes), no como el puntaje ponderado precensal
 0,6 orgánica / 0,4 Comercio Justo. Fuentes: Matriz de Cobertura Técnica —«IP5 recalculado
 (Certificaciones, conteo 0/33/66/100)»— y §7.3 —«IP5 = (D7 + D9 + Certificación) / 3»—. El cálculo
 viejo mezclaba escalas (D7 y D9 en 0–100 con la certificación en 0–1) y tomaba la certificación de
@@ -320,8 +320,8 @@ una fuente precensal.
   (Tabla 2 → 94; D1–D15 → 80; total general → 104 ítems / 95 preguntas).
 
 **Defectos ortográficos corregidos de paso** `[M]`: tres intrusiones de caracteres CJK heredadas
-del portapapeles —«文献» por «bibliografía» (DT-ISCAM-001, dos ocasiones, y su generador) y «满分»
-por «un puntaje máximo» (ídem)— más «報告ar» por «reportar» en DOC_TRABAJO_Instrumento2_ISCAM_v2.md.
+del portapapeles —«bibliografía» por «bibliografía» (DT-ISCAM-001, dos ocasiones, y su generador) y «满分»
+por «un puntaje máximo» (ídem)— más «reportar» por «reportar» en DOC_TRABAJO_Instrumento2_ISCAM_v2.md.
 Quedan pendientes instancias de la misma familia en `ficharucsunat\fuentes_urls.md`,
 `reports\ANALISIS_TITULACION_EUDR_CAFE_PERU.md` y `reports\INFORME_TECNICO_EUDR_CAFE_PERU.md`,
 fuera del alcance de esta sesión.
@@ -372,7 +372,7 @@ activos sin movimiento: 3 indirecta, 7 domestica, 13 sin operacion; (6) alcance 
 3 opciones documentadas, se recomienda la B.
 
 **Hallazgo que reorganiza el analisis** `[M]`: el "42% sin movimiento" del universo exportador
-**no era un hueco de datos**. El flag `exporta` del proyecto cruza limpio con la realidad: los 44
+**no era un hueco de datos**. El indicador `exporta` del proyecto cruza limpio con la realidad: los 44
 con `exporta=SI` son todos ACTIVO y todos tienen FOB. Quien induce a error es la ficha SUNAT, que
 clasifica como EXPORTADOR a organizaciones que no embarcan nada.
 
@@ -459,7 +459,7 @@ de las 12 migraciones previas. No se revirtio nada: quedan 6 tablas `eudr_*` vac
 - **Señales RLAC/TBML:** **TRAMPA 52.4%** vs LINEA 46.6% (el envío tramp — irregular, sin línea fija — es el perfil que FATF/GAFILAT asocia a mayor riesgo de lavado vía comercio); **banderas de conveniencia 47-52%** (Liberia 236, Panamá 158, Islas Marshall 126, Malta 96, Bahamas 34).
 - **Procedencia:** 71-73% extranjera (Buenaventura 129, Guayaquil 114, San Antonio 78, Pisco 76…), 22-26% puertos peruanos (cabotaje), ~5% aguas internacionales.
 - **Estadía media:** 2.7-3.6 h (mediana ~2.5 h).
-- **Calidad de dato:** cobertura del reporte vs numeración DUE acumulada anual: 86-97% (Mar-Jun); Feb sin baseline (Enero 404). 174 filas (13.4%) tienen OBS "NO PAGA — puerto intermedio peruano" (tránsito sin operación comercial).
+- **Calidad de dato:** cobertura del reporte vs numeración DUE acumulada anual: 86-97% (Mar-Jun); Feb sin línea base (Enero 404). 174 filas (13.4%) tienen OBS "NO PAGA — puerto intermedio peruano" (tránsito sin operación comercial).
 
 **No verificable** `[I]`: son señales de **exposición**, no evidencia de ilícito ni calificación de cumplimiento; no hay equivalente para Paita u otros puertos en 2023; la serie 2018-2022 de cargas/naves sigue requiriendo solicitud Ley 27806.
 
@@ -467,12 +467,12 @@ de las 12 migraciones previas. No se revirtio nada: quedan 6 tablas `eudr_*` vac
 
 **Entregable nuevo** `[M]`: `Scripts\icrpp_monte_carlo.py` → `docs\ICRPP_MONTE_CARLO_PASO7.xlsx` (12 hojas, 10,000 corridas, semilla 42, reproducible). Mitiga las Limitaciones 1 y 3 del paper ICRPP para el único dominio reconstruible con datos abiertos: RON.
 
-**Alcance honesto:** RON-01 = cargas TM/año (proxy de TEU — la fuente abierta reporta TM) y RON-03 = incidentes portuarios/año, 2010-2017 (únicos años con ambos indicadores). **RON-02 (HHI inverso de heterogeneidad de carga) es S/D**: CARGAS se desagregan por terminal, no por tipo de carga. RTID/RLAC/RVI/RRC se fijan en los scores de la Tabla 9 del paper (sus series requieren las solicitudes Ley 27806 ya generadas). Dos variantes: V1 renormaliza pesos (5/8, 3/8); V2 trata RON-02 como latente U(0,1).
+**Alcance honesto:** RON-01 = cargas TM/año (proxy de TEU — la fuente abierta reporta TM) y RON-03 = incidentes portuarios/año, 2010-2017 (únicos años con ambos indicadores). **RON-02 (HHI inverso de heterogeneidad de carga) es S/D**: CARGAS se desagregan por terminal, no por tipo de carga. RTID/RLAC/RVI/RRC se fijan en los puntajes de la Tabla 9 del paper (sus series requieren las solicitudes Ley 27806 ya generadas). Dos variantes: V1 renormaliza pesos (5/8, 3/8); V2 trata RON-02 como latente U(0,1).
 
 **Hallazgos** `[M]`:
-- **Ranking robusto:** Callao > Paita en 8/8 años (mediana MC, ambas variantes).
-- **Callao:** compuesto MC mediana 71.7 (p5-p95: 67.8-76.5); P(≥69.2 del paper) = 84% (V1) / 66% (V2) — el score del paper es ligeramente conservador. CAVEAT: el Callao satura el min-max (~10× el siguiente puerto en TM; toca la cota 1.0 en la mayoría de años), así que su RON recomputado (96.1) es "máximo del pool", no cardinal.
-- **Paita:** compuesto MC mediana 47.3 (p5-p95: 32.7-56.2); P(≥57.4 del paper) = 2.5% — el score del paper para Paita está en el extremo superior de lo que la serie reconstruida soporta, porque su RON real (8.3 V1 / 22.2 V2) es mucho menor que la estimación del paper (42.0).
+- **Ordenamiento robusto:** Callao > Paita en 8/8 años (mediana MC, ambas variantes).
+- **Callao:** compuesto MC mediana 71.7 (p5-p95: 67.8-76.5); P(≥69.2 del paper) = 84% (V1) / 66% (V2) — el puntaje del paper es ligeramente conservador. CAVEAT: el Callao satura el min-max (~10× el siguiente puerto en TM; toca la cota 1.0 en la mayoría de años), así que su RON recomputado (96.1) es "máximo del pool", no cardinal.
+- **Paita:** compuesto MC mediana 47.3 (p5-p95: 32.7-56.2); P(≥57.4 del paper) = 2.5% — el puntaje del paper para Paita está en el extremo superior de lo que la serie reconstruida soporta, porque su RON real (8.3 V1 / 22.2 V2) es mucho menor que la estimación del paper (42.0).
 - **Brecha Callao-Paita:** 11.8 (paper) → 24.4 (MC V1): la concentración del tráfico en el Callao pesa más de lo que el paper estima.
 - **Paso 3 (ACP/α):** α = 0.87 (2 indicadores, n=80) y 0.88 (3 indicadores con accidentes, n=28); PC1 = 88%. CAVEAT: RON-01 y RON-03 correlacionan 0.77 en parte porque ambos escalan con el tamaño del puerto — la coherencia puede medir tamaño, no riesgo. Lectura preliminar, no validación factorial.
 
@@ -488,7 +488,7 @@ de las 12 migraciones previas. No se revirtio nada: quedan 6 tablas `eudr_*` vac
 - **IQ No Fiscalizado decomisados 2013-2018** (MININTER, CSV): kg por departamento; extiende RTID a 2013-2018 (Callao = 0 en todo el periodo).
 - **Naves 2023**: reportes mensuales `.xls` **solo de Callao** (prefijo DUE `CLL`, 245-283 naves/mes) para **Feb-Jun**; los CSV de Set-Dic son **extractos de un solo día**; **Enero/Julio/Agosto 2023 no existen en el portal (HTTP 404)**. Estado PARCIAL, no ABIERTO.
 
-**Cruce cooperativa↔riesgo portuario** `[M]`: `docs\COOPERATIVAS_EXPOSICION_PORTUARIA.xlsx` — 15 organizaciones exportadoras del DUA consolidado (el universo mayor del proyecto son 51 cooperativas; el DUA consolidado tiene 15 RUC con DUAs), con aduana dominante por FOB (PAITA o CALLAO), score ICRPP del paper (Callao 69.2 ALTO / Paita 57.4 MODERADO-ALTO — solo existen para esos dos puertos; el resto se marca S/D, no se inventa), y stats RON de la serie reconstruida (cargas TM prom 2015-2017: Callao 49.90 M / Paita 2.16 M; naves prom: 3,497 / 572; incidentes 2005-2017: 128 / 5). Verificación aritmética contra la fuente APN pasada.
+**Cruce cooperativa↔riesgo portuario** `[M]`: `docs\COOPERATIVAS_EXPOSICION_PORTUARIA.xlsx` — 15 organizaciones exportadoras del DUA consolidado (el universo mayor del proyecto son 51 cooperativas; el DUA consolidado tiene 15 RUC con DUAs), con aduana dominante por FOB (PAITA o CALLAO), puntaje ICRPP del paper (Callao 69.2 ALTO / Paita 57.4 MODERADO-ALTO — solo existen para esos dos puertos; el resto se marca S/D, no se inventa), y stats RON de la serie reconstruida (cargas TM prom 2015-2017: Callao 49.90 M / Paita 2.16 M; naves prom: 3,497 / 572; incidentes 2005-2017: 128 / 5). Verificación aritmética contra la fuente APN pasada.
 
 **Totales:** 2,817 registros (2,550 ABIERTO / 232 PARCIAL / 30 LOCAL / 5 CURADO); años con dato 2005-2022 **continuos** + 2023-2026; 21 indicadores; 179 brechas 2015-2025. Reproducir: `python Scripts\icrpp_serie_historica.py`.
 
@@ -512,7 +512,7 @@ de las 12 migraciones previas. No se revirtio nada: quedan 6 tablas `eudr_*` vac
 
 **Hallazgo separado, sobre el Plan de Trabajo 75 días (Fase 1):** al revisar las 4 tareas 🟢 internas pendientes, 2 resultaron ser **falsos pendientes** — ya estaban resueltos o superados, solo no estaba documentado:
 
-- **Tarea C (marco muestral):** el objetivo del plan ("pasar de 46 a 100-150 orgs", escrito 2026-09-17) quedó obsoleto **el mismo día** en que se escribió — ese mismo 17-sep se cerró la consolidación a **245 organizaciones con RUC validado 100% por SUNAT** (`docs/FUNDAMENTOS_UNIVERSO_ENCUESTABLE.md`, universo extendido 328 con el banco de 83 no exportadoras). `[M]` El gap real, antes no cuantificado: **95 de las 245 no tienen ningún contacto** (ni teléfono ni correo) — ese es el cuello de botella real, no el conteo total. Corregido en `Instrumentos/Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` (decía "46 orgs, 20 verificadas").
+- **Tarea C (marco muestral):** el objetivo del plan ("pasar de 46 a 100-150 orgs", escrito 2026-09-17) quedó obsoleto **el mismo día** en que se escribió — ese mismo 17-sep se cerró la consolidación a **245 organizaciones con RUC validado 100% por SUNAT** (`docs/FUNDAMENTOS_UNIVERSO_ENCUESTABLE.md`, universo extendido 328 con el banco de 83 no exportadoras). `[M]` La brecha real, antes no cuantificado: **95 de las 245 no tienen ningún contacto** (ni teléfono ni correo) — ese es el cuello de botella real, no el conteo total. Corregido en `Instrumentos/Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` (decía "46 orgs, 20 verificadas").
 - **Fricción D8→IV5:** la definición **ya estaba cerrada desde el 2026-09-17** en `ISCAM/Diseno - Indice de Vulnerabilidad (IV-ISCAM).md` §6 (es **D8.30** invertido, `fricción_D8 = 100 − D8.30`; D8.29/31/32 quedan fuera porque miden esfuerzo institucional o continuidad, no resistencia del socio). El problema real era que `Scripts/matriz_data.py` (la fuente única de datos de la matriz de cobertura) nunca se sincronizó con esa decisión — seguía diciendo "pendiente" para D8.31/32 y "no entra a IV" para D8.30. Corregido.
 
 **2 tareas 🟢 construidas de cero:**
@@ -749,7 +749,7 @@ Tienen la misma firma que los 11 items fantasma ya excluidos (US$ 500.000). El f
 
 ### 2026-10-03 — Tabla 6 verificada en fuente primaria; 14d resuelta; Instrumento 7 movido
 
-**Contexto:** el punto 11 del checklist (resolver 14d) llevaba dos dias abierto porque la Tabla 6 no estaba en el repo. Esta entrada lo cierra con fuente primaria, y de paso corrige dos conteos que estaban equivocados en tres documentos.
+**Contexto:** el punto 11 de la lista de verificación (resolver 14d) llevaba dos dias abierto porque la Tabla 6 no estaba en el repo. Esta entrada lo cierra con fuente primaria, y de paso corrige dos conteos que estaban equivocados en tres documentos.
 
 **1. Tabla 6 localizada y leida.** Descargado el PDF completo de 37 paginas del *Manual de debida diligencia en deforestacion. Pasos para su implementacion en cadenas exportadoras de cafe y cacao* (PROMPERU/BID, setiembre 2025). Copia publica verificada en `culturasostenible.pe`. La Tabla 6 esta en la **pag. 23**, titulada "Categorias de legalidad consideradas por el EUDR". [V] Contenido integro de la tabla:
 
@@ -795,7 +795,7 @@ Tienen la misma firma que los 11 items fantasma ya excluidos (US$ 500.000). El f
 
 **Observación registrada, sin acción:** el Instrumento 7 vive en `ISCAM\`, no en `Instrumentos\`, pese a que nueve archivos del paquete lo referencian desde `Instrumentos\`. No se movió el archivo.
 
-⚠ **Punto 11 del checklist queda parcialmente resuelto:** falta resolver 14d. Requiere la Tabla 6 del Manual PROMPERÚ/BID o del *Documento orientador ADEX/MIDAGRI/EFI*, **ninguno de los dos presente en el repo**. No se redactó la pregunta porque implicaría reconstruir una categoría legal sin anclaje al texto oficial.
+⚠ **Punto 11 de la lista de verificación queda parcialmente resuelto:** falta resolver 14d. Requiere la Tabla 6 del Manual PROMPERÚ/BID o del *Documento orientador ADEX/MIDAGRI/EFI*, **ninguno de los dos presente en el repo**. No se redactó la pregunta porque implicaría reconstruir una categoría legal sin anclaje al texto oficial.
 
 ---
 
@@ -810,7 +810,7 @@ Tienen la misma firma que los 11 items fantasma ya excluidos (US$ 500.000). El f
 - MEDIDO: el universo de riesgo se reduce a **52 cooperativas con destino UE y US$2.786,5M de FOB acumulado**.
 - Corrección: el informe inicial sobreestimaba la exposición al citar "245 organizaciones" y "118 con destino UE". Las cifras operativas son 54 café/cacao → 52 con destino UE.
 - **Brecha abierta:** no existe conector a las evaluaciones ambientales del sector agrario de MIDAGRI (el complemento de §2.5). Es el corte que falta para cerrar D3 con dato propio.
-- **Nota de infraestructura (repo `appsperu`):** el diagnóstico `rastro_health` reporta `sin_base / Sin NEON_DATABASE_URL` para apps en modo stdio. **Ese mensaje no significa que falte la base** — el health check evalúa un secret de Neon inexistente, mientras el dato real va por HTTP al puerto local. El diagnóstico útil es el `ECONNREFUSED` en los logs del servidor. Las apps del repo requieren `docker compose up -d` porque solo persiste el volumen, no el contenedor.
+- **Nota de infraestructura (repo `appsperu`):** el diagnóstico `rastro_health` reporta `sin_base / Sin NEON_DATABASE_URL` para apps en modo stdio. **Ese mensaje no significa que falte la base** — el verificación de salud evalúa un secret de Neon inexistente, mientras el dato real va por HTTP al puerto local. El diagnóstico útil es el `ECONNREFUSED` en los logs del servidor. Las apps del repo requieren `docker compose up -d` porque solo persiste el volumen, no el contenedor.
 
 **Endpoints que se intentaron y resultaron inútiles para el Anexo VII** (`catastro-forestal`, `areas-protegidas`) y **el único que aporta algo** (`infracciones-ambientales`) están documentados en §8.10.1, con sus conteos reales y sus límites de fecha.
 
@@ -1231,7 +1231,7 @@ No existe endpoint público de **evaluaciones ambientales del sector agrario**. 
 
 Consecuencia directa: el §2.5 del análisis no puede cerrarse con una vía pública. Para un operador europeo, la verificación de la legalidad ambiental de una parcela de café o cacao en el Perú **no tiene fuente oficial consultable**. Ese es el hallazgo estructural más fuerte del proyecto, y se sostiene precisamente porque el endpoint no existe.
 
-**Es el corte de investigación prioritario para la línea base.** Si en algún momento MIDAGRI publica el registro, hay que (a) re-ejecutar §6.3, (b) esperar a que el ranking de §2.5 caiga, y (c) anotar en §5 con `⚠ SUSTITUIDO`.
+**Es el corte de investigación prioritario para la línea base.** Si en algún momento MIDAGRI publica el registro, hay que (a) re-ejecutar §6.3, (b) esperar a que el ordenamiento de §2.5 caiga, y (c) anotar en §5 con `⚠ SUSTITUIDO`.
 
 #### 8.10.1 Búsqueda de un endpoint sustituto — apps locales (ejecutado 2026-10-01)
 

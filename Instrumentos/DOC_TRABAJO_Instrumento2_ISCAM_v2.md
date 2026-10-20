@@ -8,11 +8,11 @@ Documento de trabajo · versión 0.3 — actualizada según recomendaciones DT-I
 
 ---
 
-**Resumen.** Este documento describe el diseño, la arquitectura y la cobertura temática del Instrumento 2, la encuesta cuantitativa del toolkit de diagnóstico EUDR del proyecto *El impacto del Pacto Verde Europeo en la performance de las cooperativas peruanas* (ISCAM, Universidad del Pacífico). El instrumento opera sobre **95 preguntas** (antes 89: +2 preguntas nuevas B0-13 y B0-14 para IV3; +2 preguntas nuevas Q22a y Q25a para IP4; +2 ramales condicionales Q22b y Q25b para profundizar la capacidad digital en organizaciones avanzadas) organizadas en 15 dimensiones (D1–D15) más un bloque de variables de resultado (Bloque P), y produce dos sub-índices separables: el ISA-EUDR, que mide madurez regulatoria frente al Reglamento (UE) 2023/1115, y el ISA-PactoVerde, que mide alineamiento competitivo con las cuatro estrategias del Pacto Verde con mayor impacto operativo para el sector —huella de carbono, reporte de sostenibilidad, economía circular y gestión fitosanitaria/LMR. El documento expone la lógica de diseño de cada dimensión, las decisiones de alcance tomadas con argumentos verificables, las cuatro preguntas que actúan como banderas no compensables, y el mapa completo del instrumento con opciones de respuesta, referencia normativa y rol en el índice. Se concluye que el instrumento cubre las dos vías por las que el Pacto Verde afecta a una cooperativa exportadora peruana —el acceso legal al mercado y la competitividad de largo plazo—, y que la separación entre ISA-EUDR e ISA-PactoVerde es una condición de diseño necesaria para que el diagnóstico produzca recomendaciones diferenciadas, no una elección cosmética.
+**Resumen.** Este documento describe el diseño, la arquitectura y la cobertura temática del Instrumento 2, la encuesta cuantitativa del toolkit de diagnóstico EUDR del proyecto *El impacto del Pacto Verde Europeo en el desempeño de las cooperativas peruanas* (ISCAM, Universidad del Pacífico). El instrumento opera sobre **95 preguntas** (antes 89: +2 preguntas nuevas B0-13 y B0-14 para IV3; +2 preguntas nuevas Q22a y Q25a para IP4; +2 ramales condicionales Q22b y Q25b para profundizar la capacidad digital en organizaciones avanzadas) organizadas en 15 dimensiones (D1–D15) más un bloque de variables de resultado (Bloque P), y produce dos sub-índices separables: el ISA-EUDR, que mide madurez regulatoria frente al Reglamento (UE) 2023/1115, y el ISA-PactoVerde, que mide alineamiento competitivo con las cuatro estrategias del Pacto Verde con mayor impacto operativo para el sector —huella de carbono, reporte de sostenibilidad, economía circular y gestión fitosanitaria/LMR. El documento expone la lógica de diseño de cada dimensión, las decisiones de alcance tomadas con argumentos verificables, las cuatro preguntas que actúan como banderas no compensables, y el mapa completo del instrumento con opciones de respuesta, referencia normativa y rol en el índice. Se concluye que el instrumento cubre las dos vías por las que el Pacto Verde afecta a una cooperativa exportadora peruana —el acceso legal al mercado y la competitividad de largo plazo—, y que la separación entre ISA-EUDR e ISA-PactoVerde es una condición de diseño necesaria para que el diagnóstico produzca recomendaciones diferenciadas, no una elección cosmética.
 
 **Palabras clave:** EUDR, Pacto Verde Europeo, cooperativas cafetaleras, cooperativas cacaoteras, Perú, índice de alineamiento, ISA, diligencia debida, trazabilidad, LMR, Farm to Fork, CSRD.
 
-> **Nota sobre cambios v0.3 (2026-10-12).** Las cuatro preguntas nuevas responden a tres recomendaciones del documento de trabajo DT-ISCAM-001 (versión 4.0): **(1) IP4 tiene solo 2 ítems** — se agregan Q22a y Q25a para fortalecer la sub-dimensión de información y documentación; **(2) IV3 tiene cobertura territorial insuficiente** — se agregan B0-13 y B0-14 al Bloque 0 para capturar dispersión por zona de riesgo y capacidad de verificación de campo; **(3) D15.Q56–Q60 requiere evaluación de comprensibilidad en piloto** — añadida nota de evaluación en la introducción de D15. Ningún cambio altera fórmulas de índice ni scores existentes.
+> **Nota sobre cambios v0.3 (2026-10-12).** Las cuatro preguntas nuevas responden a tres recomendaciones del documento de trabajo DT-ISCAM-001 (versión 4.0): **(1) IP4 tiene solo 2 ítems** — se agregan Q22a y Q25a para fortalecer la sub-dimensión de información y documentación; **(2) IV3 tiene cobertura territorial insuficiente** — se agregan B0-13 y B0-14 al Bloque 0 para capturar dispersión por zona de riesgo y capacidad de verificación de campo; **(3) D15.Q56–Q60 requiere evaluación de comprensibilidad en piloto** — añadida nota de evaluación en la introducción de D15. Ningún cambio altera fórmulas de índice ni puntajes existentes.
 
 ---
 
@@ -20,7 +20,7 @@ Documento de trabajo · versión 0.3 — actualizada según recomendaciones DT-I
 
 El Reglamento (UE) 2023/1115 sobre productos libres de deforestación —conocido como EUDR— convierte la trazabilidad del café y el cacao exportados a Europa en una condición obligatoria de acceso al mercado a partir del 30 de diciembre de 2026, fecha fijada por el Reglamento (UE) 2025/2650 tras tres postergaciones previas. Pero el EUDR es solo uno de los instrumentos del Pacto Verde Europeo que afectan a una cooperativa exportadora peruana: los Límites Máximos de Residuos de pesticidas establecidos por la Directiva 2009/128/CE y monitoreados por el sistema RASFF pueden bloquear un lote en frontera con el mismo efecto comercial que un rechazo por deforestación; la Directiva (UE) 2024/1760 sobre diligencia debida corporativa traslada obligaciones de sus propios compradores europeos hacia la cadena de suministro peruana; y los requerimientos de reporte ESG derivados de la Directiva (UE) 2022/2464 (CSRD) condicionan ya hoy el acceso a financiamiento verde y la preferencia de compradores que deben reportar su huella de cadena.
 
-El Instrumento 2 es la encuesta cuantitativa diseñada para operacionalizar este diagnóstico en una muestra de 100–150 organizaciones. Su objetivo es doble: producir un índice de preparación regulatoria ante el EUDR que oriente la priorización de asistencia técnica, y medir el alineamiento más amplio con el Pacto Verde para responder al objetivo (f) del proyecto madre —cuantificar el impacto de esa adecuación sobre la performance de las cooperativas.
+El Instrumento 2 es la encuesta cuantitativa diseñada para operacionalizar este diagnóstico en una muestra de 100–150 organizaciones. Su objetivo es doble: producir un índice de preparación regulatoria ante el EUDR que oriente la priorización de asistencia técnica, y medir el alineamiento más amplio con el Pacto Verde para responder al objetivo (f) del proyecto madre —cuantificar el impacto de esa adecuación sobre el desempeño de las cooperativas.
 
 La sección 2 encuadra los pilares del Pacto Verde con impacto verificable para este sector. La sección 3 describe la arquitectura del instrumento y el sistema de índices. La sección 4 presenta la matriz completa con opciones de respuesta, referencia normativa y rol en el índice. La sección 5 documenta las decisiones de alcance y los elementos evaluados que quedaron fuera. La sección 6 describe las cuatro banderas no compensables. La sección 7 introduce el Bloque P. La sección 8 provee la guía de llenado, y la sección 9 cierra con un glosario de acrónimos con fuentes.
 
@@ -65,7 +65,7 @@ El instrumento opera sobre 90 preguntas distribuidas en cuatro bloques. La Tabla
 | Bloque 0 | Ficha de identificación | **14** (antes 12: +B0-13 IV3-territorio, +B0-14 IV3-verificación) | No — contexto e insumos IV/IP |
 | D1–D11 | Dimensiones EUDR (núcleo + extendidas) | **60** (v0.4: +Q22a, Q25a, Q22b, Q25b para IP4; +Q28c para D7; +Q36a para D10, 2026-10-15) | ISA-EUDR (D1–D9); bandera (D10); inventario (D11) |
 | D12–D15 | Módulos Pacto Verde | 21 | ISA-PactoVerde |
-| Bloque P | Variables de performance | 14 | No — variable de resultado |
+| Bloque P | Variables de desempeño | 14 | No — variable de resultado |
 | **Total** | | **94** | |
 
 ### 3.2 Escala de madurez
@@ -344,7 +344,7 @@ La Tabla 4 presenta las 89 preguntas del instrumento con sus opciones de respues
 
 *Nota de aplicación.* Esta dimensión aplica por igual a café y cacao — es el módulo del instrumento sin sesgo de producto. El informante clave es el responsable técnico de campo, no la gerencia comercial. Q60 es bandera independiente del promedio: si la respuesta es afirmativa (rechazo real en frontera), reportarla siempre por separado sin importar el puntaje promedio de D15.
 
-> ⚠️ **Evaluación de comprensibilidad (Fase piloto, Roadmap DT-ISCAM-001 §8.1).** Antes de escalar la aplicación de D15.Q56–Q60 a las 174 organizaciones, el equipo de campo debe validar la comprensibilidad de estas cinco preguntas con 5–8 cooperativas piloto. En particular, verificar: (a) que el término "LMR" sea conocido por el técnico de campo o pueda ser traducido al vocabulario local ("límites de residuos permitidos en destino"); (b) que Q57 (protocolo interno de pesticidas) no genere confusión con la lista de pesticidas prohibidos por DIGESA/SENASA Peru — son requisitos distintos; (c) que Q59 (exigencia del comprador) aplique para organizaciones que nunca exportaron a la UE. Si el piloto revela incomprensión sistemática en alguna pregunta, documentar la alternativa lingüística usada y reportar al equipo ISCAM antes de escalar.
+> ⚠️ **Evaluación de comprensibilidad (Fase piloto, Hoja de ruta DT-ISCAM-001 §8.1).** Antes de escalar la aplicación de D15.Q56–Q60 a las 174 organizaciones, el equipo de campo debe validar la comprensibilidad de estas cinco preguntas con 5–8 cooperativas piloto. En particular, verificar: (a) que el término "LMR" sea conocido por el técnico de campo o pueda ser traducido al vocabulario local ("límites de residuos permitidos en destino"); (b) que Q57 (protocolo interno de pesticidas) no genere confusión con la lista de pesticidas prohibidos por DIGESA/SENASA Peru — son requisitos distintos; (c) que Q59 (exigencia del comprador) aplique para organizaciones que nunca exportaron a la UE. Si el piloto revela incomprensión sistemática en alguna pregunta, documentar la alternativa lingüística usada y reportar al equipo ISCAM antes de escalar.
 
 | # | Pregunta | Opciones de respuesta | Estrategia PV | Tipo | Rol | Obligación |
 |---|---|---|---|---|---|---|
@@ -421,20 +421,20 @@ A diferencia de las banderas Q10, Q36 y Q37, que son señales de riesgo potencia
 
 ---
 
-## 7. Variables de performance — Bloque P
+## 7. Variables de desempeño — Bloque P
 
 ### 7.1 Propósito
 
-El ISA-EUDR y el ISA-PactoVerde miden el nivel de preparación —son el predictor. El objetivo (f) del proyecto madre requiere además medir el impacto de esa preparación sobre resultados de negocio reales. El Bloque P recoge ese resultado en el mismo instrumento para permitir el cruce ISA↔performance sobre la misma organización sin depender de fuentes externas.
+El ISA-EUDR y el ISA-PactoVerde miden el nivel de preparación —son el predictor. El objetivo (f) del proyecto madre requiere además medir el impacto de esa preparación sobre resultados de negocio reales. El Bloque P recoge ese resultado en el mismo instrumento para permitir el cruce ISA↔desempeño sobre la misma organización sin depender de fuentes externas.
 
 ### 7.2 Limitación de diseño
 
-El levantamiento es transversal. Las preguntas P2, P5 y P7 son retrospectivas por autodeclaración —piden recordar una cifra de hace tres años—, no datos de panel verificados. Cualquier correlación ISA↔performance que resulte del análisis debe reportarse como asociación transversal con recall retrospectivo, nunca como evidencia de causalidad. Esta limitación no invalida el bloque: es la información disponible para el diseño, y es preferible una correlación con limitaciones declaradas que ningún indicador de resultado en absoluto.
+El levantamiento es transversal. Las preguntas P2, P5 y P7 son retrospectivas por autodeclaración —piden recordar una cifra de hace tres años—, no datos de panel verificados. Cualquier correlación ISA↔desempeño que resulte del análisis debe reportarse como asociación transversal con recall retrospectivo, nunca como evidencia de causalidad. Esta limitación no invalida el bloque: es la información disponible para el diseño, y es preferible una correlación con limitaciones declaradas que ningún indicador de resultado en absoluto.
 
 ### 7.3 Tabla del Bloque P
 
 **Tabla 6**
-*Bloque P — Variables de performance (v0.2)*
+*Bloque P — Variables de desempeño (v0.2)*
 
 | # | Pregunta | Opciones de respuesta | Estrategia PV | Tipo | Rol | Obligación |
 |---|---|---|---|---|---|---|
@@ -543,7 +543,7 @@ Reglamento (UE) 2025/2650 del Parlamento Europeo y del Consejo, de 19 de diciemb
 
 SAI Platform. (2022). *Farm Sustainability Assessment (FSA) version 3.0: Methodology and scoring guide*. Sustainable Agriculture Initiative Platform. https://saiplatform.org/fsa/
 
-Team Europe Initiative on Deforestation-free Value Chains. (2025). *EUDR readiness assessment: Coffee, rubber and timber value chains in Vietnam*. European Commission.
+Team Europe Initiative on Deforestation-free Value Chains. (2025). *EUDR preparación assessment: Coffee, rubber and timber value chains in Vietnam*. European Commission.
 
 UNDP. (2010). *Human Development Report 2010: The real wealth of nations — Pathways to human development*. United Nations Development Programme. https://hdr.undp.org/content/human-development-report-2010
 
@@ -555,26 +555,26 @@ Vargas, G., & Willems, S. (2017). *Línea base de deforestación en zonas cafeta
 
 *Esta sección es nueva en v0.3. Recoge los procedimientos operativos derivados de las recomendaciones del DT-ISCAM-001 (versión 4.0, sección 8.1) para la Fase 1 del piloto. Su audiencia es el equipo de campo, no el lector académico del documento.*
 
-### 10.1 Calibración de D3 con OSCE — organizaciones sin score en Neon
+### 10.1 Calibración de D3 con OSCE — organizaciones sin puntaje en Neon
 
-**Problema:** D3.Q11–Q14f se sustentan en scores Neon/OSCE para organizaciones que ya tienen inh. vigente o registro público. Para organizaciones sin score en la base Neon (`proveedores_sancionados.inhabilitaciones`), el puntaje D3 depende solo de las respuestas autodeclaradas.
+**Problema:** D3.Q11–Q14f se sustentan en puntajes Neon/OSCE para organizaciones que ya tienen inh. vigente o registro público. Para organizaciones sin puntaje en la base Neon (`proveedores_sancionados.inhabilitaciones`), el puntaje D3 depende solo de las respuestas autodeclaradas.
 
 **Procedimiento de calibración:**
 
 1. **Antes de la visita**, ejecutar consulta a Neon para el RUC de la organización:
    - Endpoint: `neon(proveedores_sancionados.inhabilitaciones)` filtrado por RUC
-   - Si el RUC aparece con inh. vigente → D3 score parcial = 0 por Neon, usar preguntas Q11–Q14f para documentar la brecha específica
+   - Si el RUC aparece con inh. vigente → D3 puntaje parcial = 0 por Neon, usar preguntas Q11–Q14f para documentar la brecha específica
    - Si el RUC no aparece → registrar "RUC no encontrado en Neon" y proceder con preguntas Q11–Q14f
 
 2. **Si el RUC no está en Neon pero la organización tiene contratos con el Estado:**
    - Consultar OSCEcheck (`oscecheck.pe`) buscando el RUC en la lista de proveedores inhabilitados
    - Descargar bulk CSV si la organización no aparece: contrastar NIT de SUNAT con la lista OSCE
 
-3. **Si la organización tiene score D3 bajo (≤2) por autodeclaración:**
-   - Marcar D3.Q11 = "No verificado" con nota de campo: "score OSCE no disponible; se requiere consulta directa a OSCE para confirmar"
+3. **Si la organización tiene puntaje D3 bajo (≤2) por autodeclaración:**
+   - Marcar D3.Q11 = "No verificado" con nota de campo: "puntaje OSCE no disponible; se requiere consulta directa a OSCE para confirmar"
    - No inventar un puntaje más alto; dejar que el diagnóstico refleje la incertidumbre
 
-4. **Después de la visita**, reportar al equipo ISCAM: organizaciones sin score OSCE verificable → список para consulta OSCE masiva
+4. **Después de la visita**, reportar al equipo ISCAM: organizaciones sin puntaje OSCE verificable → lista para consulta OSCE masiva
 
 **Responsable:** técnico de campo + responsable de datos OSCE (rol separado).  
 **Tiempo adicional estimado:** 10–15 minutos por organización.
@@ -608,7 +608,7 @@ Para cada pregunta, antes de registrado el valor:
 **Responsable:** entrevistador principal.  
 **Tiempo adicional estimado:** 5 minutos por organización.
 
-### 10.3 Checklist de verificación rápida antes de cerrar la entrevista
+### 10.3 Lista de verificación de verificación rápida antes de cerrar la entrevista
 
 *Entregar al entrevistador como ficha de control.*
 

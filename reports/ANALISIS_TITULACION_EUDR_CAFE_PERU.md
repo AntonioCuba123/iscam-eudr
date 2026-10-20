@@ -71,12 +71,12 @@ Este es quizás el problema más profundo y el menos discutido. La tierra rural 
 - **SIER**: registro de tierras eriazas
 - **Gobiernos Regionales**: competencias sobre tierras agrícolas y Recursos Naturales
 - **SERFOR / MINAGRI**: tierras forestales
-- **SUNARP**: registro de derechos第一部
+- **SUNARP**: registro de derechos
 - **GOREU**:Gobierno Regional de Ucayali y otros GORES con competencias delegadas
-- **Comunidades nativas**: titulación a través del 法令 de Comunidades Nativas
+- **Comunidades nativas**: titulación a través de la Ley de Comunidades Nativas
 - **PETT** (desaparecido, transferencias a gobiernos regionales): antiguo registro de tierras
 
-En la Amazonía, el problema se complica porque la **clasificación de la tierra** determina qué institución tiene competencia. Si la tierra está clasificada como **tierra forestal** (la mayoría de la Amazonía), la titulación como propiedad agraria está vedada o severely restringida. Si está clasificada como **tierra eriaza**, el proceso es largo y costoso. La Ley de Zonificación Ecológica Económica (ZEE), que debería resolver esta ambigüedad, tiene décadas de retraso en su implementación.
+En la Amazonía, el problema se complica porque la **clasificación de la tierra** determina qué institución tiene competencia. Si la tierra está clasificada como **tierra forestal** (la mayoría de la Amazonía), la titulación como propiedad agraria está vedada o severamente restringida. Si está clasificada como **tierra eriaza**, el proceso es largo y costoso. La Ley de Zonificación Ecológica Económica (ZEE), que debería resolver esta ambigüedad, tiene décadas de retraso en su implementación.
 
 ### 2.2 El obstáculo de la zonificación forestal
 
@@ -231,7 +231,7 @@ Imaginemos el escenario ideal: el PTRT3 cumple su meta de 132,277 títulos en zo
 | Productores de café sin título (80% de 288,647) | ~231,000 |
 | Títulos meta PTRT3 para café, cacao, palma | 132,277 (máximo teórico) |
 | Déficit restante si se cumple meta al 100% | ~100,000+ productores |
-| Tiempo disponible hasta deadline EUDR | ~14 meses (a octubre 2026) |
+| Tiempo disponible hasta fecha límite EUDR | ~14 meses (a octubre 2026) |
 | Títulos entregados por año (promedio PTRT3) | ~25,000/año (estimado) |
 
 Even with optimistic assumptions about PTRT3's coffee-specific coverage, the math is daunting. Y estos números asumen que los títulos entregados corresponden a productores activos en café, no a propietarios de tierras sin relación con la cadena.
@@ -275,7 +275,7 @@ El EUDR exige "producción de acuerdo con la legislación del país de origen" �
 
 **Registros comunitarios:** Para comunidades nativas y campesinas con territorios formalizados, los acuerdos internos pueden documentar qué productores tienen derecho a cultivar en qué parcelas.
 
-**Concesiones agroforestales:**理论上 son la herramienta correcta para la Amazonía. En la práctica, el volumen de otorgadas es marginal.
+**Concesiones agroforestales:** en teoría son la herramienta correcta para la Amazonía. En la práctica, el volumen de otorgadas es marginal.
 
 ### 6.2 Las limitantes de estas alternativas
 
@@ -497,7 +497,7 @@ La brecha de titulación rural es, simultáneamente, el mayor riesgo y la mayor 
 
 El EUDR está funcionando, aunque sea indirectamente, como un accelerador de formalización de la propiedad rural en Perú. Eso es algo que las políticas públicas de titulación por sí solas no habían logrado en 30 años.
 
-La pregunta no es si esta brecha se cierra — es si se cierra a tiempo para el deadline de diciembre 2026, y si se cierra de una manera que beneficie a los productores más vulnerables o que los deje fuera.
+La pregunta no es si esta brecha se cierra — es si se cierra a tiempo para el fecha límite de diciembre 2026, y si se cierra de una manera que beneficie a los productores más vulnerables o que los deje fuera.
 
 ---
 

@@ -1,0 +1,43 @@
+CODEMAP DIFF — 2026-10-16
+Project: C:\Users\acuba\eudrperu
+Scan: 238 code/doc files (173 *.py, 56 *.md, 8 *.html, 1 *.gs).
+Workbooks and the DUA PDF corpus were inventoried by path, not line-scanned.
+Previous codemaps: none. Diff vs prior = n/a (first baseline, not an overwrite).
+Approval gate (>30% change): not triggered.
+
+Files added
+- docs/CODEMAPS/architecture.md
+- docs/CODEMAPS/backend.md
+- docs/CODEMAPS/frontend.md
+- docs/CODEMAPS/data.md
+- docs/CODEMAPS/dependencies.md
+- .reports/codemap-diff.txt
+
+Files removed
+- none
+
+Files modified
+- none (no prior codemap bytes)
+
+New dependencies detected (first scan)
+- Python floor in requirements.txt: pandas, openpyxl, python-docx, reportlab, numpy, scipy, matplotlib
+- Used but not pinned: psycopg2, PyMuPDF, Excel COM/pywin32
+- External: ADUANET, SUNAT consulta masiva, OECE/OSCE, OEFA, MIDAGRI, PRODUCE, Neon Postgres, Docker Postgres identidad_fiscal :5438 (appsperu), Google Forms/Sheets, Apify, FAO/IPCC factors (constants, not an API)
+- Adjacent system outside this repo: appsperu/apps/identidad-fiscal (migrations 001–013, GET /eudr/cobertura not present here)
+
+Architecture captured
+- Five pipelines: universo MIDAGRI/SUNAT, FOB+DUA, matriz 174, índices ISA/IP/IV/RE, informes HTML/docx
+- Side track: ICRPP port data under data/icrpp and Scripts/icrpp_*.py
+- No HTTP surface in-repo. Excel workbooks are the operational UI.
+- Traceability chain parcela→lote→declaración exists only in the external Postgres schema and has no coordinates loaded.
+- Neon production holds migration 013 only (six empty eudr_* tables). Active DB is the local Docker instance.
+- DUA number still lives in Excel (RUC_FOB_DUA / dua_canal_final.csv). Migration 014 is not in this repo.
+- Index coding was ratified 2026-10-15 (codificacion_instrumento2.py). PARA_SEGUIR_2026-10-12.md is four days behind that ratification.
+
+Staleness
+- No Markdown file under the repo has LastWriteTime older than 90 days (cutoff 2026-07-18, checked 2026-10-16).
+- Operational handoff PARA_SEGUIR_2026-10-12.md is fresher than 90 days but lags the 2026-10-15 coding ratification and later fix_*/update_docx_* patches. Prefer the index scripts when they disagree.
+- data/icrpp source tables stop around 2017–2023. That is source vintage, not a stale codemap.
+
+Security note (not copied into the codemaps)
+- Neon DSN is hardcoded in batch_d3_*.py, batch_neon_d3*.py, oefa_rucs.py, and the connect() helpers. Codemaps name the files only.

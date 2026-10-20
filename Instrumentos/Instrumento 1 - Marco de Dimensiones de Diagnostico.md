@@ -37,19 +37,21 @@ Estas dimensiones no están en el reglamento de forma explícita como categoría
 
 ### 2.2 Módulos Pacto Verde (D12–D14) — competitividad de largo plazo
 
-Estos tres módulos corresponden a los pilares (i), (iv) y (v) del proyecto madre ISCAM ("El impacto del Pacto Verde Europeo en la performance de las cooperativas peruanas"). **No determinan el acceso al mercado bajo el EUDR** (eso lo deciden D1–D7), pero definen la resiliencia competitiva, el acceso a financiamiento verde, la preferencia de compradores europeos y la alineación con CSRD/CBAM/taxonomía.
+Estos tres módulos corresponden a los pilares (i), (iv) y (v) del proyecto madre ISCAM ("El impacto del Pacto Verde Europeo en el desempeño de las cooperativas peruanas"). **No determinan el acceso al mercado bajo el EUDR** (eso lo deciden D1–D7), pero definen la resiliencia competitiva, el acceso a financiamiento verde, la preferencia de compradores europeos y la alineación con CSRD/CBAM/taxonomía.
 
 | # | Dimensión | Módulo Pacto Verde | Qué mide | Herramienta de referencia |
 |---|---|---|---|---|
 | D12 | **Huella de carbono y gestión de emisiones GEI** | (i) Huella de carbono | Capacidad de medir, reportar y reducir huella de carbono de café/cacao exportado | **CalCafé v2.1** (PromPerú/PUCP-PELCAN, ISO 14040/44, PEFCR) — ✅ café validado; ⚠️ cacao sin equivalente identificado |
 | D13 | **Reporte de sostenibilidad y transparencia** | (iv) Reporte de sostenibilidad | Capacidad de producir información ESG estructurada, verificable, comparable (CSRD/ESRS/taxonomía) | GRI, ESRS simplificado, taxonomía verde UE |
 | D14 | **Economía circular, envases y gestión de residuos** | (v) Economía circular/envases | Prácticas de circularidad en acopio, beneficio, empaque de exportación (PPWR, "granja a mesa") | Plan Acción Economía Circular UE, PPWR (Directiva envases) |
+| D15 | **Gestión fitosanitaria y LMR** | (vi) Farm to Fork | Capacidad de identificar LMR de la UE, aplicar protocolos de control de pesticidas y prevenir rechazos en frontera por residuos — aplica igual a café y cacao | RASFF (Red de Alerta Rápida UE), Directiva 2009/128/CE (uso sostenible de plaguicidas), Estrategia Farm to Fork (-50% pesticidas al 2030) |
 
 **Scoring diferenciado:**
 - D8–D9: semáforo 0–4 igual que núcleo → entran a ISA-EUDR (D8–D9 = 12.5% peso)
 - D10: bandera de alerta invertida → **no** entra a ISA-EUDR
 - D11: inventario de cobertura → **no** entra a ISA-EUDR
-- **D12–D14: semáforo 0–4 propio → entran a ISA-PactoVerde (media aritmética simple); NO entran a ISA-EUDR**
+- **D12–D15: semáforo 0–4 propio → entran a ISA-PactoVerde (media aritmética simple); NO entran a ISA-EUDR**
+- **ISA-PactoVerde = (D12 + D13 + D14 + D15) / 4** (cuatro módulos: i huella de carbono, iv reporte de sostenibilidad, v economía circular, vi Farm to Fork/LMR)
 - **ISA-Completo = 0.70 × ISA-EUDR + 0.30 × ISA-PactoVerde** (pesos a validar en piloto)
 
 ---
@@ -65,12 +67,12 @@ Ver el análisis completo en `Instrumento 7`. En resumen, se evaluaron y se deci
 
 **Actualización 2026-10-08:** los módulos Pacto Verde (huella de carbono, reporte sostenibilidad, economía circular/envases) **sí se incluyen** como D12–D14 — no son criterios de cumplimiento EUDR, son criterios de **competitividad bajo el Pacto Verde completo**. Ver `Instrumento 7` para la justificación detallada del cambio.
 
-Esto no significa que estos temas sean irrelevantes para la cooperativa en general — solo que **no deben competir por prioridad ni presupuesto** con las dimensiones que sí determinan el acceso al mercado europeo (D1–D7).
+**Actualización 2026-10-09:** se agrega **D15 (Gestión fitosanitaria y LMR, módulo vi Farm to Fork)** — los LMR de pesticidas son una vía de exclusión del mercado europeo que opera en paralelo al EUDR y que aplica por igual a café y cacao. Es el pilar del Pacto Verde con mayor impacto operativo inmediato después del EUDR para este sector. Ver `Instrumento 2`, §D15 y `Instrumento 7`, §3 para justificación.
 
 ---
 
 ## 4. Cómo se usa este marco
 
 - **Diagnóstico EUDR-only / gran número de cooperativas:** aplicar solo D1–D9 (núcleo + extendidas EUDR), vía el Instrumento 2 (encuesta) y el panel digital. Genera **ISA-EUDR**.
-- **Diagnóstico Pacto Verde completo / cooperativas prioritarias o con financiamiento de cooperación:** aplicar **D1–D14 completas**, combinando encuesta + entrevista (Instrumento 3). Genera **ISA-EUDR + ISA-PactoVerde + ISA-Completo**.
-- Las dimensiones extendidas EUDR (D8–D9) y módulos Pacto Verde (D12–D14) están diseñadas para añadirse sin romper la comparabilidad de D1–D7 entre cooperativas evaluadas solo con el núcleo.
+- **Diagnóstico Pacto Verde completo / cooperativas prioritarias o con financiamiento de cooperación:** aplicar **D1–D15 completas**, combinando encuesta + entrevista (Instrumento 3). Genera **ISA-EUDR + ISA-PactoVerde + ISA-Completo**.
+- Las dimensiones extendidas EUDR (D8–D9) y módulos Pacto Verde (D12–D15) están diseñadas para añadirse sin romper la comparabilidad de D1–D7 entre cooperativas evaluadas solo con el núcleo.

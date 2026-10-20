@@ -28,7 +28,7 @@
 - IV5 (Riesgo social y comercial) ← D7 + fracción de D8.
 
 **Vacíos reales, ya redactados en Instrumento 2 (2026-09-16):**
-- **P1b** (Bloque P) — volumen total exportado a todos los destinos, cierra IV1. Esta misma pregunta, además, cierra parcialmente el gap de "% volumen trazable" que el propio Comparativa (§3.3) marcó como faltante para la validación externa de ISCAM.
+- **P1b** (Bloque P) — volumen total exportado a todos los destinos, cierra IV1. Esta misma pregunta, además, cierra parcialmente la brecha de "% volumen trazable" que el propio Comparativa (§3.3) marcó como faltante para la validación externa de ISCAM.
 - **2 ítems nuevos en Bloque 0** — dispersión geográfica de los socios (concentrados/dispersos por distrito-provincia) y distancia al centro de acopio, cierran la parte real del vacío de IV3.
 
 **Vacíos que resultaron NO ser reales, al revisar el instrumento con más cuidado antes de escribir preguntas nuevas:**
@@ -73,7 +73,7 @@ Con IP (Remapeo D1-D9) e IV (este documento) definidos:
 RE_c = IV_c · (1 − IP_c/100)
 ```
 
-Interpretación: una cooperativa muy vulnerable (IV alto) pero muy preparada (IP alto) tiene RE bajo — la preparación *modera* la vulnerabilidad, tal como lo plantea la Hipótesis 3 del proyecto madre (ver Comparativa §1, fila "Operacionalización de impacto en performance/exclusión"). Esto ya es calculable en el piloto interno (artifact online) una vez se agreguen las 3-4 preguntas nuevas de IV1/IV3 al Bloque 0/P.
+Interpretación: una cooperativa muy vulnerable (IV alto) pero muy preparada (IP alto) tiene RE bajo — la preparación *modera* la vulnerabilidad, tal como lo plantea la Hipótesis 3 del proyecto madre (ver Comparativa §1, fila "Operacionalización de impacto en desempeño/exclusión"). Esto ya es calculable en el piloto interno (artifact en línea) una vez se agreguen las 3-4 preguntas nuevas de IV1/IV3 al Bloque 0/P.
 
 ---
 
@@ -93,7 +93,7 @@ El punto de corte alto/bajo (mediana muestral vs. umbral fijo) se decide con los
 ## 6. Pendientes después de este diseño
 
 - [x] Redactar las preguntas nuevas realmente faltantes (§2): P1b (IV1) y los 2 ítems de dispersión geográfica (IV3), ya incorporadas en `Instrumento 2 - Encuesta Cuantitativa.md` (2026-09-16).
-- [x] Agregar esas mismas 3 preguntas al artifact online — hecho 2026-09-16, mismo patrón ya usado para 14a/14b/14c y RUC. Documento y artifact vuelven a estar sincronizados.
+- [x] Agregar esas mismas 3 preguntas al artifact en línea — hecho 2026-09-16, mismo patrón ya usado para 14a/14b/14c y RUC. Documento y artifact vuelven a estar sincronizados.
 - [x] Agregar "% de mujeres en la directiva" a Bloque 0 e IV5 (§3.1) — hecho 2026-09-16, incorporada a `Instrumento 2 - Encuesta Cuantitativa.md`.
 - [x] **Fracción de D8 que cuenta como "fricción" para IV5 — cerrado 2026-09-17.** Es **D8.30** (% de socios que entienden por qué se les pide geolocalización/documentación), invertida: `fricción_D8_c = 100 − D8.30_c`. Es el único ítem de D8 que mide directamente la brecha de comprensión/aceptación del socio de base — D8.29 (asambleas realizadas) y D8.31 (mecanismo de entrega) miden esfuerzo institucional, no resistencia del socio; D8.32 (rotación de directiva) mide continuidad, no fricción. Usar solo D8.30 evita diluir IV5 con ítems que no miden resistencia real.
 - [ ] Ejecutar el panel AHP para validar pesos de IP e IV juntos (Fase 1 ISCAM) — sigue pendiente desde el Remapeo, ahora se puede hacer en una sola ronda para ambos índices.

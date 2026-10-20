@@ -1,0 +1,1756 @@
+{
+  "base_osce": "proveedores_sancionados",
+  "base_oea": "infracciones_ambientales",
+  "timestamp": "2026-10-15 11:59:01 UTC",
+  "total_rucs": 174,
+  "results": {
+    "20118578415": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20129156083": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20129529530": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20132489824": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20132505455": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20132509795": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20132509876": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20132517119": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20136201132": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20136201213": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 1,
+      "infracciones_ambientales_detalle": [
+        {
+          "expediente": "0827-2019-OEFA/DFAI/PAS",
+          "fecha": "2019-11-26",
+          "tipo_sancion": null,
+          "multa_uit": "0",
+          "detalle": "El administrado realizó el cierre de sus actividades sin contar con un Plan de Cierre aprobado por la DGAA"
+        }
+      ],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20140292657": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20143692010": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20145484597": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20146696041": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20147443120": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20166786861": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20170142773": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20200880448": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20352417018": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20352423921": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393152207": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393593670": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393692228": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393786044": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393816211": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393882868": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20393972000": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20447888701": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20450189201": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20450207544": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20450242021": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20450319423": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20452774705": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20479595276": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20479622699": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20479856258": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20479917141": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20480458550": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20480762895": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20484163902": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20485945815": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20486094657": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20486255090": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20486668335": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20486876019": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20486973219": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20487242994": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20487351343": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20487661539": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20490726196": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20493934822": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20493959574": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20494126819": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20494145791": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20494699690": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20525969551": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20526514689": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20527565376": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20528996214": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20529801433": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20529822350": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20531405723": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20531441797": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20534524774": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20539205600": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20539241665": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20539280644": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542209951": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542251990": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542257416": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542264544": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542289024": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542299330": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542311569": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542380455": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542482886": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20542825163": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20561140091": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20564032485": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568071281": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568080948": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568190450": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568194951": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568428375": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568549083": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568560133": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568567731": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568609833": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20568962282": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20570706927": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20572111131": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20572190251": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20573049102": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20573057385": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20573138202": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20573260008": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20573344791": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20574797013": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600001109": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600010086": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600029887": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600146689": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600200756": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600263286": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600382064": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600390911": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600529693": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600668430": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600682386": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600720733": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600785541": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600796683": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600796721": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600874919": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20600964080": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601067146": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601119316": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601186986": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601329159": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601339090": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601537771": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601558204": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601667526": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601919657": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601939402": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20601958911": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602047025": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602054480": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602161081": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602194265": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602242464": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602488927": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602650643": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602712657": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20602881971": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603320621": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603526423": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603557825": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603675551": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603676476": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603820691": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603829515": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603842511": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20603862369": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604151954": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604215600": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604309728": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604401187": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604705411": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20604988200": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20605228489": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20605500430": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20605688170": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20606041382": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20606451122": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20606485281": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20606556331": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20606717475": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20607265624": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20607382604": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20607536016": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20607558559": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20607775185": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20608235648": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20608294512": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20608478311": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20609025353": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20609555395": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20609846314": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20610739491": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20610772553": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20611316616": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20611935243": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    },
+    "20612331821": {
+      "inhabilitaciones": 0,
+      "tiene_inhabilitacion_vigente": false,
+      "inhabilitaciones_detalle": [],
+      "multas": 0,
+      "multas_detalle": [],
+      "infracciones_ambientales": 0,
+      "infracciones_ambientales_detalle": [],
+      "d3_senal": "SIN_HALLAZGOS"
+    }
+  }
+}

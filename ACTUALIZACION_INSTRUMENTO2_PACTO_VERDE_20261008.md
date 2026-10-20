@@ -132,3 +132,108 @@ ISA-Completo = 0.70 × ISA-EUDR + 0.30 × ISA-PactoVerde
 ---
 
 *Documento generado automáticamente tras actualización 2026-10-08. Verificar consistencia cruzada entre los 4 archivos modificados antes de piloto.*
+
+---
+
+# Actualización Instrumento 2 — Cierre de sesgo Pacto Verde café/cacao (D15 + ajustes)
+
+**Fecha:** 2026-10-09
+**Motivo:** corregir tres sesgos identificados en análisis de cobertura: (1) D12 anclado a CalCafé/solo café, (2) D13 sin escala intermedia adaptada al universo objetivo, (3) pilares Pacto Verde ausentes — Farm to Fork/LMR es la brecha de mayor impacto operativo sin dimensión propia.
+
+---
+
+## Resumen de cambios
+
+### 1. Instrumento 2 — Encuesta Cuantitativa (`Instrumentos/Instrumento 2 - Encuesta Cuantitativa.md`)
+
+**Renombrado:** D1–D11 + Desempeño → **D1–D15 + Desempeño** | v0.2
+
+| Cambio | Tipo | Q afectadas |
+|---|---|---|
+| Encabezado: actualizado a D1–D15, total 89 preguntas | Editorial | — |
+| **D7 — nueva Q28b** presión CSDDD del comprador | Pregunta nueva | Q28b |
+| **D12 — Q40 reformulada** producto-neutral (café y cacao sin sesgo CalCafé-only) | Modificación | Q40 |
+| **D12 — Encabezado** actualizado: herramienta por producto, instrucción cacao | Aclaración editorial | — |
+| **D13 — nueva Q44b** escala de entrada nivel 0→1 | Pregunta nueva | Q44b |
+| **D15 (nueva)** Gestión fitosanitaria y LMR — módulo Pacto Verde vi, Farm to Fork | Dimensión nueva | Q56–Q60 |
+| **Bloque P v0.2** — P13 (exigencias PV del comprador) y P14 (financiamiento verde) | Preguntas nuevas | P13, P14 |
+| **Nota de puntaje** actualizada: D12–D15 entran a ISA-PactoVerde; Q60 es bandera | Editorial | — |
+
+**Total preguntas:** 89 (antes 80: +1 Q28b D7, +1 Q44b D13, +5 D15, +2 P13/P14)
+
+### 2. Instrumento 1 — Marco de Dimensiones (`Instrumentos/Instrumento 1 - Marco de Dimensiones de Diagnostico.md`)
+
+- Tabla módulos Pacto Verde: añadida fila **D15** (Gestión fitosanitaria y LMR, módulo vi, RASFF/Directiva 2009/128/CE/Farm to Fork)
+- Scoring diferenciado: `ISA-PactoVerde = (D12 + D13 + D14 + D15) / 4`
+- Cómo se usa: referencias actualizadas a D1–D15 y D12–D15
+
+### 3. Metodología ISA (`ISCAM/Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md`)
+
+- Alcance actualizado a 2026-10-09: módulo (vi) Farm to Fork, D15
+- ISA-PactoVerde: fórmula actualizada a 4 módulos `(D12 + D13 + D14 + D15) / 4`
+- Umbral mínimo ISA-PactoVerde: ≥3 de 4 dimensiones (antes ≥2 de 3)
+- Q60 D15 declarada bandera independiente (no entra al promedio)
+- PCA y Cronbach: actualizados a D1–D15
+- Informantes: D15 = gerencia + responsable técnico de campo
+
+---
+
+## Nueva arquitectura ISA-PactoVerde
+
+```
+ISA-PactoVerde (módulos i + iv + v + vi)
+  D12: Huella de carbono — módulo (i)
+  D13: Reporte de sostenibilidad — módulo (iv)
+  D14: Economía circular/envases — módulo (v)
+  D15: Fitosanitarios/LMR — módulo (vi) Farm to Fork ← NUEVO
+
+ISA_PactoVerde_i = (D12_i + D13_i + D14_i + D15_i) / 4
+
+ISA_Completo_i = 0.70 × ISA_EUDR_i + 0.30 × ISA_PactoVerde_i
+```
+
+---
+
+## Justificación de D15 vs. no-dimensión
+
+| Factor | Decisión |
+|---|---|
+| ¿Afecta acceso al mercado UE directamente? | **Sí** — rechazo en frontera por LMR tiene el mismo efecto que rechazo por deforestación |
+| ¿Encaja en D1–D9 existentes? | No — LMR no es legalidad peruana (D3) ni posición en cadena de valor (D7) |
+| ¿Aplica por igual a café y cacao? | **Sí** — elimina el sesgo café/cacao de D12 (CalCafé) |
+| ¿Tiene referente normativo UE claro? | **Sí** — Directiva 2009/128/CE, RASFF, Farm to Fork -50% pesticidas 2030 |
+| ¿Por qué no entra al ISA-EUDR? | El reglamento 2023/1115 no regula residuos de pesticidas; va al ISA-PactoVerde como competitividad de largo plazo |
+
+---
+
+## Pilares del Pacto Verde — estado de cobertura post-actualización
+
+| Pilar | Normativa UE principal | Cobertura en instrumento |
+|---|---|---|
+| (i) Huella de carbono / GEI | Taxonomía UE, CSRD, CBAM | ✅ D12 (producto-neutral desde 2026-10-09) |
+| (ii) Deforestación / trazabilidad | EUDR 2023/1115 | ✅ D1–D7 núcleo |
+| (iii) Diligencia debida DD.HH./ambiente | EUDR Art. 2(40) | ✅ D1–D9, D3 completo |
+| (iv) Reporte de sostenibilidad | CSRD/ESRS, taxonomía | ✅ D13 (con Q44b escala intermedia) |
+| (v) Economía circular / envases | PPWR, Plan EC UE 2020 | ✅ D14 |
+| (vi) Farm to Fork / LMR pesticidas | Directiva 2009/128/CE, RASFF | ✅ **D15 (nuevo 2026-10-09)** |
+| CSDDD (presión del comprador) | Directiva 2024/1760/UE | ✅ D7.Q28b (captura traslado contractual) |
+| Financiamiento verde / taxonomía | Taxonomía UE, SFDR | ✅ P14 (variable de resultado) |
+| Biodiversidad | Regl. Restauración Naturaleza 2024 | ⚠️ Cubierta en encuesta productores Q55; sin peso en ISA. Decisión de alcance documentada. |
+| CBAM | Regl. (UE) 2023/956 | ❌ No aplica a café/cacao (sectores cubiertos: acero, cemento, electricidad, fertilizantes, aluminio, hidrógeno) |
+
+---
+
+## Próximos pasos (Lista de verificación — post 2026-10-09)
+
+- [ ] Actualizar `Instrumentos/Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` (estructura: 89 preguntas, informante D15)
+- [ ] Actualizar `Instrumentos/Instrumento 3 - Guia de Entrevista Semiestructurada.md` con bloque D15
+- [ ] Actualizar `Instrumentos/Instrumento 4 - Matriz de Brechas y Oportunidades.md` (semáforo D15, fila en matriz)
+- [ ] Actualizar `Instrumentos/Instrumento 5 - Ficha de Triaje Rapido.md` (¿D15 como criterio de alerta en triaje?)
+- [ ] Actualizar `Instrumentos/Instrumento 7 - Evaluacion Critica y Elementos Adicionales.md` §3 (D15 justificación) y §5 (implementación digital 15 dimensiones)
+- [ ] Actualizar `Scripts/matriz_data.py` (esquema columnas D15 Q56–Q60, fórmulas ISA-PactoVerde 4 módulos)
+- [ ] Actualizar `Instrumentos/Estructura Google Sheet - Respuestas Instrumento 2.md` (89 columnas)
+- [ ] Pilotear Q56–Q60 (D15) y Q28b, Q44b, P13, P14 en 5–8 cooperativas — verificar comprensibilidad y tasa de respuesta
+
+---
+
+*Documento actualizado 2026-10-09. Verificar consistencia entre los 4 archivos modificados (Instrumento 2, Instrumento 1, Metodología ISA, este documento) antes del piloto.*

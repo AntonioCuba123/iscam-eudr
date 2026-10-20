@@ -1,13 +1,13 @@
 # Fuentes y Endpoints — Ficha RUC SUNAT/eudrperu
 
-> Ricardo |生成: 2026-09-22
+> Ricardo | Generado: 2026-09-22
 
 ---
 
 ## 1 · rucs.txt
 **Contenido:** Lista de 598 RUCs (solo el número, sin más campos).
 
-**Fuente de origen:** Es el universo de consulta — fue la **base de partida** para cruzar con todas las demás fuentes. No es un dataset público per se; es el input que define el universo de cooperativas agrarias.
+**Fuente de origen:** Es el universo de consulta — fue la **base de partida** para cruzar con todas las demás fuentes. No es un dataset público per se; es la entrada que define el universo de cooperativas agrarias.
 
 ---
 
@@ -29,7 +29,7 @@
 ---
 
 ## 3 · ruc-oece-ficha.txt
-**Contenido:** Ficha de organizaciones — razón social, tipo de empresa, estado SUNAT, condición, ubicación, teléfono, email, código de registro. (597 registros).
+**Contenido:** Ficha de organizaciones — razón social, tipo de empresa, estado SUNAT, condición, ubicación, teléfono, correo, código de registro. (597 registros).
 
 ### Fuentes oficiales para re-construir o ampliar
 
@@ -77,7 +77,7 @@
 ---
 
 ## 6 · ruc-padron-ppa.txt
-**Contenido:** Padrón de Productores Agrarios (PPA) — RUC, flag registrado, nombre. (597 registros).
+**Contenido:** Padrón de Productores Agrarios (PPA) — RUC, indicador de registro, nombre. (597 registros).
 
 ### Fuentes oficiales para re-construir o ampliar
 

@@ -1,6 +1,6 @@
 # Protocolo de Aplicación — Tarea B: Bloque Directiva (D1, D5, D6, D7, D9, D10)
 
-**Qué resuelve este documento:** la Checklist (`Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`) dejó la Tarea B con 6 pasos (B1–B6). El paso B3 ("aplicar el bloque D1/D5/D6/D7/D9/D10") **ya está resuelto** — el `Instrumento 3 - Guia de Entrevista Semiestructurada.md` ya trae las preguntas de entrevista para las seis dimensiones, dirigidas a directiva/gerencia. No hay que crear un guion nuevo.
+**Qué resuelve este documento:** la lista de verificación (`Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`) dejó la Tarea B con 6 pasos (B1–B6). El paso B3 ("aplicar el bloque D1/D5/D6/D7/D9/D10") **ya está resuelto** — el `Instrumento 3 - Guia de Entrevista Semiestructurada.md` ya trae las preguntas de entrevista para las seis dimensiones, dirigidas a directiva/gerencia. No hay que crear un guion nuevo.
 
 Lo que faltaba, y que ningún instrumento existente cubre explícitamente, es la parte operativa: **a quién se entrevista según cada dimensión, con qué muestra, y cómo se cruza D10 contra los datos de productores**. Eso es lo que resuelve este protocolo (B1, B2, B5, B6).
 
@@ -60,15 +60,15 @@ El Instrumento 3 asume "gerencia y personal técnico" como bloque genérico. En 
 
 Cada vez que se cierre una cooperativa (campo + directiva completos), actualizar la tabla resumen de cobertura del `Puente - Mapeo Encuesta Productor a Dimensiones D1-D11.md`:
 - Mover la fila de la dimensión correspondiente de "Aplicar Instrumento 2 a directiva/gerencia" a "Cubierto — ver ficha de [nombre de cooperativa] en la Brújula".
-- Mantener el Puente como documento de **diseño del mapeo** (no como bitácora de campo) — el detalle de qué cooperativa está en qué estado va en la Brújula de Diligencia, no aquí. El Puente solo se actualiza para reflejar que el gap de diseño ya fue cerrado en la práctica, la primera vez que ocurre.
+- Mantener el Puente como documento de **diseño del mapeo** (no como bitácora de campo) — el detalle de qué cooperativa está en qué estado va en la Brújula de Diligencia, no aquí. El Puente solo se actualiza para reflejar que la brecha de diseño ya fue cerrado en la práctica, la primera vez que ocurre.
 
 ---
 
-## Checklist de cierre de la Tarea B por cooperativa
+## Lista de verificación de cierre de la Tarea B por cooperativa
 
 - [ ] Identificado el informante por dimensión (B1) y registrado su cargo.
 - [ ] Cooperativa priorizada según triaje (B2), con su categoría de riesgo anotada.
 - [ ] Entrevista aplicada con el guion del Instrumento 3, D1/D5/D6/D7/D9/D10 (B3 — ya resuelto, solo ejecutar).
 - [ ] Resultados cargados en la Brújula de Diligencia (B4), semáforo D1–D9 completo (no parcial).
 - [ ] Cruce D10 directiva-productores realizado y clasificado en uno de los 4 casos (B5).
-- [ ] Puente actualizado si esta cooperativa cierra por primera vez un gap de diseño (B6).
+- [ ] Puente actualizado si esta cooperativa cierra por primera vez una brecha de diseño (B6).

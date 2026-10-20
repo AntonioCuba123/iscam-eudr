@@ -90,9 +90,9 @@ Una cooperativa muy vulnerable (IV alto) pero muy preparada (IP alto) tiene RE b
 
 ## 6. Panel AHP — validación de pesos
 
-El 20% parejo por sub-dimensión (§3, §4) es un default, no una decisión final. El panel AHP (Saaty 1980) lo reemplaza con pesos derivados de comparaciones pareadas de 8–10 expertos (5 grupos: EUDR/legal, gremios/cooperativas, certificación, cooperación técnica, académico ISCAM), en dos matrices 5×5 independientes (IP y IV — nunca un peso relativo IP-vs-IV, porque esa relación ya está fija en RE).
+El 20% parejo por sub-dimensión (§3, §4) es un valor predeterminado, no una decisión final. El panel AHP (Saaty 1980) lo reemplaza con pesos derivados de comparaciones pareadas de 8–10 expertos (5 grupos: EUDR/legal, gremios/cooperativas, certificación, cooperación técnica, académico ISCAM), en dos matrices 5×5 independientes (IP y IV — nunca un peso relativo IP-vs-IV, porque esa relación ya está fija en RE).
 
-**El punto donde más se falla:** agregar las matrices de los expertos por **media geométrica elemento-por-elemento (método AIJ)**, nunca promediando los pesos ya calculados de cada experto por separado (método AIP) — Forman & Peniwati (1998). Sensibilidad obligatoria: correlación de Spearman entre ranking con pesos AHP y ranking con pesos iguales.
+**El punto donde más se falla:** agregar las matrices de los expertos por **media geométrica elemento-por-elemento (método AIJ)**, nunca promediando los pesos ya calculados de cada experto por separado (método AIP) — Forman & Peniwati (1998). Sensibilidad obligatoria: correlación de Spearman entre ordenamiento con pesos AHP y ordenamiento con pesos iguales.
 
 **Diagrama completo del proceso (6 pasos, con el contraste AIJ vs. AIP):** https://claude.ai/code/artifact/fdf332b1-897d-43ad-b182-0bda5465067a
 **Instrumento de captura ya construido:** https://claude.ai/code/artifact/323b416c-1678-4fd0-a5c9-b02b7d874f1e
@@ -112,7 +112,7 @@ Panel real **aún no convocado** — depende del equipo del proyecto madre (Fase
 
 ---
 
-## 8. Checklist de 6 pilares para publicación Q1/Q2 (auto-evaluación, criterio propio de ISCAM)
+## 8. Lista de verificación de 6 pilares para publicación Q1/Q2 (auto-evaluación, criterio propio de ISCAM)
 
 | Pilar | Estado |
 |---|---|
@@ -133,7 +133,7 @@ Panel real **aún no convocado** — depende del equipo del proyecto madre (Fase
 - [x] **Fracción de D8 que cuenta como "fricción" para IV5 — cerrado 2026-09-17.** D8.30 invertida (100 − D8.30); ver `Diseno - Indice de Vulnerabilidad (IV-ISCAM).md`.
 - [x] **Bootstrap adoptado como estándar de robustez — cerrado 2026-09-17** (regla documentada en Metodología ISA §4; ejecución espera datos reales del piloto).
 - [ ] Fijar el corte alto/bajo de la matriz de tipología 2×2 — depende de datos reales del piloto (Fase 2/3 del plan a 75 días). Único ítem que sigue bloqueado por falta de datos, no por decisión pendiente.
-- [x] **Territorio como nivel de agregación con score propio — cerrado 2026-09-17.** Regla `RE_territorio = promedio(RE_c)` documentada en Metodología ISA §5; ejecución espera datos reales.
+- [x] **Territorio como nivel de agregación con puntaje propio — cerrado 2026-09-17.** Regla `RE_territorio = promedio(RE_c)` documentada en Metodología ISA §5; ejecución espera datos reales.
 
 ---
 

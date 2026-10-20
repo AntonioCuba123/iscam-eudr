@@ -1,6 +1,6 @@
-# Instrumento 3 — Guía de Entrevista Semiestructurada (D1–D14)
+# Instrumento 3 — Guía de Entrevista Semiestructurada (D1–D15)
 
-**Serie:** parte del paquete de 7 instrumentos. Ficha técnica y quién responde qué: `Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md`. Alcance/frecuencia de aplicación: `Uso de Resultados y Alcance de Aplicacion.md`. Aplicar con gerencia y personal técnico (40–55 min si se incluyen D8–D11; **55–75 min si se incluyen D12–D14**; 30–45 min si solo D1–D7). Esta guía completa (D1–D14) también está disponible como pestaña de referencia dentro del panel digital "Brújula de Diligencia".
+**Serie:** parte del paquete de 7 instrumentos. Ficha técnica y quién responde qué: `Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md`. Alcance/frecuencia de aplicación: `Uso de Resultados y Alcance de Aplicacion.md`. Aplicar con gerencia y personal técnico (40–55 min si se incluyen D8–D11; **55–75 min si se incluyen D12–D14**; **75–90 min con D15 incluida**; 30–45 min si solo D1–D7). Esta guía completa (D1–D15) también está disponible como pestaña de referencia dentro del panel digital "Brújula de Diligencia".
 
 ### Apertura
 - "Cuéntenos brevemente cómo está organizada la cooperativa en cuanto a acopio y exportación: ¿venden directo o a través de un tercero?"
@@ -65,19 +65,20 @@
 - "¿Conocen algún programa de apoyo (SERFOR, MIDAGRI, PNCB, gobierno regional, algún gremio) que no hayan usado todavía? ¿Por qué no lo han usado — no lo conocían, no califican, no confían?"
 
 ### D12 — Huella de carbono y gestión de emisiones GEI *(módulo Pacto Verde i)*
-- "¿Conocen la herramienta **CalCafé v2.1** (para café) para calcular la huella de carbono? ¿La han usado o intentado usar?"
-- "¿Llevan registro de los insumos necesarios para calcular la huella: fertilizantes por campaña, combustible en maquinaria y transporte, energía del beneficio, distancia finca-acopio?"
-- "¿Han calculado la huella de carbono de su café/cacao de exportación en los últimos 2 años? ¿Con qué herramienta — estimación interna, CalCafé, verificación externa?"
+- "¿Conocen alguna herramienta o metodología para calcular la huella de carbono de su producto de exportación? Para café, la referencia es **CalCafé v2.1** (PromPerú, gratuita); para cacao no hay equivalente nacional validado — ¿han usado alguna otra herramienta (del comprador, consultoría, COSA tool)?"
+- "¿Llevan registro de los insumos necesarios para calcular la huella: fertilizantes por campaña, combustible en maquinaria y transporte, energía del beneficio, distancia finca-acopio? *(La pregunta aplica igual para café y cacao.)*"
+- "¿Han calculado la huella de carbono de su café/cacao de exportación en los últimos 2 años? ¿Con qué herramienta — estimación interna, herramienta validada, verificación externa?"
 - "¿Tienen un objetivo cuantificado de reducción de emisiones (ej. -X% al 2030)? ¿Es público, con plan de acción, o solo interno?"
 - "¿Reportan su huella de carbono a compradores o plataformas (ej. CDP, plataforma del comprador)? ¿Regularmente o solo si se lo piden?"
-> **Nota:** para cacao no hay equivalente a CalCafé v2.1 identificado. Si exportan ambos, preguntar por el producto principal y anotar la brecha en cacao.
+> **Nota de aplicación:** las preguntas son válidas para café y cacao por igual. Para café, anotar si conocen CalCafé v2.1; para cacao, anotar qué alternativa usan o si no usan ninguna — esa brecha debe quedar registrada explícitamente, no se imputa ni se omite.
 
 ### D13 — Reporte de sostenibilidad y transparencia *(módulo Pacto Verde iv)*
+- "¿Elaboran actualmente algún documento que recoja indicadores de su desempeño ambiental, social o de gestión, aunque sea informal y para uso interno? *(La respuesta puede ser desde un registro básico de insumos hasta un reporte formal según GRI o ESRS — cualquier nivel de documentación es válido.)*"
 - "¿Elaboran algún reporte anual de sostenibilidad o memoria de responsabilidad social? ¿Es público, interno, informal, o según algún estándar (GRI, ESRS simplificado)?"
 - "¿El reporte incluye indicadores ambientales (deforestación, huella carbono, agua, biodiversidad, residuos)? ¿Con metas o solo descriptivos?"
 - "¿El reporte incluye indicadores sociales (trabajo infantil, trabajo forzoso, igualdad salarial, participación de mujeres, salud ocupacional)?"
 - "¿El reporte incluye indicadores de gobernanza (estructura directiva, anticorrupción, gestión de riesgos, canal de denuncias)?"
-- "¿La información reportada es verificada/auditada por un tercero independiente? (No / Auto-declarada / Verificación parcial / Auditoría completa externa)"
+- "¿La información reportada es verificada/auditada por un tercero independiente?"
 - "¿Comparten proactivamente el reporte con compradores europeos y partes interesadas, o solo bajo petición?"
 
 ### D14 — Economía circular, envases y gestión de residuos *(módulo Pacto Verde v)*
@@ -86,6 +87,14 @@
 - "¿Hay plan de reducción/eliminación de plásticos de un solo uso en la cadena (bolsas, film, flejes, etiquetas)?"
 - "¿Se comercializa o transforma algún residuo/subproducto (cáscara → biocombustible, mucílago → bioinsumos, agua tratada → riego)?"
 - "¿Existe registro de qué envases salen, cuáles retornan y qué residuos se generan por lote exportado?"
+
+### D15 — Gestión fitosanitaria y LMR *(módulo Pacto Verde vi, Farm to Fork)*
+- "¿Conocen los LMR — Límites Máximos de Residuos de Pesticidas — de la Unión Europea que aplican a su producto? ¿Saben si alguno de esos LMR ha generado alertas del sistema RASFF para café o cacao peruano?" *(Si no saben qué es el RASFF, explicar brevemente: es la red de alerta rápida de la UE que notifica cuando un lote de importación supera los límites permitidos. Un registro RASFF puede bloquear a toda la categoría de producto de un país de origen.)*
+- "¿Tienen un protocolo que les diga a los socios qué pesticidas no pueden usar porque superan los LMR de la UE, aunque estén permitidos en Perú?"
+- "¿Hacen análisis de residuos de pesticidas sobre el producto que van a exportar? ¿Cómo, con qué frecuencia, dónde archivan los resultados?"
+- "¿El comprador europeo les ha pedido alguna vez un certificado de análisis de residuos o una declaración de cumplimiento de LMR?"
+- "¿Han tenido algún lote retenido o rechazado en la frontera de la UE por exceso de residuos de pesticidas en los últimos 3 años?" *(Si la respuesta es "Sí", registrar textualmente — es una bandera de alto impacto independiente del puntaje promedio de D15.)*
+> **Nota de aplicación:** esta dimensión aplica por igual a café y cacao — es el módulo del instrumento sin sesgo de producto. El responsable de campo (quien supervisa las prácticas agronómicas en las parcelas de los socios) es el informante clave, más que la gerencia comercial.
 
 ### Cierre
 - "Si tuvieran que priorizar una sola cosa para resolver en los próximos 6 meses relacionada con esto, ¿cuál sería?"
@@ -97,7 +106,7 @@
 
 - Reservar las preguntas **D8–D14** para la submuestra de cooperativas donde se busca un diagnóstico integral (ver Instrumento 6); en un levantamiento masivo, limitarse a D1–D7.
 - La pregunta de D10 requiere tacto: el objetivo es detectar una creencia real, no corregirla en el momento ni hacer sentir a la cooperativa que su certificación "no vale" — solo el EUDR específicamente no está cubierto por ella.
-- **D12–D14 (módulos Pacto Verde):** aplicar solo en diagnóstico completo Pacto Verde (submuestra prioritaria). D12 requiere responsable técnico/calidad; D13 requiere gerencia + comunicación; D14 requiere gerencia + operaciones/beneficio (ver Ficha Técnica).
+- **D12–D15 (módulos Pacto Verde):** aplicar solo en diagnóstico completo Pacto Verde (submuestra prioritaria). D12 requiere responsable técnico/calidad; D13 requiere gerencia + comunicación; D14 requiere gerencia + operaciones/beneficio; **D15 requiere gerencia + responsable técnico de campo** (ver Ficha Técnica).
 - Registrar citas textuales cuando sea posible, especialmente en D8, D10, D12 y D13 — son las dimensiones donde el dato cualitativo (cómo lo dicen) importa tanto como la clasificación en la escala.
 
 ---

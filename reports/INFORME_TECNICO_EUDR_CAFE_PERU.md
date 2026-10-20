@@ -12,7 +12,7 @@
 
 Perú es el **noveno exportador mundial de café** y la **Unión Europea es su principal destino comercial**, absorbiendo entre el 40% y el 49% del valor exportado según el año. El Reglamento (UE) 2023/1115 sobre productos libres de deforestación (EUDR) establece que, desde el 30 de diciembre de 2026, todo lote de café que ingrese al mercado europeo debe demostrar que fue producido en parcelas no deforestadas después del 31 de diciembre de 2020, que cumple la legislación del país de origen y que cuenta con una declaración de debida diligencia presentada al sistema TRACES de la UE antes del embarque.
 
-La adaptación de la cadena de café peruana al EUDR es un proceso **en curso, desigual y de alto riesgo operacional**. El Estado peruano ha construido infraestructura pública significativa —geolocalización de más de 181,000 parcelas, interoperabilidad con plataformas satelitales internacionales, plataforma nacional EUDR— pero la cobertura es aún parcial. Las cooperativas organizadas con compradores europeos comprometidos van avanzan con trazabilidad real; los pequeños productores independientes y los medianos exportadores están rezagados. El análisis sectorial más conservador estima que **más del 55% del volumen de exportación de café peruano corre riesgo si no se cierra la brecha de trazabilidad antes del deadline**.
+La adaptación de la cadena de café peruana al EUDR es un proceso **en curso, desigual y de alto riesgo operacional**. El Estado peruano ha construido infraestructura pública significativa —geolocalización de más de 181,000 parcelas, interoperabilidad con plataformas satelitales internacionales, plataforma nacional EUDR— pero la cobertura es aún parcial. Las cooperativas organizadas con compradores europeos comprometidos van avanzan con trazabilidad real; los pequeños productores independientes y los medianos exportadores están rezagados. El análisis sectorial más conservador estima que **más del 55% del volumen de exportación de café peruano corre riesgo si no se cierra la brecha de trazabilidad antes de la fecha límite**.
 
 ---
 
@@ -76,7 +76,7 @@ El universo de exportadores de café peruano es amplio y asimétrico:
 | **Cooperativa Norandino** | **46** | **Única coop. en top 10** |
 | Cafetalera Amazónica (ECOM) | 41 | Multinacional/Empresa |
 
-**Dato estructural clave:** de los 10 principales exportadores, solo **1 es cooperativa** (Norandino). El resto son empresas, muchas con estructura de跨国 corporation. Esto tiene implicaciones directas para el cumplimiento del EUDR: las empresas tienen más recursos y sistemas internos para la debida diligencia; las cooperativas representan a miles de pequeños productores pero operan con menos capital tecnológico.
+**Dato estructural clave:** de los 10 principales exportadores, solo **1 es cooperativa** (Norandino). El resto son empresas, muchas con estructura de corporación transnacional. Esto tiene implicaciones directas para el cumplimiento del EUDR: las empresas tienen más recursos y sistemas internos para la debida diligencia; las cooperativas representan a miles de pequeños productores pero operan con menos capital tecnológico.
 
 ---
 
@@ -133,7 +133,7 @@ La segunda modificación del EUDR (diciembre 2025) introdujo simplificaciones qu
 
 - **La DDS ahora la presenta solo el primer operador** que coloca el producto en el mercado europeo (el importador de registro), no cada actor posterior de la cadena
 - Se redujo la documentación duplicada en cadenas con múltiples actores
-- Se，允许 el uso de declaraciones grupales para productores organizados bajo ciertas condiciones
+- Se permite el uso de declaraciones grupales para productores organizados bajo ciertas condiciones
 - Se clarified la definición de " parcela" y los casos de producción en sistemas agroforestales
 
 ### 2.6 Productos derivados de café cubiertos
@@ -325,7 +325,7 @@ Proyecto de Solidaridad con el Instituto para el Desarrollo Sostenible de la Ama
 
 ### 5.5 El modelo de "marcha blanca" (piloto de exportación)
 
-La estrategia nacional incluye exportaciones piloto que funcionan como **simulacros de cumplimiento normativo real**: el exportador prepara toda la documentación EUDR, la presenta a la autoridad competente (virtualmente), y realiza el embarque bajo condiciones controladas. Esto permite identificar cuellos de botella antes del deadline.
+La estrategia nacional incluye exportaciones piloto que funcionan como **simulacros de cumplimiento normativo real**: el exportador prepara toda la documentación EUDR, la presenta a la autoridad competente (virtualmente), y realiza el embarque bajo condiciones controladas. Esto permite identificar cuellos de botella antes de la fecha límite.
 
 **Exportaciones piloto registradas:**
 - 45+ toneladas de café organizadas en la fase inicial (junio 2025) con organizaciones como Satipo, Sonomoro, APROCAM, Gera Organero
@@ -491,7 +491,7 @@ A mayo de 2026, MIDAGRI ha mapeado cerca de **200 normas nacionales** potencialm
 
 ### 8.2 Casos de éxito documentados
 
-**Corporación Perhusa:** presentに立ち responsAbility ante el Forest 500 Report 2026 que sus parcelas de café cumplen EUDR según análisis de mapas oficiales de deforestación. Es la empresa que más café exporta en volumen (468,300 sacos en 2025).
+**Corporación Perhusa:** presentó responsAbility ante el Forest 500 Report 2026 que sus parcelas de café cumplen EUDR según análisis de mapas oficiales de deforestación. Es la empresa que más café exporta en volumen (468,300 sacos en 2025).
 
 **Cooperativa Norandino:** la única cooperativa en el top 10 de exportadores. Con trayectoria en comercio justo y orgánico, tiene sistemas internos de trazabilidad desarrollados.
 
@@ -503,7 +503,7 @@ A mayo de 2026, MIDAGRI ha mapeado cerca de **200 normas nacionales** potencialm
 
 ### 8.3 Proyecciones de riesgo sectorial
 
-El análisis sectorial más conservador y citations frecuentes estiman que **más del 55% del volumen de exportación de café peruano está en riesgo si no se cierra la brecha de trazabilidad antes del deadline de diciembre 2026**.
+El análisis sectorial más conservador y citations frecuentes estiman que **más del 55% del volumen de exportación de café peruano está en riesgo si no se cierra la brecha de trazabilidad antes de la fecha límite de diciembre 2026**.
 
 Esta estimación se basa en:
 - El volumen que proviene de productores sin geolocalización ni titulación
@@ -560,7 +560,7 @@ El costo de adaptación al EUDR tiene varios componentes:
 
 ## DIMENSIÓN 11: TENDENCIAS Y PERSPECTIVAS
 
-### 11.1 El EUDR ya está generando cambios antes del deadline
+### 11.1 El EUDR ya está generando cambios antes de la fecha límite
 
 Aunque la entrada en aplicación es el 30 de diciembre de 2026, **el EUDR ya está transformando las prácticas**:
 
@@ -625,7 +625,7 @@ El 80% de los pequeños productores sin título de propiedad no se resuelve con 
 
 Con el 72% del valor exportado explicado por ~62 empresas, el universo de actores que necesita sistemas formales de debida diligencia es manejable. Si las principales empresas y cooperativas están alineadas, la mayor parte del comercio con la UE puede continuar sin disrupción. El problema son los 135+ exportadores restantes y los miles de pequeños productores independientes.
 
-### Conclusión 5: El deadline de diciembre 2026 es real e implacable
+### Conclusión 5: El fecha límite de diciembre 2026 es real e implacable
 
 La normativa ha sido prorrogada tres veces. La cuarta no debería esperarse. Para diciembre 2026, los importadores europeos tendrán la obligación legal de presentar la DDS. Los exportadores peruanos que no puedan entregar la información a sus compradores a tiempo enfrentarán problemas comerciales concretos. El margen de acción se está reduciendo.
 
@@ -644,7 +644,7 @@ La normativa ha sido prorrogada tres veces. La cuarta no debería esperarse. Par
 ### Para cooperativas y asociaciones
 
 6. **Invertir en sistemas internos de control** (SIC) como base sobre la cual montar la trazabilidad EUDR. Los sistemas alineados al EUDR se construyen sobre la calidad del control interno.
-7. **Digitalizar la gestión de datos de productores** antes del deadline. La diferencia entre cumplir y no cumplir frecuentemente no es la tecnología, sino el registro ordenado de la información que ya existe.
+7. **Digitalizar la gestión de datos de productores** antes de la fecha límite. La diferencia entre cumplir y no cumplir frecuentemente no es la tecnología, sino el registro ordenado de la información que ya existe.
 8. **Establecer protocolos de segregación de lotes** EUDR vs. no-EUDR desde la cosecha, no desde el acopio final.
 
 ### Para exportadores

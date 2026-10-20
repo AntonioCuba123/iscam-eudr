@@ -2,7 +2,7 @@
 
 **Qué es este documento:** la versión corregida del formulario de campo (`Encuesta - Formularios de Google.pdf`, v1, 108 preguntas), lista para reconstruir manualmente en Google Forms. No se editó el Google Form original desde aquí — ese acceso no está disponible en este entorno — así que este `.md` es el material fuente para que alguien con acceso a la cuenta de Google Forms aplique los 4 cambios de la Tarea A.
 
-**Cambios aplicados frente a v1** (checklist `Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`, Tarea A):
+**Cambios aplicados frente a v1** (lista de verificación `Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`, Tarea A):
 - **A1 —** eliminada la pregunta 90 de v1, duplicado literal de la 89. Se conserva una sola pregunta.
 - **A2 —** eliminada la pregunta 104 de v1, duplicado de la 105. Se conserva la versión con la definición extendida de GEI.
 - **A3 —** agregada pregunta nueva de seguimiento condicional a la Q20 (certificaciones), para operacionalizar la bandera D10 del Instrumento 2.

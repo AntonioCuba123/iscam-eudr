@@ -3,7 +3,7 @@
 **Actualización 2026-09-16 (segunda pasada):** además de JNC y APPCACAO, se mapearon otras 4 fuentes reales que amplían o cruzan el marco muestral. La más importante es el **Directorio Nacional de Cooperativas de PRODUCE** — es literalmente la fuente que nombra la metodología del proyecto madre ("encuesta PRODUCE/CENACOOP"), y tiene una categoría específica "COOPERATIVAS AGRARIAS CAFETALERAS".
 
 
-**Qué es esto:** avance de la Tarea C1/C2 de la Checklist (`Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`). Es información pública recogida por búsqueda web el 2026-09-16 — **no es el directorio oficial completo** de ninguna de las dos instituciones. Ambas fuentes tienen limitaciones reales documentadas abajo. Sirve para arrancar la construcción del marco muestral (Metodología del ISA, §1), no para cerrarlo.
+**Qué es esto:** avance de la Tarea C1/C2 de la lista de verificación (`Checklist - Correccion de Encuesta y Aplicacion de Instrumento 2.md`). Es información pública recogida por búsqueda web el 2026-09-16 — **no es el directorio oficial completo** de ninguna de las dos instituciones. Ambas fuentes tienen limitaciones reales documentadas abajo. Sirve para arrancar la construcción del marco muestral (Metodología del ISA, §1), no para cerrarlo.
 
 ---
 

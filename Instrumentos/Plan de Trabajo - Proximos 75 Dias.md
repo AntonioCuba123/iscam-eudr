@@ -70,7 +70,7 @@ Esta fase depende de que la Fase 0 haya dado al menos una respuesta parcial (ej.
 | Recalcular IP/IV/RE con datos reales del piloto | 🟢 | Exportar la Google Sheet de respuestas y cargarla en el Excel `Modelo de Calculo - ISA-IP-IV-RE-AHP.xlsx`, reemplazando las 8 filas de ejemplo sintético por los datos reales de las 15–25 cooperativas piloto. |
 | Fijar el corte alto/bajo de la matriz de tipología 2×2 | 🟢 | Ahora sí con mediana muestral real, no arbitraria (documentado como pendiente en el Diseño IV). |
 | Verificación de sensibilidad (Spearman, pesos AHP vs. pesos iguales) | 🟢 | Paso 6 del proceso AHP — obligatorio antes de reportar cualquier resultado como definitivo. |
-| Validar Bloque P con el equipo madre (si respondieron en Fase 0) | 🟡 | Confirmar si los 10 indicadores de performance siguen siendo los que el objetivo (f) necesita, o si requieren ajuste. |
+| Validar Bloque P con el equipo madre (si respondieron en Fase 0) | 🟡 | Confirmar si los 10 indicadores de desempeño siguen siendo los que el objetivo (f) necesita, o si requieren ajuste. |
 
 **Entregable de fase:** pesos AHP reales (no 20% parejo), ISA/IP/IV/RE calculados con datos reales de 15–25 cooperativas, matriz de tipología con corte real, y validación (o ajuste) de Bloque P.
 

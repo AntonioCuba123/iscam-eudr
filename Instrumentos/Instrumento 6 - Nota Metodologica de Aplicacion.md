@@ -41,7 +41,7 @@ El detalle de quién responde cada bloque/dimensión de Instrumento 2 específic
 
 - `Ficha Tecnica y Guia de Aplicacion - Instrumento 2.md` — ficha técnica, guía metodológica resumida y guía de llenado de Instrumento 2 específicamente (universo, muestra, quién responde cada bloque, banderas especiales). Esta nota (Instrumento 6) cubre el alcance de aplicación de los instrumentos 2–5 en conjunto, no reemplaza a esa ficha.
 - `Instrumento 1` (marco) — referencia conceptual antes de aplicar cualquier encuesta.
-- `Protocolo de Cumplimiento_...pdf` — fuente de la checklist operativa que sustenta las preguntas de D5.
+- `Protocolo de Cumplimiento_...pdf` — fuente de la lista de verificación operativa que sustenta las preguntas de D5.
 - `Informe Técnico_...pdf` — fundamento técnico de "riesgo despreciable" que sustenta D4.
 - `Fe de Erratas - Actualizacion Reglamento 2025-2650.md` — **usar siempre** para comunicar a las cooperativas las fechas y categorías ya corregidas (30 dic. 2026 / 30 jun. 2027, corte PYME 31 dic. 2024) y no las fechas originales que aparecen en las guías de mayo 2025.
 - `Instrumento 7 - Evaluacion Critica y Elementos Adicionales.md` — justificación de por qué el marco incluye D8–D14 y excluye otros temas (blockchain, género, "certificación EUDR").

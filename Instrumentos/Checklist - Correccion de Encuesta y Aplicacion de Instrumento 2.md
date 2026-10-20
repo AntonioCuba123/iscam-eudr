@@ -1,6 +1,6 @@
-# Checklist — Tareas pendientes para cerrar la alineación operativa
+# Lista de verificación — Tareas pendientes para cerrar la alineación operativa
 
-Referencia: `Puente - Mapeo Encuesta Productor a Dimensiones D1-D11.md` (gaps identificados), `Instrumento 7 - Evaluacion Critica y Elementos Adicionales.md` (decisiones de alcance) y `Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md` (diseño del ISA).
+Referencia: `Puente - Mapeo Encuesta Productor a Dimensiones D1-D11.md` (brechas identificados), `Instrumento 7 - Evaluacion Critica y Elementos Adicionales.md` (decisiones de alcance) y `Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md` (diseño del ISA).
 
 **Aclaración de estado (2026-09-16):** ninguna cooperativa tiene datos reales todavía. El PDF de la encuesta de campo es el **formulario vacío** (estructura de preguntas, sin respuestas). Los dos casos en la Brújula de Diligencia son ejemplos marcados `esEjemplo:true`. Esto **reordena las prioridades**: no hay nada que "corregir en datos ya recolectados" — todo el trabajo pendiente es de diseño y de arranque de campo real. La Tarea A (corregir el form) se puede aplicar ya mismo, sin ningún costo de migración de respuestas, porque no hay respuestas que migrar. Las Tareas C y D (nuevas, abajo) son ahora bloqueantes reales antes de que la Tarea B tenga sentido: no se puede entrevistar directiva de "la muestra" si la muestra todavía no existe como lista concreta de organizaciones.
 
@@ -8,7 +8,7 @@ Referencia: `Puente - Mapeo Encuesta Productor a Dimensiones D1-D11.md` (gaps id
 
 **Avances 2026-09-16 (posteriores al reordenamiento de arriba):**
 - El **Bloque P** (Tarea D) ya está insertado en el Instrumento 2 — ver Tarea D abajo, actualizada.
-- El Instrumento 2 completo (Bloque 0 + Bloque P + D1–D11) ya existe como **encuesta aplicable online**, con guardado compartido en vivo para piloto interno: https://claude.ai/code/artifact/5b99e447-cbce-46e6-ae84-195b3ea34fbd — cada módulo trae descripción y ayuda de llenado. Sirve directamente para ejecutar **C7**. Limitación conocida: solo funciona para gente de la organización de Claude del usuario — no apto todavía para las 100–150 cooperativas externas (ver Tarea C).
+- El Instrumento 2 completo (Bloque 0 + Bloque P + D1–D11) ya existe como **encuesta aplicable en línea**, con guardado compartido en vivo para piloto interno: https://claude.ai/code/artifact/5b99e447-cbce-46e6-ae84-195b3ea34fbd — cada módulo trae descripción y ayuda de llenado. Sirve directamente para ejecutar **C7**. Limitación conocida: solo funciona para gente de la organización de Claude del usuario — no apto todavía para las 100–150 cooperativas externas (ver Tarea C).
 - La **Metodología del ISA** se corrigió en tres puntos reales (no cosméticos): agregación aritmética → **geométrica híbrida** en D1–D9 (evita que una dimensión núcleo en 0 quede "escondida" por un promedio alto en otras), post-estratificación por celda → **raking** (más estable con 100–150 casos repartidos en ~24 celdas), y se agregó **PCA** como chequeo de robustez de los pesos una vez haya datos reales. Ver `Metodologia...md` §0, §2.3, §3, §4.
 
 ---
@@ -37,11 +37,11 @@ Estas seis dimensiones no tienen ninguna fuente de dato todavía porque dependen
   - D5 (sistema de diligencia debida) y D6 (capacidad organizacional/digital) → responsable técnico o de cumplimiento, si existe el cargo.
   - D9 (sostenibilidad económica) → tesorería o gerencia administrativa.
   - D10 (confusión certificación/EUDR) → puede aplicarse tanto a la directiva como triangularse con lo que ya se sabe de los productores (Q20/Q23 del form), pero **la pregunta núcleo de D10 debe hacerse a nivel organización**, no inferirse solo de productores.
-- [ ] **B2. Seleccionar la muestra de cooperativas** a las que se aplicará esta ronda — idealmente cruzando con el Instrumento 5 (Ficha de Triaje Rápido) para priorizar por riesgo/tamaño antes de gastar tiempo de entrevista en las 100+ preguntas restantes del framework.
+- [ ] **B2. Seleccionar la muestra de cooperativas** a las que se aplicará esta ronda — idealmente cruzando con el Instrumento 5 (Ficha de Triaje Rápido) para priorizar por riesgo/tamaño antes de gastar tiempo de entrevista en las 100+ preguntas restantes del marco.
 - [ ] **B3. Aplicar el bloque D1, D5, D6, D7, D9, D10 del Instrumento 2** (formato entrevista estructurada, no encuesta auto-administrada — ver Instrumento 3 para el guion de entrevista semiestructurada que puede adaptarse a estos bloques).
 - [ ] **B4. Registrar los resultados en la Brújula de Diligencia** (Artifact ya implementado) para la cooperativa correspondiente, completando el semáforo D1–D9 que hoy solo puede calcularse parcialmente con datos de campo (D2, D3, D4).
 - [ ] **B5. Cruzar D10 (bandera de falsa seguridad) obtenida de la directiva contra la percepción de los productores** (Q20/Q23 del form, una vez corregido con A3) — si hay una brecha grande entre lo que cree la directiva y lo que creen los productores, documentarlo como hallazgo aparte (posible mensaje interno inconsistente sobre el tema).
-- [ ] **B6. Actualizar el Puente** con los datos reales obtenidos, moviendo cada dimensión de "gap" a "cubierto" en la tabla resumen de cobertura, a medida que se van cerrando cooperativa por cooperativa.
+- [ ] **B6. Actualizar el Puente** con los datos reales obtenidos, moviendo cada dimensión de "brecha" a "cubierto" en la tabla resumen de cobertura, a medida que se van cerrando cooperativa por cooperativa.
 
 ---
 
@@ -55,22 +55,22 @@ Ver `Metodologia - Indice de Alineamiento (ISA) y Marco Muestral.md`, §1. Sin e
 - [ ] **C4. Obtener los totales poblacionales del último CENAGRO disponible** por región/producto — no como marco de selección, sino como insumo de calibración ex-post (Metodología §3). Esto puede hacerse en paralelo, no bloquea el inicio de C1-C3.
 - [ ] **C5. Construir la tabla de cuotas real** (Producto × Vía de exportación × Tamaño × Territorio) a partir de C1-C3, y verificar qué celdas de la Metodología §1.2 tienen incidencia real baja o nula en el universo peruano (ej. cooperativas "grandes" de cacao) para ajustar la meta por celda en vez de forzarla.
 - [ ] **C6. Seleccionar las 5-8 organizaciones piloto** (Metodología §1.4) cubriendo al menos 3 de las celdas de mayor incidencia esperada.
-- [ ] **C7. Aplicar el piloto** con el Instrumento 2 v2 (con 14a/14b y Bloque P) — ya disponible como encuesta online con guardado en vivo: https://claude.ai/code/artifact/5b99e447-cbce-46e6-ae84-195b3ea34fbd. Revisar tiempo de aplicación, comprensibilidad y no-respuesta por ítem antes de escalar a las 100-150 organizaciones. Activar el enlace desde el menú de compartir del artifact para que el equipo del piloto pueda responder.
+- [ ] **C7. Aplicar el piloto** con el Instrumento 2 v2 (con 14a/14b y Bloque P) — ya disponible como encuesta en línea con guardado en vivo: https://claude.ai/code/artifact/5b99e447-cbce-46e6-ae84-195b3ea34fbd. Revisar tiempo de aplicación, comprensibilidad y no-respuesta por ítem antes de escalar a las 100-150 organizaciones. Activar el enlace desde el menú de compartir del artifact para que el equipo del piloto pueda responder.
 - [ ] **C8. (nuevo, depende de C7) Correr el Análisis de Componentes Principales (PCA)** sobre los datos de la primera ronda completa — no del piloto de 5-8 casos, que no alcanza — para validar el esquema de pesos de la Metodología §2.3/§4. No es bloqueante para avanzar a B, pero sí para reportar el ISA como definitivo en vez de provisional.
 
 > Nota: esto es trabajo de campo/gestión institucional (contactar gremios, pedir directorios), no de escritorio — no lo puedo ejecutar yo directamente, pero puedo ayudar a redactar la solicitud formal a JNC/APPCACAO/MIDAGRI si es útil, o buscar si alguno de estos directorios ya es público.
 
-## Tarea D — Definir la variable de performance (objetivo f del proyecto madre)
+## Tarea D — Definir la variable de desempeño (objetivo f del proyecto madre)
 
-Ver `Metodologia...md`, §5. **Actualización 2026-09-16:** D1 ya tiene un borrador aplicable — se agregó el **Bloque P** al `Instrumento 2 - Encuesta Cuantitativa.md` con 10 preguntas de performance (volumen exportado UE, N° compradores europeos, precio pagado al socio, rechazos/pérdida de contratos, cada una con su versión retrospectiva a 3 años). Falta la validación formal con el equipo del proyecto madre antes del levantamiento definitivo, pero ya no bloquea el piloto (Tarea C7).
+Ver `Metodologia...md`, §5. **Actualización 2026-09-16:** D1 ya tiene un borrador aplicable — se agregó el **Bloque P** al `Instrumento 2 - Encuesta Cuantitativa.md` con 10 preguntas de desempeño (volumen exportado UE, N° compradores europeos, precio pagado al socio, rechazos/pérdida de contratos, cada una con su versión retrospectiva a 3 años). Falta la validación formal con el equipo del proyecto madre antes del levantamiento definitivo, pero ya no bloquea el piloto (Tarea C7).
 
 - [x] **D1 (borrador).** Bloque P insertado en el Instrumento 2 — pendiente solo la validación/ajuste con el equipo del proyecto madre, no el diseño desde cero.
 - [ ] **D1b. Validar el Bloque P con el equipo del proyecto madre** — confirmar que los 4 indicadores elegidos (volumen, N° compradores, precio al socio, rechazos/pérdida de contrato) son los que ellos esperan, o ajustar antes de que el piloto los fije de facto.
 - [x] **D2 (resuelto por diseño).** El Bloque P ya incluye la solución de "proxy retrospectivo" (P2, P5, P7 preguntan la cifra de hace 3 años) para aproximar tendencia sin necesitar panel real — documentado en el propio Bloque P y en la Metodología §5 como limitación explícita a declarar en cualquier reporte (asociación transversal, no causalidad).
-- [x] **D3 (resuelto).** Las preguntas de performance ya están insertadas — como Bloque P propio, no dentro del Bloque 0 (más limpio: el Bloque 0 es identificación fija de la organización, el Bloque P es resultado de negocio, tienen naturalezas distintas). El modelo de análisis (correlación, cuartiles) quedó documentado en la Metodología del ISA, §5.
+- [x] **D3 (resuelto).** Las preguntas de desempeño ya están insertadas — como Bloque P propio, no dentro del Bloque 0 (más limpio: el Bloque 0 es identificación fija de la organización, el Bloque P es resultado de negocio, tienen naturalezas distintas). El modelo de análisis (correlación, cuartiles) quedó documentado en la Metodología del ISA, §5.
 
 ---
 
 ## Orden recomendado
 
-**A → C → B, con D en paralelo a B una vez que exista variable de performance decidida.** A no depende de nada (edición de un formulario vacío, sin datos que preservar) y puede hacerse ya. C es hoy el verdadero cuello de botella: sin marco muestral real no hay a quién aplicarle ni el Instrumento 2 ni el Protocolo de Tarea B. D puede decidirse en paralelo a C/B porque es una conversación con el equipo del proyecto madre, no un paso de campo — pero debe estar resuelta antes de reportar cualquier resultado sobre "impacto en performance", o el entregable prometerá algo que la metodología en curso no puede sustentar.
+**A → C → B, con D en paralelo a B una vez que exista variable de desempeño decidida.** A no depende de nada (edición de un formulario vacío, sin datos que preservar) y puede hacerse ya. C es hoy el verdadero cuello de botella: sin marco muestral real no hay a quién aplicarle ni el Instrumento 2 ni el Protocolo de Tarea B. D puede decidirse en paralelo a C/B porque es una conversación con el equipo del proyecto madre, no un paso de campo — pero debe estar resuelta antes de reportar cualquier resultado sobre "impacto en desempeño", o el entregable prometerá algo que la metodología en curso no puede sustentar.

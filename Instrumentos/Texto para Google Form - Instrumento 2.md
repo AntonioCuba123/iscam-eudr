@@ -54,7 +54,7 @@
 
 **Texto de encabezado de sección:** "Esta sección mide resultados de negocio, no madurez de cumplimiento. Las preguntas que piden una cifra de hace 3 años son un recuerdo aproximado, no un dato verificado — tómelo como referencia, no como registro exacto."
 
-**Destino:** P1/P1b/P3/P4 alimentan IV1 (presión UE) del índice; P3 + B0.4 permiten derivar los indicadores PVE P1 (productividad) y P2 (ingreso neto USD/ha) de `MATRIZ_174`; P11 coincide con la columna `AK` (Score trazabilidad). Este bloque no puntúa dimensiones ISCAM.
+**Destino:** P1/P1b/P3/P4 alimentan IV1 (presión UE) del índice; P3 + B0.4 permiten derivar los indicadores PVE P1 (productividad) y P2 (ingreso neto USD/ha) de `MATRIZ_174`; P11 coincide con la columna `AK` (Puntaje de trazabilidad). Este bloque no puntúa dimensiones ISCAM.
 
 | # | Pregunta | Tipo de campo | Opciones |
 |---|---|---|---|
@@ -119,7 +119,7 @@
 | D3.14h | ¿La organización cuenta con autorizaciones ambientales vigentes para su planta y actividad (EIA, DIA, certificación forestal o certificado de habilitación, según corresponda)? | Opción múltiple | Sí, vigentes y verificadas / Parcial, alguna falta o está vencida / No / No aplica (sin actividad que la requiera) |
 | D3.14i | ¿Existe algún proceso sancionador vigente de OEFA, SINEFA u otra autoridad ambiental contra la organización o sus socios? | Opción múltiple | Sí, vigente y sin resolver / Sí, en proceso de resolución / No / No sabe |
 
-**Destino:** variables `aut_ambiental` y `sancion_oea` del proxy; dimensión D3 (`ISCAM_Score!G`); D3.14i actualiza `MATRIZ_174!U` (hoy solo score OSCE con corte a abril 2024) y alimenta la bandera `ISCAM_Score!AD` e `X` (IV4).
+**Destino:** variables `aut_ambiental` y `sancion_oea` del proxy; dimensión D3 (`ISCAM_Score!G`); D3.14i actualiza `MATRIZ_174!U` (hoy solo puntaje OSCE con corte a abril 2024) y alimenta la bandera `ISCAM_Score!AD` e `X` (IV4).
 
 ## Sección 6 — D4: Riesgo de deforestación
 
@@ -287,7 +287,7 @@
 | D2.5b | Nueva (rama) — trazabilidad de proveedores externos | ídem + bandera D2.10; variable `traza_ext` |
 | D3.12 | Modificada — opción ANP / zona de amortiguamiento | `ISCAM_Score!G` (D3); variable `anp` |
 | D3.14h | Nueva — autorizaciones ambientales vigentes | `ISCAM_Score!G`; variable `aut_ambiental` |
-| D3.14i | Nueva — sanción OEFA/SINEFA vigente | `MATRIZ_174!U` (reemplaza el score OSCE histórico, corte 2024-04); bandera `ISCAM_Score!AD`; `X` (IV4) |
+| D3.14i | Nueva — sanción OEFA/SINEFA vigente | `MATRIZ_174!U` (reemplaza el puntaje OSCE histórico, corte 2024-04); bandera `ISCAM_Score!AD`; `X` (IV4) |
 | D4.15 | Modificada — precisa el cruce GEOSERFOR/PNCB/GFW | `ISCAM_Score!H` (D4); variable `cruce_deforest` |
 | D4.15a | Nueva — alertas activas de deforestación | `ISCAM_Score!H`; `Q` (IP2 `√(D3×D4)`); variable `alerta_deforest` |
 | D6.22 | Modificada — distingue partida de tecnología y datos | `ISCAM_Score!J` (D6); componente CAPAC (`PONDERADORES!A15`) |
@@ -314,4 +314,4 @@
 | R9 | Nueva — % energía renovable | `MATRIZ_174!AM` (P13) |
 | R10 | Nueva — % residuos gestionados | `MATRIZ_174!AN` (P14) |
 
-**Con este anexo, las 36 variables del proxy quedan cubiertas** (17 ya lo estaban, 6 por fusión en preguntas existentes, 13 por preguntas nuevas). Pendiente fuera del Form: hoja de codificación 0-4 → 0-100 y hoja de ingesta con join por RUC, que hoy no existen en la Plantilla.
+**Con este anexo, las 36 variables del proxy quedan cubiertas** (17 ya lo estaban, 6 por fusión en preguntas existentes, 13 por preguntas nuevas). Pendiente fuera del Form: hoja de codificación 0-4 → 0-100 y hoja de ingesta con unión por RUC, que hoy no existen en la Plantilla.
