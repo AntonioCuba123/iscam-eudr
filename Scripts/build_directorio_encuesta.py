@@ -613,6 +613,105 @@ for c, w in zip("ABCDEFGHI", (30, 18, 48, 30, 10, 62, 14, 12, 34)):
     wi.column_dimensions[c].width = w
 wi.freeze_panes = "B5"
 
+# CORREOS: textos listos por intermediario (completar los [corchetes] antes de enviar)
+FIRMA = ("Atentamente,\n[Nombre completo]\n[Cargo] – [Institución / proyecto]\n[Teléfono / WhatsApp] · [Correo]")
+CONDICIONES = (
+    "Algunos detalles del estudio:\n"
+    "• La participación es voluntaria y la encuesta toma unos [XX] minutos (por teléfono, videollamada o formulario en línea).\n"
+    "• Los datos de contacto se usarán solo para coordinar la encuesta, conforme a la Ley N.° 29733 de Protección de Datos "
+    "Personales. Los resultados se presentarán de forma agregada, sin identificar a personas.\n"
+    "• Con gusto compartiremos los resultados generales del estudio.\n\n"
+    "Si alguna de estas organizaciones ya no está activa o cambió de nombre, también nos sería muy útil saberlo.")
+INTRO = ("Le saluda [nombre], [cargo] de [institución / proyecto]. Estamos realizando un estudio sobre la preparación de las "
+         "organizaciones de productores de café y cacao del Perú frente al Reglamento de la Unión Europea sobre productos libres "
+         "de deforestación (EUDR). Como parte del estudio, aplicaremos una encuesta breve a organizaciones de la base de MIDAGRI.")
+
+
+def lista_orgs(g, por_region=False):
+    fmt = lambda r: f"• {r.Organización} (RUC {r.RUC}) – {r.Distrito}, {r.Región.title()}"
+    if not por_region:
+        return "\n".join(fmt(r) for r in g.itertuples(index=False))
+    bloques = []
+    for reg, gg in g.groupby("Región"):
+        bloques.append(f"{reg.title()}:\n" + "\n".join(fmt(r) for r in gg.itertuples(index=False)))
+    return "\n\n".join(bloques)
+
+
+def correo(k, g):
+    nombre_i, tipo, contacto, _ = INTERMEDIARIOS[k]
+    n = len(g)
+    orgs_txt = "organización" if n == 1 else "organizaciones"
+    para = " · ".join(sorted(set(re.findall(r"[\w.+-]+@[\w-]+\.[\w.-]+", contacto)))) or contacto
+    if tipo == "Entidad pública":
+        if k == "DEVIDA":
+            para = "Mesa de partes virtual: https://sistemas.devida.gob.pe/mesadepartesvirtual/"
+        asunto = "Solicitud de información de contacto de organizaciones de productores de café y cacao, con fines de investigación"
+        cuerpo = (f"Señores\n{nombre_i}\nPresente.-\n\n"
+                  "Por medio del presente me dirijo a ustedes para saludarles. " + INTRO[INTRO.index("Estamos"):] + "\n\n"
+                  f"No contamos con datos de contacto actualizados de {n} {orgs_txt} que, según información pública, "
+                  f"{'es' if n == 1 else 'son'} o {'ha' if n == 1 else 'han'} sido {'atendida' if n == 1 else 'atendidas'} por su institución. Solicitamos su apoyo, a través de la oficina zonal o dirección "
+                  "que corresponda, para obtener un teléfono o correo de su gerente o presidente, o para hacerles llegar esta "
+                  "comunicación y que puedan escribirnos directamente.\n\n"
+                  f"Organizaciones:\n{lista_orgs(g, por_region=(k == 'DEVIDA'))}\n\n{CONDICIONES}\n\n"
+                  "Agradecemos de antemano su atención y quedamos atentos a su respuesta.\n\n" + FIRMA)
+    else:
+        asunto = f"Solicitud de apoyo para contactar a {n} {orgs_txt} de café y cacao (estudio EUDR)"
+        extra = ""
+        if k == "NORANDINO":
+            extra = ("\n\nSegún información pública, algunas de estas organizaciones serían bases de Norandino o se ubican en su "
+                     "zona de acopio. Si alguna no lo es, le agradeceremos indicárnoslo.")
+        uno = n == 1
+        cuerpo = (f"Estimado equipo de {nombre_i}:\n\n{INTRO}\n\n"
+                  f"No contamos con datos de contacto actualizados de {'una organización que' if uno else 'un grupo de organizaciones que'}, "
+                  f"según información pública, {'trabaja' if uno else 'trabajan'} con ustedes o se {'ubica' if uno else 'ubican'} "
+                  "en su ámbito. Le agradeceríamos mucho que nos facilite un teléfono o correo de su gerente o presidente, o bien "
+                  f"que le{'' if uno else 's'} reenvíe este mensaje para que nos escriba{'' if uno else 'n'} directamente."
+                  f"{extra}\n\n{'Organización' if uno else 'Organizaciones'}:\n{lista_orgs(g)}\n\n{CONDICIONES}\n\n"
+                  "Muchas gracias de antemano por su apoyo.\n\n" + FIRMA)
+    return nombre_i, para, asunto, cuerpo, n
+
+
+def correo_muni(muni, g):
+    asunto = "Solicitud de contacto de organizaciones de productores de café y cacao del distrito (estudio EUDR)"
+    cuerpo = (f"Estimados señores de la {muni}:\n\n{INTRO}\n\n"
+              "Nos dirigimos a ustedes para solicitar, de ser posible, el contacto de las siguientes asociaciones y cooperativas "
+              f"de productores de su jurisdicción:\n\n{lista_orgs(g)}\n\n"
+              "Agradeceremos que nos indiquen la oficina o persona encargada del padrón de organizaciones agrarias "
+              "(Gerencia de Desarrollo Económico o Agencia Agraria), o que les hagan llegar este mensaje.\n\n"
+              f"{CONDICIONES}\n\nMuchas gracias por su apoyo.\n\n" + FIRMA)
+    return muni, "Canales de atención en gob.pe («Municipalidad de …»)", asunto, cuerpo, len(g)
+
+
+wc = wb.create_sheet("CORREOS", 2)
+wc["A1"] = "Correos y oficios listos por intermediario"
+wc["A1"].font = Font(bold=True, size=13, color=VERDE)
+wc["A2"] = ("Completar los [corchetes] (nombre, cargo, institución, duración de la encuesta) antes de enviar. A entidades públicas: "
+            "enviar como oficio por mesa de partes. Municipalidades: usar si el intermediario sugerido no responde en 7-10 días.")
+wc["A2"].font = Font(italic=True, size=9, color="555555")
+hdr_c = ["#", "Intermediario", "Para / canal de envío", "Asunto", "Cuerpo del mensaje", "N.º orgs", "Estado", "Fecha de envío"]
+for j, h in enumerate(hdr_c, 1):
+    c = wc.cell(row=4, column=j, value=h)
+    c.font = hdr_font; c.border = borde
+    c.fill = PatternFill("solid", fgColor=VERDE if j <= 6 else AZUL_OSC)
+    c.alignment = Alignment(wrap_text=True, vertical="center")
+filas_c = [correo(k, g) for k, g in sorted(grupos, key=lambda kv: -len(kv[1]))]
+e_df = df[sinc]
+filas_c += [correo_muni(m, e_df[e_df["Intermediario alterno"] == m])
+            for m in munis.index]
+for i, (nom_i, para, asunto, cuerpo_txt, n) in enumerate(filas_c, 1):
+    r = 4 + i
+    for j, v in enumerate([i, nom_i, para, asunto, cuerpo_txt, n], 1):
+        c = wc.cell(row=r, column=j, value=v)
+        c.font = cuerpo; c.border = borde; c.alignment = Alignment(wrap_text=True, vertical="top")
+    for j in (7, 8):
+        wc.cell(row=r, column=j).border = borde
+    wc.row_dimensions[r].height = min(409, 15 * (cuerpo_txt.count("\n") + 2 + len(cuerpo_txt) // 110))
+dv_c = DataValidation(type="list", formula1='"Pendiente,Enviado,Respondió,Sin respuesta"', allow_blank=True)
+wc.add_data_validation(dv_c); dv_c.add(f"G5:G{4 + len(filas_c)}")
+for c, w in zip("ABCDEFGH", (4, 26, 30, 34, 110, 8, 13, 12)):
+    wc.column_dimensions[c].width = w
+wc.freeze_panes = "C5"
+
 # RESUMEN (con fórmulas vivas sobre DIRECTORIO)
 wr = wb.create_sheet("RESUMEN")
 wr["A1"] = "Cobertura de contacto"; wr["A1"].font = Font(bold=True, size=13, color=VERDE)
