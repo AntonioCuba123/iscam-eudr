@@ -281,6 +281,24 @@ for _, x in v3.iterrows():
         o.add_tel(x["Teléfono"], f); o.add_mail(x["Correo"], f)
 
 
+F_WEB = ROOT / "data/contactos_publicos_web.csv"   # búsqueda en fuentes públicas (no versionado)
+if F_WEB.exists():
+    web = pd.read_csv(F_WEB, dtype=str, encoding="utf-8").fillna("")
+    for _, x in web.iterrows():
+        o = org(ruc(x["RUC"]))
+        if not o:
+            continue
+        f = "Web pública"
+        o.add_tel(x["telefonos"], f); o.add_tel(x["whatsapp"], f)
+        o.add_mail(x["correos"], f)
+        o.add_web(x["redes"], f); o.add_web(x["url_fuente"] if "http" in x["url_fuente"] and x["nota"].startswith("Web propia") else "", f)
+        for p in [s.strip() for s in x["personas"].split("·") if s.strip()]:
+            nom, _, cargo = p.partition(" - ")
+            cargo = re.sub(r"\s*\(.*?\)\s*$", "", cargo).strip()
+            o.add_persona(nom, cargo, f)
+        o.set("web_fuente", f"{x['url_fuente']} ({x['fecha_consulta']})")
+        o.set("web_nota", x["nota"])
+
 # ------------------------------------------------------------ 3. ensamblar
 def rango_persona(p):
     c = p["cargo"].lower()
@@ -354,6 +372,8 @@ for o in ORGS.values():
         "N.º socios": c.get("socios", ""),
         "Listas de origen": " + ".join(sorted(o.listas)),
         "Fuentes del contacto": "; ".join(fuentes),
+        "Fuente web pública (URL, fecha)": c.get("web_fuente", ""),
+        "Nota fuente web": c.get("web_nota", ""),
     })
     for p in ps:
         personas.append({"RUC": o.ruc, "Organización": c.get("org") or c.get("sunat", ""), "Nombre": p["nombre"],
@@ -421,6 +441,7 @@ anchos = {"N.º": 5, "RUC": 13, "Organización": 38, "Razón social (SUNAT)": 34
           "Celular(es)": 15, "Teléfono fijo": 13, "Correo(s)": 30, "WhatsApp (enlace)": 11,
           "Página web": 24, "Redes sociales": 24, "Calidad del contacto": 22, "Estado SUNAT": 16,
           "Exporta": 8, "N.º socios": 8, "En Matriz 174": 9, "Fuentes del contacto": 30,
+          "Fuente web pública (URL, fecha)": 34, "Nota fuente web": 34,
           "Estado de la gestión": 18, "N.º intentos": 8, "Fecha último contacto": 12,
           "Fecha encuesta agendada": 12, "Modalidad": 13, "Encuestador": 16,
           "Persona que responde": 22, "Observaciones": 36}
