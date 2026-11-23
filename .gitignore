@@ -34,3 +34,4 @@ data/backup/
 # Directorio de encuesta: contiene datos personales de contacto (Ley 29733); se regenera con Scripts/build_directorio_encuesta.py
 DIRECTORIO_ENCUESTA_ORGANIZACIONES.xlsx
 data/contactos_publicos_web.csv
+data/remitente_encuesta.json

@@ -624,7 +624,7 @@ CONDICIONES = (
     "Si alguna de estas organizaciones ya no está activa o cambió de nombre, también nos sería muy útil saberlo.")
 INTRO = ("Le saluda [nombre], [cargo] de [institución / proyecto]. Estamos realizando un estudio sobre la preparación de las "
          "organizaciones de productores de café y cacao del Perú frente al Reglamento de la Unión Europea sobre productos libres "
-         "de deforestación (EUDR). Como parte del estudio, aplicaremos una encuesta breve a organizaciones de la base de MIDAGRI.")
+         "de deforestación (EUDR). Como parte del estudio, aplicaremos una encuesta a organizaciones de la base de MIDAGRI.")
 
 
 def lista_orgs(g, por_region=False):
@@ -647,7 +647,8 @@ def correo(k, g):
             para = "Mesa de partes virtual: https://sistemas.devida.gob.pe/mesadepartesvirtual/"
         asunto = "Solicitud de información de contacto de organizaciones de productores de café y cacao, con fines de investigación"
         cuerpo = (f"Señores\n{nombre_i}\nPresente.-\n\n"
-                  "Por medio del presente me dirijo a ustedes para saludarles. " + INTRO[INTRO.index("Estamos"):] + "\n\n"
+                  "Por medio del presente, en mi calidad de [cargo] de [institución / proyecto], me dirijo a ustedes para "
+                  "saludarles. " + INTRO[INTRO.index("Estamos"):] + "\n\n"
                   f"No contamos con datos de contacto actualizados de {n} {orgs_txt} que, según información pública, "
                   f"{'es' if n == 1 else 'son'} o {'ha' if n == 1 else 'han'} sido {'atendida' if n == 1 else 'atendidas'} por su institución. Solicitamos su apoyo, a través de la oficina zonal o dirección "
                   "que corresponda, para obtener un teléfono o correo de su gerente o presidente, o para hacerles llegar esta "
@@ -698,6 +699,28 @@ filas_c = [correo(k, g) for k, g in sorted(grupos, key=lambda kv: -len(kv[1]))]
 e_df = df[sinc]
 filas_c += [correo_muni(m, e_df[e_df["Intermediario alterno"] == m])
             for m in munis.index]
+# Datos del remitente (archivo local, no versionado): rellena los [corchetes]
+F_REM = ROOT / "data/remitente_encuesta.json"
+if F_REM.exists():
+    import json
+    rem = json.loads(F_REM.read_text(encoding="utf-8"))
+    sust = {
+        "de [institución / proyecto]": "de " + rem.get("institucion_con_articulo", rem["institucion"]),
+        "[nombre]": rem["nombre"], "[Nombre completo]": rem["nombre"],
+        "[cargo]": rem["cargo"], "[Cargo]": rem["cargo"][:1].upper() + rem["cargo"][1:],
+        "[institución / proyecto]": rem["institucion"], "[Institución / proyecto]": rem["institucion"],
+        "[Teléfono / WhatsApp]": rem["telefono"], "[Correo]": rem["correo"],
+        "unos [XX] minutos": f"aproximadamente {rem['duracion']} minutos",
+    }
+
+    def rellenar(t):
+        for a, b in sust.items():
+            t = t.replace(a, b)
+        return t
+
+    filas_c = [(a, b, c, rellenar(d), n) for a, b, c, d, n in filas_c]
+    wc["A2"] = ("Textos con los datos del remitente (data/remitente_encuesta.json). A entidades públicas: enviar como oficio "
+                "por mesa de partes. Municipalidades: usar si el intermediario sugerido no responde en 7-10 días.")
 for i, (nom_i, para, asunto, cuerpo_txt, n) in enumerate(filas_c, 1):
     r = 4 + i
     for j, v in enumerate([i, nom_i, para, asunto, cuerpo_txt, n], 1):
