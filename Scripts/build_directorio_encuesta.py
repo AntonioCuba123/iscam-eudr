@@ -10,6 +10,7 @@ Cruza por RUC todas las fuentes locales de contacto y arma un Excel con:
 Universo = base MIDAGRI café-cacao limpia (178) ∪ «base 174 detallada» (177).
 Uso:  python Scripts/build_directorio_encuesta.py
 """
+import json
 import re
 import unicodedata
 from pathlib import Path
@@ -702,7 +703,6 @@ filas_c += [correo_muni(m, e_df[e_df["Intermediario alterno"] == m])
 # Datos del remitente (archivo local, no versionado): rellena los [corchetes]
 F_REM = ROOT / "data/remitente_encuesta.json"
 if F_REM.exists():
-    import json
     rem = json.loads(F_REM.read_text(encoding="utf-8"))
     sust = {
         "de [institución / proyecto]": "de " + rem.get("institucion_con_articulo", rem["institucion"]),
@@ -734,6 +734,105 @@ wc.add_data_validation(dv_c); dv_c.add(f"G5:G{4 + len(filas_c)}")
 for c, w in zip("ABCDEFGH", (4, 26, 30, 34, 110, 8, 13, 12)):
     wc.column_dimensions[c].width = w
 wc.freeze_panes = "C5"
+
+# GUION: speech para la llamada / WhatsApp a cada organización
+_r = json.loads(F_REM.read_text(encoding="utf-8")) if F_REM.exists() else {}
+NOM = _r.get("nombre", "[nombre]")
+CARGO = _r.get("cargo", "[cargo]")
+INST = _r.get("institucion", "[institución]")
+INST_ART = _r.get("institucion_con_articulo", INST)
+DUR = _r.get("duracion", "[XX]")
+GUION = [
+    ("h", "1. Apertura (primeros 20 segundos)"),
+    ("p", f"«Buenos días/tardes, ¿hablo con la [Cooperativa/Asociación ___]?\nMi nombre es {NOM}, soy {CARGO} de {INST_ART}.\n"
+          "Le llamo por un estudio sobre cómo se están preparando las organizaciones de café y cacao para la nueva norma europea "
+          "de deforestación, la EUDR.\n¿Podría comunicarme con el gerente o el presidente?»"),
+    ("n", "Si llegaste por un intermediario, agrega tras presentarte: «Su contacto nos lo facilitó [DEVIDA / APPCACAO / la "
+          "Municipalidad de ___ / Norandino]»."),
+    ("n", "Si el gerente no está: «¿En qué horario lo puedo encontrar? ¿O me podría dar un número o WhatsApp donde escribirle?» "
+          "Anota el nombre de quien atendió."),
+    ("h", "2. Con el gerente o presidente (1-2 minutos)"),
+    ("p", "«Gracias por atenderme, señor/a ___. Le explico rápido: estamos haciendo un diagnóstico de qué tan preparadas están "
+          "las cooperativas y asociaciones de café y cacao para cumplir la EUDR, que exigirá a quienes vendan a Europa demostrar "
+          "que su producto no viene de zonas deforestadas: georreferenciación de parcelas, trazabilidad, documentación.\n"
+          "Su organización está en la base de MIDAGRI y nos interesa mucho conocer su experiencia: qué tienen avanzado y dónde "
+          f"ven dificultades.\nLa encuesta toma aproximadamente {DUR} minutos y la podemos hacer cuando a usted le acomode: por "
+          "teléfono, por videollamada o con un formulario en línea.»"),
+    ("p", "«La participación es voluntaria y la información es confidencial; los resultados se presentan agregados, sin mencionar "
+          "a ninguna organización en particular. Al terminar el estudio les compartiremos los resultados generales, que les pueden "
+          "servir para compararse con otras organizaciones del sector.»"),
+    ("p", "Cierre (pide fecha, no un «sí» abstracto): «¿Qué día de esta semana o la próxima le quedaría mejor? ¿Mañana o tarde?»"),
+    ("h", "3. Si pone reparos"),
+    ("t", [("Si te dice…", "Responde"),
+           ("«No tengo tiempo, es mucho.»", "«Lo entiendo. Podemos dividirla en dos partes de media hora, o le envío el formulario "
+            "para que lo llene a su ritmo. ¿Qué le resulta más cómodo?»"),
+           ("«¿Para qué es? ¿Quién lo financia?»", f"«Es un estudio académico de {INST_ART}. No vendemos nada ni tiene costo. "
+            "Si gusta, le envío por correo una carta de presentación.»"),
+           ("«No exportamos a Europa / no nos afecta.»", "«Nos interesa incluir a organizaciones en todas las situaciones, también "
+            "a las que venden en el mercado nacional o a intermediarios, porque la norma afecta a toda la cadena.»"),
+           ("«No sabemos nada de la EUDR.»", "«No se preocupe, no es un examen. Esa información también es valiosa para el "
+            "estudio; las preguntas son sobre cómo trabajan hoy.»"),
+           ("«¿Qué harán con mis datos?»", "«Se usan solo para el estudio, conforme a la Ley de Protección de Datos Personales. "
+            "No compartimos información individual de su organización con nadie.»"),
+           ("«Hable con el presidente / el técnico.»", "«Perfecto, ¿me da su nombre y un número para contactarlo? ¿Puedo decirle "
+            "que usted me recomendó?»"),
+           ("«Mándeme información por escrito.»", "«Claro, ¿a qué correo o WhatsApp se la envío? Le escribo hoy y lo vuelvo a "
+            "llamar el [día] para coordinar.»")]),
+    ("h", "4. Confirmación (antes de colgar)"),
+    ("p", "«Entonces quedamos el [día] a las [hora], por [teléfono / videollamada / formulario]. ¿Este es el mejor número para "
+          "comunicarme con usted? ¿Tiene un correo donde le envíe la confirmación? Un día antes le escribo por WhatsApp para "
+          "recordárselo. ¡Muchas gracias, señor/a ___!»"),
+    ("h", "5. Mensajes de WhatsApp"),
+    ("p", f"Primer contacto:\n«Buenos días, señor/a ___. Le saluda {NOM}, {CARGO} de {INST_ART}. Estamos haciendo un estudio "
+          "sobre la preparación de las organizaciones de café y cacao frente a la norma europea de deforestación (EUDR) y nos "
+          f"gustaría contar con la participación de [organización]. La encuesta toma aprox. {DUR} minutos y puede ser por teléfono, "
+          "videollamada o formulario, en el horario que usted prefiera. ¿Podríamos coordinar una fecha? Muchas gracias.»"),
+    ("p", f"Recordatorio (un día antes):\n«Buenos días, señor/a ___. Le recuerdo nuestra cita de mañana [día] a las [hora] para "
+          f"la encuesta de {INST_ART} sobre la EUDR. Si necesita cambiar el horario, me avisa por aquí sin problema. ¡Gracias!»"),
+    ("n", "Si no contesta en 3 intentos: pasar al intermediario alterno (hojas DIRECTORIO e INTERMEDIARIOS)."),
+    ("h", "6. Qué anotar en DIRECTORIO tras cada intento"),
+    ("p", "• Estado de la gestión (Contactado – sin respuesta / Agendado / Rechazó / Número errado…)\n"
+          "• N.º intentos y Fecha último contacto\n• Fecha encuesta agendada y Modalidad\n"
+          "• Persona que responde (nombre y cargo)\n"
+          "• Observaciones: mejor horario, quién atendió, si pidió carta de presentación, si la org. está inactiva o cambió de nombre"),
+    ("h", "Tips"),
+    ("p", "• Llamar entre 8:00 y 11:00 a. m.: por la tarde muchos gerentes están en campo o en acopio.\n"
+          "• En cosecha (café ~abril-agosto según zona) cuesta más: proponer fechas posteriores en vez de insistir.\n"
+          "• Tener a la mano la ficha de la organización (región, producto, si exporta): un dato concreto genera confianza."),
+]
+wg = wb.create_sheet("GUION", 3)
+wg["A1"] = "Guion de contacto con las organizaciones"
+wg["A1"].font = Font(bold=True, size=14, color=VERDE)
+wg["A2"] = f"{NOM} · {CARGO} · {INST} · encuesta ≈ {DUR} min. Los [corchetes] se ajustan en cada llamada."
+wg["A2"].font = Font(italic=True, size=9, color="555555")
+wg.column_dimensions["A"].width = 34
+wg.column_dimensions["B"].width = 96
+fila_g = 4
+for tipo, contenido in GUION:
+    if tipo == "h":
+        fila_g += 1
+        c = wg.cell(row=fila_g, column=1, value=contenido)
+        c.font = hdr_font; c.fill = PatternFill("solid", fgColor=VERDE)
+        wg.merge_cells(start_row=fila_g, start_column=1, end_row=fila_g, end_column=2)
+        fila_g += 1
+    elif tipo == "t":
+        for i, (a, b) in enumerate(contenido):
+            for j, v in enumerate((a, b), 1):
+                c = wg.cell(row=fila_g, column=j, value=v)
+                c.border = borde; c.alignment = Alignment(wrap_text=True, vertical="top")
+                c.font = hdr_font if i == 0 else cuerpo
+                if i == 0:
+                    c.fill = PatternFill("solid", fgColor=AZUL_OSC)
+            wg.row_dimensions[fila_g].height = 15 if i == 0 else 15 * (1 + len(b) // 95)
+            fila_g += 1
+    else:
+        c = wg.cell(row=fila_g, column=1, value=contenido)
+        c.alignment = Alignment(wrap_text=True, vertical="top")
+        c.font = Font(name="Calibri", size=10, italic=(tipo == "n"), color="555555" if tipo == "n" else "000000")
+        wg.merge_cells(start_row=fila_g, start_column=1, end_row=fila_g, end_column=2)
+        wg.row_dimensions[fila_g].height = 15 * (contenido.count("\n") + 1 + len(contenido) // 125)
+        fila_g += 1
+wg.sheet_view.showGridLines = False
 
 # RESUMEN (con fórmulas vivas sobre DIRECTORIO)
 wr = wb.create_sheet("RESUMEN")
