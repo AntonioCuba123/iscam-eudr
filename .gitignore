@@ -30,3 +30,6 @@ Desktop.ini
 # regenerables desde las fuentes originales, no deben versionarse
 ficharucsunat/cache_ocds/*.jsonl.gz
 data/backup/
+
+# Directorio de encuesta: contiene datos personales de contacto (Ley 29733); se regenera con Scripts/build_directorio_encuesta.py
+DIRECTORIO_ENCUESTA_ORGANIZACIONES.xlsx
