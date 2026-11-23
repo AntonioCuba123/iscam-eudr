@@ -386,8 +386,95 @@ otras = df_all[~en176].copy()
 df = df_all[en176].copy()
 df["En Matriz 174"] = df["Listas de origen"].str.contains("Matriz 174").map({True: "Sí", False: "No"})
 df = df.drop(columns=["Listas de origen"])
+
+# ------------------------------------------------- intermediarios sugeridos
+# Contactos institucionales verificados en fuentes públicas el 2026-11-23.
+INTERMEDIARIOS = {
+    "DEVIDA": ("DEVIDA – Desarrollo Alternativo", "Entidad pública",
+               "Mesa de partes virtual: https://sistemas.devida.gob.pe/mesadepartesvirtual/ · Presencial: Av. José Ramírez "
+               "Gastón de los Reyes 151, Miraflores (gob.pe también cita Av. Benavides 2199-B; confirmar) · Pedir derivación "
+               "a la oficina zonal que corresponda", "https://www.gob.pe/institucion/devida"),
+    "AGROIDEAS": ("Agroideas (MIDAGRI)", "Entidad pública",
+                  "Aló Midagri – Agroideas: 997 822 487 · Central Midagri (01) 209-8600 opc. 1 · consultas@midagri.gob.pe · "
+                  "https://www.gob.pe/agroideas", "https://www.gob.pe/institucion/midagri/pages/9241-acceder-a-los-canales-de-atencion-al-ciudadano-del-midagri"),
+    "AGROMERCADO": ("Agromercado (MIDAGRI)", "Entidad pública",
+                    "Canales de atención en https://www.gob.pe/institucion/agromercado · Central Midagri (01) 209-8600 opc. 1 · "
+                    "consultas@midagri.gob.pe", "https://www.gob.pe/institucion/agromercado"),
+    "APPCACAO": ("APPCACAO – Asociación Peruana de Productores de Cacao", "Gremio",
+                 "gerencia@appcacao.org · imagen@appcacao.org · +51 1 566 6067 · Jr. Sáenz Peña 525 int. 605, Magdalena del Mar",
+                 "Documento de proyecto IICA/APPCACAO (sección de contacto)"),
+    "JNC": ("Junta Nacional del Café (JNC)", "Gremio",
+            "www.juntadelcafe.org.pe · jnc@juntadelcafe.org.pe · (01) 433 1477 (dato de fecha incierta; confirmar) · "
+            "Presidente: Delky Gutiérrez Guerrero (2024-2027)", "https://connectamericas.com/es/node/3671"),
+    "NORANDINO": ("Cooperativa Agraria Norandino", "Cooperativa de segundo nivel",
+                  "(073) 344983 · coopnorandino@coopnorandino.com.pe · Zona Industrial II Etapa Mz X lotes 3-4, Piura · "
+                  "GG Omar Guerrero Alberca (2025) · datos de 2014/2024: confirmar",
+                  "https://es.panjiva.com/Cooperativa-Agraria-Norandino-Ltda/25364786"),
+    "HELVETAS": ("Helvetas Perú", "Cooperación internacional", "peru@helvetas.org",
+                 "https://www.helvetas.org/Publications-PDFs/Latin-America/Peru/cacao%20imaza/brochure%20CACAO%20IMAZA.pdf"),
+    "SERNANP": ("SERNANP – Jefatura SN Megantoni", "Entidad pública",
+                "Canales de atención de SERNANP en gob.pe; pedir a la jefatura del Santuario Nacional Megantoni", "gob.pe"),
+    "SSE": ("Sierra y Selva Exportadora", "Entidad pública",
+            "Sede en Lince, Lima; canales en gob.pe (no se verificó teléfono)", "gob.pe"),
+    "FIAD_UDEP": ("FIAD / Universidad de Piura – Proyectos sociales", "ONG / Universidad",
+                  "https://www.udep.edu.pe/proyectos-sociales/ (proyecto de café en Lalaquiz)",
+                  "https://www.udep.edu.pe/hoy/2023/04/mas-de-100-familias-de-lalaquiz-mejoran-la-calidad-de-sus-cultivos-de-cafe/"),
+}
+# Vínculo documentado en fuentes públicas (ver data/contactos_publicos_web.csv y notas de búsqueda)
+VINCULO_DOC = {
+    "20146696041": ("NORANDINO", "Es base de Norandino y exporta por ella"),
+    "20610739491": ("AGROIDEAS", "Plan de negocio Agroideas aprobado (jul-2026)"),
+    "20542251990": ("DEVIDA", "Planta chocolatera Devida 2019"),
+    "20393882868": ("DEVIDA", "Planta chocolatera Devida / GORE Ucayali"),
+    "20600029887": ("DEVIDA", "Proyecto BID PE-T1532 y Devida (Ramón Castilla)"),
+    "20564032485": ("SERNANP", "Acuerdo de conservación con SERNANP (SN Megantoni)"),
+    "20568560133": ("SSE", "Asistencia de Sierra Exportadora para certificación orgánica"),
+    "20607382604": ("FIAD_UDEP", "Proyecto de café FIAD-UDEP en Lalaquiz"),
+    "20608478311": ("HELVETAS", "Proyecto cacao Imaza-Nieva de Helvetas"),
+    "20568428375": ("DEVIDA", "Rueda de negocios con asistencia de Devida"),
+    "20602047025": ("DEVIDA", "Planta procesadora (convenio Agroideas-Devida)"),
+    "20542289024": ("AGROMERCADO", "Asistencia técnica de Agromercado desde 2024"),
+    "20611935243": ("AGROMERCADO", "Exportación con apoyo de Agromercado (2025)"),
+    "20600010086": ("AGROIDEAS", "Plan de negocio Agroideas (Bolsón Cuchara)"),
+    "20393786044": ("DEVIDA", "Capacitación de caficultores por Devida"),
+}
+# Distritos en zonas de desarrollo alternativo atendidas por DEVIDA
+DEVIDA_DIST = {"pichari", "kimbiri", "llochegua", "pangoa", "rio tambo", "mazamari", "satipo", "rupa-rupa",
+               "jose crespo y castillo", "marias", "nuevo progreso", "tocache", "juanjui", "picota", "padre abad",
+               "irazola", "curimana", "neshuya", "alexander von humboldt", "boqueron", "puerto bermudez", "palcazu",
+               "echarate", "quellouno", "teniente cesar lopez rojas", "yurimaguas"}
+
+
+def _sin_tilde(s):
+    return "".join(ch for ch in unicodedata.normalize("NFD", str(s).lower()) if unicodedata.category(ch) != "Mn").strip()
+
+
+def intermediarios(r):
+    dist = _sin_tilde(r["Distrito"])
+    muni = f"Municipalidad de {r['Distrito']}" if r["Distrito"] else ""
+    if r["RUC"] in VINCULO_DOC:
+        k, motivo = VINCULO_DOC[r["RUC"]]
+        alt = "DEVIDA" if dist in DEVIDA_DIST and k != "DEVIDA" else muni
+        base = f"Vínculo documentado: {motivo}"
+    elif dist in DEVIDA_DIST:
+        k, alt, base = "DEVIDA", muni, "Por ámbito: zona de desarrollo alternativo"
+    elif r["Producto"] == "CACAO":
+        k, alt, base = "APPCACAO", muni, "Por producto: gremio nacional de cacao"
+    elif r["Región"] in ("PIURA", "LAMBAYEQUE"):
+        k, alt, base = "NORANDINO", muni, "Por ámbito: Norandino opera en la zona (verificar si es base)"
+    else:
+        k, alt, base = "JNC", muni, "Por producto: federación nacional del café"
+    if not r["Estado SUNAT"].startswith("ACTIVO"):
+        base += " · RUC no activo en SUNAT: confirmar si sigue operando"
+    nom = lambda x: INTERMEDIARIOS[x][0] if x in INTERMEDIARIOS else x
+    return pd.Series({"Intermediario sugerido": nom(k), "Intermediario alterno": nom(alt), "Base del vínculo": base,
+                      "_k": k})
+
+
+df = pd.concat([df, df.apply(intermediarios, axis=1)], axis=1)
 df = df.sort_values(["Región", "Provincia", "Organización"]).reset_index(drop=True)
 df.insert(0, "N.º", range(1, len(df) + 1))
+k_inter = df.pop("_k")
 pp = pd.DataFrame(personas)
 pp = pp[pp["RUC"].isin(df["RUC"])].sort_values(["Organización", "RUC"])
 SEGUIMIENTO = ["Estado de la gestión", "N.º intentos", "Fecha último contacto", "Fecha encuesta agendada",
@@ -442,6 +529,7 @@ anchos = {"N.º": 5, "RUC": 13, "Organización": 38, "Razón social (SUNAT)": 34
           "Página web": 24, "Redes sociales": 24, "Calidad del contacto": 22, "Estado SUNAT": 16,
           "Exporta": 8, "N.º socios": 8, "En Matriz 174": 9, "Fuentes del contacto": 30,
           "Fuente web pública (URL, fecha)": 34, "Nota fuente web": 34,
+          "Intermediario sugerido": 28, "Intermediario alterno": 28, "Base del vínculo": 40,
           "Estado de la gestión": 18, "N.º intentos": 8, "Fecha último contacto": 12,
           "Fecha encuesta agendada": 12, "Modalidad": 13, "Encuestador": 16,
           "Persona que responde": 22, "Observaciones": 36}
@@ -485,6 +573,45 @@ for cell in wp[1]:
     cell.font = hdr_font; cell.fill = PatternFill("solid", fgColor=VERDE); cell.alignment = Alignment(wrap_text=True)
 wp.freeze_panes = "C2"
 wp.auto_filter.ref = wp.dimensions
+
+# INTERMEDIARIOS: a quién pedir los contactos de las organizaciones sin contacto (calidad E)
+wi = wb.create_sheet("INTERMEDIARIOS", 1)
+wi["A1"] = "Intermediarios para ubicar a las organizaciones sin teléfono ni correo"
+wi["A1"].font = Font(bold=True, size=13, color=VERDE)
+wi["A2"] = ("Un pedido por institución: enviar la lista de la columna F y solicitar contacto de gerente/presidente. "
+            "Contactos institucionales verificados en fuentes públicas el 23/11/2026. Las municipalidades se ubican en gob.pe › "
+            "«Municipalidad (distrital o provincial) de …» › Canales de atención.")
+wi["A2"].font = Font(italic=True, size=9, color="555555")
+hdr_i = ["Intermediario", "Tipo", "Contacto institucional", "Fuente del contacto", "N.º orgs sin contacto",
+         "Organizaciones a solicitar (RUC – nombre – distrito)", "Estado del pedido", "Fecha de envío", "Respuesta / observaciones"]
+for j, h in enumerate(hdr_i, 1):
+    c = wi.cell(row=4, column=j, value=h)
+    c.font = hdr_font; c.border = borde
+    c.fill = PatternFill("solid", fgColor=VERDE if j <= 6 else AZUL_OSC)
+    c.alignment = Alignment(wrap_text=True, vertical="center")
+sinc = df["Calidad del contacto"].str.startswith("E")
+grupos = df[sinc].assign(_k=k_inter[sinc]).groupby("_k")
+fila = 5
+for k, g in sorted(grupos, key=lambda kv: -len(kv[1])):
+    nombre_i, tipo, contacto, fuente = INTERMEDIARIOS[k]
+    lista = "\n".join(f"{r.RUC} – {r.Organización} – {r.Distrito}" for r in g.itertuples(index=False))
+    for j, v in enumerate([nombre_i, tipo, contacto, fuente, len(g), lista], 1):
+        c = wi.cell(row=fila, column=j, value=v)
+        c.font = cuerpo; c.border = borde; c.alignment = Alignment(wrap_text=True, vertical="top")
+    for j in range(7, 10):
+        wi.cell(row=fila, column=j).border = borde
+    fila += 1
+# municipalidades como alterno general
+munis = df[sinc]["Intermediario alterno"].loc[lambda s: s.str.startswith("Municipalidad")].value_counts()
+wi.cell(row=fila + 1, column=1, value="Municipalidades (intermediario alterno)").font = Font(bold=True)
+for i, (m, n) in enumerate(munis.items(), fila + 2):
+    wi.cell(row=i, column=1, value=m).font = cuerpo
+    wi.cell(row=i, column=5, value=int(n)).font = cuerpo
+dv_ped = DataValidation(type="list", formula1='"Pendiente,Enviado,Respondió,Sin respuesta"', allow_blank=True)
+wi.add_data_validation(dv_ped); dv_ped.add(f"G5:G{fila - 1}")
+for c, w in zip("ABCDEFGHI", (30, 18, 48, 30, 10, 62, 14, 12, 34)):
+    wi.column_dimensions[c].width = w
+wi.freeze_panes = "B5"
 
 # RESUMEN (con fórmulas vivas sobre DIRECTORIO)
 wr = wb.create_sheet("RESUMEN")
